@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { LayoutDashboard, Sliders, Route } from 'lucide-react';
+import { LayoutDashboard, Sliders, Route, Settings } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 export default function SidebarNav() {
@@ -12,6 +12,7 @@ export default function SidebarNav() {
     { href: '/dashboard', label: 'Overview', icon: LayoutDashboard },
     { href: '/domain-selection', label: 'Domain Setup', icon: Sliders },
     { href: '/pathway-recommendations', label: 'My Pathway', icon: Route },
+    { href: '/settings/profile', label: 'Settings', icon: Settings },
   ];
 
   return (

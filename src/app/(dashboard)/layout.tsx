@@ -4,6 +4,7 @@ import { createClient } from '@/lib/supabase/server';
 import { Button } from '@/components/ui/button';
 import UserProfileMenu from '@/components/UserProfileMenu';
 import SidebarNav from '@/components/SidebarNav';
+import MobileNav from '@/components/MobileNav';
 
 export default async function DashboardLayout({ children }: { children: React.ReactNode }) {
   const supabase = await createClient();
@@ -28,8 +29,9 @@ export default async function DashboardLayout({ children }: { children: React.Re
     <div className="min-h-screen bg-zinc-50 flex flex-col">
       {/* Top Navbar */}
       <header className="flex h-16 items-center justify-between px-6 border-b border-zinc-200 bg-white sticky top-0 z-10 shadow-sm">
-        <div className="flex items-center gap-3">
-          <div className="h-6 w-6 rounded-md bg-indigo-600" />
+        <div className="flex items-center gap-2 md:gap-3">
+          <MobileNav />
+          <div className="h-6 w-6 rounded-md bg-indigo-600 hidden md:block" />
           <span className="font-semibold text-lg text-zinc-900 tracking-tight">EduPredict</span>
         </div>
         <div className="flex items-center gap-4">

@@ -174,7 +174,10 @@ export default function UserProfileMenu({ profile }: { profile: any }) {
           </div>
         </div>
 
-        <div className="bg-zinc-50 px-6 py-4 border-t border-zinc-200 flex justify-end">
+        <div className="bg-zinc-50 px-6 py-4 border-t border-zinc-200 flex justify-between">
+          <Button variant="outline" className="text-zinc-600 hover:text-zinc-900 border-zinc-200" onClick={() => router.push('/settings/profile')}>
+            Edit Profile
+          </Button>
           <Button variant="outline" className="text-red-600 hover:text-red-700 hover:bg-red-50 border-red-200" onClick={handleSignOut}>
             <LogOut className="h-4 w-4 mr-2" /> Sign Out
           </Button>
