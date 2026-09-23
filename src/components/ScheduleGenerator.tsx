@@ -31,11 +31,11 @@ export default function ScheduleGenerator({ timeCommitment, domainName }: { time
 
   return (
     <Dialog>
-      <DialogTrigger asChild>
+      <DialogTrigger render={
         <Button onClick={generateSchedule} variant="outline" className="w-full mt-4 border-indigo-200 text-indigo-700 hover:bg-indigo-50 font-medium">
           <Calendar className="mr-2 h-4 w-4" /> AI Study Schedule
         </Button>
-      </DialogTrigger>
+      } />
       <DialogContent className="sm:max-w-xl max-h-[80vh] overflow-y-auto">
         <DialogHeader>
           <DialogTitle className="flex items-center gap-2 text-xl font-bold">
