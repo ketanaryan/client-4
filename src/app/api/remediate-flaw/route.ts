@@ -28,7 +28,7 @@ export async function POST(req: Request) {
       prompt: prompt,
     });
 
-    return result.toTextStreamResponse();
+    return result.toDataStreamResponse();
 
   } catch (error: any) {
     console.error("Remediate Flaw Error, falling back to dummy data:", error);
@@ -45,13 +45,17 @@ Key Takeaway: Always look for ways to optimize your approach when dealing with $
     const encoder = new TextEncoder();
     const stream = new ReadableStream({
       async start(controller) {
-        controller.enqueue(encoder.encode(fallbackMarkdown));
+        const chunk = `0:${JSON.stringify(fallbackMarkdown)}\n`;
+        controller.enqueue(encoder.encode(chunk));
         controller.close();
       },
     });
 
     return new Response(stream, {
-      headers: { 'Content-Type': 'text/plain; charset=utf-8' },
+      headers: {
+        'Content-Type': 'text/plain; charset=utf-8',
+        'x-vercel-ai-data-stream': 'v1',
+      },
     });
   }
 }
