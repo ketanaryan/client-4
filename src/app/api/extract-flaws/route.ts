@@ -136,6 +136,8 @@ export async function POST(req: Request) {
 
   } catch (error: any) {
     console.error("Extract Flaws Error, falling back to dummy data:", error);
+    // Add realistic presentation delay so it doesn't flash instantly
+    await new Promise(resolve => setTimeout(resolve, 2000));
     // Fallback for presentation so it never breaks
     return NextResponse.json({ 
       success: true, 

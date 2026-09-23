@@ -76,6 +76,7 @@ export async function POST(req: Request) {
     return NextResponse.json(object);
   } catch (error) {
     console.error('Error generating course pathway, falling back to dummy data:', error);
+    await new Promise(resolve => setTimeout(resolve, 2000));
     // Presentation fallback
     const fallbackCourses = [
       {

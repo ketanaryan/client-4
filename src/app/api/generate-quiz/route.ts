@@ -60,6 +60,7 @@ export async function POST(req: Request) {
 
   } catch (error: any) {
     console.error("Quiz Generation Error, falling back to dummy data:", error);
+    await new Promise(resolve => setTimeout(resolve, 2000));
     // Hardcoded dummy data for presentations so the app doesn't break if API fails
     return NextResponse.json({
       quiz: [

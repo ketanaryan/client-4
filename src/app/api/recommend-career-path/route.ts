@@ -80,6 +80,7 @@ export async function POST(req: Request) {
     return NextResponse.json(object);
   } catch (error) {
     console.error('Error generating career paths, falling back to dummy data:', error);
+    await new Promise(resolve => setTimeout(resolve, 2000));
     const fallbackPaths = [
       {
         title: "Systems Architect",
