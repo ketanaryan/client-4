@@ -42,8 +42,16 @@ Think of it like reading a book. If you read every single word to find a specifi
 Key Takeaway: Always look for ways to optimize your approach when dealing with ${fallbackFlawConcept}, as overlooking it can cause significant bottlenecks in real-world environments!
     `.trim();
 
-    return new Response(fallbackMarkdown, {
-      headers: { 'Content-Type': 'text/plain' }
+    const encoder = new TextEncoder();
+    const stream = new ReadableStream({
+      async start(controller) {
+        controller.enqueue(encoder.encode(fallbackMarkdown));
+        controller.close();
+      },
+    });
+
+    return new Response(stream, {
+      headers: { 'Content-Type': 'text/plain; charset=utf-8' },
     });
   }
 }
