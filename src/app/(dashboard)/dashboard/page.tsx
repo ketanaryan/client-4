@@ -4,6 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Progress } from '@/components/ui/progress';
 import { Clock, Activity, CheckCircle2, AlertCircle, ArrowRight } from 'lucide-react';
 import { redirect } from 'next/navigation';
+import ScheduleGenerator from '@/components/ScheduleGenerator';
 
 export default async function DashboardOverview() {
   const supabase = await createClient();
@@ -214,9 +215,10 @@ export default async function DashboardOverview() {
                 <span className="text-sm font-medium text-indigo-600">0%</span>
               </div>
               <Progress value={0} className="h-2.5 bg-zinc-100 [&>div]:bg-indigo-600" />
-              <p className="text-xs text-zinc-500 mt-4 text-center">
+              <p className="text-xs text-zinc-500 mt-4 text-center mb-4">
                 Your committed target is {profile?.time_commitment || 'not set'} hours per week.
               </p>
+              <ScheduleGenerator timeCommitment={profile?.time_commitment || '5'} domainName={domainProfile?.domain_name || 'General'} />
             </CardContent>
           </Card>
 
