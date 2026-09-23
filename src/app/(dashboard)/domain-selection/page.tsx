@@ -21,6 +21,7 @@ export default function DomainSelectionPage() {
   const [isLoading, setIsLoading] = useState(false);
   const supabase = createClient();
   const { toast } = useToast();
+  const router = useRouter();
 
   const handleSave = async () => {
     if (!selectedDomain) return;
