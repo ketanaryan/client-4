@@ -29,6 +29,10 @@ const requestSchema = z.object({
 });
 
 export async function POST(req: Request) {
+  let score = 50;
+  let quizResultId: string | null = null;
+  let currentUserId: string | null = null;
+
   try {
     const body = await req.json();
     const parsedBody = requestSchema.safeParse(body);
@@ -39,6 +43,7 @@ export async function POST(req: Request) {
     }
 
     const { userId, domainProfileId, questions, answers } = parsedBody.data;
+    currentUserId = userId;
 
     // 1. Evaluate Quiz
     let correctCount = 0;
@@ -70,7 +75,7 @@ export async function POST(req: Request) {
       }
     });
 
-    const score = (correctCount / questions.length) * 100;
+    score = (correctCount / questions.length) * 100;
 
     // Use anon key, but we need to forward the user's JWT so RLS works.
     const authHeader = req.headers.get('Authorization');
@@ -93,6 +98,8 @@ export async function POST(req: Request) {
       console.error("Failed to save quiz results:", quizError);
       throw new Error("Database error saving quiz");
     }
+
+    quizResultId = quizResult.id;
 
     // 3. If they got things wrong, extract flaws using Gemini
     let extractedFlaws: any[] = [];
@@ -139,19 +146,37 @@ export async function POST(req: Request) {
     // Add realistic presentation delay so it doesn't flash instantly
     await new Promise(resolve => setTimeout(resolve, 2000));
     // Fallback for presentation so it never breaks
+    const fallbackFlaws = [
+      {
+        conceptName: "Algorithmic Complexity",
+        description: "Student lacks understanding of how time complexity scales with nested operations."
+      },
+      {
+        conceptName: "State Management",
+        description: "Student failed to identify how state mutations trigger UI re-renders."
+      }
+    ];
+
+    if (quizResultId && currentUserId) {
+      const authHeader = req.headers.get('Authorization');
+      const supabase = createClient(process.env.NEXT_PUBLIC_SUPABASE_URL!, process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!, {
+        global: { headers: { Authorization: authHeader || '' } }
+      });
+      
+      const flawsToInsert = fallbackFlaws.map(f => ({
+        quiz_result_id: quizResultId,
+        user_id: currentUserId,
+        concept_name: f.conceptName,
+        description: f.description,
+        is_remediated: false
+      }));
+      await supabase.from('identified_flaws').insert(flawsToInsert);
+    }
+
     return NextResponse.json({ 
       success: true, 
-      score: 50, 
-      flaws: [
-        {
-          conceptName: "Algorithmic Complexity",
-          description: "Student lacks understanding of how time complexity scales with nested operations."
-        },
-        {
-          conceptName: "State Management",
-          description: "Student failed to identify how state mutations trigger UI re-renders."
-        }
-      ]
+      score: score, 
+      flaws: fallbackFlaws
     });
   }
 }
