@@ -6,6 +6,8 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle, CardFooter }
 import { Button } from '@/components/ui/button';
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 import { Label } from '@/components/ui/label';
+import { createClient } from '@/lib/supabase/client';
+import { useToast } from '@/hooks/use-toast';
 
 const DOMAINS = [
   { id: 'computer-engineering', title: 'Computer Engineering', description: 'Systems programming, architecture, and embedded systems.' },
@@ -17,19 +19,47 @@ export default function DomainSelectionPage() {
   const [selectedDomain, setSelectedDomain] = useState<string>('');
   const [competency, setCompetency] = useState<string>('Beginner');
   const [isLoading, setIsLoading] = useState(false);
-  const router = useRouter();
+  const supabase = createClient();
+  const { toast } = useToast();
 
   const handleSave = async () => {
     if (!selectedDomain) return;
     setIsLoading(true);
     
-    // In a real app, save to Supabase public.domain_profiles here
-    // await supabase.from('domain_profiles').insert({...})
-    
-    // Simulate API call
-    setTimeout(() => {
+    try {
+      const { data: { user } } = await supabase.auth.getUser();
+      if (!user) {
+        router.push('/login');
+        return;
+      }
+
+      // Check if this domain already exists for the user
+      const { data: existing } = await supabase
+        .from('domain_profiles')
+        .select('id')
+        .eq('user_id', user.id)
+        .eq('domain_id', selectedDomain)
+        .single();
+
+      if (!existing) {
+        const { error } = await supabase
+          .from('domain_profiles')
+          .insert({
+            user_id: user.id,
+            domain_id: selectedDomain,
+            domain_name: DOMAINS.find(d => d.id === selectedDomain)?.title || selectedDomain,
+            current_competency_level: competency
+          });
+
+        if (error) throw error;
+      }
+      
       router.push(`/quiz/${selectedDomain}`);
-    }, 800);
+    } catch (error: any) {
+      console.error(error);
+      toast({ title: "Setup Failed", description: error.message, variant: "destructive" });
+      setIsLoading(false);
+    }
   };
 
   return (
