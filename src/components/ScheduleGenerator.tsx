@@ -40,7 +40,7 @@ export default function ScheduleGenerator({ timeCommitment, domainName }: { time
         <DialogHeader>
           <DialogTitle className="flex items-center gap-2 text-xl font-bold">
             <Sparkles className="h-5 w-5 text-indigo-600" />
-            Your Personalized {timeCommitment}hr Schedule
+            Your Personalized {timeCommitment} Schedule
           </DialogTitle>
         </DialogHeader>
         <div className="mt-4">
