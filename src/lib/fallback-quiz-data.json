@@ -1,0 +1,1106 @@
+{
+  "Computer Engineering": {
+    "Beginner": [
+      {
+        "id": "fb-Co-Beg-0",
+        "text": "What is the primary function of a ALU in a computer system?",
+        "options": [
+          "Store data",
+          "Process instructions",
+          "Cool the system",
+          "Provide power"
+        ],
+        "correctOption": "Process instructions",
+        "conceptTarget": "Hardware Basics"
+      },
+      {
+        "id": "fb-Co-Beg-1",
+        "text": "Which component is volatile and loses data when power is off?",
+        "options": [
+          "ROM",
+          "[RAM]",
+          "Hard Drive",
+          "SSD"
+        ],
+        "correctOption": "[RAM]",
+        "conceptTarget": "Memory Architecture"
+      },
+      {
+        "id": "fb-Co-Beg-2",
+        "text": "In binary, what does 1100 represent?",
+        "options": [
+          "10",
+          "12",
+          "14",
+          "15"
+        ],
+        "correctOption": "10",
+        "conceptTarget": "Number Systems"
+      },
+      {
+        "id": "fb-Co-Beg-3",
+        "text": "What is the primary function of a CPU in a computer system?",
+        "options": [
+          "Store data",
+          "Process instructions",
+          "Cool the system",
+          "Provide power"
+        ],
+        "correctOption": "Process instructions",
+        "conceptTarget": "Hardware Basics"
+      },
+      {
+        "id": "fb-Co-Beg-4",
+        "text": "Which component is volatile and loses data when power is off?",
+        "options": [
+          "ROM",
+          "[RAM]",
+          "Hard Drive",
+          "SSD"
+        ],
+        "correctOption": "[RAM]",
+        "conceptTarget": "Memory Architecture"
+      },
+      {
+        "id": "fb-Co-Beg-5",
+        "text": "In binary, what does 1100 represent?",
+        "options": [
+          "10",
+          "12",
+          "14",
+          "15"
+        ],
+        "correctOption": "10",
+        "conceptTarget": "Number Systems"
+      },
+      {
+        "id": "fb-Co-Beg-6",
+        "text": "What is the primary function of a CPU in a computer system?",
+        "options": [
+          "Store data",
+          "Process instructions",
+          "Cool the system",
+          "Provide power"
+        ],
+        "correctOption": "Process instructions",
+        "conceptTarget": "Hardware Basics"
+      },
+      {
+        "id": "fb-Co-Beg-7",
+        "text": "Which component is volatile and loses data when power is off?",
+        "options": [
+          "ROM",
+          "[RAM]",
+          "Hard Drive",
+          "SSD"
+        ],
+        "correctOption": "[RAM]",
+        "conceptTarget": "Memory Architecture"
+      },
+      {
+        "id": "fb-Co-Beg-8",
+        "text": "In binary, what does 1100 represent?",
+        "options": [
+          "10",
+          "12",
+          "14",
+          "15"
+        ],
+        "correctOption": "10",
+        "conceptTarget": "Number Systems"
+      },
+      {
+        "id": "fb-Co-Beg-9",
+        "text": "What is the primary function of a Control Unit in a computer system?",
+        "options": [
+          "Store data",
+          "Process instructions",
+          "Cool the system",
+          "Provide power"
+        ],
+        "correctOption": "Process instructions",
+        "conceptTarget": "Hardware Basics"
+      }
+    ],
+    "Intermediate": [
+      {
+        "id": "fb-Co-Int-0",
+        "text": "In a pipeline architecture, what causes a control hazard?",
+        "options": [
+          "Data dependencies",
+          "Control flow changes",
+          "Structural conflicts",
+          "All of the above"
+        ],
+        "correctOption": "All of the above",
+        "conceptTarget": "Pipelining"
+      },
+      {
+        "id": "fb-Co-Int-1",
+        "text": "Which cache mapping technique uses blocks and lines?",
+        "options": [
+          "Direct",
+          "Fully Associative",
+          "Set Associative",
+          "None"
+        ],
+        "correctOption": "Set Associative",
+        "conceptTarget": "Cache Memory"
+      },
+      {
+        "id": "fb-Co-Int-2",
+        "text": "What is the role of the Program Counter in the CPU?",
+        "options": [
+          "Store the next instruction address",
+          "Perform ALU operations",
+          "Manage interrupts",
+          "Hold page tables"
+        ],
+        "correctOption": "Store the next instruction address",
+        "conceptTarget": "CPU Architecture"
+      },
+      {
+        "id": "fb-Co-Int-3",
+        "text": "In a pipeline architecture, what causes a structural hazard?",
+        "options": [
+          "Data dependencies",
+          "Control flow changes",
+          "Structural conflicts",
+          "All of the above"
+        ],
+        "correctOption": "All of the above",
+        "conceptTarget": "Pipelining"
+      },
+      {
+        "id": "fb-Co-Int-4",
+        "text": "Which cache mapping technique uses tags and indices?",
+        "options": [
+          "Direct",
+          "Fully Associative",
+          "Set Associative",
+          "None"
+        ],
+        "correctOption": "Set Associative",
+        "conceptTarget": "Cache Memory"
+      },
+      {
+        "id": "fb-Co-Int-5",
+        "text": "What is the role of the Instruction Register in the CPU?",
+        "options": [
+          "Store the next instruction address",
+          "Perform ALU operations",
+          "Manage interrupts",
+          "Hold page tables"
+        ],
+        "correctOption": "Store the next instruction address",
+        "conceptTarget": "CPU Architecture"
+      },
+      {
+        "id": "fb-Co-Int-6",
+        "text": "In a pipeline architecture, what causes a control hazard?",
+        "options": [
+          "Data dependencies",
+          "Control flow changes",
+          "Structural conflicts",
+          "All of the above"
+        ],
+        "correctOption": "All of the above",
+        "conceptTarget": "Pipelining"
+      },
+      {
+        "id": "fb-Co-Int-7",
+        "text": "Which cache mapping technique uses tags and indices?",
+        "options": [
+          "Direct",
+          "Fully Associative",
+          "Set Associative",
+          "None"
+        ],
+        "correctOption": "Set Associative",
+        "conceptTarget": "Cache Memory"
+      },
+      {
+        "id": "fb-Co-Int-8",
+        "text": "What is the role of the Program Counter in the CPU?",
+        "options": [
+          "Store the next instruction address",
+          "Perform ALU operations",
+          "Manage interrupts",
+          "Hold page tables"
+        ],
+        "correctOption": "Store the next instruction address",
+        "conceptTarget": "CPU Architecture"
+      },
+      {
+        "id": "fb-Co-Int-9",
+        "text": "In a pipeline architecture, what causes a structural hazard?",
+        "options": [
+          "Data dependencies",
+          "Control flow changes",
+          "Structural conflicts",
+          "All of the above"
+        ],
+        "correctOption": "All of the above",
+        "conceptTarget": "Pipelining"
+      }
+    ],
+    "Advanced": [
+      {
+        "id": "fb-Co-Adv-0",
+        "text": "How does a MOESI protocol resolve cache inconsistencies in multi-core systems?",
+        "options": [
+          "Snooping",
+          "Directory-based",
+          "Both",
+          "Neither"
+        ],
+        "correctOption": "Both",
+        "conceptTarget": "Multiprocessing"
+      },
+      {
+        "id": "fb-Co-Adv-1",
+        "text": "What is the primary advantage of paging memory?",
+        "options": [
+          "Faster access",
+          "Larger address space than physical RAM",
+          "Less power consumption",
+          "No page faults"
+        ],
+        "correctOption": "Larger address space than physical RAM",
+        "conceptTarget": "Memory Management"
+      },
+      {
+        "id": "fb-Co-Adv-2",
+        "text": "In out-of-order execution, what structure handles speculative execution?",
+        "options": [
+          "Reorder Buffer",
+          "Reservation Station",
+          "Instruction Queue",
+          "TLB"
+        ],
+        "correctOption": "Reorder Buffer",
+        "conceptTarget": "Instruction Level Parallelism"
+      },
+      {
+        "id": "fb-Co-Adv-3",
+        "text": "How does a MSI protocol resolve cache inconsistencies in multi-core systems?",
+        "options": [
+          "Snooping",
+          "Directory-based",
+          "Both",
+          "Neither"
+        ],
+        "correctOption": "Both",
+        "conceptTarget": "Multiprocessing"
+      },
+      {
+        "id": "fb-Co-Adv-4",
+        "text": "What is the primary advantage of paging memory?",
+        "options": [
+          "Faster access",
+          "Larger address space than physical RAM",
+          "Less power consumption",
+          "No page faults"
+        ],
+        "correctOption": "Larger address space than physical RAM",
+        "conceptTarget": "Memory Management"
+      },
+      {
+        "id": "fb-Co-Adv-5",
+        "text": "In out-of-order execution, what structure handles dynamic scheduling?",
+        "options": [
+          "Reorder Buffer",
+          "Reservation Station",
+          "Instruction Queue",
+          "TLB"
+        ],
+        "correctOption": "Reorder Buffer",
+        "conceptTarget": "Instruction Level Parallelism"
+      },
+      {
+        "id": "fb-Co-Adv-6",
+        "text": "How does a MSI protocol resolve cache inconsistencies in multi-core systems?",
+        "options": [
+          "Snooping",
+          "Directory-based",
+          "Both",
+          "Neither"
+        ],
+        "correctOption": "Both",
+        "conceptTarget": "Multiprocessing"
+      },
+      {
+        "id": "fb-Co-Adv-7",
+        "text": "What is the primary advantage of virtual memory?",
+        "options": [
+          "Faster access",
+          "Larger address space than physical RAM",
+          "Less power consumption",
+          "No page faults"
+        ],
+        "correctOption": "Larger address space than physical RAM",
+        "conceptTarget": "Memory Management"
+      },
+      {
+        "id": "fb-Co-Adv-8",
+        "text": "In out-of-order execution, what structure handles out-of-order execution?",
+        "options": [
+          "Reorder Buffer",
+          "Reservation Station",
+          "Instruction Queue",
+          "TLB"
+        ],
+        "correctOption": "Reorder Buffer",
+        "conceptTarget": "Instruction Level Parallelism"
+      },
+      {
+        "id": "fb-Co-Adv-9",
+        "text": "How does a MESI protocol resolve cache inconsistencies in multi-core systems?",
+        "options": [
+          "Snooping",
+          "Directory-based",
+          "Both",
+          "Neither"
+        ],
+        "correctOption": "Both",
+        "conceptTarget": "Multiprocessing"
+      }
+    ]
+  },
+  "Artificial Intelligence": {
+    "Beginner": [
+      {
+        "id": "fb-Ar-Beg-0",
+        "text": "What is the goal of Supervised Learning in Machine Learning?",
+        "options": [
+          "Memorize data",
+          "Find patterns and generalize",
+          "Delete outliers",
+          "Sort data"
+        ],
+        "correctOption": "Find patterns and generalize",
+        "conceptTarget": "ML Fundamentals"
+      },
+      {
+        "id": "fb-Ar-Beg-1",
+        "text": "Which algorithm is used for clustering tasks?",
+        "options": [
+          "Linear Regression",
+          "K-Means",
+          "Decision Trees",
+          "PCA"
+        ],
+        "correctOption": "Linear Regression",
+        "conceptTarget": "Supervised Learning"
+      },
+      {
+        "id": "fb-Ar-Beg-2",
+        "text": "What does CNN stand for in neural networks?",
+        "options": [
+          "Artificial Neural Network",
+          "Automated Natural Node",
+          "Algorithmic Number Network",
+          "None"
+        ],
+        "correctOption": "Artificial Neural Network",
+        "conceptTarget": "Neural Networks"
+      },
+      {
+        "id": "fb-Ar-Beg-3",
+        "text": "What is the goal of Unsupervised Learning in Machine Learning?",
+        "options": [
+          "Memorize data",
+          "Find patterns and generalize",
+          "Delete outliers",
+          "Sort data"
+        ],
+        "correctOption": "Find patterns and generalize",
+        "conceptTarget": "ML Fundamentals"
+      },
+      {
+        "id": "fb-Ar-Beg-4",
+        "text": "Which algorithm is used for classification tasks?",
+        "options": [
+          "Linear Regression",
+          "K-Means",
+          "Decision Trees",
+          "PCA"
+        ],
+        "correctOption": "Linear Regression",
+        "conceptTarget": "Supervised Learning"
+      },
+      {
+        "id": "fb-Ar-Beg-5",
+        "text": "What does ANN stand for in neural networks?",
+        "options": [
+          "Artificial Neural Network",
+          "Automated Natural Node",
+          "Algorithmic Number Network",
+          "None"
+        ],
+        "correctOption": "Artificial Neural Network",
+        "conceptTarget": "Neural Networks"
+      },
+      {
+        "id": "fb-Ar-Beg-6",
+        "text": "What is the goal of Unsupervised Learning in Machine Learning?",
+        "options": [
+          "Memorize data",
+          "Find patterns and generalize",
+          "Delete outliers",
+          "Sort data"
+        ],
+        "correctOption": "Find patterns and generalize",
+        "conceptTarget": "ML Fundamentals"
+      },
+      {
+        "id": "fb-Ar-Beg-7",
+        "text": "Which algorithm is used for classification tasks?",
+        "options": [
+          "Linear Regression",
+          "K-Means",
+          "Decision Trees",
+          "PCA"
+        ],
+        "correctOption": "Linear Regression",
+        "conceptTarget": "Supervised Learning"
+      },
+      {
+        "id": "fb-Ar-Beg-8",
+        "text": "What does ANN stand for in neural networks?",
+        "options": [
+          "Artificial Neural Network",
+          "Automated Natural Node",
+          "Algorithmic Number Network",
+          "None"
+        ],
+        "correctOption": "Artificial Neural Network",
+        "conceptTarget": "Neural Networks"
+      },
+      {
+        "id": "fb-Ar-Beg-9",
+        "text": "What is the goal of Supervised Learning in Machine Learning?",
+        "options": [
+          "Memorize data",
+          "Find patterns and generalize",
+          "Delete outliers",
+          "Sort data"
+        ],
+        "correctOption": "Find patterns and generalize",
+        "conceptTarget": "ML Fundamentals"
+      }
+    ],
+    "Intermediate": [
+      {
+        "id": "fb-Ar-Int-0",
+        "text": "How does Early Stopping prevent overfitting?",
+        "options": [
+          "By adding a penalty to the loss function",
+          "By increasing model complexity",
+          "By removing data",
+          "By changing the learning rate"
+        ],
+        "correctOption": "By adding a penalty to the loss function",
+        "conceptTarget": "Model Optimization"
+      },
+      {
+        "id": "fb-Ar-Int-1",
+        "text": "What is the purpose of Sigmoid functions?",
+        "options": [
+          "Introduce non-linearity",
+          "Speed up training",
+          "Reduce memory",
+          "Initialize weights"
+        ],
+        "correctOption": "Introduce non-linearity",
+        "conceptTarget": "Deep Learning"
+      },
+      {
+        "id": "fb-Ar-Int-2",
+        "text": "In NLP, what does Word2Vec capture?",
+        "options": [
+          "Word frequencies",
+          "Semantic relationships",
+          "Syntax trees",
+          "Character counts"
+        ],
+        "correctOption": "Semantic relationships",
+        "conceptTarget": "Natural Language Processing"
+      },
+      {
+        "id": "fb-Ar-Int-3",
+        "text": "How does Dropout prevent overfitting?",
+        "options": [
+          "By adding a penalty to the loss function",
+          "By increasing model complexity",
+          "By removing data",
+          "By changing the learning rate"
+        ],
+        "correctOption": "By adding a penalty to the loss function",
+        "conceptTarget": "Model Optimization"
+      },
+      {
+        "id": "fb-Ar-Int-4",
+        "text": "What is the purpose of Tanh functions?",
+        "options": [
+          "Introduce non-linearity",
+          "Speed up training",
+          "Reduce memory",
+          "Initialize weights"
+        ],
+        "correctOption": "Introduce non-linearity",
+        "conceptTarget": "Deep Learning"
+      },
+      {
+        "id": "fb-Ar-Int-5",
+        "text": "In NLP, what does Word2Vec capture?",
+        "options": [
+          "Word frequencies",
+          "Semantic relationships",
+          "Syntax trees",
+          "Character counts"
+        ],
+        "correctOption": "Semantic relationships",
+        "conceptTarget": "Natural Language Processing"
+      },
+      {
+        "id": "fb-Ar-Int-6",
+        "text": "How does Early Stopping prevent overfitting?",
+        "options": [
+          "By adding a penalty to the loss function",
+          "By increasing model complexity",
+          "By removing data",
+          "By changing the learning rate"
+        ],
+        "correctOption": "By adding a penalty to the loss function",
+        "conceptTarget": "Model Optimization"
+      },
+      {
+        "id": "fb-Ar-Int-7",
+        "text": "What is the purpose of Tanh functions?",
+        "options": [
+          "Introduce non-linearity",
+          "Speed up training",
+          "Reduce memory",
+          "Initialize weights"
+        ],
+        "correctOption": "Introduce non-linearity",
+        "conceptTarget": "Deep Learning"
+      },
+      {
+        "id": "fb-Ar-Int-8",
+        "text": "In NLP, what does BERT capture?",
+        "options": [
+          "Word frequencies",
+          "Semantic relationships",
+          "Syntax trees",
+          "Character counts"
+        ],
+        "correctOption": "Semantic relationships",
+        "conceptTarget": "Natural Language Processing"
+      },
+      {
+        "id": "fb-Ar-Int-9",
+        "text": "How does Early Stopping prevent overfitting?",
+        "options": [
+          "By adding a penalty to the loss function",
+          "By increasing model complexity",
+          "By removing data",
+          "By changing the learning rate"
+        ],
+        "correctOption": "By adding a penalty to the loss function",
+        "conceptTarget": "Model Optimization"
+      }
+    ],
+    "Advanced": [
+      {
+        "id": "fb-Ar-Adv-0",
+        "text": "How does the Multi-Head Attention mechanism improve sequence-to-sequence models?",
+        "options": [
+          "By focusing on relevant parts of the input",
+          "By ignoring the input",
+          "By processing sequentially",
+          "By using convolutions"
+        ],
+        "correctOption": "By focusing on relevant parts of the input",
+        "conceptTarget": "Transformer Architecture"
+      },
+      {
+        "id": "fb-Ar-Adv-1",
+        "text": "What is the main challenge in training WGANs?",
+        "options": [
+          "Mode collapse",
+          "Too much data",
+          "Fast convergence",
+          "Easy evaluation"
+        ],
+        "correctOption": "Mode collapse",
+        "conceptTarget": "Generative Models"
+      },
+      {
+        "id": "fb-Ar-Adv-2",
+        "text": "In Reinforcement Learning, what equation defines the optimal policy?",
+        "options": [
+          "Schrodinger",
+          "Bellman",
+          "Euler",
+          "Navier-Stokes"
+        ],
+        "correctOption": "Bellman",
+        "conceptTarget": "Reinforcement Learning"
+      },
+      {
+        "id": "fb-Ar-Adv-3",
+        "text": "How does the Self-Attention mechanism improve sequence-to-sequence models?",
+        "options": [
+          "By focusing on relevant parts of the input",
+          "By ignoring the input",
+          "By processing sequentially",
+          "By using convolutions"
+        ],
+        "correctOption": "By focusing on relevant parts of the input",
+        "conceptTarget": "Transformer Architecture"
+      },
+      {
+        "id": "fb-Ar-Adv-4",
+        "text": "What is the main challenge in training WGANs?",
+        "options": [
+          "Mode collapse",
+          "Too much data",
+          "Fast convergence",
+          "Easy evaluation"
+        ],
+        "correctOption": "Mode collapse",
+        "conceptTarget": "Generative Models"
+      },
+      {
+        "id": "fb-Ar-Adv-5",
+        "text": "In Reinforcement Learning, what equation defines the optimal policy?",
+        "options": [
+          "Schrodinger",
+          "Bellman",
+          "Euler",
+          "Navier-Stokes"
+        ],
+        "correctOption": "Bellman",
+        "conceptTarget": "Reinforcement Learning"
+      },
+      {
+        "id": "fb-Ar-Adv-6",
+        "text": "How does the Self-Attention mechanism improve sequence-to-sequence models?",
+        "options": [
+          "By focusing on relevant parts of the input",
+          "By ignoring the input",
+          "By processing sequentially",
+          "By using convolutions"
+        ],
+        "correctOption": "By focusing on relevant parts of the input",
+        "conceptTarget": "Transformer Architecture"
+      },
+      {
+        "id": "fb-Ar-Adv-7",
+        "text": "What is the main challenge in training DCGANs?",
+        "options": [
+          "Mode collapse",
+          "Too much data",
+          "Fast convergence",
+          "Easy evaluation"
+        ],
+        "correctOption": "Mode collapse",
+        "conceptTarget": "Generative Models"
+      },
+      {
+        "id": "fb-Ar-Adv-8",
+        "text": "In Reinforcement Learning, what equation defines the optimal policy?",
+        "options": [
+          "Schrodinger",
+          "Bellman",
+          "Euler",
+          "Navier-Stokes"
+        ],
+        "correctOption": "Bellman",
+        "conceptTarget": "Reinforcement Learning"
+      },
+      {
+        "id": "fb-Ar-Adv-9",
+        "text": "How does the Scaled Dot-Product mechanism improve sequence-to-sequence models?",
+        "options": [
+          "By focusing on relevant parts of the input",
+          "By ignoring the input",
+          "By processing sequentially",
+          "By using convolutions"
+        ],
+        "correctOption": "By focusing on relevant parts of the input",
+        "conceptTarget": "Transformer Architecture"
+      }
+    ]
+  },
+  "Software Engineering": {
+    "Beginner": [
+      {
+        "id": "fb-So-Beg-0",
+        "text": "What is the primary purpose of SVN control?",
+        "options": [
+          "Write code",
+          "Track changes",
+          "Compile code",
+          "Deploy code"
+        ],
+        "correctOption": "Track changes",
+        "conceptTarget": "Version Control"
+      },
+      {
+        "id": "fb-So-Beg-1",
+        "text": "In OOP, what does Inheritance allow?",
+        "options": [
+          "Hiding data",
+          "Code reuse",
+          "Multiple inheritance",
+          "Polymorphism"
+        ],
+        "correctOption": "Hiding data",
+        "conceptTarget": "Object-Oriented Programming"
+      },
+      {
+        "id": "fb-So-Beg-2",
+        "text": "What does HTML stand for?",
+        "options": [
+          "Hyper Text Markup Language",
+          "High Tech Machine Learning",
+          "Hyperlink Text Module Language",
+          "None"
+        ],
+        "correctOption": "Hyper Text Markup Language",
+        "conceptTarget": "Web Fundamentals"
+      },
+      {
+        "id": "fb-So-Beg-3",
+        "text": "What is the primary purpose of SVN control?",
+        "options": [
+          "Write code",
+          "Track changes",
+          "Compile code",
+          "Deploy code"
+        ],
+        "correctOption": "Track changes",
+        "conceptTarget": "Version Control"
+      },
+      {
+        "id": "fb-So-Beg-4",
+        "text": "In OOP, what does Encapsulation allow?",
+        "options": [
+          "Hiding data",
+          "Code reuse",
+          "Multiple inheritance",
+          "Polymorphism"
+        ],
+        "correctOption": "Hiding data",
+        "conceptTarget": "Object-Oriented Programming"
+      },
+      {
+        "id": "fb-So-Beg-5",
+        "text": "What does XML stand for?",
+        "options": [
+          "Hyper Text Markup Language",
+          "High Tech Machine Learning",
+          "Hyperlink Text Module Language",
+          "None"
+        ],
+        "correctOption": "Hyper Text Markup Language",
+        "conceptTarget": "Web Fundamentals"
+      },
+      {
+        "id": "fb-So-Beg-6",
+        "text": "What is the primary purpose of SVN control?",
+        "options": [
+          "Write code",
+          "Track changes",
+          "Compile code",
+          "Deploy code"
+        ],
+        "correctOption": "Track changes",
+        "conceptTarget": "Version Control"
+      },
+      {
+        "id": "fb-So-Beg-7",
+        "text": "In OOP, what does Inheritance allow?",
+        "options": [
+          "Hiding data",
+          "Code reuse",
+          "Multiple inheritance",
+          "Polymorphism"
+        ],
+        "correctOption": "Hiding data",
+        "conceptTarget": "Object-Oriented Programming"
+      },
+      {
+        "id": "fb-So-Beg-8",
+        "text": "What does HTML stand for?",
+        "options": [
+          "Hyper Text Markup Language",
+          "High Tech Machine Learning",
+          "Hyperlink Text Module Language",
+          "None"
+        ],
+        "correctOption": "Hyper Text Markup Language",
+        "conceptTarget": "Web Fundamentals"
+      },
+      {
+        "id": "fb-So-Beg-9",
+        "text": "What is the primary purpose of Mercurial control?",
+        "options": [
+          "Write code",
+          "Track changes",
+          "Compile code",
+          "Deploy code"
+        ],
+        "correctOption": "Track changes",
+        "conceptTarget": "Version Control"
+      }
+    ],
+    "Intermediate": [
+      {
+        "id": "fb-So-Int-0",
+        "text": "Which design pattern ensures a class has only one object?",
+        "options": [
+          "Factory",
+          "Singleton",
+          "Observer",
+          "Decorator"
+        ],
+        "correctOption": "Singleton",
+        "conceptTarget": "Design Patterns"
+      },
+      {
+        "id": "fb-So-Int-1",
+        "text": "What is the main benefit of Microservices architecture?",
+        "options": [
+          "Easier deployment",
+          "Independent scaling",
+          "Less code",
+          "No network latency"
+        ],
+        "correctOption": "Independent scaling",
+        "conceptTarget": "System Architecture"
+      },
+      {
+        "id": "fb-So-Int-2",
+        "text": "In SQL, what type of join returns all rows from the outer table?",
+        "options": [
+          "INNER",
+          "LEFT",
+          "RIGHT",
+          "FULL"
+        ],
+        "correctOption": "LEFT",
+        "conceptTarget": "Databases"
+      },
+      {
+        "id": "fb-So-Int-3",
+        "text": "Which design pattern ensures a class has only one object?",
+        "options": [
+          "Factory",
+          "Singleton",
+          "Observer",
+          "Decorator"
+        ],
+        "correctOption": "Singleton",
+        "conceptTarget": "Design Patterns"
+      },
+      {
+        "id": "fb-So-Int-4",
+        "text": "What is the main benefit of Microservices architecture?",
+        "options": [
+          "Easier deployment",
+          "Independent scaling",
+          "Less code",
+          "No network latency"
+        ],
+        "correctOption": "Independent scaling",
+        "conceptTarget": "System Architecture"
+      },
+      {
+        "id": "fb-So-Int-5",
+        "text": "In SQL, what type of join returns all rows from the left table?",
+        "options": [
+          "INNER",
+          "LEFT",
+          "RIGHT",
+          "FULL"
+        ],
+        "correctOption": "LEFT",
+        "conceptTarget": "Databases"
+      },
+      {
+        "id": "fb-So-Int-6",
+        "text": "Which design pattern ensures a class has only one creation?",
+        "options": [
+          "Factory",
+          "Singleton",
+          "Observer",
+          "Decorator"
+        ],
+        "correctOption": "Singleton",
+        "conceptTarget": "Design Patterns"
+      },
+      {
+        "id": "fb-So-Int-7",
+        "text": "What is the main benefit of Decoupled architecture?",
+        "options": [
+          "Easier deployment",
+          "Independent scaling",
+          "Less code",
+          "No network latency"
+        ],
+        "correctOption": "Independent scaling",
+        "conceptTarget": "System Architecture"
+      },
+      {
+        "id": "fb-So-Int-8",
+        "text": "In SQL, what type of join returns all rows from the outer table?",
+        "options": [
+          "INNER",
+          "LEFT",
+          "RIGHT",
+          "FULL"
+        ],
+        "correctOption": "LEFT",
+        "conceptTarget": "Databases"
+      },
+      {
+        "id": "fb-So-Int-9",
+        "text": "Which design pattern ensures a class has only one object?",
+        "options": [
+          "Factory",
+          "Singleton",
+          "Observer",
+          "Decorator"
+        ],
+        "correctOption": "Singleton",
+        "conceptTarget": "Design Patterns"
+      }
+    ],
+    "Advanced": [
+      {
+        "id": "fb-So-Adv-0",
+        "text": "How does Brewer theorem restrict distributed systems?",
+        "options": [
+          "Can't have Consistency, Availability, Partition tolerance simultaneously",
+          "Must use NoSQL",
+          "Limits data size",
+          "Requires synchronous replication"
+        ],
+        "correctOption": "Can't have Consistency, Availability, Partition tolerance simultaneously",
+        "conceptTarget": "Distributed Systems"
+      },
+      {
+        "id": "fb-So-Adv-1",
+        "text": "What is a major advantage of Event-Driven sourcing?",
+        "options": [
+          "Smaller database",
+          "Complete history of state changes",
+          "Faster queries",
+          "Simpler schema"
+        ],
+        "correctOption": "Complete history of state changes",
+        "conceptTarget": "System Architecture"
+      },
+      {
+        "id": "fb-So-Adv-2",
+        "text": "In concurrency, how do you prevent a livelock?",
+        "options": [
+          "Resource ordering",
+          "More threads",
+          "Less memory",
+          "Global locks"
+        ],
+        "correctOption": "Resource ordering",
+        "conceptTarget": "Concurrency"
+      },
+      {
+        "id": "fb-So-Adv-3",
+        "text": "How does CAP theorem restrict distributed systems?",
+        "options": [
+          "Can't have Consistency, Availability, Partition tolerance simultaneously",
+          "Must use NoSQL",
+          "Limits data size",
+          "Requires synchronous replication"
+        ],
+        "correctOption": "Can't have Consistency, Availability, Partition tolerance simultaneously",
+        "conceptTarget": "Distributed Systems"
+      },
+      {
+        "id": "fb-So-Adv-4",
+        "text": "What is a major advantage of CQRS sourcing?",
+        "options": [
+          "Smaller database",
+          "Complete history of state changes",
+          "Faster queries",
+          "Simpler schema"
+        ],
+        "correctOption": "Complete history of state changes",
+        "conceptTarget": "System Architecture"
+      },
+      {
+        "id": "fb-So-Adv-5",
+        "text": "In concurrency, how do you prevent a livelock?",
+        "options": [
+          "Resource ordering",
+          "More threads",
+          "Less memory",
+          "Global locks"
+        ],
+        "correctOption": "Resource ordering",
+        "conceptTarget": "Concurrency"
+      },
+      {
+        "id": "fb-So-Adv-6",
+        "text": "How does CAP theorem restrict distributed systems?",
+        "options": [
+          "Can't have Consistency, Availability, Partition tolerance simultaneously",
+          "Must use NoSQL",
+          "Limits data size",
+          "Requires synchronous replication"
+        ],
+        "correctOption": "Can't have Consistency, Availability, Partition tolerance simultaneously",
+        "conceptTarget": "Distributed Systems"
+      },
+      {
+        "id": "fb-So-Adv-7",
+        "text": "What is a major advantage of CQRS sourcing?",
+        "options": [
+          "Smaller database",
+          "Complete history of state changes",
+          "Faster queries",
+          "Simpler schema"
+        ],
+        "correctOption": "Complete history of state changes",
+        "conceptTarget": "System Architecture"
+      },
+      {
+        "id": "fb-So-Adv-8",
+        "text": "In concurrency, how do you prevent a race condition?",
+        "options": [
+          "Resource ordering",
+          "More threads",
+          "Less memory",
+          "Global locks"
+        ],
+        "correctOption": "Resource ordering",
+        "conceptTarget": "Concurrency"
+      },
+      {
+        "id": "fb-So-Adv-9",
+        "text": "How does Brewer theorem restrict distributed systems?",
+        "options": [
+          "Can't have Consistency, Availability, Partition tolerance simultaneously",
+          "Must use NoSQL",
+          "Limits data size",
+          "Requires synchronous replication"
+        ],
+        "correctOption": "Can't have Consistency, Availability, Partition tolerance simultaneously",
+        "conceptTarget": "Distributed Systems"
+      }
+    ]
+  }
+}

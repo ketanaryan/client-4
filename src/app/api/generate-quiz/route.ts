@@ -1,3 +1,4 @@
+import { fallbackQuizData } from '@/lib/fallback-quiz-data';
 import { createGoogleGenerativeAI } from '@ai-sdk/google';
 import { generateObject } from 'ai';
 import { z } from 'zod';
@@ -25,6 +26,8 @@ const requestSchema = z.object({
 });
 
 export async function POST(req: Request) {
+  let targetDomain = "";
+  let academicLevel = "";
   try {
     const body = await req.json();
     const parsedBody = requestSchema.safeParse(body);
@@ -34,7 +37,9 @@ export async function POST(req: Request) {
       throw new Error("Invalid request payload");
     }
 
-    const { targetDomain, academicLevel, priorKnowledge } = parsedBody.data;
+    targetDomain = parsedBody.data.targetDomain;
+    academicLevel = parsedBody.data.academicLevel;
+    const priorKnowledge = parsedBody.data.priorKnowledge;
 
     const prompt = `
       You are an expert academic evaluator and diagnostic system architect.
@@ -62,40 +67,16 @@ export async function POST(req: Request) {
     console.error("Quiz Generation Error, falling back to dummy data:", error);
     await new Promise(resolve => setTimeout(resolve, 2000));
     // Hardcoded dummy data for presentations so the app doesn't break if API fails
-    const questionPool = [
-      { text: 'In the context of the requested domain, which approach provides the most robust optimization?', options: ['Brute Force', 'Dynamic Programming', 'Randomized Selection', 'Linear Search'], correctOption: 'Dynamic Programming', conceptTarget: 'Optimization Strategies' },
-      { text: 'What is the primary advantage of utilizing a closed-loop remediation engine?', options: ['Higher latency', 'Static pathway generation', 'Dynamic real-time adaptation', 'Reduced analytics capability'], correctOption: 'Dynamic real-time adaptation', conceptTarget: 'System Architecture' },
-      { text: 'How does Reinforcement Learning from Human Feedback (RLHF) improve outcomes?', options: ['By ignoring user input', 'By updating weights based on scalar rewards', 'By generating random noise', 'By locking out users'], correctOption: 'By updating weights based on scalar rewards', conceptTarget: 'Machine Learning' },
-      { text: 'Which cryptographic method ensures Differential Privacy compliance during metric aggregation?', options: ['AES-256', 'Laplacian Noise Injection', 'SHA-256 Hashing', 'RSA Signatures'], correctOption: 'Laplacian Noise Injection', conceptTarget: 'Data Privacy' },
-      { text: 'In Explainable AI (XAI), what is the primary purpose of outputting a natural-language rationale?', options: ['To increase token costs', 'To build user trust and transparency', 'To slow down rendering', 'To obfuscate the model logic'], correctOption: 'To build user trust and transparency', conceptTarget: 'Explainable AI' },
-      { text: 'Which design pattern is best suited for managing complex state transitions in a frontend application?', options: ['Singleton', 'Observer', 'State Machine', 'Factory'], correctOption: 'State Machine', conceptTarget: 'State Management' },
-      { text: 'When designing a highly available distributed database, which theorem dictates the inherent trade-offs?', options: ['Pythagorean Theorem', 'CAP Theorem', 'Moore\'s Law', 'Amdahl\'s Law'], correctOption: 'CAP Theorem', conceptTarget: 'Distributed Systems' },
-      { text: 'What is the main benefit of using Server-Side Rendering (SSR) over Client-Side Rendering (CSR) for e-commerce?', options: ['Slower initial load', 'Better SEO and faster First Contentful Paint', 'Requires no backend infrastructure', 'Reduces server costs'], correctOption: 'Better SEO and faster First Contentful Paint', conceptTarget: 'Web Architecture' },
-      { text: 'In React, what is the primary risk of mutating state directly instead of using a setter function?', options: ['It will cause infinite loops', 'The component will not re-render to reflect the change', 'It increases memory usage', 'It deletes the component'], correctOption: 'The component will not re-render to reflect the change', conceptTarget: 'Frontend Frameworks' },
-      { text: 'Which protocol is strictly connectionless and provides no guarantee of delivery?', options: ['TCP', 'HTTP', 'UDP', 'FTP'], correctOption: 'UDP', conceptTarget: 'Networking' },
-      { text: 'In neural networks, what problem does the ReLU activation function primarily solve compared to Sigmoid?', options: ['Overfitting', 'Vanishing Gradient Problem', 'High memory usage', 'Exploding gradients'], correctOption: 'Vanishing Gradient Problem', conceptTarget: 'Deep Learning' },
-      { text: 'What does Big O notation describe in algorithm analysis?', options: ['The exact execution time in seconds', 'The upper bound of algorithmic complexity', 'The lower bound of memory usage', 'The number of lines of code'], correctOption: 'The upper bound of algorithmic complexity', conceptTarget: 'Algorithmic Complexity' },
-      { text: 'Which SQL command is used to combine rows from two or more tables based on a related column?', options: ['MERGE', 'APPEND', 'JOIN', 'CONCAT'], correctOption: 'JOIN', conceptTarget: 'Databases' },
-      { text: 'In Git, what is the safest way to undo a published commit without rewriting history?', options: ['git reset --hard', 'git revert', 'git rebase', 'git delete'], correctOption: 'git revert', conceptTarget: 'Version Control' },
-      { text: 'What is the primary vulnerability prevented by using parameterized queries?', options: ['Cross-Site Scripting (XSS)', 'SQL Injection', 'Cross-Site Request Forgery (CSRF)', 'Buffer Overflow'], correctOption: 'SQL Injection', conceptTarget: 'Cybersecurity' },
-      { text: 'Which data structure uses LIFO (Last In, First Out) ordering?', options: ['Queue', 'Stack', 'Tree', 'Graph'], correctOption: 'Stack', conceptTarget: 'Data Structures' },
-      { text: 'In Object-Oriented Programming, what principle allows a subclass to provide a specific implementation of a method that is already provided by its superclass?', options: ['Encapsulation', 'Polymorphism', 'Inheritance', 'Abstraction'], correctOption: 'Polymorphism', conceptTarget: 'Object-Oriented Programming' },
-      { text: 'What does REST stand for in web services?', options: ['Reliable State Transfer', 'Representational State Transfer', 'Remote Execution System Technology', 'Rapid Event Sourcing Transmission'], correctOption: 'Representational State Transfer', conceptTarget: 'API Design' },
-      { text: 'Which sorting algorithm has an average time complexity of O(n log n) and uses a pivot element?', options: ['Bubble Sort', 'Insertion Sort', 'Quick Sort', 'Selection Sort'], correctOption: 'Quick Sort', conceptTarget: 'Algorithms' },
-      { text: 'What is the primary function of a reverse proxy server?', options: ['To block outgoing traffic', 'To encrypt local storage', 'To direct client requests to the appropriate backend server', 'To compile frontend assets'], correctOption: 'To direct client requests to the appropriate backend server', conceptTarget: 'Infrastructure' },
-      { text: 'Which of the following is a NoSQL database?', options: ['PostgreSQL', 'MySQL', 'MongoDB', 'Oracle'], correctOption: 'MongoDB', conceptTarget: 'Databases' },
-      { text: 'What does a Docker container package together?', options: ['Code and its dependencies', 'Only the source code', 'Just the operating system', 'Hardware drivers'], correctOption: 'Code and its dependencies', conceptTarget: 'DevOps' },
-      { text: 'In Agile methodology, what is the purpose of a Sprint Retrospective?', options: ['To plan the next sprint', 'To demonstrate the product to clients', 'To reflect on what went well and what can be improved', 'To write code'], correctOption: 'To reflect on what went well and what can be improved', conceptTarget: 'Software Engineering' },
-      { text: 'What is the main advantage of using a Content Delivery Network (CDN)?', options: ['It increases server storage capacity', 'It reduces latency by serving assets from geographically closer servers', 'It automatically writes backend code', 'It prevents SQL injection'], correctOption: 'It reduces latency by serving assets from geographically closer servers', conceptTarget: 'Web Architecture' },
-      { text: 'Which programming paradigm treats computation as the evaluation of mathematical functions and avoids changing-state and mutable data?', options: ['Object-Oriented', 'Imperative', 'Functional', 'Procedural'], correctOption: 'Functional', conceptTarget: 'Programming Paradigms' },
-      { text: 'In cloud computing, what does IaaS stand for?', options: ['Internet as a Service', 'Infrastructure as a Service', 'Information as a Service', 'Integration as a Service'], correctOption: 'Infrastructure as a Service', conceptTarget: 'Cloud Computing' },
-      { text: 'What is the purpose of the virtual DOM in React?', options: ['To directly manipulate the browser DOM', 'To optimize rendering by minimizing expensive real DOM updates', 'To act as a database', 'To manage server-side routing'], correctOption: 'To optimize rendering by minimizing expensive real DOM updates', conceptTarget: 'Frontend Frameworks' },
-      { text: 'Which type of testing verifies that different modules or services work together correctly?', options: ['Unit Testing', 'Integration Testing', 'Performance Testing', 'A/B Testing'], correctOption: 'Integration Testing', conceptTarget: 'Software Testing' },
-      { text: 'What is the role of a Load Balancer?', options: ['To write code faster', 'To securely store passwords', 'To distribute network traffic across multiple servers', 'To design the user interface'], correctOption: 'To distribute network traffic across multiple servers', conceptTarget: 'System Architecture' },
-      { text: 'In microservices architecture, what is a common challenge?', options: ['Too much shared code', 'Difficulty in data consistency and inter-service communication', 'Lack of scalability', 'Inability to use different technologies'], correctOption: 'Difficulty in data consistency and inter-service communication', conceptTarget: 'Software Architecture' },
-      { text: 'Which HTTP method is typically used to partially update a resource?', options: ['GET', 'POST', 'PUT', 'PATCH'], correctOption: 'PATCH', conceptTarget: 'API Design' },
-      { text: 'What is the primary use of a JWT (JSON Web Token)?', options: ['Styling web pages', 'Securely transmitting information between parties as a JSON object', 'Storing large binary files', 'Executing database queries'], correctOption: 'Securely transmitting information between parties as a JSON object', conceptTarget: 'Security' }
-    ];
+    // Read from the pre-bundled TS file
+    let questionPool: any[] = [];
+    const domainMap: Record<string, string> = {
+      'computer-engineering': 'Computer Engineering',
+      'artificial-intelligence': 'Artificial Intelligence',
+      'software-engineering': 'Software Engineering'
+    };
+    const actualDomain = domainMap[targetDomain] || 'Computer Engineering';
+    const actualLevel = academicLevel || 'Beginner';
+    questionPool = fallbackQuizData[actualDomain]?.[actualLevel] || fallbackQuizData['Computer Engineering']['Beginner'];
 
     // Shuffle the array using Fisher-Yates and pick the first 5
     for (let i = questionPool.length - 1; i > 0; i--) {
