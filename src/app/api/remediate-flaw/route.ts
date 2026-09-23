@@ -20,7 +20,7 @@ export async function POST(req: Request) {
       A student has just failed a diagnostic question related to the concept: "${flawConcept}".
       
       Generate a concise, highly engaging micro-lesson to explain this concept clearly to them. 
-      Format the response in Markdown. Use analogies if helpful. Keep it under 200 words.
+      Respond in plain text paragraphs. DO NOT use markdown formatting (no bolding, no headings, no asterisks). Use analogies if helpful. Keep it under 200 words.
     `;
 
     const result = await streamText({
@@ -35,12 +35,11 @@ export async function POST(req: Request) {
     await new Promise(resolve => setTimeout(resolve, 1500)); // Fake generation delay
 
     const fallbackMarkdown = `
-**${fallbackFlawConcept}** is a critical concept in this domain that bridges the gap between basic theory and advanced application.
+${fallbackFlawConcept} is a critical concept in this domain that bridges the gap between basic theory and advanced application.
 
 Think of it like reading a book. If you read every single word to find a specific phrase, it takes longer the thicker the book gets. But if you have an index at the back that points exactly to the page, it takes the same amount of effort regardless of how massive the book is. Mastery of this concept allows you to build systems that scale effortlessly.
 
-### Key Takeaway
-Always look for ways to optimize your approach when dealing with ${fallbackFlawConcept}, as overlooking it can cause significant bottlenecks in real-world environments!
+Key Takeaway: Always look for ways to optimize your approach when dealing with ${fallbackFlawConcept}, as overlooking it can cause significant bottlenecks in real-world environments!
     `.trim();
 
     return new Response(fallbackMarkdown, {

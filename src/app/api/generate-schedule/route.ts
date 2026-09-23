@@ -18,7 +18,10 @@ export async function POST(req: Request) {
       They have committed to studying for ${timeCommitment || '5'} hours per week.
       
       Generate a practical, week-long study schedule that breaks this time down day-by-day.
-      Format the output in clean, readable Markdown. Do not include introductory fluff, just start with the schedule.
+      Format the output using EXACTLY this markdown structure (do not use asterisks for bolding):
+      ## Day of Week
+      - Study task 1
+      - Study task 2
       
       Make the schedule interesting, realistic, and include time for reviewing concepts (spaced repetition) and hands-on practice.
     `;
@@ -37,17 +40,17 @@ export async function POST(req: Request) {
     const dailyHours = Math.max(1, Math.floor(baseHours / 4)); // Distribute across 4 study days
 
     const fallbackSchedule = `
-**Monday**
-* ${dailyHours} hour(s): Core concepts & reading for ${fallbackDomainName}
+## Monday
+- ${dailyHours} hour(s): Core concepts & reading for ${fallbackDomainName}
 
-**Wednesday**
-* ${dailyHours} hour(s): Hands-on practice projects
+## Wednesday
+- ${dailyHours} hour(s): Hands-on practice projects
 
-**Friday**
-* ${dailyHours} hour(s): Weekly review and spaced repetition flashcards
+## Friday
+- ${dailyHours} hour(s): Weekly review and spaced repetition flashcards
 
-**Weekend**
-* ${Math.max(1, dailyHours * 2)} hour(s): Deep dive into current locked flaws
+## Weekend
+- ${Math.max(1, dailyHours * 2)} hour(s): Deep dive into current locked flaws
     `.trim();
 
     return NextResponse.json({ schedule: fallbackSchedule });
