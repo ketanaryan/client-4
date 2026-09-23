@@ -93,8 +93,8 @@ for (const domain of Object.keys(domains)) {
     const templates = domains[domain][level];
     let pool = [];
     
-    // Generate exactly 10 variations per level per domain (30 per domain)
-    for (let i = 0; i < 10; i++) {
+    // Generate exactly 30 variations per level per domain (90 per domain, 270 total)
+    for (let i = 0; i < 30; i++) {
       const template = templates[i % templates.length];
       let text = template.text;
       
