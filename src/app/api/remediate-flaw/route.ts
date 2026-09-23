@@ -32,12 +32,12 @@ export async function POST(req: Request) {
     await new Promise(resolve => setTimeout(resolve, 1500)); // Fake generation delay
 
     const fallbackMarkdown = `
-**Algorithmic Complexity** is a way to measure how the runtime or memory requirements of an algorithm grow as the size of the input data increases.
+**${flawConcept}** is a critical concept in this domain that bridges the gap between basic theory and advanced application.
 
-Think of it like reading a book. If you read every single word to find a specific phrase, that's $O(n)$ time—it takes longer the thicker the book gets. But if you have an index at the back that points exactly to the page, that's $O(1)$ time—it takes the same amount of effort regardless of how massive the book is.
+Think of it like reading a book. If you read every single word to find a specific phrase, it takes longer the thicker the book gets. But if you have an index at the back that points exactly to the page, it takes the same amount of effort regardless of how massive the book is. Mastery of this concept allows you to build systems that scale effortlessly.
 
 ### Key Takeaway
-Always look for ways to avoid nested loops ($O(n^2)$) when working with large datasets, as they can cause your application to freeze!
+Always look for ways to optimize your approach when dealing with ${flawConcept}, as overlooking it can cause significant bottlenecks in real-world environments!
     `.trim();
 
     return new Response(fallbackMarkdown, {

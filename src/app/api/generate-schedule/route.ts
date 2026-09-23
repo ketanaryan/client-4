@@ -28,18 +28,21 @@ export async function POST(req: Request) {
     console.error('Error generating schedule, falling back to dummy data:', error);
     await new Promise(resolve => setTimeout(resolve, 1500));
     
+    const baseHours = timeCommitment ? parseInt(timeCommitment.split('-')[0]) || 2 : 2;
+    const dailyHours = Math.max(1, Math.floor(baseHours / 4)); // Distribute across 4 study days
+
     const fallbackSchedule = `
 **Monday**
-* 1 hour: Core concepts & reading
+* ${dailyHours} hour(s): Core concepts & reading for ${domainName || 'your target domain'}
 
 **Wednesday**
-* 1 hour: Hands-on practice projects
+* ${dailyHours} hour(s): Hands-on practice projects
 
 **Friday**
-* 1 hour: Weekly review and spaced repetition flashcards
+* ${dailyHours} hour(s): Weekly review and spaced repetition flashcards
 
 **Weekend**
-* 2 hours: Deep dive into current locked flaws
+* ${Math.max(1, dailyHours * 2)} hour(s): Deep dive into current locked flaws
     `.trim();
 
     return NextResponse.json({ schedule: fallbackSchedule });

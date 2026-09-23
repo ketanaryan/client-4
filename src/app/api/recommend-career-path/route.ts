@@ -83,12 +83,12 @@ export async function POST(req: Request) {
     await new Promise(resolve => setTimeout(resolve, 2000));
     const fallbackPaths = [
       {
-        title: "Systems Architect",
-        match_reason: "Your strong foundation in computer engineering combined with your analytical approach makes you ideal for designing large-scale distributed systems.",
+        title: `Lead ${domainProfile?.domain_name || 'Systems'} Architect`,
+        match_reason: `Your strong foundation in ${domainProfile?.domain_name || 'this domain'} combined with your analytical approach makes you ideal for designing large-scale distributed systems.`,
         growth_potential: "High Demand"
       },
       {
-        title: "Embedded Systems Engineer",
+        title: `Senior ${domainProfile?.domain_name || 'Integration'} Engineer`,
         match_reason: "Leverages your interest in hardware-software integration and low-level optimization.",
         growth_potential: "Steady Growth"
       },

@@ -84,7 +84,7 @@ export async function POST(req: Request) {
         title: 'Foundations of Modern Architectures',
         type: 'Course',
         status: 'Locked',
-        flaws: ['Algorithmic Complexity', 'State Management'],
+        flaws: flaws && flaws.length > 0 ? flaws : ['Core Concepts'],
         reasoning: 'Since your diagnostic score revealed specific gaps in core concepts, this course is designed to rebuild your foundational logic.'
       },
       {
