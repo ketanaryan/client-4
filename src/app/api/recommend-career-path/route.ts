@@ -55,7 +55,7 @@ export async function POST(req: Request) {
     `;
 
     const { object } = await generateObject({
-      model: google('gemini-1.5-flash'),
+      model: google('gemini-3.5-flash'),
       schema: pathSchema,
       prompt: prompt,
     });
