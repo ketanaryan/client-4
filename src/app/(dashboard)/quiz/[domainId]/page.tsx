@@ -83,7 +83,7 @@ export default function QuizPage() {
         <div className="w-12 h-12 border-4 border-zinc-200 border-t-blue-600 rounded-full animate-spin"></div>
         <div className="text-center">
           <h2 className="text-xl font-bold text-zinc-900">Initializing Diagnostic Engine</h2>
-          <p className="text-zinc-500 mt-2">Gemini AI is analyzing your competency profile and crafting an adaptive assessment...</p>
+          <p className="text-zinc-500 mt-2">Our AI is analyzing your competency profile and crafting an adaptive assessment...</p>
         </div>
       </div>
     );
