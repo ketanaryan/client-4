@@ -323,12 +323,10 @@ export default function PathwayRecommendationsPage() {
                                         )}
                                       </div>
                                       <div className="p-4 border-t border-zinc-200 bg-white flex justify-end gap-2">
-                                        <DialogClose asChild>
-                                          <Button variant="outline" className="border-zinc-200 text-zinc-700" onClick={() => handleMarkUnderstood(flaw)}>
-                                            Mark as Understood
-                                          </Button>
+                                        <DialogClose render={<Button variant="outline" className="border-zinc-200 text-zinc-700" onClick={() => handleMarkUnderstood(flaw)} />}>
+                                          Mark as Understood
                                         </DialogClose>
-                                        <Button className="bg-indigo-600 hover:bg-indigo-700 text-white">Continue to Course</Button>
+                                        <Button className="bg-indigo-600 hover:bg-indigo-700 text-white" onClick={() => alert("Presentation Demo: This would open the interactive LMS module to remediate this specific concept gap.")}>Continue to Course</Button>
                                       </div>
                                     </DialogContent>
                                   </Dialog>
