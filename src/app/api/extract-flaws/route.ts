@@ -25,7 +25,7 @@ const requestSchema = z.object({
   userId: z.string(),
   domainProfileId: z.string(),
   questions: z.array(z.any()),
-  answers: z.record(z.string())
+  answers: z.record(z.string(), z.string())
 });
 
 export async function POST(req: Request) {
