@@ -60,26 +60,28 @@ export default function PathwayRecommendationsPage() {
       setDomainProfile(userDomain);
 
       // Get latest quiz result
-      const { data: latestQuiz } = await supabase
-        .from('quiz_results')
-        .select('id, score')
-        .eq('user_id', user.id)
-        .order('created_at', { ascending: false })
-        .limit(1)
-        .single();
+      if (userDomain) {
+        const { data: latestQuiz } = await supabase
+          .from('quiz_results')
+          .select('id, score')
+          .eq('domain_profile_id', userDomain.id)
+          .order('created_at', { ascending: false })
+          .limit(1)
+          .single();
 
-      if (latestQuiz) {
-        setScore(latestQuiz.score);
-        
-        // Get flaws for this quiz
-        const { data: identifiedFlaws } = await supabase
-          .from('identified_flaws')
-          .select('*')
-          .eq('quiz_result_id', latestQuiz.id)
-          .eq('is_remediated', false);
+        if (latestQuiz) {
+          setScore(latestQuiz.score);
           
-        if (identifiedFlaws) {
-          setFlaws(identifiedFlaws);
+          // Get flaws for this quiz
+          const { data: identifiedFlaws } = await supabase
+            .from('identified_flaws')
+            .select('*')
+            .eq('quiz_result_id', latestQuiz.id)
+            .eq('is_remediated', false);
+            
+          if (identifiedFlaws) {
+            setFlaws(identifiedFlaws);
+          }
         }
       }
       setIsLoading(false);

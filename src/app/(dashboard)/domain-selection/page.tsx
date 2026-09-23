@@ -33,12 +33,14 @@ export default function DomainSelectionPage() {
         return;
       }
 
-      // Check if this domain already exists for the user
+      // Check if this domain already exists for the user (using domain_name since domain_id doesn't exist)
+      const domainNameStr = DOMAINS.find(d => d.id === selectedDomain)?.title || selectedDomain;
+      
       const { data: existing } = await supabase
         .from('domain_profiles')
         .select('id')
         .eq('user_id', user.id)
-        .eq('domain_id', selectedDomain)
+        .eq('domain_name', domainNameStr)
         .single();
 
       if (!existing) {
@@ -46,8 +48,7 @@ export default function DomainSelectionPage() {
           .from('domain_profiles')
           .insert({
             user_id: user.id,
-            domain_id: selectedDomain,
-            domain_name: DOMAINS.find(d => d.id === selectedDomain)?.title || selectedDomain,
+            domain_name: domainNameStr,
             current_competency_level: competency
           });
 
