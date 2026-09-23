@@ -30,10 +30,8 @@ export async function POST(req: Request) {
     const parsedBody = requestSchema.safeParse(body);
 
     if (!parsedBody.success) {
-      return NextResponse.json(
-        { error: 'Invalid request payload', details: parsedBody.error.issues },
-        { status: 400 }
-      );
+      console.error("Payload validation failed:", parsedBody.error.issues);
+      throw new Error("Invalid request payload");
     }
 
     const { targetDomain, academicLevel, priorKnowledge } = parsedBody.data;

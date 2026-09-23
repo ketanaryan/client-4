@@ -34,10 +34,8 @@ export async function POST(req: Request) {
     const parsedBody = requestSchema.safeParse(body);
 
     if (!parsedBody.success) {
-      return NextResponse.json(
-        { error: 'Invalid request payload', details: parsedBody.error.issues },
-        { status: 400 }
-      );
+      console.error("Payload validation failed:", parsedBody.error.issues);
+      throw new Error("Invalid request payload");
     }
 
     const { userId, domainProfileId, questions, answers } = parsedBody.data;
@@ -93,7 +91,7 @@ export async function POST(req: Request) {
 
     if (quizError) {
       console.error("Failed to save quiz results:", quizError);
-      return NextResponse.json({ error: "Database error saving quiz" }, { status: 500 });
+      throw new Error("Database error saving quiz");
     }
 
     // 3. If they got things wrong, extract flaws using Gemini
