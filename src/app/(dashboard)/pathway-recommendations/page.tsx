@@ -65,7 +65,7 @@ export default function PathwayRecommendationsPage() {
           .from('quiz_results')
           .select('id, score')
           .eq('domain_profile_id', userDomain.id)
-          .order('created_at', { ascending: false })
+          .order('taken_at', { ascending: false })
           .limit(1)
           .single();
 
