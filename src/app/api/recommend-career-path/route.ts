@@ -24,6 +24,8 @@ const requestSchema = z.object({
 });
 
 export async function POST(req: Request) {
+  let fallbackDomainName = 'Systems';
+
   try {
     const body = await req.json();
     const parsedBody = requestSchema.safeParse(body);
@@ -34,6 +36,9 @@ export async function POST(req: Request) {
     }
 
     const { profile, domainProfile, masteryScore, flaws } = parsedBody.data;
+    if (domainProfile?.domain_name) {
+      fallbackDomainName = domainProfile.domain_name;
+    }
 
     const prompt = `
       You are an expert academic and career counselor AI.
@@ -83,12 +88,12 @@ export async function POST(req: Request) {
     await new Promise(resolve => setTimeout(resolve, 2000));
     const fallbackPaths = [
       {
-        title: `Lead ${domainProfile?.domain_name || 'Systems'} Architect`,
-        match_reason: `Your strong foundation in ${domainProfile?.domain_name || 'this domain'} combined with your analytical approach makes you ideal for designing large-scale distributed systems.`,
+        title: `Lead ${fallbackDomainName} Architect`,
+        match_reason: `Your strong foundation in ${fallbackDomainName} combined with your analytical approach makes you ideal for designing large-scale distributed systems.`,
         growth_potential: "High Demand"
       },
       {
-        title: `Senior ${domainProfile?.domain_name || 'Integration'} Engineer`,
+        title: `Senior ${fallbackDomainName} Engineer`,
         match_reason: "Leverages your interest in hardware-software integration and low-level optimization.",
         growth_potential: "Steady Growth"
       },

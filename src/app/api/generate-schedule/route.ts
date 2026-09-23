@@ -5,8 +5,13 @@ import { NextResponse } from 'next/server';
 const google = createGoogleGenerativeAI({ apiKey: process.env.GOOGLE_GEMINI_API_KEY });
 
 export async function POST(req: Request) {
+  let fallbackTimeCommitment = '2';
+  let fallbackDomainName = 'your target domain';
+
   try {
     const { timeCommitment, domainName } = await req.json();
+    if (timeCommitment) fallbackTimeCommitment = timeCommitment;
+    if (domainName) fallbackDomainName = domainName;
 
     const prompt = `
       You are an expert academic advisor. A student is studying the domain of "${domainName || 'General Academics'}".
@@ -28,12 +33,12 @@ export async function POST(req: Request) {
     console.error('Error generating schedule, falling back to dummy data:', error);
     await new Promise(resolve => setTimeout(resolve, 1500));
     
-    const baseHours = timeCommitment ? parseInt(timeCommitment.split('-')[0]) || 2 : 2;
+    const baseHours = fallbackTimeCommitment ? parseInt(fallbackTimeCommitment.split('-')[0]) || 2 : 2;
     const dailyHours = Math.max(1, Math.floor(baseHours / 4)); // Distribute across 4 study days
 
     const fallbackSchedule = `
 **Monday**
-* ${dailyHours} hour(s): Core concepts & reading for ${domainName || 'your target domain'}
+* ${dailyHours} hour(s): Core concepts & reading for ${fallbackDomainName}
 
 **Wednesday**
 * ${dailyHours} hour(s): Hands-on practice projects
