@@ -122,6 +122,13 @@ export default function PathwayRecommendationsPage() {
     fetchCoursePathway();
   }, [isLoading, profile, domainProfile, courses.length, isGeneratingCourses, score, flaws]);
 
+  // Sync locked courses with current flaws if loaded from cache
+  useEffect(() => {
+    if (courses.length > 0 && courses[0].status === 'Locked' && flaws.length === 0 && !isLoading) {
+      setCourses(prev => prev.map((c, idx) => idx === 0 ? { ...c, status: 'Next', flaws: [] } : c));
+    }
+  }, [courses, flaws, isLoading]);
+
   const handleRemediate = async (flaw: string) => {
     setSelectedFlaw(flaw);
     setIsGenerating(true);

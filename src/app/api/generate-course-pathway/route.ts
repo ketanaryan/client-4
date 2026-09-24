@@ -135,7 +135,7 @@ export async function POST(req: Request) {
       await supabase
         .from('profiles')
         .update({ cached_course_pathway: fallbackCourses })
-        .eq('id', 'presentation-mode'); // ignore DB update failure
+        .eq('id', userId); 
     } catch (dbError) {}
 
     return NextResponse.json({ courses: fallbackCourses });
