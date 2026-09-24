@@ -76,9 +76,9 @@ export default function QuizPage() {
         };
 
         await Promise.race([fetchLogic(), timeoutPromise]);
-      } catch (error) {
+      } catch (error: any) {
         console.error("Quiz Init Error:", error);
-        if (isMounted) toast({ title: "Error", description: "An unexpected error occurred connecting to the AI engine.", variant: "destructive" });
+        if (isMounted) toast({ title: "Error", description: error?.message || "An unexpected error occurred connecting to the AI engine.", variant: "destructive" });
       } finally {
         if (isMounted) setIsInitializing(false);
       }
