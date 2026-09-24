@@ -116,11 +116,17 @@ export async function POST(req: Request) {
         Ensure your analysis is highly accurate and isolated to the specific gap in their knowledge.
       `;
 
+      const controller = new AbortController();
+      const timeoutId = setTimeout(() => controller.abort(), 7500);
+
       const { object } = await generateObject({
         model: google('gemini-3.5-flash'),
         schema: flawsSchema,
         prompt: prompt,
+        abortSignal: controller.signal
       });
+      
+      clearTimeout(timeoutId);
 
       extractedFlaws = object.flaws;
 

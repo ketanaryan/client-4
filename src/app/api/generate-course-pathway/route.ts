@@ -55,11 +55,17 @@ export async function POST(req: Request) {
       3. If they have NO flaws, set the FIRST course to 'Next' and the rest to 'Locked'.
     `;
 
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), 7500);
+
     const { object } = await generateObject({
       model: google('gemini-3.5-flash'),
       schema: pathwaySchema,
       prompt: prompt,
+      abortSignal: controller.signal
     });
+    
+    clearTimeout(timeoutId);
 
     // Cache the result in the database
     try {

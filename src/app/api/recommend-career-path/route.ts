@@ -57,11 +57,17 @@ export async function POST(req: Request) {
       For example, if they like 'Graphic Design' and study 'Computer Engineering', suggest 'Frontend Engineer' or 'UX Developer'.
     `;
 
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), 7500);
+
     const { object } = await generateObject({
       model: google('gemini-3.5-flash'),
       schema: pathSchema,
       prompt: prompt,
+      abortSignal: controller.signal
     });
+    
+    clearTimeout(timeoutId);
 
     // Cache the result in the database
     try {
