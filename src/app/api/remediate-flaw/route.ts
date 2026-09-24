@@ -23,12 +23,16 @@ export async function POST(req: Request) {
       Respond in plain text paragraphs. DO NOT use markdown formatting (no bolding, no headings, no asterisks). Use analogies if helpful. Keep it under 200 words.
     `;
 
+        const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), 7500);
+
     const result = await streamText({
       model: google('gemini-3.5-flash'),
       prompt: prompt,
+      abortSignal: controller.signal
     });
 
-    return result.toTextStreamResponse();
+    return result.toDataStreamResponse();
 
   } catch (error: any) {
     console.error("Remediate Flaw Error, falling back to dummy data:", error);
