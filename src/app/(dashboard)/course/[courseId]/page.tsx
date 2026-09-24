@@ -4,10 +4,12 @@ import { useParams, useRouter } from 'next/navigation';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { BookOpen, CheckCircle, Clock, FileText, PlayCircle } from 'lucide-react';
+import { useToast } from '@/hooks/use-toast';
 
 export default function CoursePage() {
   const params = useParams();
   const router = useRouter();
+  const { toast } = useToast();
   
   const courseId = params?.courseId as string;
   const courseTitle = decodeURIComponent(courseId || 'Module');
@@ -69,7 +71,10 @@ export default function CoursePage() {
 
               <div className="flex justify-between items-center mt-10 pt-6 border-t border-zinc-100">
                 <Button variant="outline" disabled>Previous Lesson</Button>
-                <Button className="bg-zinc-900 text-white hover:bg-zinc-800">Continue to Lesson 2</Button>
+                <Button className="bg-zinc-900 text-white hover:bg-zinc-800" onClick={() => {
+                  toast({ title: "Module Completed", description: "This concludes the interactive presentation demo." });
+                  router.push('/pathway-recommendations');
+                }}>Continue to Lesson 2</Button>
               </div>
             </CardContent>
           </Card>
