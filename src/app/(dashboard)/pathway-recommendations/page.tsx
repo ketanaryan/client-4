@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from 'react';
-import { useRouter } from 'next/navigation';
+import { useRouter, useSearchParams } from 'next/navigation';
 import { useCompletion } from '@ai-sdk/react';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -13,6 +13,7 @@ import { createClient } from '@/lib/supabase/client';
 
 export default function PathwayRecommendationsPage() {
   const router = useRouter();
+  const searchParams = useSearchParams();
   const [selectedFlaw, setSelectedFlaw] = useState<string | null>(null);
   const [isGenerating, setIsGenerating] = useState(false);
   const [flaws, setFlaws] = useState<any[]>([]);
@@ -137,6 +138,40 @@ export default function PathwayRecommendationsPage() {
     // Call the streaming API
     await complete('', { body: { flawConcept: flaw } });
   };
+
+
+  // Handle course completion from URL parameter
+  useEffect(() => {
+    if (searchParams.get('completed') === 'true' && courses.length > 0 && profile) {
+      const updatedCourses = [...courses];
+      
+      // Find the first non-completed course
+      const currentIndex = updatedCourses.findIndex(c => c.status !== 'Completed');
+      
+      if (currentIndex !== -1) {
+        // Mark current as completed
+        updatedCourses[currentIndex].status = 'Completed';
+        updatedCourses[currentIndex].flaws = [];
+        
+        // Unlock next course if it exists
+        if (currentIndex + 1 < updatedCourses.length) {
+          updatedCourses[currentIndex + 1].status = 'Next';
+        }
+        
+        setCourses(updatedCourses);
+        
+        // Save to database
+        supabase
+          .from('profiles')
+          .update({ cached_course_pathway: updatedCourses })
+          .eq('id', profile.id)
+          .then(() => {
+            // Remove the query param silently
+            router.replace('/pathway-recommendations');
+          });
+      }
+    }
+  }, [searchParams, courses, profile, router, supabase]);
 
   const handleMarkUnderstood = async (flaw: string) => {
     try {
@@ -283,10 +318,17 @@ export default function PathwayRecommendationsPage() {
                               </div>
                             )}
                           </div>
-                          <Button variant={course.status === 'Next' || idx === 0 ? 'default' : 'outline'} 
-className={course.status === 'Next' || idx === 0 ? 'bg-zinc-900 hover:bg-zinc-800 text-white shadow-sm' : ''} 
-disabled={course.status === 'Locked' && idx !== 0} onClick={() => router.push(`/course/${encodeURIComponent(course.title)}`)}>
-  {course.status === 'Locked' && idx !== 0 ? 'Locked' : 'Start Course'}
+                          <Button 
+  variant={course.status === 'Completed' ? 'secondary' : (course.status === 'Next' || idx === 0 ? 'default' : 'outline')} 
+  className={course.status === 'Completed' ? 'bg-green-50 text-green-700 hover:bg-green-100 border-green-200' : (course.status === 'Next' || idx === 0 ? 'bg-zinc-900 hover:bg-zinc-800 text-white shadow-sm' : '')} 
+  disabled={course.status === 'Locked' && idx !== 0} 
+  onClick={() => router.push(`/course/${encodeURIComponent(course.title)}`)}
+>
+  {course.status === 'Completed' ? (
+    <><CheckCircle2 className="h-4 w-4 mr-2 text-green-600" /> Completed</>
+  ) : (
+    course.status === 'Locked' && idx !== 0 ? 'Locked' : 'Start Course'
+  )}
 </Button>
                         </div>
 
