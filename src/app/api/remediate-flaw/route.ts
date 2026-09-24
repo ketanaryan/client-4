@@ -48,7 +48,7 @@ Key Takeaway: Always look for ways to optimize your approach when dealing with $
         const words = fallbackMarkdown.split(' ');
         for (let i = 0; i < words.length; i += 5) {
           const chunkWords = words.slice(i, i + 5).join(' ') + ' ';
-          const dataStreamChunk = \`0:\${JSON.stringify(chunkWords)}\\n\`;
+          const dataStreamChunk = `0:${JSON.stringify(chunkWords)}\n`;
           controller.enqueue(encoder.encode(dataStreamChunk));
           await new Promise(r => setTimeout(r, 50));
         }
