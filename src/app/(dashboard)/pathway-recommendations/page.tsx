@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from 'react';
+import { useRouter } from 'next/navigation';
 import { useCompletion } from '@ai-sdk/react';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -11,6 +12,7 @@ import { CheckCircle2, AlertCircle, PlayCircle, Briefcase, Loader2, TrendingUp, 
 import { createClient } from '@/lib/supabase/client';
 
 export default function PathwayRecommendationsPage() {
+  const router = useRouter();
   const [selectedFlaw, setSelectedFlaw] = useState<string | null>(null);
   const [isGenerating, setIsGenerating] = useState(false);
   const [flaws, setFlaws] = useState<any[]>([]);
