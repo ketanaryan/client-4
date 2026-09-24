@@ -32,7 +32,7 @@ export async function POST(req: Request) {
       abortSignal: controller.signal
     });
 
-    return result.toDataStreamResponse();
+    return result.toTextStreamResponse();
 
   } catch (error: any) {
     console.error("Remediate Flaw Error, falling back to dummy data:", error);
