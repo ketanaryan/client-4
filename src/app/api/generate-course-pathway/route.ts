@@ -28,6 +28,7 @@ const requestSchema = z.object({
 
 export async function POST(req: Request) {
   let fallbackFlaws: string[] = ['Core Concepts'];
+  let extractedUserId = 'presentation-mode';
 
   try {
     const body = await req.json();
@@ -39,6 +40,7 @@ export async function POST(req: Request) {
     }
 
     const { userId, domainName, masteryScore, flaws } = parsedBody.data;
+    extractedUserId = userId;
     if (flaws && flaws.length > 0) {
       fallbackFlaws = flaws;
     }
@@ -135,7 +137,7 @@ export async function POST(req: Request) {
       await supabase
         .from('profiles')
         .update({ cached_course_pathway: fallbackCourses })
-        .eq('id', userId); 
+        .eq('id', extractedUserId);
     } catch (dbError) {}
 
     return NextResponse.json({ courses: fallbackCourses });

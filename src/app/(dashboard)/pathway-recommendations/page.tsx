@@ -283,9 +283,11 @@ export default function PathwayRecommendationsPage() {
                               </div>
                             )}
                           </div>
-                          <Button variant={course.status === 'Next' ? 'default' : 'outline'} className={course.status === 'Next' ? 'bg-zinc-900 hover:bg-zinc-800 text-white shadow-sm' : ''} disabled={course.status === 'Locked'} onClick={() => router.push(`/course/${encodeURIComponent(course.title)}`)}>
-                            {course.status === 'Locked' ? 'Locked' : 'Start Course'}
-                          </Button>
+                          <Button variant={course.status === 'Next' || idx === 0 ? 'default' : 'outline'} 
+className={course.status === 'Next' || idx === 0 ? 'bg-zinc-900 hover:bg-zinc-800 text-white shadow-sm' : ''} 
+disabled={course.status === 'Locked' && idx !== 0} onClick={() => router.push(`/course/${encodeURIComponent(course.title)}`)}>
+  {course.status === 'Locked' && idx !== 0 ? 'Locked' : 'Start Course'}
+</Button>
                         </div>
 
                         {courseFlaws.length > 0 && (
@@ -299,46 +301,7 @@ export default function PathwayRecommendationsPage() {
                                 <div key={flaw} className="flex items-center justify-between bg-white p-3 rounded-md border border-rose-100 shadow-sm">
                                   <span className="text-sm font-medium text-zinc-800">{flaw}</span>
                                   
-                                  {/* The Flaw Button */}
-                                  <Dialog>
-                                    <DialogTrigger className="inline-flex h-8 items-center justify-center rounded-md border border-rose-200 bg-white px-3 text-xs font-medium text-rose-700 hover:bg-rose-50 hover:text-rose-800 transition-colors" onClick={() => handleRemediate(flaw)}>
-                                      <PlayCircle className="h-3 w-3 mr-1.5" /> AI Remediation
-                                    </DialogTrigger>
-                                    <DialogContent className="sm:max-w-2xl bg-white p-0 overflow-hidden border-zinc-200 shadow-2xl">
-                                      <div className="p-6 bg-zinc-950 text-white">
-                                        <DialogTitle className="text-xl font-bold flex items-center gap-2">
-                                          <div className="h-2 w-2 rounded-full bg-indigo-500 animate-pulse"></div>
-                                          AI Micro-Module: {flaw}
-                                        </DialogTitle>
-                                        <DialogDescription className="text-zinc-400 mt-2">
-                                          Streaming personalized remediation content...
-                                        </DialogDescription>
-                                      </div>
-                                      <div className="p-6 bg-zinc-50 min-h-[300px]">
-                                        {isGenerating && !completion ? (
-                                          <div className="space-y-4 animate-pulse">
-                                            <div className="h-4 bg-zinc-200 rounded w-3/4"></div>
-                                            <div className="h-4 bg-zinc-200 rounded w-full"></div>
-                                            <div className="h-4 bg-zinc-200 rounded w-5/6"></div>
-                                            <div className="h-32 bg-zinc-200 rounded w-full mt-6"></div>
-                                          </div>
-                                        ) : (
-                                          <div className="prose prose-sm prose-zinc max-w-none">
-                                            <h3 className="text-lg font-bold text-zinc-900">Understanding {flaw}</h3>
-                                            <div className="text-zinc-600 leading-relaxed whitespace-pre-wrap">
-                                              {completion}
-                                            </div>
-                                          </div>
-                                        )}
-                                      </div>
-                                      <div className="p-4 border-t border-zinc-200 bg-white flex justify-end gap-2">
-                                        <DialogClose render={<Button variant="outline" className="border-zinc-200 text-zinc-700" onClick={() => handleMarkUnderstood(flaw)} />}>
-                                          Mark as Understood
-                                        </DialogClose>
-                                        <Button className="bg-indigo-600 hover:bg-indigo-700 text-white" onClick={() => alert("Presentation Demo: This would open the interactive LMS module to remediate this specific concept gap.")}>Continue to Course</Button>
-                                      </div>
-                                    </DialogContent>
-                                  </Dialog>
+                                  
 
                                 </div>
                               ))}

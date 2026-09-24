@@ -73,7 +73,7 @@ export default function CoursePage() {
                 <Button variant="outline" disabled>Previous Lesson</Button>
                 <Button className="bg-zinc-900 text-white hover:bg-zinc-800" onClick={() => {
                   toast({ title: "Module Completed", description: "This concludes the interactive presentation demo." });
-                  router.push('/pathway-recommendations');
+                  router.push('/pathway-recommendations?completed=true');
                 }}>Continue to Lesson 2</Button>
               </div>
             </CardContent>
