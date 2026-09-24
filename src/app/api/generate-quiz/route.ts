@@ -55,11 +55,17 @@ export async function POST(req: Request) {
       4. Each question must target a specific sub-concept so we can isolate knowledge gaps if they answer incorrectly.
     `;
 
+        const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), 7500); // 7.5s hard limit before Vercel 10s kill
+
     const { object } = await generateObject({
       model: google('gemini-3.5-flash'),
       schema: quizSchema,
       prompt: prompt,
+      abortSignal: controller.signal
     });
+    
+    clearTimeout(timeoutId);
 
     return NextResponse.json({ quiz: object.questions });
 
