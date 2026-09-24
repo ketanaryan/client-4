@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { useCompletion } from '@ai-sdk/react';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
@@ -14,6 +14,7 @@ import { createClient } from '@/lib/supabase/client';
 export default function PathwayRecommendationsPage() {
   const router = useRouter();
   const searchParams = useSearchParams();
+  const processingCompletion = useRef(false);
   const [selectedFlaw, setSelectedFlaw] = useState<string | null>(null);
   const [isGenerating, setIsGenerating] = useState(false);
   const [flaws, setFlaws] = useState<any[]>([]);
@@ -142,7 +143,8 @@ export default function PathwayRecommendationsPage() {
 
   // Handle course completion from URL parameter
   useEffect(() => {
-    if (searchParams.get('completed') === 'true' && courses.length > 0 && profile) {
+    if (searchParams.get('completed') === 'true' && courses.length > 0 && profile && !processingCompletion.current) {
+      processingCompletion.current = true;
       const updatedCourses = [...courses];
       
       // Find the first non-completed course
@@ -167,7 +169,7 @@ export default function PathwayRecommendationsPage() {
           .eq('id', profile.id)
           .then(() => {
             // Remove the query param silently
-            router.replace('/pathway-recommendations');
+            window.history.replaceState(null, '', '/pathway-recommendations');
           });
       }
     }
