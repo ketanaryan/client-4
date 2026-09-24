@@ -274,7 +274,7 @@ export default function PathwayRecommendationsPage() {
                               </div>
                             )}
                           </div>
-                          <Button variant={course.status === 'Next' ? 'default' : 'outline'} className={course.status === 'Next' ? 'bg-zinc-900 hover:bg-zinc-800 text-white shadow-sm' : ''} disabled={course.status === 'Locked'} onClick={() => alert("Presentation Demo: This would open the interactive LMS module for " + course.title + " (Coming in v2).")}>
+                          <Button variant={course.status === 'Next' ? 'default' : 'outline'} className={course.status === 'Next' ? 'bg-zinc-900 hover:bg-zinc-800 text-white shadow-sm' : ''} disabled={course.status === 'Locked'} onClick={() => router.push(`/course/${encodeURIComponent(course.title)}`)}>
                             {course.status === 'Locked' ? 'Locked' : 'Start Course'}
                           </Button>
                         </div>
