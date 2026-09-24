@@ -28,7 +28,7 @@ export async function POST(req: Request) {
       prompt: prompt,
     });
 
-    return result.toDataStreamResponse();
+    return result.toTextStreamResponse();
 
   } catch (error: any) {
     console.error("Remediate Flaw Error, falling back to dummy data:", error);
@@ -45,8 +45,13 @@ Key Takeaway: Always look for ways to optimize your approach when dealing with $
     const encoder = new TextEncoder();
     const stream = new ReadableStream({
       async start(controller) {
-        const chunk = `0:${JSON.stringify(fallbackMarkdown)}\n`;
-        controller.enqueue(encoder.encode(chunk));
+        const words = fallbackMarkdown.split(' ');
+        for (let i = 0; i < words.length; i += 5) {
+          const chunkWords = words.slice(i, i + 5).join(' ') + ' ';
+          const dataStreamChunk = \`0:\${JSON.stringify(chunkWords)}\\n\`;
+          controller.enqueue(encoder.encode(dataStreamChunk));
+          await new Promise(r => setTimeout(r, 50));
+        }
         controller.close();
       },
     });
