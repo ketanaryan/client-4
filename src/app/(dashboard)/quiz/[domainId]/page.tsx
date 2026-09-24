@@ -31,52 +31,63 @@ export default function QuizPage() {
   const { toast } = useToast();
   const supabase = createClient();
 
-  useEffect(() => {
+    useEffect(() => {
+    let isMounted = true;
+    
     async function initializeQuiz() {
       try {
-        const { data: { user } } = await supabase.auth.getUser();
-        if (!user) {
-          router.push('/login');
-          return;
-        }
-
-        const { data: profile } = await supabase
-          .from('profiles')
-          .select('academic_level, prior_knowledge')
-          .eq('id', user.id)
-          .single();
-
-        const domainId = params?.domainId as string;
-        const decodedDomain = decodeURIComponent(domainId || '');
-
-        const response = await fetch('/api/generate-quiz', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            targetDomain: decodedDomain,
-            academicLevel: profile?.academic_level || 'Beginner',
-            priorKnowledge: profile?.prior_knowledge || []
-          })
-        });
-
-        const data = await response.json();
+        const timeoutPromise = new Promise((_, reject) => 
+          setTimeout(() => reject(new Error("Timeout")), 15000)
+        );
         
-        if (response.ok && data.quiz) {
-          setQuestions(data.quiz);
-        } else {
-          toast({ title: "Generation Failed", description: data.error || "Failed to generate AI quiz.", variant: "destructive" });
-        }
+        const fetchLogic = async () => {
+          const { data: { user } } = await supabase.auth.getUser();
+          if (!user) {
+            router.push('/login');
+            return;
+          }
+
+          const { data: profile } = await supabase
+            .from('profiles')
+            .select('academic_level, prior_knowledge')
+            .eq('id', user.id)
+            .single();
+
+          const domainId = params?.domainId as string;
+          const decodedDomain = decodeURIComponent(domainId || '');
+
+          const response = await fetch('/api/generate-quiz', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              targetDomain: decodedDomain,
+              academicLevel: profile?.academic_level || 'Beginner',
+              priorKnowledge: profile?.prior_knowledge || []
+            })
+          });
+
+          const data = await response.json();
+          
+          if (response.ok && data.quiz) {
+            if (isMounted) setQuestions(data.quiz);
+          } else {
+            if (isMounted) toast({ title: "Generation Failed", description: data.error || "Failed to generate AI quiz.", variant: "destructive" });
+          }
+        };
+
+        await Promise.race([fetchLogic(), timeoutPromise]);
       } catch (error) {
         console.error("Quiz Init Error:", error);
-        toast({ title: "Error", description: "An unexpected error occurred connecting to the AI engine.", variant: "destructive" });
+        if (isMounted) toast({ title: "Error", description: "An unexpected error occurred connecting to the AI engine.", variant: "destructive" });
       } finally {
-        setIsInitializing(false);
+        if (isMounted) setIsInitializing(false);
       }
     }
 
     initializeQuiz();
-      // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [params?.domainId]);
+    return () => { isMounted = false; };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [params?.domainId]);
 
   if (isInitializing) {
     return (
