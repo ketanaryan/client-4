@@ -75,7 +75,8 @@ export default function QuizPage() {
     }
 
     initializeQuiz();
-  }, [params, router, supabase, toast]);
+      // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [params?.domainId]);
 
   if (isInitializing) {
     return (
