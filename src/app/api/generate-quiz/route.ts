@@ -76,9 +76,17 @@ export async function POST(req: Request) {
         const domainMap: Record<string, string> = {
           'computer-engineering': 'Computer Engineering',
           'artificial-intelligence': 'Artificial Intelligence',
-          'software-engineering': 'Software Engineering'
+          'software-engineering': 'Software Engineering',
+          'data-science': 'Data Science',
+          'cybersecurity': 'Cybersecurity',
+          'mobile-development': 'Mobile Development',
+          'blockchain': 'Blockchain & Distributed Systems',
+          'blockchain-distributed-systems': 'Blockchain & Distributed Systems',
+          'devops': 'DevOps & Cloud Engineering',
+          'devops-cloud-engineering': 'DevOps & Cloud Engineering'
         };
-        const actualDomain = domainMap[targetDomain] || 'Computer Engineering';
+        const normalizedTarget = (targetDomain || '').toLowerCase().replace(/\s+/g, '-');
+        const actualDomain = domainMap[normalizedTarget] || (fallbackQuizData[targetDomain] ? targetDomain : 'Computer Engineering');
         const actualLevel = academicLevel || 'Beginner';
         questionPool = fallbackQuizData[actualDomain]?.[actualLevel] || fallbackQuizData['Computer Engineering']['Beginner'];
 

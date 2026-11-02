@@ -3262,5 +3262,1485 @@ export const fallbackQuizData: any = {
         "conceptTarget": "Cloud Infrastructure"
       }
     ]
+  },
+  "Data Science": {
+    "Beginner": [
+      {
+        "id": "ds-b-1",
+        "text": "What is the primary purpose of Pandas in Python data science workflows?",
+        "options": [
+          "Compiling C++ extensions",
+          "Data manipulation and analysis on tabular structures",
+          "Creating 3D game engines",
+          "Configuring network routing tables"
+        ],
+        "correctOption": "Data manipulation and analysis on tabular structures",
+        "conceptTarget": "Pandas DataFrames"
+      },
+      {
+        "id": "ds-b-2",
+        "text": "Which measure of central tendency is least sensitive to extreme outliers?",
+        "options": [
+          "Arithmetic Mean",
+          "Median",
+          "Standard Deviation",
+          "Variance"
+        ],
+        "correctOption": "Median",
+        "conceptTarget": "Descriptive Statistics"
+      },
+      {
+        "id": "ds-b-3",
+        "text": "What does a p-value represent in statistical hypothesis testing?",
+        "options": [
+          "The probability that the null hypothesis is unconditionally true",
+          "The probability of observing results at least as extreme as the sample under the null hypothesis",
+          "The exact percentage of errors in the dataset",
+          "The correlation coefficient between variables"
+        ],
+        "correctOption": "The probability of observing results at least as extreme as the sample under the null hypothesis",
+        "conceptTarget": "Hypothesis Testing"
+      },
+      {
+        "id": "ds-b-4",
+        "text": "Which Python library is the foundational standard for numerical array computations?",
+        "options": [
+          "NumPy",
+          "Django",
+          "Flask",
+          "BeautifulSoup"
+        ],
+        "correctOption": "NumPy",
+        "conceptTarget": "Numerical Computing"
+      },
+      {
+        "id": "ds-b-5",
+        "text": "What is the fundamental difference between Supervised and Unsupervised Learning?",
+        "options": [
+          "Supervised uses GPU; Unsupervised uses CPU only",
+          "Supervised models require labeled target outcomes; Unsupervised finds patterns in unlabeled data",
+          "Unsupervised models cannot make numerical predictions",
+          "Supervised learning does not use mathematical loss functions"
+        ],
+        "correctOption": "Supervised models require labeled target outcomes; Unsupervised finds patterns in unlabeled data",
+        "conceptTarget": "Machine Learning Paradigms"
+      },
+      {
+        "id": "ds-b-6",
+        "text": "What does an exploratory box plot (whisker plot) visualize?",
+        "options": [
+          "Server memory allocation",
+          "Five-number statistical summary including median, quartiles, and outliers",
+          "Relational database foreign keys",
+          "Execution speed of a GPU"
+        ],
+        "correctOption": "Five-number statistical summary including median, quartiles, and outliers",
+        "conceptTarget": "Exploratory Data Analysis"
+      },
+      {
+        "id": "ds-b-7",
+        "text": "Why is feature scaling (e.g. StandardScaler or MinMaxScaler) critical before training distance-based algorithms?",
+        "options": [
+          "It reduces disk storage size",
+          "It prevents features with large numeric scales from dominating model weight updates",
+          "It automatically deletes corrupt rows",
+          "It converts numbers into string format"
+        ],
+        "correctOption": "It prevents features with large numeric scales from dominating model weight updates",
+        "conceptTarget": "Feature Preprocessing"
+      },
+      {
+        "id": "ds-b-8",
+        "text": "Which SQL clause is used to aggregate rows that have the same values into summary statistics?",
+        "options": [
+          "ORDER BY",
+          "GROUP BY",
+          "WHERE",
+          "JOIN"
+        ],
+        "correctOption": "GROUP BY",
+        "conceptTarget": "SQL Aggregations"
+      }
+    ],
+    "Intermediate": [
+      {
+        "id": "ds-i-1",
+        "text": "What problem does the Central Limit Theorem address in statistical inference?",
+        "options": [
+          "Calculates database index seek times",
+          "States that sample means approach a normal distribution as sample size grows, regardless of population shape",
+          "Proves that deep neural networks cannot overfit",
+          "Eliminates missing data automatically"
+        ],
+        "correctOption": "States that sample means approach a normal distribution as sample size grows, regardless of population shape",
+        "conceptTarget": "Sampling Theory"
+      },
+      {
+        "id": "ds-i-2",
+        "text": "Why should you use Stratified K-Fold cross-validation instead of standard random K-Fold?",
+        "options": [
+          "It runs 10x faster by skipping validations",
+          "It preserves the percentage of samples for each target class within every fold",
+          "It converts continuous targets to discrete labels",
+          "It removes the need for a test dataset"
+        ],
+        "correctOption": "It preserves the percentage of samples for each target class within every fold",
+        "conceptTarget": "Validation Strategies"
+      },
+      {
+        "id": "ds-i-3",
+        "text": "Which metric is most reliable for evaluating a binary classification model on a severe class imbalance (e.g., 99:1)?",
+        "options": [
+          "Accuracy",
+          "Precision-Recall AUC (PR-AUC)",
+          "Mean Squared Error",
+          "R-Squared"
+        ],
+        "correctOption": "Precision-Recall AUC (PR-AUC)",
+        "conceptTarget": "Evaluation Metrics"
+      },
+      {
+        "id": "ds-i-4",
+        "text": "What is the primary mechanism of Principal Component Analysis (PCA)?",
+        "options": [
+          "Multiplying datasets by random numbers",
+          "Projecting data onto orthogonal eigenvectors that capture the directions of maximum variance",
+          "Deleting low-correlation columns sequentially",
+          "Replacing outliers with the column median"
+        ],
+        "correctOption": "Projecting data onto orthogonal eigenvectors that capture the directions of maximum variance",
+        "conceptTarget": "Dimensionality Reduction"
+      },
+      {
+        "id": "ds-i-5",
+        "text": "What is the key distinction between L1 (Lasso) and L2 (Ridge) regularization in regression?",
+        "options": [
+          "L1 creates sparse feature coefficients by driving some to exact zero; L2 shrinks weights asymptotically",
+          "L1 is only for classification; L2 is only for regression",
+          "L2 eliminates multicollinearity by deleting tables",
+          "L1 increases the learning rate automatically"
+        ],
+        "correctOption": "L1 creates sparse feature coefficients by driving some to exact zero; L2 shrinks weights asymptotically",
+        "conceptTarget": "Regularization Techniques"
+      },
+      {
+        "id": "ds-i-6",
+        "text": "What does the bias-variance trade-off dictate regarding model complexity?",
+        "options": [
+          "Higher complexity always decreases test error",
+          "Underfitting results from high bias; overfitting results from high variance",
+          "Bias and variance can both be driven to absolute zero simultaneously",
+          "Variance only applies to unsupervised clustering"
+        ],
+        "correctOption": "Underfitting results from high bias; overfitting results from high variance",
+        "conceptTarget": "Model Generalization"
+      },
+      {
+        "id": "ds-i-7",
+        "text": "What is the primary difference between Bagging (e.g. Random Forest) and Boosting (e.g. XGBoost)?",
+        "options": [
+          "Bagging trains models in parallel to reduce variance; Boosting trains sequentially to reduce bias",
+          "Bagging is only for neural networks",
+          "Boosting does not use decision trees",
+          "Bagging requires gradient descent"
+        ],
+        "correctOption": "Bagging trains models in parallel to reduce variance; Boosting trains sequentially to reduce bias",
+        "conceptTarget": "Ensemble Methods"
+      },
+      {
+        "id": "ds-i-8",
+        "text": "In clustering, what does the Silhouette Score evaluate?",
+        "options": [
+          "Execution speed of K-Means",
+          "How similar an object is to its own cluster compared to neighboring clusters",
+          "Number of missing columns",
+          "Database foreign key integrity"
+        ],
+        "correctOption": "How similar an object is to its own cluster compared to neighboring clusters",
+        "conceptTarget": "Cluster Validation"
+      }
+    ],
+    "Advanced": [
+      {
+        "id": "ds-a-1",
+        "text": "What is the main computational bottleneck when calculating exact SHAP (Shapley Additive exPlanations) values?",
+        "options": [
+          "Requires exponential 2^|F| evaluations across all possible feature coalition subsets",
+          "Requires converting all models to C++ binaries",
+          "Only functions on linear regression models",
+          "Cannot handle continuous numerical features"
+        ],
+        "correctOption": "Requires exponential 2^|F| evaluations across all possible feature coalition subsets",
+        "conceptTarget": "Explainable AI (XAI)"
+      },
+      {
+        "id": "ds-a-2",
+        "text": "How does Apache Spark provide fault tolerance across distributed Resilient Distributed Datasets (RDDs)?",
+        "options": [
+          "Replicating the entire dataset to every cluster disk",
+          "Maintaining an acyclic lineage DAG that allows lost partitions to be recomputed on-demand",
+          "Stopping execution whenever a worker crashes",
+          "Writing every transformation to local SSDs synchronously"
+        ],
+        "correctOption": "Maintaining an acyclic lineage DAG that allows lost partitions to be recomputed on-demand",
+        "conceptTarget": "Distributed Data Processing"
+      },
+      {
+        "id": "ds-a-3",
+        "text": "Why does the Isolation Forest algorithm isolate anomalous data points significantly faster than normal observations?",
+        "options": [
+          "Anomalies are outliers and require fewer recursive random binary splits to isolate",
+          "Anomalies are always clustered in dense geometric neighborhoods",
+          "It relies on gradient descent to optimize loss",
+          "It calculates inverted covariance matrices"
+        ],
+        "correctOption": "Anomalies are outliers and require fewer recursive random binary splits to isolate",
+        "conceptTarget": "Anomaly Detection"
+      },
+      {
+        "id": "ds-a-4",
+        "text": "How does the Attention mechanism in Transformer architectures compute token contextual representations?",
+        "options": [
+          "Scaled dot-product of Query and Key vectors softmax-normalized and multiplied by Values",
+          "Recursive hidden state propagation via recurrent loops",
+          "Convolutional kernel filters sliding across tokens",
+          "Random Gaussian noise injection"
+        ],
+        "correctOption": "Scaled dot-product of Query and Key vectors softmax-normalized and multiplied by Values",
+        "conceptTarget": "Self-Attention Mechanism"
+      },
+      {
+        "id": "ds-a-5",
+        "text": "In Bayesian inference, what does Markov Chain Monte Carlo (MCMC) approximate?",
+        "options": [
+          "High-dimensional posterior probability distributions that cannot be integrated analytically",
+          "The speed of light in fiber optics",
+          "Linear regression gradients only",
+          "Missing data deletion"
+        ],
+        "correctOption": "High-dimensional posterior probability distributions that cannot be integrated analytically",
+        "conceptTarget": "Bayesian Sampling / MCMC"
+      },
+      {
+        "id": "ds-a-6",
+        "text": "What is target leakage in predictive machine learning pipelines?",
+        "options": [
+          "When features contain information about the target that would not be available at inference time",
+          "When the model runs out of GPU memory",
+          "When database connections time out",
+          "When all values in a column are null"
+        ],
+        "correctOption": "When features contain information about the target that would not be available at inference time",
+        "conceptTarget": "Data Pipeline Integrity"
+      },
+      {
+        "id": "ds-a-7",
+        "text": "How does t-SNE differ from UMAP in non-linear manifold dimensionality reduction?",
+        "options": [
+          "UMAP preserves both local and more global topological structure with significantly faster runtime scaling than t-SNE",
+          "t-SNE can only handle 2 data points",
+          "UMAP is strictly a supervised classification tool",
+          "t-SNE uses Euclidean distance exclusively while UMAP does not"
+        ],
+        "correctOption": "UMAP preserves both local and more global topological structure with significantly faster runtime scaling than t-SNE",
+        "conceptTarget": "Manifold Learning"
+      },
+      {
+        "id": "ds-a-8",
+        "text": "What mathematical property ensures that a covariance matrix is positive semi-definite in PCA?",
+        "options": [
+          "All eigenvalues are non-negative, ensuring real variance projections",
+          "All matrix entries must be prime numbers",
+          "Determinant must equal exactly 1.0",
+          "Matrix must be strictly diagonal"
+        ],
+        "correctOption": "All eigenvalues are non-negative, ensuring real variance projections",
+        "conceptTarget": "Linear Algebra / Eigendecomposition"
+      }
+    ]
+  },
+  "Cybersecurity": {
+    "Beginner": [
+      {
+        "id": "sec-b-1",
+        "text": "What is the primary difference between symmetric and asymmetric encryption?",
+        "options": [
+          "Symmetric uses one shared secret key; asymmetric uses a public/private cryptographic key pair",
+          "Symmetric cannot encrypt text files",
+          "Asymmetric is 1000x faster and requires no CPU overhead",
+          "Symmetric encryption is illegal on the web"
+        ],
+        "correctOption": "Symmetric uses one shared secret key; asymmetric uses a public/private cryptographic key pair",
+        "conceptTarget": "Cryptography Basics"
+      },
+      {
+        "id": "sec-b-2",
+        "text": "What type of attack deceives users into entering sensitive credentials on a fraudulent replica website?",
+        "options": [
+          "Buffer Overflow",
+          "Phishing",
+          "Port Knocking",
+          "SYN Flood"
+        ],
+        "correctOption": "Phishing",
+        "conceptTarget": "Social Engineering"
+      },
+      {
+        "id": "sec-b-3",
+        "text": "What are the three core pillars of the CIA Triad in information security?",
+        "options": [
+          "Control, Inspection, Authorization",
+          "Confidentiality, Integrity, and Availability",
+          "Centralization, Integration, Auditing",
+          "Credentials, IP, Architecture"
+        ],
+        "correctOption": "Confidentiality, Integrity, and Availability",
+        "conceptTarget": "Security Principles"
+      },
+      {
+        "id": "sec-b-4",
+        "text": "Which standard network port is universally reserved for secure HTTPS traffic?",
+        "options": [
+          "Port 80",
+          "Port 22",
+          "Port 443",
+          "Port 21"
+        ],
+        "correctOption": "Port 443",
+        "conceptTarget": "Network Protocols"
+      },
+      {
+        "id": "sec-b-5",
+        "text": "What vulnerability does an attacker exploit when executing a SQL Injection (SQLi) attack?",
+        "options": [
+          "Unsanitized user input concatenated directly into raw database query strings",
+          "Hardware failure in the memory RAM",
+          "Weak Wi-Fi encryption protocols",
+          "Outdated operating system drivers"
+        ],
+        "correctOption": "Unsanitized user input concatenated directly into raw database query strings",
+        "conceptTarget": "SQL Injection"
+      },
+      {
+        "id": "sec-b-6",
+        "text": "What is ransomware?",
+        "options": [
+          "Malware that encrypts a victim's files and demands payment for the decryption key",
+          "Hardware that speeds up Wi-Fi",
+          "A tool for compressing photos",
+          "A protocol for sending emails"
+        ],
+        "correctOption": "Malware that encrypts a victim's files and demands payment for the decryption key",
+        "conceptTarget": "Malware Types"
+      },
+      {
+        "id": "sec-b-7",
+        "text": "What is the purpose of hashing passwords with bcrypt or Argon2 instead of storing them as plain text?",
+        "options": [
+          "To prevent passwords from being recovered even if the database is leaked, using cryptographic one-way salt and cost factors",
+          "To compress password string length",
+          "To send passwords faster over HTTP",
+          "To make passwords publicly visible"
+        ],
+        "correctOption": "To prevent passwords from being recovered even if the database is leaked, using cryptographic one-way salt and cost factors",
+        "conceptTarget": "Password Security"
+      },
+      {
+        "id": "sec-b-8",
+        "text": "What does a VPN (Virtual Private Network) do?",
+        "options": [
+          "Encrypts internet traffic and tunnels it through a secure remote server, masking the user's IP",
+          "Increases monitor refresh rate",
+          "Deletes all cookies automatically",
+          "Cleans hardware fans"
+        ],
+        "correctOption": "Encrypts internet traffic and tunnels it through a secure remote server, masking the user's IP",
+        "conceptTarget": "Network Privacy"
+      }
+    ],
+    "Intermediate": [
+      {
+        "id": "sec-i-1",
+        "text": "What is the most effective architectural defense against Cross-Site Scripting (XSS)?",
+        "options": [
+          "Disabling the database firewall",
+          "Context-aware output encoding and enforcing a strict Content Security Policy (CSP)",
+          "Storing passwords in plain text cookies",
+          "Using HTTP instead of HTTPS"
+        ],
+        "correctOption": "Context-aware output encoding and enforcing a strict Content Security Policy (CSP)",
+        "conceptTarget": "XSS Mitigation"
+      },
+      {
+        "id": "sec-i-2",
+        "text": "How does a Cross-Site Request Forgery (CSRF) attack exploit a victim's authenticated browser session?",
+        "options": [
+          "It cracks the victim's master password with brute-force",
+          "It tricks the browser into sending stored session cookies along with an unauthorized state-changing request",
+          "It intercepts Wi-Fi radio frequencies",
+          "It reboots the server operating system"
+        ],
+        "correctOption": "It tricks the browser into sending stored session cookies along with an unauthorized state-changing request",
+        "conceptTarget": "CSRF Mitigation"
+      },
+      {
+        "id": "sec-i-3",
+        "text": "What is the primary objective of a Diffie-Hellman cryptographic exchange?",
+        "options": [
+          "To compress image files over HTTP",
+          "To securely establish a shared secret key over an untrusted, public communication channel",
+          "To sign email headers with digital certificates",
+          "To decrypt hash passwords instantly"
+        ],
+        "correctOption": "To securely establish a shared secret key over an untrusted, public communication channel",
+        "conceptTarget": "Key Exchange Protocols"
+      },
+      {
+        "id": "sec-i-4",
+        "text": "What is the fundamental operational difference between an IDS and an IPS?",
+        "options": [
+          "An IDS detects and alerts on anomalies; an IPS actively intercepts and drops malicious traffic in-line",
+          "An IDS is hardware; an IPS is only a software plugin",
+          "An IPS cannot monitor TCP packets",
+          "An IDS encrypts data while an IPS decrypts it"
+        ],
+        "correctOption": "An IDS detects and alerts on anomalies; an IPS actively intercepts and drops malicious traffic in-line",
+        "conceptTarget": "Network Defense"
+      },
+      {
+        "id": "sec-i-5",
+        "text": "What is an ARP Poisoning attack?",
+        "options": [
+          "Sending spoofed ARP messages onto a LAN to associate the attacker's MAC address with an authorized gateway IP",
+          "Flooding an email inbox with spam",
+          "Corrupting hard drive sectors physically",
+          "Breaking RSA 4096-bit keys instantly"
+        ],
+        "correctOption": "Sending spoofed ARP messages onto a LAN to associate the attacker's MAC address with an authorized gateway IP",
+        "conceptTarget": "Layer 2 Attacks"
+      },
+      {
+        "id": "sec-i-6",
+        "text": "How does a WAF (Web Application Firewall) inspect HTTP traffic differently from a traditional network firewall?",
+        "options": [
+          "WAF inspects Layer 7 application payload content for SQLi, XSS, and command injection patterns",
+          "WAF only blocks port 80",
+          "WAF cannot inspect HTTPS traffic",
+          "WAF only monitors router cooling fans"
+        ],
+        "correctOption": "WAF inspects Layer 7 application payload content for SQLi, XSS, and command injection patterns",
+        "conceptTarget": "Application Firewalls"
+      },
+      {
+        "id": "sec-i-7",
+        "text": "What is the purpose of Public Key Infrastructure (PKI)?",
+        "options": [
+          "A framework of policies, hardware, and software that manages the issuance, distribution, and revocation of digital X.509 certificates",
+          "A cryptocurrency trading system",
+          "A protocol to format SSD drives",
+          "A game development library"
+        ],
+        "correctOption": "A framework of policies, hardware, and software that manages the issuance, distribution, and revocation of digital X.509 certificates",
+        "conceptTarget": "PKI Architecture"
+      },
+      {
+        "id": "sec-i-8",
+        "text": "What is the principle of least privilege (PoLP)?",
+        "options": [
+          "Users and processes should only be granted the minimum necessary permissions required to perform their specific duties",
+          "All users must have administrator rights by default",
+          "Passwords must be reset every hour",
+          "Servers must run without firewalls"
+        ],
+        "correctOption": "Users and processes should only be granted the minimum necessary permissions required to perform their specific duties",
+        "conceptTarget": "Access Governance"
+      }
+    ],
+    "Advanced": [
+      {
+        "id": "sec-a-1",
+        "text": "In binary exploitation, how does Return-Oriented Programming (ROP) bypass Data Execution Prevention (DEP/NX)?",
+        "options": [
+          "It chains together existing executable machine code snippets ('gadgets') ending in RET instructions",
+          "It disables the CPU memory controller physically",
+          "It overwrites the BIOS motherboard firmware",
+          "It injects shellcode directly onto an executable stack"
+        ],
+        "correctOption": "It chains together existing executable machine code snippets ('gadgets') ending in RET instructions",
+        "conceptTarget": "Binary Exploitation"
+      },
+      {
+        "id": "sec-a-2",
+        "text": "What is the core paradigm shift of Zero-Trust Architecture (ZTA)?",
+        "options": [
+          "Eliminating all encryption within internal networks",
+          "Assuming the internal network is hostile and continuously verifying identity and device posture for every transaction",
+          "Granting full access to any client connected via company VPN",
+          "Allowing users to bypass multi-factor authentication"
+        ],
+        "correctOption": "Assuming the internal network is hostile and continuously verifying identity and device posture for every transaction",
+        "conceptTarget": "Zero-Trust Architecture"
+      },
+      {
+        "id": "sec-a-3",
+        "text": "In memory safety, how does Address Space Layout Randomization (ASLR) prevent exploitation?",
+        "options": [
+          "Randomizes memory location offsets of key data areas (stack, heap, libraries) at execution time",
+          "Deletes RAM memory periodically",
+          "Encrypts the CPU instruction cache with AES",
+          "Converts all pointers to 32-bit floats"
+        ],
+        "correctOption": "Randomizes memory location offsets of key data areas (stack, heap, libraries) at execution time",
+        "conceptTarget": "Memory Protection"
+      },
+      {
+        "id": "sec-a-4",
+        "text": "How does the Rowhammer DRAM attack achieve hardware privilege escalation?",
+        "options": [
+          "Rapidly alternating electrical charges in memory cells induce parasitic capacitance coupling, inducing bit-flips in adjacent rows",
+          "Overheating the CPU with infinite while loops",
+          "Overclocking monitor refresh rates",
+          "Cracking BIOS passwords via serial ports"
+        ],
+        "correctOption": "Rapidly alternating electrical charges in memory cells induce parasitic capacitance coupling, inducing bit-flips in adjacent rows",
+        "conceptTarget": "Hardware Vulnerabilities"
+      },
+      {
+        "id": "sec-a-5",
+        "text": "What cryptographic primitive enables Zero-Knowledge Proofs (ZKPs) like zk-SNARKs?",
+        "options": [
+          "Elliptic curve pairings and polynomial commitment schemes proving knowledge without revealing inputs",
+          "Simple MD5 hashing",
+          "Symmetric XOR operations",
+          "Base64 encoding"
+        ],
+        "correctOption": "Elliptic curve pairings and polynomial commitment schemes proving knowledge without revealing inputs",
+        "conceptTarget": "Zero-Knowledge Cryptography"
+      },
+      {
+        "id": "sec-a-6",
+        "text": "What is the primary role of an HSM (Hardware Security Module) in enterprise infrastructure?",
+        "options": [
+          "A tamper-resistant dedicated physical computing device that securely generates, stores, and manages cryptographic keys",
+          "A backup power generator",
+          "A fast graphics card for video editing",
+          "A high-speed network switch"
+        ],
+        "correctOption": "A tamper-resistant dedicated physical computing device that securely generates, stores, and manages cryptographic keys",
+        "conceptTarget": "Hardware Security Modules"
+      },
+      {
+        "id": "sec-a-7",
+        "text": "What does Perfect Forward Secrecy (PFS) guarantee in TLS/SSL communications?",
+        "options": [
+          "Compromise of the server's long-term private key does not compromise past recorded session traffic",
+          "Websites can never be taken offline by DDoS",
+          "Passwords never expire",
+          "Encryption keys can be shared publicly"
+        ],
+        "correctOption": "Compromise of the server's long-term private key does not compromise past recorded session traffic",
+        "conceptTarget": "Forward Secrecy"
+      },
+      {
+        "id": "sec-a-8",
+        "text": "In side-channel analysis, what vulnerability does a Timing Attack exploit?",
+        "options": [
+          "Variations in execution time of cryptographic operations leak information about secret key bits",
+          "Clock drift between servers",
+          "Slow internet connections",
+          "Time zones differences across clients"
+        ],
+        "correctOption": "Variations in execution time of cryptographic operations leak information about secret key bits",
+        "conceptTarget": "Side-Channel Attacks"
+      }
+    ]
+  },
+  "Mobile Development": {
+    "Beginner": [
+      {
+        "id": "mob-b-1",
+        "text": "Which programming language is officially designated as the modern first-class standard for native Android development?",
+        "options": [
+          "Kotlin",
+          "C#",
+          "PHP",
+          "Ruby"
+        ],
+        "correctOption": "Kotlin",
+        "conceptTarget": "Android Core"
+      },
+      {
+        "id": "mob-b-2",
+        "text": "Which programming language is the primary modern language for native iOS app development?",
+        "options": [
+          "Swift",
+          "Objective-C",
+          "Java",
+          "Python"
+        ],
+        "correctOption": "Swift",
+        "conceptTarget": "iOS Core"
+      },
+      {
+        "id": "mob-b-3",
+        "text": "What is React Native's primary engineering value proposition?",
+        "options": [
+          "Compiles JavaScript/TypeScript into native platform UI components for iOS and Android simultaneously",
+          "Eliminates the need for mobile app stores",
+          "Runs full desktop Linux kernels inside mobile phones",
+          "Replaces mobile cellular antennas"
+        ],
+        "correctOption": "Compiles JavaScript/TypeScript into native platform UI components for iOS and Android simultaneously",
+        "conceptTarget": "Cross-Platform Mobile"
+      },
+      {
+        "id": "mob-b-4",
+        "text": "What is the purpose of the AndroidManifest.xml file in an Android project?",
+        "options": [
+          "Declares application structure, requested system permissions, activities, and entry points",
+          "Stores user passwords in plain text",
+          "Runs database migrations on build",
+          "Styles buttons with CSS syntax"
+        ],
+        "correctOption": "Declares application structure, requested system permissions, activities, and entry points",
+        "conceptTarget": "Android Architecture"
+      },
+      {
+        "id": "mob-b-5",
+        "text": "What is the primary function of an Activity in Android architecture?",
+        "options": [
+          "Represents a single screen with a user interface",
+          "A background service that plays music",
+          "A database table",
+          "An image asset"
+        ],
+        "correctOption": "Represents a single screen with a user interface",
+        "conceptTarget": "Android Activity Lifecycle"
+      },
+      {
+        "id": "mob-b-6",
+        "text": "In iOS SwiftUI, what does the @State property wrapper signify?",
+        "options": [
+          "A source of truth for a value owned by the view that triggers an automatic UI redraw when mutated",
+          "A database connection pool",
+          "An audio driver",
+          "A network routing protocol"
+        ],
+        "correctOption": "A source of truth for a value owned by the view that triggers an automatic UI redraw when mutated",
+        "conceptTarget": "SwiftUI State"
+      },
+      {
+        "id": "mob-b-7",
+        "text": "What is an APK file in Android distribution?",
+        "options": [
+          "Android Package Kit: the file format used to distribute and install apps on Android",
+          "A video file format",
+          "A photo editing tool",
+          "A sound driver"
+        ],
+        "correctOption": "Android Package Kit: the file format used to distribute and install apps on Android",
+        "conceptTarget": "Android Packaging"
+      },
+      {
+        "id": "mob-b-8",
+        "text": "What tool does Apple provide as the official Integrated Development Environment (IDE) for iOS?",
+        "options": [
+          "Xcode",
+          "Visual Studio Code",
+          "Eclipse",
+          "IntelliJ IDEA"
+        ],
+        "correctOption": "Xcode",
+        "conceptTarget": "iOS Tooling"
+      }
+    ],
+    "Intermediate": [
+      {
+        "id": "mob-i-1",
+        "text": "What paradigm does Jetpack Compose introduce to Android UI development?",
+        "options": [
+          "Imperative XML layout inflation",
+          "Declarative UI where UI components re-compose automatically when state updates",
+          "Manual pixel coordinate rendering using OpenGL",
+          "Server-side HTML rendering only"
+        ],
+        "correctOption": "Declarative UI where UI components re-compose automatically when state updates",
+        "conceptTarget": "Jetpack Compose"
+      },
+      {
+        "id": "mob-i-2",
+        "text": "How does Swift's Automatic Reference Counting (ARC) manage memory allocation?",
+        "options": [
+          "Pauses application execution for periodic stop-the-world garbage collection cycles",
+          "Tracks and manages reference counts at compile-time, deallocating instances when references reach zero",
+          "Stores all objects indefinitely until the phone reboots",
+          "Allocates all variables to the global thread pool"
+        ],
+        "correctOption": "Tracks and manages reference counts at compile-time, deallocating instances when references reach zero",
+        "conceptTarget": "Swift Memory Management"
+      },
+      {
+        "id": "mob-i-3",
+        "text": "What is the primary cause of a retain cycle / memory leak in iOS Swift development?",
+        "options": [
+          "Two objects holding strong references to each other, preventing ARC from releasing memory",
+          "Writing more than 100 lines of code in a ViewController",
+          "Using struct instead of class",
+          "Connecting to a remote HTTPS server"
+        ],
+        "correctOption": "Two objects holding strong references to each other, preventing ARC from releasing memory",
+        "conceptTarget": "Memory Leaks"
+      },
+      {
+        "id": "mob-i-4",
+        "text": "In Android development, why should heavy computational tasks be dispatched away from the Main/UI thread?",
+        "options": [
+          "To prevent Application Not Responding (ANR) dialogs and UI frame dropping",
+          "The main thread cannot execute math",
+          "The battery will explode",
+          "Android OS will delete the app"
+        ],
+        "correctOption": "To prevent Application Not Responding (ANR) dialogs and UI frame dropping",
+        "conceptTarget": "Thread Management / Coroutines"
+      },
+      {
+        "id": "mob-i-5",
+        "text": "What is the primary role of ViewModel in Google's recommended Android architecture?",
+        "options": [
+          "Persists UI state data through configuration changes like screen rotations",
+          "Draws pixels on the screen",
+          "Compiles Kotlin into Java bytecode",
+          "Handles Wi-Fi radio frequencies"
+        ],
+        "correctOption": "Persists UI state data through configuration changes like screen rotations",
+        "conceptTarget": "Android Architecture Components"
+      },
+      {
+        "id": "mob-i-6",
+        "text": "What is the difference between [weak self] and [unowned self] in Swift closures?",
+        "options": [
+          "weak creates an optional reference that becomes nil when deallocated; unowned assumes self is never nil and crashes if accessed after deallocation",
+          "unowned is faster and always safe",
+          "weak can only be used with numbers",
+          "unowned is deprecated in Swift 5"
+        ],
+        "correctOption": "weak creates an optional reference that becomes nil when deallocated; unowned assumes self is never nil and crashes if accessed after deallocation",
+        "conceptTarget": "ARC Reference Types"
+      },
+      {
+        "id": "mob-i-7",
+        "text": "What is Flutter's Skia / Impeller rendering engine approach compared to React Native?",
+        "options": [
+          "Flutter controls and renders every single pixel directly to a canvas rather than bridging to native OEM platform widgets",
+          "Flutter converts Dart to HTML",
+          "Flutter runs exclusively inside Safari",
+          "Flutter does not support animations"
+        ],
+        "correctOption": "Flutter controls and renders every single pixel directly to a canvas rather than bridging to native OEM platform widgets",
+        "conceptTarget": "Flutter Engine"
+      },
+      {
+        "id": "mob-i-8",
+        "text": "How does Android Room database persistence ensure type safety at compile time?",
+        "options": [
+          "Validates SQLite queries and schema definitions at compile-time using annotation processors",
+          "Converts SQL tables to JSON text files",
+          "Bypasses SQLite and uses text files",
+          "Disables database transactions"
+        ],
+        "correctOption": "Validates SQLite queries and schema definitions at compile-time using annotation processors",
+        "conceptTarget": "Android Room ORM"
+      }
+    ],
+    "Advanced": [
+      {
+        "id": "mob-a-1",
+        "text": "In React Native's New Architecture (Fabric & TurboModules), how does JSI replace the legacy asynchronous bridge?",
+        "options": [
+          "By exposing direct C++ host object pointers to JavaScript, eliminating JSON serialization bottlenecks",
+          "By converting JavaScript to Python code at runtime",
+          "By running all React components inside web views",
+          "By bypassing the native operating system entirely"
+        ],
+        "correctOption": "By exposing direct C++ host object pointers to JavaScript, eliminating JSON serialization bottlenecks",
+        "conceptTarget": "JSI & TurboModules"
+      },
+      {
+        "id": "mob-a-2",
+        "text": "In React Native's Fabric rendering system, how does C++ core state synchronization prevent visual layout pop-in?",
+        "options": [
+          "Measures and layouts UI nodes synchronously in C++ shadow trees before painting to the host platform",
+          "Renders everything as static SVG images",
+          "Delays all user touches by 500ms",
+          "Executes all animations on web workers"
+        ],
+        "correctOption": "Measures and layouts UI nodes synchronously in C++ shadow trees before painting to the host platform",
+        "conceptTarget": "Fabric Renderer"
+      },
+      {
+        "id": "mob-a-3",
+        "text": "What is the purpose of R8 / ProGuard in Android release builds?",
+        "options": [
+          "Performs whole-program bytecode shrinking, aggressive dead-code elimination, and symbol obfuscation",
+          "Encrypts all images with RSA",
+          "Translates Kotlin to Swift",
+          "Compiles Android to iOS"
+        ],
+        "correctOption": "Performs whole-program bytecode shrinking, aggressive dead-code elimination, and symbol obfuscation",
+        "conceptTarget": "Build Optimization / R8"
+      },
+      {
+        "id": "mob-a-4",
+        "text": "How does iOS handle background execution deferral with BGTaskScheduler?",
+        "options": [
+          "Intelligently batches non-urgent tasks until the device is connected to external power and unmetered network connectivity",
+          "Forces the phone to stay awake 24/7",
+          "Uploads all data to Apple servers immediately",
+          "Deletes background apps after 5 minutes"
+        ],
+        "correctOption": "Intelligently batches non-urgent tasks until the device is connected to external power and unmetered network connectivity",
+        "conceptTarget": "iOS Background Processing"
+      },
+      {
+        "id": "mob-a-5",
+        "text": "In modern Android, how does Kotlin Coroutines Flow handle backpressure?",
+        "options": [
+          "Suspends the emitter coroutine when the collector cannot keep up with the emission rate without buffer overflow",
+          "Drops all packets over 1MB",
+          "Spawns 100 new OS threads",
+          "Crashes the application"
+        ],
+        "correctOption": "Suspends the emitter coroutine when the collector cannot keep up with the emission rate without buffer overflow",
+        "conceptTarget": "Coroutines Flow Backpressure"
+      },
+      {
+        "id": "mob-a-6",
+        "text": "What mechanism allows iOS Dynamic Island and Live Activities to update in real-time with sub-second latency?",
+        "options": [
+          "ActivityKit background push tokens via Apple Push Notification service (APNs) updates",
+          "Continuous Bluetooth polling",
+          "Keeping the main app running in the foreground",
+          "Refreshing the entire iOS home screen"
+        ],
+        "correctOption": "ActivityKit background push tokens via Apple Push Notification service (APNs) updates",
+        "conceptTarget": "ActivityKit Architecture"
+      },
+      {
+        "id": "mob-a-7",
+        "text": "What is memory thrashing in mobile devices with low RAM budgets?",
+        "options": [
+          "The OS spends more time evicting and paging memory pages than executing application instructions, causing severe stutter",
+          "Battery overheating",
+          "Wi-Fi disconnection",
+          "Screen flickering"
+        ],
+        "correctOption": "The OS spends more time evicting and paging memory pages than executing application instructions, causing severe stutter",
+        "conceptTarget": "Memory Thrashing"
+      },
+      {
+        "id": "mob-a-8",
+        "text": "How does Android's low-memory killer daemon (lmkd) prioritize process termination under memory pressure?",
+        "options": [
+          "Evaluates the Out-Of-Memory score (oom_score_adj) to terminate background and cached processes before foreground services",
+          "Kills the currently active user app first",
+          "Shuts down the phone",
+          "Deletes user photos"
+        ],
+        "correctOption": "Evaluates the Out-Of-Memory score (oom_score_adj) to terminate background and cached processes before foreground services",
+        "conceptTarget": "Android Kernel lmkd"
+      }
+    ]
+  },
+  "Blockchain & Distributed Systems": {
+    "Beginner": [
+      {
+        "id": "bc-b-1",
+        "text": "What is a blockchain at its fundamental structural level?",
+        "options": [
+          "A centralized relational SQL database",
+          "A cryptographically linked chain of blocks using cryptographic hashes",
+          "A cloud server hosting Apache web servers",
+          "A compiled C++ desktop program"
+        ],
+        "correctOption": "A cryptographically linked chain of blocks using cryptographic hashes",
+        "conceptTarget": "Blockchain Architecture"
+      },
+      {
+        "id": "bc-b-2",
+        "text": "What is a smart contract in a decentralized network?",
+        "options": [
+          "A signed legal document on paper",
+          "Deterministic self-executing code stored and verified across a decentralized state machine",
+          "A private chat message between users",
+          "A tool for mining Bitcoin faster"
+        ],
+        "correctOption": "Deterministic self-executing code stored and verified across a decentralized state machine",
+        "conceptTarget": "Smart Contracts"
+      },
+      {
+        "id": "bc-b-3",
+        "text": "What is the purpose of 'Gas' on the Ethereum network?",
+        "options": [
+          "A measure of computational execution units required to process transactions and prevent infinite loops",
+          "A physical fuel for cooling servers",
+          "A payment to download the web browser",
+          "A tool to increase internet bandwidth"
+        ],
+        "correctOption": "A measure of computational execution units required to process transactions and prevent infinite loops",
+        "conceptTarget": "Gas Economics"
+      },
+      {
+        "id": "bc-b-4",
+        "text": "What is a cryptographic hash function (e.g. SHA-256)?",
+        "options": [
+          "A mathematical algorithm that maps arbitrary data to a fixed-size bit string deterministically and is one-way",
+          "A compression tool for zip files",
+          "A password manager plugin",
+          "A tool to edit audio"
+        ],
+        "correctOption": "A mathematical algorithm that maps arbitrary data to a fixed-size bit string deterministically and is one-way",
+        "conceptTarget": "Cryptographic Hashing"
+      },
+      {
+        "id": "bc-b-5",
+        "text": "What is the primary difference between a public blockchain and a private consortium blockchain?",
+        "options": [
+          "Public is permissionless where anyone can participate; private restricts consensus and reading rights to vetted entities",
+          "Public blockchains do not use cryptography",
+          "Private blockchains run without electricity",
+          "Public blockchains can only have 10 users"
+        ],
+        "correctOption": "Public is permissionless where anyone can participate; private restricts consensus and reading rights to vetted entities",
+        "conceptTarget": "Blockchain Taxonomy"
+      },
+      {
+        "id": "bc-b-6",
+        "text": "What is a cold hardware wallet?",
+        "options": [
+          "A secure offline physical device that stores private keys isolated from internet-connected devices",
+          "A computer stored in a refrigerator",
+          "A frozen bank account",
+          "An email draft folder"
+        ],
+        "correctOption": "A secure offline physical device that stores private keys isolated from internet-connected devices",
+        "conceptTarget": "Key Management"
+      },
+      {
+        "id": "bc-b-7",
+        "text": "What is mining in Proof-of-Work blockchains?",
+        "options": [
+          "Using computational power to solve difficult cryptographic puzzles to propose and validate new blocks",
+          "Digging for precious metals",
+          "Writing smart contracts in Solidity",
+          "Buying cryptocurrency on an exchange"
+        ],
+        "correctOption": "Using computational power to solve difficult cryptographic puzzles to propose and validate new blocks",
+        "conceptTarget": "Proof of Work"
+      },
+      {
+        "id": "bc-b-8",
+        "text": "What does the 51% attack represent in blockchain networks?",
+        "options": [
+          "When an entity controls a majority of hashing/voting power and can reorganize blocks or double-spend",
+          "When 51% of users delete their wallets",
+          "A tax fee on transactions",
+          "A discount on transaction fees"
+        ],
+        "correctOption": "When an entity controls a majority of hashing/voting power and can reorganize blocks or double-spend",
+        "conceptTarget": "Network Vulnerabilities"
+      }
+    ],
+    "Intermediate": [
+      {
+        "id": "bc-i-1",
+        "text": "What problem does Byzantine Fault Tolerance (BFT) resolve in distributed consensus?",
+        "options": [
+          "Ensuring network nodes can reach reliable consensus even when some nodes fail or act maliciously",
+          "Compressing database images by 90%",
+          "Increasing GPU frame rates in gaming",
+          "Speeding up CPU clock frequencies"
+        ],
+        "correctOption": "Ensuring network nodes can reach reliable consensus even when some nodes fail or act maliciously",
+        "conceptTarget": "Distributed Consensus"
+      },
+      {
+        "id": "bc-i-2",
+        "text": "What is the primary role of a Merkle Tree in a block header?",
+        "options": [
+          "To provide efficient and secure cryptographic verification of large data sets using O(log n) inclusion proofs",
+          "To sort transactions alphabetically",
+          "To store high-resolution profile pictures",
+          "To convert smart contracts into HTML"
+        ],
+        "correctOption": "To provide efficient and secure cryptographic verification of large data sets using O(log n) inclusion proofs",
+        "conceptTarget": "Merkle Trees"
+      },
+      {
+        "id": "bc-i-3",
+        "text": "What is a reentrancy attack in Solidity smart contracts?",
+        "options": [
+          "When an external call invokes the calling contract recursively before internal balance states are updated, draining funds",
+          "When two miners find a block simultaneously",
+          "When a user logs in from two computers",
+          "When a wallet password is forgotten"
+        ],
+        "correctOption": "When an external call invokes the calling contract recursively before internal balance states are updated, draining funds",
+        "conceptTarget": "Smart Contract Security"
+      },
+      {
+        "id": "bc-i-4",
+        "text": "What is the difference between Layer 1 (L1) and Layer 2 (L2) blockchain scaling?",
+        "options": [
+          "L1 modifies the fundamental base consensus protocol; L2 processes transactions off-chain and posts cryptographic validity proofs on-chain",
+          "L1 is for mobile; L2 is for desktop",
+          "L2 does not use smart contracts",
+          "L1 is centralized; L2 is decentralized"
+        ],
+        "correctOption": "L1 modifies the fundamental base consensus protocol; L2 processes transactions off-chain and posts cryptographic validity proofs on-chain",
+        "conceptTarget": "Layer 2 Scaling"
+      },
+      {
+        "id": "bc-i-5",
+        "text": "In distributed systems, what is the purpose of Vector Clocks?",
+        "options": [
+          "To capture causal relationships and determine partial ordering of events across distributed nodes without a central physical clock",
+          "To measure network cable lengths",
+          "To draw 3D graphics in games",
+          "To calculate GPU frame rates"
+        ],
+        "correctOption": "To capture causal relationships and determine partial ordering of events across distributed nodes without a central physical clock",
+        "conceptTarget": "Logical Time / Vector Clocks"
+      },
+      {
+        "id": "bc-i-6",
+        "text": "What is the Raft consensus algorithm designed to achieve in distributed systems?",
+        "options": [
+          "Leader election, log replication, and safe state machine consensus among distributed server clusters",
+          "Bitcoin mining efficiency",
+          "CSS layout styling",
+          "Audio encoding"
+        ],
+        "correctOption": "Leader election, log replication, and safe state machine consensus among distributed server clusters",
+        "conceptTarget": "Raft Consensus"
+      },
+      {
+        "id": "bc-i-7",
+        "text": "What does an Automated Market Maker (AMM) rely on instead of a traditional order book in decentralized finance (DeFi)?",
+        "options": [
+          "Constant product mathematical formula (e.g. x * y = k) governing liquidity pools",
+          "Centralized stock exchange brokers",
+          "Manual price negotiations via chat",
+          "Government regulatory approval"
+        ],
+        "correctOption": "Constant product mathematical formula (e.g. x * y = k) governing liquidity pools",
+        "conceptTarget": "DeFi / AMM Mechanics"
+      },
+      {
+        "id": "bc-i-8",
+        "text": "What is a hard fork in blockchain protocol evolution?",
+        "options": [
+          "A non-backwards-compatible protocol rule change requiring all validating nodes to upgrade or split into separate chains",
+          "A physical break in a fiber optic cable",
+          "A software crash in the web browser",
+          "A temporary price fluctuation"
+        ],
+        "correctOption": "A non-backwards-compatible protocol rule change requiring all validating nodes to upgrade or split into separate chains",
+        "conceptTarget": "Hard Fork Dynamics"
+      }
+    ],
+    "Advanced": [
+      {
+        "id": "bc-a-1",
+        "text": "What does the CAP Theorem mathematically dictate regarding distributed distributed data stores?",
+        "options": [
+          "A system can achieve Consistency, Availability, and Partition Tolerance simultaneously without trade-offs",
+          "In the presence of a network partition, a distributed system must trade off between consistency and availability",
+          "Distributed systems must always prioritize throughput over correctness",
+          "Latency is independent of physical distance"
+        ],
+        "correctOption": "In the presence of a network partition, a distributed system must trade off between consistency and availability",
+        "conceptTarget": "CAP Theorem"
+      },
+      {
+        "id": "bc-a-2",
+        "text": "How do Zero-Knowledge Rollups (zk-Rollups) verify transaction batches without executing every state transition on-chain?",
+        "options": [
+          "Generates a concise cryptographic validity proof (SNARK/STARK) proving the mathematical correctness of thousands of off-chain state updates",
+          "Trusts a central validator company signature",
+          "Reruns every transaction on Ethereum mainnet",
+          "Delays all withdrawals by 7 days"
+        ],
+        "correctOption": "Generates a concise cryptographic validity proof (SNARK/STARK) proving the mathematical correctness of thousands of off-chain state updates",
+        "conceptTarget": "zk-Rollup Architecture"
+      },
+      {
+        "id": "bc-a-3",
+        "text": "In distributed consensus, what is the FLP Impossibility Theorem (Fischer, Lynch, Paterson)?",
+        "options": [
+          "In an asynchronous network, no deterministic consensus protocol can guarantee both safety and liveness if even a single node can fail by crashing",
+          "Distributed systems can achieve infinite scaling without bandwidth limits",
+          "Data can never be lost on SSDs",
+          "All networks must use TCP instead of UDP"
+        ],
+        "correctOption": "In an asynchronous network, no deterministic consensus protocol can guarantee both safety and liveness if even a single node can fail by crashing",
+        "conceptTarget": "FLP Impossibility"
+      },
+      {
+        "id": "bc-a-4",
+        "text": "What is MEV (Maximal Extractable Value) in decentralized blockchain networks?",
+        "options": [
+          "The maximum value that miners/validators can extract by arbitrarily reordering, inserting, or censoring transactions in a block",
+          "The highest gas price paid in a day",
+          "The total market cap of Bitcoin",
+          "The maximum memory size of a node"
+        ],
+        "correctOption": "The maximum value that miners/validators can extract by arbitrarily reordering, inserting, or censoring transactions in a block",
+        "conceptTarget": "MEV & Block Production"
+      },
+      {
+        "id": "bc-a-5",
+        "text": "In Ethereum's Proof of Stake consensus, what is the role of the Casper FFG (Friendly Finality Gadget)?",
+        "options": [
+          "An overlay consensus protocol providing economic finality by slashing validator stakes if contradictory checkpoints are attested",
+          "A wallet user interface tool",
+          "A compiler for Solidity",
+          "A network routing protocol"
+        ],
+        "correctOption": "An overlay consensus protocol providing economic finality by slashing validator stakes if contradictory checkpoints are attested",
+        "conceptTarget": "Casper FFG Finality"
+      },
+      {
+        "id": "bc-a-6",
+        "text": "What is state bloat in public blockchain nodes?",
+        "options": [
+          "The continuous growth of active global state accounts and smart contract storage that must reside in fast memory for transaction validation",
+          "When smart contract code exceeds 100 lines",
+          "When gas prices drop too low",
+          "When a block has too few transactions"
+        ],
+        "correctOption": "The continuous growth of active global state accounts and smart contract storage that must reside in fast memory for transaction validation",
+        "conceptTarget": "State Bloat"
+      },
+      {
+        "id": "bc-a-7",
+        "text": "How does sharding achieve horizontal scalability in distributed ledger architectures?",
+        "options": [
+          "Partitions the global network state and transaction throughput across independent parallel subnetworks ('shards')",
+          "Compiles all smart contracts to WebAssembly",
+          "Reduces block times to 1 millisecond",
+          "Increases block size to 100 Gigabytes"
+        ],
+        "correctOption": "Partitions the global network state and transaction throughput across independent parallel subnetworks ('shards')",
+        "conceptTarget": "Database Sharding"
+      },
+      {
+        "id": "bc-a-8",
+        "text": "What is a Sybil attack and how do consensus mechanisms mathematically prevent it?",
+        "options": [
+          "An adversary creates numerous pseudo-identities to gain disproportionate influence; prevented by tying voting weight to scarce economic resources (PoW hashpower or PoS stake)",
+          "Flooding network ports with UDP packets",
+          "Guessing private keys using dictionary attacks",
+          "Injecting malicious SQL queries"
+        ],
+        "correctOption": "An adversary creates numerous pseudo-identities to gain disproportionate influence; prevented by tying voting weight to scarce economic resources (PoW hashpower or PoS stake)",
+        "conceptTarget": "Sybil Resistance"
+      }
+    ]
+  },
+  "DevOps & Cloud Engineering": {
+    "Beginner": [
+      {
+        "id": "dev-b-1",
+        "text": "What is Docker's primary role in software development and deployment?",
+        "options": [
+          "Packaging applications and their dependencies into standardized, isolated lightweight containers",
+          "Writing frontend CSS styling rules",
+          "Designing relational database schemas",
+          "Creating vector graphics"
+        ],
+        "correctOption": "Packaging applications and their dependencies into standardized, isolated lightweight containers",
+        "conceptTarget": "Containerization"
+      },
+      {
+        "id": "dev-b-2",
+        "text": "What is Continuous Integration (CI) in a DevOps pipeline?",
+        "options": [
+          "The practice of automating the building, testing, and validation of code changes as soon as they are pushed",
+          "Manually testing code in production once a year",
+          "Re-installing the operating system weekly",
+          "Writing documentation on paper"
+        ],
+        "correctOption": "The practice of automating the building, testing, and validation of code changes as soon as they are pushed",
+        "conceptTarget": "Continuous Integration"
+      },
+      {
+        "id": "dev-b-3",
+        "text": "What is the concept of Infrastructure as Code (IaC)?",
+        "options": [
+          "Managing and provisioning cloud and IT infrastructure through declarative code definition files rather than manual console clicks",
+          "Writing assembly language for routers",
+          "Building physical server racks with wood",
+          "Printing server logs on paper"
+        ],
+        "correctOption": "Managing and provisioning cloud and IT infrastructure through declarative code definition files rather than manual console clicks",
+        "conceptTarget": "Infrastructure as Code"
+      },
+      {
+        "id": "dev-b-4",
+        "text": "What is the primary role of Git in a modern software engineering team?",
+        "options": [
+          "Distributed version control tracking source code history and enabling collaborative branch merges",
+          "Running automated database backups",
+          "Compiling JavaScript to native machine code",
+          "Hosting domain name servers (DNS)"
+        ],
+        "correctOption": "Distributed version control tracking source code history and enabling collaborative branch merges",
+        "conceptTarget": "Git Version Control"
+      },
+      {
+        "id": "dev-b-5",
+        "text": "Which configuration language is the standard for Kubernetes manifests and GitHub Actions workflows?",
+        "options": [
+          "YAML",
+          "C++",
+          "Assembly",
+          "CSS"
+        ],
+        "correctOption": "YAML",
+        "conceptTarget": "YAML Configuration"
+      },
+      {
+        "id": "dev-b-6",
+        "text": "What is a Reverse Proxy (e.g. Nginx or Cloudflare)?",
+        "options": [
+          "A server sitting in front of web servers, intercepting client requests to handle load balancing, SSL termination, and caching",
+          "A tool to download torrents",
+          "A computer monitor calibration tool",
+          "A browser extension for taking screenshots"
+        ],
+        "correctOption": "A server sitting in front of web servers, intercepting client requests to handle load balancing, SSL termination, and caching",
+        "conceptTarget": "Reverse Proxies"
+      },
+      {
+        "id": "dev-b-7",
+        "text": "What does CD stand for in the CI/CD paradigm?",
+        "options": [
+          "Continuous Delivery / Continuous Deployment",
+          "Compact Disc",
+          "Centralized Database",
+          "Code Documentation"
+        ],
+        "correctOption": "Continuous Delivery / Continuous Deployment",
+        "conceptTarget": "Continuous Delivery"
+      },
+      {
+        "id": "dev-b-8",
+        "text": "What is an AWS S3 bucket primarily used for in cloud architecture?",
+        "options": [
+          "Scalable, highly durable object storage for files, media, and static assets",
+          "Executing relational SQL queries",
+          "Running Windows desktop games",
+          "Monitoring server temperatures"
+        ],
+        "correctOption": "Scalable, highly durable object storage for files, media, and static assets",
+        "conceptTarget": "Object Storage"
+      }
+    ],
+    "Intermediate": [
+      {
+        "id": "dev-i-1",
+        "text": "In Kubernetes, what is a Pod?",
+        "options": [
+          "The smallest deployable unit of computing in Kubernetes, encapsulating one or more co-located containers",
+          "A physical data center facility",
+          "A hardware hard drive partition",
+          "A type of network router cable"
+        ],
+        "correctOption": "The smallest deployable unit of computing in Kubernetes, encapsulating one or more co-located containers",
+        "conceptTarget": "Kubernetes Primitives"
+      },
+      {
+        "id": "dev-i-2",
+        "text": "How does a Blue/Green deployment strategy achieve zero-downtime application releases?",
+        "options": [
+          "Maintaining two identical production environments and instantly switching router traffic to the new version once verified",
+          "Deploying changes randomly to half the users",
+          "Shutting down servers for maintenance overnight",
+          "Converting all microservices to a single monolith"
+        ],
+        "correctOption": "Maintaining two identical production environments and instantly switching router traffic to the new version once verified",
+        "conceptTarget": "Deployment Strategies"
+      },
+      {
+        "id": "dev-i-3",
+        "text": "What is the primary purpose of Terraform state files in Infrastructure-as-Code?",
+        "options": [
+          "Maps declared configuration resources to real-world cloud resource IDs and tracks operational metadata",
+          "Stores plain text user credit cards",
+          "Compiles Go binaries",
+          "Configures local desktop monitors"
+        ],
+        "correctOption": "Maps declared configuration resources to real-world cloud resource IDs and tracks operational metadata",
+        "conceptTarget": "Terraform State"
+      },
+      {
+        "id": "dev-i-4",
+        "text": "What is the difference between Prometheus and Grafana in cloud monitoring?",
+        "options": [
+          "Prometheus scrapes, stores, and evaluates time-series metrics; Grafana visualizes and queries those metrics on dashboards",
+          "Prometheus is hardware; Grafana is software",
+          "Grafana replaces Docker; Prometheus replaces Kubernetes",
+          "Prometheus cannot monitor CPU usage"
+        ],
+        "correctOption": "Prometheus scrapes, stores, and evaluates time-series metrics; Grafana visualizes and queries those metrics on dashboards",
+        "conceptTarget": "Observability / Metrics"
+      },
+      {
+        "id": "dev-i-5",
+        "text": "How does a Canary deployment mitigate production release risks?",
+        "options": [
+          "Gradually rolls out the new software version to a small percentage (e.g. 5%) of live users before full deployment",
+          "Deploys code exclusively on weekends",
+          "Replaces all servers with virtual machines",
+          "Disables database backups during upgrades"
+        ],
+        "correctOption": "Gradually rolls out the new software version to a small percentage (e.g. 5%) of live users before full deployment",
+        "conceptTarget": "Canary Releases"
+      },
+      {
+        "id": "dev-i-6",
+        "text": "What is an Ingress Controller in Kubernetes?",
+        "options": [
+          "Manages external HTTP/HTTPS access and routing rules to services within the cluster",
+          "Deletes crashed nodes physically",
+          "Reboots the master node weekly",
+          "Allocates hard drive sectors"
+        ],
+        "correctOption": "Manages external HTTP/HTTPS access and routing rules to services within the cluster",
+        "conceptTarget": "Kubernetes Ingress"
+      },
+      {
+        "id": "dev-i-7",
+        "text": "What does Horizontal Pod Autoscaling (HPA) in Kubernetes adjust based on workload metrics?",
+        "options": [
+          "Automatically scales the number of replica Pods up or down based on observed CPU or memory utilization",
+          "Increases the CPU speed of physical motherboards",
+          "Deletes underutilized namespaces",
+          "Purchases new cloud domain names"
+        ],
+        "correctOption": "Automatically scales the number of replica Pods up or down based on observed CPU or memory utilization",
+        "conceptTarget": "Autoscaling / HPA"
+      },
+      {
+        "id": "dev-i-8",
+        "text": "What is the benefit of multi-stage Docker builds?",
+        "options": [
+          "Dramatically reduces final production image size by copying only compiled artifacts from temporary build environments",
+          "Allows Docker to run on mobile phones",
+          "Eliminates the need for Linux kernels",
+          "Bypasses all unit test suites"
+        ],
+        "correctOption": "Dramatically reduces final production image size by copying only compiled artifacts from temporary build environments",
+        "conceptTarget": "Multi-Stage Docker"
+      }
+    ],
+    "Advanced": [
+      {
+        "id": "dev-a-1",
+        "text": "How does a Service Mesh (e.g. Istio) manage microservice traffic and security without modifying application source code?",
+        "options": [
+          "By injecting transparent sidecar proxies (e.g. Envoy) alongside each microservice container to handle mTLS and routing",
+          "By rewriting all application code into Go binaries automatically",
+          "By routing all traffic through a centralized overseas proxy server",
+          "By disabling TLS encryption within the cluster"
+        ],
+        "correctOption": "By injecting transparent sidecar proxies (e.g. Envoy) alongside each microservice container to handle mTLS and routing",
+        "conceptTarget": "Service Mesh Architecture"
+      },
+      {
+        "id": "dev-a-2",
+        "text": "What is GitOps (e.g. ArgoCD or Flux) and how does its continuous reconciliation loop operate?",
+        "options": [
+          "Git is the single declarative source of truth; cluster controllers continuously compare and synchronize live infrastructure with Git manifests",
+          "Developers push code directly to production servers via FTP",
+          "Cluster state is managed through manual web UI clicks",
+          "All Kubernetes YAML is compiled to C++"
+        ],
+        "correctOption": "Git is the single declarative source of truth; cluster controllers continuously compare and synchronize live infrastructure with Git manifests",
+        "conceptTarget": "GitOps Paradigm"
+      },
+      {
+        "id": "dev-a-3",
+        "text": "In distributed tracing (e.g. OpenTelemetry / Jaeger), what is a Trace Context / Span?",
+        "options": [
+          "A unique correlation identifier propagated across network headers tracking a single request's path and latency across multiple microservices",
+          "A physical cable measuring server speed",
+          "A snapshot of the entire database",
+          "A cron job that restarts Docker"
+        ],
+        "correctOption": "A unique correlation identifier propagated across network headers tracking a single request's path and latency across multiple microservices",
+        "conceptTarget": "Distributed Tracing"
+      },
+      {
+        "id": "dev-a-4",
+        "text": "How does Chaos Engineering (e.g. Chaos Monkey) proactively improve system resilience?",
+        "options": [
+          "Intentionally injecting realistic pseudo-random failures into production to uncover architectural weaknesses before they cause outages",
+          "Deleting user databases randomly",
+          "Shutting down company email servers",
+          "Disabling production SSL certificates"
+        ],
+        "correctOption": "Intentionally injecting realistic pseudo-random failures into production to uncover architectural weaknesses before they cause outages",
+        "conceptTarget": "Chaos Engineering"
+      },
+      {
+        "id": "dev-a-5",
+        "text": "What problem does eBPF (Extended Berkeley Packet Filter) solve in modern Linux cloud observability and security?",
+        "options": [
+          "Allows running sandboxed byte-code programs directly inside the Linux kernel without modifying kernel source code or loading modules",
+          "Replaces the Linux kernel with Windows NT",
+          "Disables all network firewalls",
+          "Translates Python to kernel machine code"
+        ],
+        "correctOption": "Allows running sandboxed byte-code programs directly inside the Linux kernel without modifying kernel source code or loading modules",
+        "conceptTarget": "eBPF Architecture"
+      },
+      {
+        "id": "dev-a-6",
+        "text": "What is Mutual TLS (mTLS) in a Service Mesh zero-trust network?",
+        "options": [
+          "Both client and server authenticate each other's X.509 digital certificates to ensure both encrypted transport and verified identity",
+          "Encrypts only the server response while leaving request headers in plain text",
+          "Disables TLS handshakes to decrease latency",
+          "Uses shared passwords instead of certificates"
+        ],
+        "correctOption": "Both client and server authenticate each other's X.509 digital certificates to ensure both encrypted transport and verified identity",
+        "conceptTarget": "mTLS Authentication"
+      },
+      {
+        "id": "dev-a-7",
+        "text": "In distributed database scaling, what is the Raft/Paxos consensus log truncation problem?",
+        "options": [
+          "State machines must periodically take snapshots and truncate append-only consensus logs to prevent disks from exhausting capacity",
+          "Consensus logs can never be pruned safely",
+          "Logs must be stored in plain text on client browsers",
+          "Truncation disables leader election"
+        ],
+        "correctOption": "State machines must periodically take snapshots and truncate append-only consensus logs to prevent disks from exhausting capacity",
+        "conceptTarget": "Consensus Log Compaction"
+      },
+      {
+        "id": "dev-a-8",
+        "text": "What is the Split-Brain scenario in high-availability clustered systems?",
+        "options": [
+          "A network partition causes two disconnected sub-clusters to each believe they are the legitimate leader, potentially corrupting shared state",
+          "When a computer monitor splits into two windows",
+          "When two developers commit to the same Git branch",
+          "When RAM is divided equally across two CPUs"
+        ],
+        "correctOption": "A network partition causes two disconnected sub-clusters to each believe they are the legitimate leader, potentially corrupting shared state",
+        "conceptTarget": "Split-Brain Resolution"
+      }
+    ]
   }
 };
