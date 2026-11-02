@@ -5,7 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Progress } from '@/components/ui/progress';
 import { Badge } from '@/components/ui/badge';
 import { 
-  Clock, 
+    Clock, 
   Activity, 
   CheckCircle2, 
   AlertCircle, 
@@ -16,10 +16,273 @@ import {
   Cpu, 
   Database,
   Sparkles,
-  Award
+  Award,
+  TrendingUp,
+  Landmark,
+  PieChart,
+  DollarSign,
+  Brain,
+  Stethoscope,
+  Pill,
+  Dna,
+  HeartPulse,
+  Palette,
+  Eye,
+  MousePointerClick,
+  Briefcase,
+  Users
 } from 'lucide-react';
 import { redirect } from 'next/navigation';
 import ScheduleGenerator from '@/components/ScheduleGenerator';
+
+
+function getCompetencyMatrixForDomain(domainName: string | undefined, baseMastery: number, hasFlaws: boolean) {
+  const d = (domainName || '').toLowerCase();
+  
+  if (d.includes('financ') || d.includes('econom')) {
+    return [
+      {
+        name: "Capital Markets & Equity Valuation",
+        score: Math.min(95, Math.max(40, baseMastery + (hasFlaws ? -10 : 15))),
+        icon: TrendingUp,
+        description: "DCF modeling, P/E multiples, capital asset pricing (CAPM), and risk premia."
+      },
+      {
+        name: "Macroeconomic Policy & Monetary Dynamics",
+        score: Math.min(92, Math.max(35, baseMastery - (hasFlaws ? 15 : 0))),
+        icon: Landmark,
+        description: "Central bank interest rates, inflation forecasting, and yield curve shifts."
+      },
+      {
+        name: "Portfolio Risk & Modern Portfolio Theory",
+        score: Math.min(90, Math.max(45, baseMastery + (hasFlaws ? -5 : 10))),
+        icon: PieChart,
+        description: "Sharpe ratio, unsystematic vs systematic risk diversification, and VaR."
+      },
+      {
+        name: "Corporate Finance & Capital Structure",
+        score: Math.min(98, Math.max(50, baseMastery + 12)),
+        icon: DollarSign,
+        description: "EBITDA normalization, Modigliani-Miller theorem, and debt-to-equity leverage."
+      },
+      {
+        name: "Derivatives, Hedging & Market Microstructure",
+        score: Math.min(95, Math.max(60, baseMastery + 18)),
+        icon: ShieldCheck,
+        description: "Options call/put mechanics, Black-Scholes dynamics, and CDS spread hedging."
+      }
+    ];
+  }
+
+  if (d.includes('psycholog') || d.includes('behavior')) {
+    return [
+      {
+        name: "Cognitive Biases & Decision Heuristics",
+        score: Math.min(95, Math.max(40, baseMastery + (hasFlaws ? -10 : 15))),
+        icon: Brain,
+        description: "Confirmation bias, cognitive dissonance, and dual-system reasoning (Kahneman)."
+      },
+      {
+        name: "Behavioral Conditioning & Learning Theory",
+        score: Math.min(92, Math.max(35, baseMastery - (hasFlaws ? 15 : 0))),
+        icon: Activity,
+        description: "Classical conditioning, operant reinforcement schedules, and self-efficacy."
+      },
+      {
+        name: "Neurobiological Foundations & Plasticity",
+        score: Math.min(90, Math.max(45, baseMastery + (hasFlaws ? -5 : 10))),
+        icon: Sparkles,
+        description: "Amygdala threat processing, synaptic Long-Term Potentiation (LTP), and SSRIs."
+      },
+      {
+        name: "Social Psychology & Group Dynamics",
+        score: Math.min(98, Math.max(50, baseMastery + 12)),
+        icon: Users,
+        description: "Bystander effect, Milgram obedience, and attribution theory."
+      },
+      {
+        name: "Psychometrics & Diagnostic Methodologies",
+        score: Math.min(95, Math.max(60, baseMastery + 18)),
+        icon: ShieldCheck,
+        description: "Big Five OCEAN validation, diathesis-stress models, and Piagetian developmental stages."
+      }
+    ];
+  }
+
+  if (d.includes('health') || d.includes('biomed') || d.includes('medic')) {
+    return [
+      {
+        name: "Human Anatomy & Systemic Pathophysiology",
+        score: Math.min(95, Math.max(40, baseMastery + (hasFlaws ? -10 : 15))),
+        icon: Stethoscope,
+        description: "Erythrocyte gas exchange, cardiovascular vitals, and homeostatic regulation."
+      },
+      {
+        name: "Pharmacology & Pharmacokinetics",
+        score: Math.min(92, Math.max(35, baseMastery - (hasFlaws ? 15 : 0))),
+        icon: Pill,
+        description: "ADME dynamics, hepatic CYP450 metabolism, and allosteric receptor modulation."
+      },
+      {
+        name: "Cellular Oncology & Molecular Genetics",
+        score: Math.min(90, Math.max(45, baseMastery + (hasFlaws ? -5 : 10))),
+        icon: Dna,
+        description: "TP53 tumor suppression, CRISPR-Cas9 PAM sequences, and mRNA immunotherapeutics."
+      },
+      {
+        name: "Immunology & Diagnostic Biomarkers",
+        score: Math.min(98, Math.max(50, baseMastery + 12)),
+        icon: HeartPulse,
+        description: "Troponin-I cardiac necrosis markers, autoimmune mechanisms, and PD-1 checkpoint inhibitors."
+      },
+      {
+        name: "Epidemiology & Clinical Trial Protocols",
+        score: Math.min(95, Math.max(60, baseMastery + 18)),
+        icon: ShieldCheck,
+        description: "Basic reproduction number (R0), Phase 1-4 trial methodologies, and public health safeguards."
+      }
+    ];
+  }
+
+  if (d.includes('design') || d.includes('hci') || d.includes('product')) {
+    return [
+      {
+        name: "Human Mental Models & Usability Heuristics",
+        score: Math.min(95, Math.max(40, baseMastery + (hasFlaws ? -10 : 15))),
+        icon: Palette,
+        description: "Nielsen's 10 heuristics, cognitive friction, affordances, and Hick's Law."
+      },
+      {
+        name: "Information Architecture & Visual Hierarchy",
+        score: Math.min(92, Math.max(35, baseMastery - (hasFlaws ? 15 : 0))),
+        icon: Layers,
+        description: "Card sorting, negative space ratio, typographic contrast, and progressive disclosure."
+      },
+      {
+        name: "Fitts's Law & Interaction Ergonomics",
+        score: Math.min(90, Math.max(45, baseMastery + (hasFlaws ? -5 : 10))),
+        icon: MousePointerClick,
+        description: "Target distance-to-size indexing, touch boundaries, and micro-interaction states."
+      },
+      {
+        name: "Accessibility (WCAG 2.1 AA) & Design Systems",
+        score: Math.min(98, Math.max(50, baseMastery + 12)),
+        icon: Eye,
+        description: "4.5:1 minimum contrast compliance, semantic tokens, and screen-reader tree structures."
+      },
+      {
+        name: "User Research & Telemetric Validation",
+        score: Math.min(95, Math.max(60, baseMastery + 18)),
+        icon: ShieldCheck,
+        description: "System Usability Scale (SUS), Double Diamond design process, and A/B split testing."
+      }
+    ];
+  }
+
+  if (d.includes('manage') || d.includes('business')) {
+    return [
+      {
+        name: "Competitive Strategy & Industry Structure",
+        score: Math.min(95, Math.max(40, baseMastery + (hasFlaws ? -10 : 15))),
+        icon: Briefcase,
+        description: "Porter's Five Forces, VRIO core competencies, and Blue Ocean uncontested space."
+      },
+      {
+        name: "Unit Economics & Growth Engines",
+        score: Math.min(92, Math.max(35, baseMastery - (hasFlaws ? 15 : 0))),
+        icon: TrendingUp,
+        description: "LTV:CAC ratio optimization (>3:1), break-even economics, and Ansoff growth matrix."
+      },
+      {
+        name: "Agile Operations & Lean Enterprise",
+        score: Math.min(90, Math.max(45, baseMastery + (hasFlaws ? -5 : 10))),
+        icon: Clock,
+        description: "Scrum sprint velocity, Toyota lean waste elimination (Muda), and Kaizen continuous flow."
+      },
+      {
+        name: "Organizational Leadership & Governance",
+        score: Math.min(98, Math.max(50, baseMastery + 12)),
+        icon: Award,
+        description: "Lewin's 3-stage change management, Agency Theory principal-agent alignment, and HR talent."
+      },
+      {
+        name: "Performance Management & Strategic M&A",
+        score: Math.min(95, Math.max(60, baseMastery + 18)),
+        icon: ShieldCheck,
+        description: "Kaplan-Norton Balanced Scorecard, balance-sheet goodwill, and Nash game equilibria."
+      }
+    ];
+  }
+
+  if (d.includes('data') || d.includes('analytic')) {
+    return [
+      {
+        name: "Statistical Inference & Probability Modeling",
+        score: Math.min(95, Math.max(40, baseMastery + (hasFlaws ? -10 : 15))),
+        icon: Database,
+        description: "Hypothesis testing, p-values, Bayes theorem, and statistical distributions."
+      },
+      {
+        name: "Predictive Machine Learning & Regression",
+        score: Math.min(92, Math.max(35, baseMastery - (hasFlaws ? 15 : 0))),
+        icon: Cpu,
+        description: "Supervised classification, regularized ridge/lasso regression, and ensemble trees."
+      },
+      {
+        name: "Feature Engineering & Data Pipeline Integrity",
+        score: Math.min(90, Math.max(45, baseMastery + (hasFlaws ? -5 : 10))),
+        icon: Layers,
+        description: "Missing value imputation, categorical one-hot encoding, and outlier detection."
+      },
+      {
+        name: "Model Evaluation, ROC-AUC & Calibration",
+        score: Math.min(98, Math.max(50, baseMastery + 12)),
+        icon: Zap,
+        description: "Precision-recall curves, confusion matrices, cross-validation, and bias-variance trade-off."
+      },
+      {
+        name: "Big Data Persistence & Business Intelligence",
+        score: Math.min(95, Math.max(60, baseMastery + 18)),
+        icon: ShieldCheck,
+        description: "Distributed SQL querying, parquet columnar storage, and interactive analytics reporting."
+      }
+    ];
+  }
+
+  // Default: Systems & Computer Science
+  return [
+    {
+      name: "Systems Architecture & Design Patterns",
+      score: Math.min(95, Math.max(40, baseMastery + (hasFlaws ? -10 : 15))),
+      icon: Layers,
+      description: "Component decoupling, micro-frontends, and client-server boundaries."
+    },
+    {
+      name: "State Synchronization & Concurrency",
+      score: Math.min(92, Math.max(35, baseMastery - (hasFlaws ? 15 : 0))),
+      icon: Zap,
+      description: "Event-driven updates, pure mutations, and race condition prevention."
+    },
+    {
+      name: "Algorithmic Complexity & Optimization",
+      score: Math.min(90, Math.max(45, baseMastery + (hasFlaws ? -5 : 10))),
+      icon: Cpu,
+      description: "Time/space scaling, memory management, and tree traversals."
+    },
+    {
+      name: "Edge Persistence & JSONB Caching",
+      score: Math.min(98, Math.max(50, baseMastery + 12)),
+      icon: Database,
+      description: "PostgreSQL JSONB schema, sub-millisecond retrieval, and cache invalidation."
+    },
+    {
+      name: "Resilience & Circuit Breaking",
+      score: Math.min(95, Math.max(60, baseMastery + 18)),
+      icon: ShieldCheck,
+      description: "7.5s AbortController timeouts, fail-safe fallbacks, and RLS security."
+    }
+  ];
+}
 
 export default async function DashboardOverview() {
   const supabase = await createClient();
@@ -83,38 +346,7 @@ export default async function DashboardOverview() {
   const baseMastery = masteryScore > 0 ? masteryScore : 65;
   const hasFlaws = activeFlaws.length > 0;
   
-  const competencyMatrix = [
-    {
-      name: "Systems Architecture & Design Patterns",
-      score: Math.min(95, Math.max(40, baseMastery + (hasFlaws ? -10 : 15))),
-      icon: Layers,
-      description: "Component decoupling, micro-frontends, and client-server boundaries."
-    },
-    {
-      name: "State Synchronization & Concurrency",
-      score: Math.min(92, Math.max(35, baseMastery - (hasFlaws ? 15 : 0))),
-      icon: Zap,
-      description: "Event-driven updates, pure mutations, and race condition prevention."
-    },
-    {
-      name: "Algorithmic Complexity & Optimization",
-      score: Math.min(90, Math.max(45, baseMastery + (hasFlaws ? -5 : 10))),
-      icon: Cpu,
-      description: "Time/space scaling, memory management, and tree traversals."
-    },
-    {
-      name: "Edge Persistence & JSONB Caching",
-      score: Math.min(98, Math.max(50, baseMastery + 12)),
-      icon: Database,
-      description: "PostgreSQL JSONB schema, sub-millisecond retrieval, and cache invalidation."
-    },
-    {
-      name: "Resilience & Circuit Breaking",
-      score: Math.min(95, Math.max(60, baseMastery + 18)),
-      icon: ShieldCheck,
-      description: "7.5s AbortController timeouts, fail-safe fallbacks, and RLS security."
-    }
-  ];
+  const competencyMatrix = getCompetencyMatrixForDomain(domainProfile?.domain_name, baseMastery, hasFlaws);
 
   return (
     <div className="max-w-7xl">

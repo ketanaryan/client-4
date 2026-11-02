@@ -1,5 +1,5 @@
 export const fallbackQuizData: any = {
-  "Computer Engineering": {
+  "Computer Science & Artificial Intelligence": {
     "Beginner": [
       {
         "id": "fb-Co-Beg-0",
@@ -1087,1095 +1087,7 @@ export const fallbackQuizData: any = {
       }
     ]
   },
-  "Artificial Intelligence": {
-    "Beginner": [
-      {
-        "id": "fb-Ar-Beg-0",
-        "text": "What is the goal of Reinforcement Learning in Machine Learning?",
-        "options": [
-          "Sort data",
-          "Memorize data",
-          "Delete outliers",
-          "Find patterns and generalize"
-        ],
-        "correctOption": "Find patterns and generalize",
-        "conceptTarget": "ML Fundamentals"
-      },
-      {
-        "id": "fb-Ar-Beg-1",
-        "text": "Which algorithm is used for classification tasks?",
-        "options": [
-          "Linear Regression",
-          "PCA",
-          "Decision Trees",
-          "K-Means"
-        ],
-        "correctOption": "Linear Regression",
-        "conceptTarget": "Supervised Learning"
-      },
-      {
-        "id": "fb-Ar-Beg-2",
-        "text": "What does GAN stand for in neural networks?",
-        "options": [
-          "Artificial Neural Network",
-          "Algorithmic Number Network",
-          "Automated Natural Node",
-          "None"
-        ],
-        "correctOption": "Artificial Neural Network",
-        "conceptTarget": "Neural Networks"
-      },
-      {
-        "id": "fb-Ar-Beg-3",
-        "text": "In evaluating an AI, what does F1-Score measure?",
-        "options": [
-          "Code complexity",
-          "Training time",
-          "True positive rate",
-          "Memory usage"
-        ],
-        "correctOption": "True positive rate",
-        "conceptTarget": "Evaluation Metrics"
-      },
-      {
-        "id": "fb-Ar-Beg-4",
-        "text": "What is the primary role of training batches?",
-        "options": [
-          "Teach the model",
-          "Style the UI",
-          "Tune hyperparameters",
-          "Evaluate final accuracy"
-        ],
-        "correctOption": "Teach the model",
-        "conceptTarget": "Data Preparation"
-      },
-      {
-        "id": "fb-Ar-Beg-5",
-        "text": "What is the goal of Semi-supervised Learning in Machine Learning?",
-        "options": [
-          "Delete outliers",
-          "Sort data",
-          "Find patterns and generalize",
-          "Memorize data"
-        ],
-        "correctOption": "Find patterns and generalize",
-        "conceptTarget": "ML Fundamentals"
-      },
-      {
-        "id": "fb-Ar-Beg-6",
-        "text": "Which algorithm is used for classification tasks?",
-        "options": [
-          "PCA",
-          "K-Means",
-          "Decision Trees",
-          "Linear Regression"
-        ],
-        "correctOption": "Linear Regression",
-        "conceptTarget": "Supervised Learning"
-      },
-      {
-        "id": "fb-Ar-Beg-7",
-        "text": "What does ANN stand for in neural networks?",
-        "options": [
-          "None",
-          "Algorithmic Number Network",
-          "Automated Natural Node",
-          "Artificial Neural Network"
-        ],
-        "correctOption": "Artificial Neural Network",
-        "conceptTarget": "Neural Networks"
-      },
-      {
-        "id": "fb-Ar-Beg-8",
-        "text": "In evaluating an AI, what does Precision measure?",
-        "options": [
-          "Training time",
-          "Code complexity",
-          "Memory usage",
-          "True positive rate"
-        ],
-        "correctOption": "True positive rate",
-        "conceptTarget": "Evaluation Metrics"
-      },
-      {
-        "id": "fb-Ar-Beg-9",
-        "text": "What is the primary role of training epochs?",
-        "options": [
-          "Style the UI",
-          "Tune hyperparameters",
-          "Evaluate final accuracy",
-          "Teach the model"
-        ],
-        "correctOption": "Teach the model",
-        "conceptTarget": "Data Preparation"
-      },
-      {
-        "id": "fb-Ar-Beg-10",
-        "text": "What is the goal of Unsupervised Learning in Machine Learning?",
-        "options": [
-          "Delete outliers",
-          "Memorize data",
-          "Find patterns and generalize",
-          "Sort data"
-        ],
-        "correctOption": "Find patterns and generalize",
-        "conceptTarget": "ML Fundamentals"
-      },
-      {
-        "id": "fb-Ar-Beg-11",
-        "text": "Which algorithm is used for regression tasks?",
-        "options": [
-          "K-Means",
-          "Decision Trees",
-          "Linear Regression",
-          "PCA"
-        ],
-        "correctOption": "Linear Regression",
-        "conceptTarget": "Supervised Learning"
-      },
-      {
-        "id": "fb-Ar-Beg-12",
-        "text": "What does ANN stand for in neural networks?",
-        "options": [
-          "Algorithmic Number Network",
-          "Artificial Neural Network",
-          "Automated Natural Node",
-          "None"
-        ],
-        "correctOption": "Artificial Neural Network",
-        "conceptTarget": "Neural Networks"
-      },
-      {
-        "id": "fb-Ar-Beg-13",
-        "text": "In evaluating an AI, what does F1-Score measure?",
-        "options": [
-          "Memory usage",
-          "True positive rate",
-          "Code complexity",
-          "Training time"
-        ],
-        "correctOption": "True positive rate",
-        "conceptTarget": "Evaluation Metrics"
-      },
-      {
-        "id": "fb-Ar-Beg-14",
-        "text": "What is the primary role of training batches?",
-        "options": [
-          "Evaluate final accuracy",
-          "Tune hyperparameters",
-          "Teach the model",
-          "Style the UI"
-        ],
-        "correctOption": "Teach the model",
-        "conceptTarget": "Data Preparation"
-      },
-      {
-        "id": "fb-Ar-Beg-15",
-        "text": "What is the goal of Semi-supervised Learning in Machine Learning?",
-        "options": [
-          "Sort data",
-          "Memorize data",
-          "Delete outliers",
-          "Find patterns and generalize"
-        ],
-        "correctOption": "Find patterns and generalize",
-        "conceptTarget": "ML Fundamentals"
-      },
-      {
-        "id": "fb-Ar-Beg-16",
-        "text": "Which algorithm is used for classification tasks?",
-        "options": [
-          "PCA",
-          "Decision Trees",
-          "K-Means",
-          "Linear Regression"
-        ],
-        "correctOption": "Linear Regression",
-        "conceptTarget": "Supervised Learning"
-      },
-      {
-        "id": "fb-Ar-Beg-17",
-        "text": "What does CNN stand for in neural networks?",
-        "options": [
-          "Artificial Neural Network",
-          "None",
-          "Algorithmic Number Network",
-          "Automated Natural Node"
-        ],
-        "correctOption": "Artificial Neural Network",
-        "conceptTarget": "Neural Networks"
-      },
-      {
-        "id": "fb-Ar-Beg-18",
-        "text": "In evaluating an AI, what does Accuracy measure?",
-        "options": [
-          "Memory usage",
-          "Code complexity",
-          "True positive rate",
-          "Training time"
-        ],
-        "correctOption": "True positive rate",
-        "conceptTarget": "Evaluation Metrics"
-      },
-      {
-        "id": "fb-Ar-Beg-19",
-        "text": "What is the primary role of training epochs?",
-        "options": [
-          "Tune hyperparameters",
-          "Style the UI",
-          "Teach the model",
-          "Evaluate final accuracy"
-        ],
-        "correctOption": "Teach the model",
-        "conceptTarget": "Data Preparation"
-      },
-      {
-        "id": "fb-Ar-Beg-20",
-        "text": "What is the goal of Semi-supervised Learning in Machine Learning?",
-        "options": [
-          "Find patterns and generalize",
-          "Sort data",
-          "Memorize data",
-          "Delete outliers"
-        ],
-        "correctOption": "Find patterns and generalize",
-        "conceptTarget": "ML Fundamentals"
-      },
-      {
-        "id": "fb-Ar-Beg-21",
-        "text": "Which algorithm is used for anomaly detection tasks?",
-        "options": [
-          "PCA",
-          "Linear Regression",
-          "Decision Trees",
-          "K-Means"
-        ],
-        "correctOption": "Linear Regression",
-        "conceptTarget": "Supervised Learning"
-      },
-      {
-        "id": "fb-Ar-Beg-22",
-        "text": "What does RNN stand for in neural networks?",
-        "options": [
-          "Algorithmic Number Network",
-          "Artificial Neural Network",
-          "Automated Natural Node",
-          "None"
-        ],
-        "correctOption": "Artificial Neural Network",
-        "conceptTarget": "Neural Networks"
-      },
-      {
-        "id": "fb-Ar-Beg-23",
-        "text": "In evaluating an AI, what does Precision measure?",
-        "options": [
-          "True positive rate",
-          "Code complexity",
-          "Memory usage",
-          "Training time"
-        ],
-        "correctOption": "True positive rate",
-        "conceptTarget": "Evaluation Metrics"
-      },
-      {
-        "id": "fb-Ar-Beg-24",
-        "text": "What is the primary role of training epochs?",
-        "options": [
-          "Style the UI",
-          "Tune hyperparameters",
-          "Teach the model",
-          "Evaluate final accuracy"
-        ],
-        "correctOption": "Teach the model",
-        "conceptTarget": "Data Preparation"
-      },
-      {
-        "id": "fb-Ar-Beg-25",
-        "text": "What is the goal of Supervised Learning in Machine Learning?",
-        "options": [
-          "Sort data",
-          "Memorize data",
-          "Delete outliers",
-          "Find patterns and generalize"
-        ],
-        "correctOption": "Find patterns and generalize",
-        "conceptTarget": "ML Fundamentals"
-      },
-      {
-        "id": "fb-Ar-Beg-26",
-        "text": "Which algorithm is used for classification tasks?",
-        "options": [
-          "Decision Trees",
-          "K-Means",
-          "PCA",
-          "Linear Regression"
-        ],
-        "correctOption": "Linear Regression",
-        "conceptTarget": "Supervised Learning"
-      },
-      {
-        "id": "fb-Ar-Beg-27",
-        "text": "What does RNN stand for in neural networks?",
-        "options": [
-          "Algorithmic Number Network",
-          "None",
-          "Automated Natural Node",
-          "Artificial Neural Network"
-        ],
-        "correctOption": "Artificial Neural Network",
-        "conceptTarget": "Neural Networks"
-      },
-      {
-        "id": "fb-Ar-Beg-28",
-        "text": "In evaluating an AI, what does F1-Score measure?",
-        "options": [
-          "Training time",
-          "True positive rate",
-          "Code complexity",
-          "Memory usage"
-        ],
-        "correctOption": "True positive rate",
-        "conceptTarget": "Evaluation Metrics"
-      },
-      {
-        "id": "fb-Ar-Beg-29",
-        "text": "What is the primary role of training batches?",
-        "options": [
-          "Teach the model",
-          "Style the UI",
-          "Tune hyperparameters",
-          "Evaluate final accuracy"
-        ],
-        "correctOption": "Teach the model",
-        "conceptTarget": "Data Preparation"
-      }
-    ],
-    "Intermediate": [
-      {
-        "id": "fb-Ar-Int-0",
-        "text": "How does Data Augmentation prevent overfitting?",
-        "options": [
-          "By adding a penalty to the loss function",
-          "By changing the learning rate",
-          "By removing data",
-          "By increasing model complexity"
-        ],
-        "correctOption": "By adding a penalty to the loss function",
-        "conceptTarget": "Model Optimization"
-      },
-      {
-        "id": "fb-Ar-Int-1",
-        "text": "What is the purpose of Tanh functions?",
-        "options": [
-          "Introduce non-linearity",
-          "Reduce memory",
-          "Speed up training",
-          "Initialize weights"
-        ],
-        "correctOption": "Introduce non-linearity",
-        "conceptTarget": "Deep Learning"
-      },
-      {
-        "id": "fb-Ar-Int-2",
-        "text": "In NLP, what does Word2Vec capture?",
-        "options": [
-          "Semantic relationships",
-          "Character counts",
-          "Syntax trees",
-          "Word frequencies"
-        ],
-        "correctOption": "Semantic relationships",
-        "conceptTarget": "Natural Language Processing"
-      },
-      {
-        "id": "fb-Ar-Int-3",
-        "text": "What is a major symptom of the dead neuron in deep networks?",
-        "options": [
-          "High memory usage",
-          "Overfitting on train data",
-          "Training is too fast",
-          "Weights stop updating"
-        ],
-        "correctOption": "Weights stop updating",
-        "conceptTarget": "Deep Learning"
-      },
-      {
-        "id": "fb-Ar-Int-4",
-        "text": "In a Convolutional Neural Network, what does a Average Pooling layer do?",
-        "options": [
-          "Reduce spatial dimensions",
-          "Calculate loss",
-          "Add non-linearity",
-          "Increase channels"
-        ],
-        "correctOption": "Reduce spatial dimensions",
-        "conceptTarget": "Computer Vision"
-      },
-      {
-        "id": "fb-Ar-Int-5",
-        "text": "How does L1/L2 prevent overfitting?",
-        "options": [
-          "By changing the learning rate",
-          "By increasing model complexity",
-          "By adding a penalty to the loss function",
-          "By removing data"
-        ],
-        "correctOption": "By adding a penalty to the loss function",
-        "conceptTarget": "Model Optimization"
-      },
-      {
-        "id": "fb-Ar-Int-6",
-        "text": "What is the purpose of Tanh functions?",
-        "options": [
-          "Introduce non-linearity",
-          "Reduce memory",
-          "Speed up training",
-          "Initialize weights"
-        ],
-        "correctOption": "Introduce non-linearity",
-        "conceptTarget": "Deep Learning"
-      },
-      {
-        "id": "fb-Ar-Int-7",
-        "text": "In NLP, what does BERT capture?",
-        "options": [
-          "Character counts",
-          "Semantic relationships",
-          "Syntax trees",
-          "Word frequencies"
-        ],
-        "correctOption": "Semantic relationships",
-        "conceptTarget": "Natural Language Processing"
-      },
-      {
-        "id": "fb-Ar-Int-8",
-        "text": "What is a major symptom of the vanishing gradient in deep networks?",
-        "options": [
-          "Overfitting on train data",
-          "Weights stop updating",
-          "High memory usage",
-          "Training is too fast"
-        ],
-        "correctOption": "Weights stop updating",
-        "conceptTarget": "Deep Learning"
-      },
-      {
-        "id": "fb-Ar-Int-9",
-        "text": "In a Convolutional Neural Network, what does a Average Pooling layer do?",
-        "options": [
-          "Reduce spatial dimensions",
-          "Calculate loss",
-          "Increase channels",
-          "Add non-linearity"
-        ],
-        "correctOption": "Reduce spatial dimensions",
-        "conceptTarget": "Computer Vision"
-      },
-      {
-        "id": "fb-Ar-Int-10",
-        "text": "How does Early Stopping prevent overfitting?",
-        "options": [
-          "By removing data",
-          "By adding a penalty to the loss function",
-          "By increasing model complexity",
-          "By changing the learning rate"
-        ],
-        "correctOption": "By adding a penalty to the loss function",
-        "conceptTarget": "Model Optimization"
-      },
-      {
-        "id": "fb-Ar-Int-11",
-        "text": "What is the purpose of ReLU functions?",
-        "options": [
-          "Speed up training",
-          "Introduce non-linearity",
-          "Initialize weights",
-          "Reduce memory"
-        ],
-        "correctOption": "Introduce non-linearity",
-        "conceptTarget": "Deep Learning"
-      },
-      {
-        "id": "fb-Ar-Int-12",
-        "text": "In NLP, what does FastText capture?",
-        "options": [
-          "Semantic relationships",
-          "Character counts",
-          "Word frequencies",
-          "Syntax trees"
-        ],
-        "correctOption": "Semantic relationships",
-        "conceptTarget": "Natural Language Processing"
-      },
-      {
-        "id": "fb-Ar-Int-13",
-        "text": "What is a major symptom of the vanishing gradient in deep networks?",
-        "options": [
-          "Weights stop updating",
-          "High memory usage",
-          "Overfitting on train data",
-          "Training is too fast"
-        ],
-        "correctOption": "Weights stop updating",
-        "conceptTarget": "Deep Learning"
-      },
-      {
-        "id": "fb-Ar-Int-14",
-        "text": "In a Convolutional Neural Network, what does a Global Pooling layer do?",
-        "options": [
-          "Increase channels",
-          "Add non-linearity",
-          "Calculate loss",
-          "Reduce spatial dimensions"
-        ],
-        "correctOption": "Reduce spatial dimensions",
-        "conceptTarget": "Computer Vision"
-      },
-      {
-        "id": "fb-Ar-Int-15",
-        "text": "How does Data Augmentation prevent overfitting?",
-        "options": [
-          "By adding a penalty to the loss function",
-          "By changing the learning rate",
-          "By increasing model complexity",
-          "By removing data"
-        ],
-        "correctOption": "By adding a penalty to the loss function",
-        "conceptTarget": "Model Optimization"
-      },
-      {
-        "id": "fb-Ar-Int-16",
-        "text": "What is the purpose of Tanh functions?",
-        "options": [
-          "Speed up training",
-          "Reduce memory",
-          "Initialize weights",
-          "Introduce non-linearity"
-        ],
-        "correctOption": "Introduce non-linearity",
-        "conceptTarget": "Deep Learning"
-      },
-      {
-        "id": "fb-Ar-Int-17",
-        "text": "In NLP, what does BERT capture?",
-        "options": [
-          "Word frequencies",
-          "Syntax trees",
-          "Semantic relationships",
-          "Character counts"
-        ],
-        "correctOption": "Semantic relationships",
-        "conceptTarget": "Natural Language Processing"
-      },
-      {
-        "id": "fb-Ar-Int-18",
-        "text": "What is a major symptom of the exploding gradient in deep networks?",
-        "options": [
-          "Training is too fast",
-          "High memory usage",
-          "Weights stop updating",
-          "Overfitting on train data"
-        ],
-        "correctOption": "Weights stop updating",
-        "conceptTarget": "Deep Learning"
-      },
-      {
-        "id": "fb-Ar-Int-19",
-        "text": "In a Convolutional Neural Network, what does a Global Pooling layer do?",
-        "options": [
-          "Reduce spatial dimensions",
-          "Increase channels",
-          "Add non-linearity",
-          "Calculate loss"
-        ],
-        "correctOption": "Reduce spatial dimensions",
-        "conceptTarget": "Computer Vision"
-      },
-      {
-        "id": "fb-Ar-Int-20",
-        "text": "How does Early Stopping prevent overfitting?",
-        "options": [
-          "By removing data",
-          "By changing the learning rate",
-          "By adding a penalty to the loss function",
-          "By increasing model complexity"
-        ],
-        "correctOption": "By adding a penalty to the loss function",
-        "conceptTarget": "Model Optimization"
-      },
-      {
-        "id": "fb-Ar-Int-21",
-        "text": "What is the purpose of Sigmoid functions?",
-        "options": [
-          "Speed up training",
-          "Initialize weights",
-          "Reduce memory",
-          "Introduce non-linearity"
-        ],
-        "correctOption": "Introduce non-linearity",
-        "conceptTarget": "Deep Learning"
-      },
-      {
-        "id": "fb-Ar-Int-22",
-        "text": "In NLP, what does BERT capture?",
-        "options": [
-          "Syntax trees",
-          "Semantic relationships",
-          "Word frequencies",
-          "Character counts"
-        ],
-        "correctOption": "Semantic relationships",
-        "conceptTarget": "Natural Language Processing"
-      },
-      {
-        "id": "fb-Ar-Int-23",
-        "text": "What is a major symptom of the exploding gradient in deep networks?",
-        "options": [
-          "Training is too fast",
-          "High memory usage",
-          "Overfitting on train data",
-          "Weights stop updating"
-        ],
-        "correctOption": "Weights stop updating",
-        "conceptTarget": "Deep Learning"
-      },
-      {
-        "id": "fb-Ar-Int-24",
-        "text": "In a Convolutional Neural Network, what does a Average Pooling layer do?",
-        "options": [
-          "Reduce spatial dimensions",
-          "Increase channels",
-          "Calculate loss",
-          "Add non-linearity"
-        ],
-        "correctOption": "Reduce spatial dimensions",
-        "conceptTarget": "Computer Vision"
-      },
-      {
-        "id": "fb-Ar-Int-25",
-        "text": "How does Early Stopping prevent overfitting?",
-        "options": [
-          "By changing the learning rate",
-          "By adding a penalty to the loss function",
-          "By removing data",
-          "By increasing model complexity"
-        ],
-        "correctOption": "By adding a penalty to the loss function",
-        "conceptTarget": "Model Optimization"
-      },
-      {
-        "id": "fb-Ar-Int-26",
-        "text": "What is the purpose of Leaky ReLU functions?",
-        "options": [
-          "Initialize weights",
-          "Reduce memory",
-          "Speed up training",
-          "Introduce non-linearity"
-        ],
-        "correctOption": "Introduce non-linearity",
-        "conceptTarget": "Deep Learning"
-      },
-      {
-        "id": "fb-Ar-Int-27",
-        "text": "In NLP, what does FastText capture?",
-        "options": [
-          "Character counts",
-          "Semantic relationships",
-          "Word frequencies",
-          "Syntax trees"
-        ],
-        "correctOption": "Semantic relationships",
-        "conceptTarget": "Natural Language Processing"
-      },
-      {
-        "id": "fb-Ar-Int-28",
-        "text": "What is a major symptom of the exploding gradient in deep networks?",
-        "options": [
-          "Overfitting on train data",
-          "Weights stop updating",
-          "Training is too fast",
-          "High memory usage"
-        ],
-        "correctOption": "Weights stop updating",
-        "conceptTarget": "Deep Learning"
-      },
-      {
-        "id": "fb-Ar-Int-29",
-        "text": "In a Convolutional Neural Network, what does a Global Pooling layer do?",
-        "options": [
-          "Reduce spatial dimensions",
-          "Increase channels",
-          "Add non-linearity",
-          "Calculate loss"
-        ],
-        "correctOption": "Reduce spatial dimensions",
-        "conceptTarget": "Computer Vision"
-      }
-    ],
-    "Advanced": [
-      {
-        "id": "fb-Ar-Adv-0",
-        "text": "How does the Cross-Attention mechanism improve sequence-to-sequence models?",
-        "options": [
-          "By focusing on relevant parts of the input",
-          "By using convolutions",
-          "By ignoring the input",
-          "By processing sequentially"
-        ],
-        "correctOption": "By focusing on relevant parts of the input",
-        "conceptTarget": "Transformer Architecture"
-      },
-      {
-        "id": "fb-Ar-Adv-1",
-        "text": "What is the main challenge in training DCGANs?",
-        "options": [
-          "Too much data",
-          "Easy evaluation",
-          "Mode collapse",
-          "Fast convergence"
-        ],
-        "correctOption": "Mode collapse",
-        "conceptTarget": "Generative Models"
-      },
-      {
-        "id": "fb-Ar-Adv-2",
-        "text": "In Reinforcement Learning, what equation defines the optimal policy?",
-        "options": [
-          "Navier-Stokes",
-          "Schrodinger",
-          "Bellman",
-          "Euler"
-        ],
-        "correctOption": "Bellman",
-        "conceptTarget": "Reinforcement Learning"
-      },
-      {
-        "id": "fb-Ar-Adv-3",
-        "text": "Which technique is critical for scaling LLMs across multiple GPUs?",
-        "options": [
-          "Data Augmentation",
-          "Tensor Parallelism",
-          "Early Stopping",
-          "Dropout"
-        ],
-        "correctOption": "Tensor Parallelism",
-        "conceptTarget": "Distributed Training"
-      },
-      {
-        "id": "fb-Ar-Adv-4",
-        "text": "How does Proximal Policy Optimization (PPO) handle reward hacking?",
-        "options": [
-          "Adding Gaussian noise",
-          "Ignoring negative rewards",
-          "Using a replay buffer",
-          "Clipping the objective function"
-        ],
-        "correctOption": "Clipping the objective function",
-        "conceptTarget": "Advanced RL"
-      },
-      {
-        "id": "fb-Ar-Adv-5",
-        "text": "How does the Cross-Attention mechanism improve sequence-to-sequence models?",
-        "options": [
-          "By processing sequentially",
-          "By using convolutions",
-          "By focusing on relevant parts of the input",
-          "By ignoring the input"
-        ],
-        "correctOption": "By focusing on relevant parts of the input",
-        "conceptTarget": "Transformer Architecture"
-      },
-      {
-        "id": "fb-Ar-Adv-6",
-        "text": "What is the main challenge in training DCGANs?",
-        "options": [
-          "Easy evaluation",
-          "Fast convergence",
-          "Too much data",
-          "Mode collapse"
-        ],
-        "correctOption": "Mode collapse",
-        "conceptTarget": "Generative Models"
-      },
-      {
-        "id": "fb-Ar-Adv-7",
-        "text": "In Reinforcement Learning, what equation defines the optimal policy?",
-        "options": [
-          "Euler",
-          "Schrodinger",
-          "Bellman",
-          "Navier-Stokes"
-        ],
-        "correctOption": "Bellman",
-        "conceptTarget": "Reinforcement Learning"
-      },
-      {
-        "id": "fb-Ar-Adv-8",
-        "text": "Which technique is critical for scaling Transformers across multiple GPUs?",
-        "options": [
-          "Dropout",
-          "Tensor Parallelism",
-          "Data Augmentation",
-          "Early Stopping"
-        ],
-        "correctOption": "Tensor Parallelism",
-        "conceptTarget": "Distributed Training"
-      },
-      {
-        "id": "fb-Ar-Adv-9",
-        "text": "How does Proximal Policy Optimization (PPO) handle policy updates?",
-        "options": [
-          "Using a replay buffer",
-          "Adding Gaussian noise",
-          "Clipping the objective function",
-          "Ignoring negative rewards"
-        ],
-        "correctOption": "Clipping the objective function",
-        "conceptTarget": "Advanced RL"
-      },
-      {
-        "id": "fb-Ar-Adv-10",
-        "text": "How does the Multi-Head Attention mechanism improve sequence-to-sequence models?",
-        "options": [
-          "By processing sequentially",
-          "By using convolutions",
-          "By ignoring the input",
-          "By focusing on relevant parts of the input"
-        ],
-        "correctOption": "By focusing on relevant parts of the input",
-        "conceptTarget": "Transformer Architecture"
-      },
-      {
-        "id": "fb-Ar-Adv-11",
-        "text": "What is the main challenge in training CycleGANs?",
-        "options": [
-          "Fast convergence",
-          "Mode collapse",
-          "Too much data",
-          "Easy evaluation"
-        ],
-        "correctOption": "Mode collapse",
-        "conceptTarget": "Generative Models"
-      },
-      {
-        "id": "fb-Ar-Adv-12",
-        "text": "In Reinforcement Learning, what equation defines the optimal policy?",
-        "options": [
-          "Euler",
-          "Schrodinger",
-          "Navier-Stokes",
-          "Bellman"
-        ],
-        "correctOption": "Bellman",
-        "conceptTarget": "Reinforcement Learning"
-      },
-      {
-        "id": "fb-Ar-Adv-13",
-        "text": "Which technique is critical for scaling Transformers across multiple GPUs?",
-        "options": [
-          "Early Stopping",
-          "Tensor Parallelism",
-          "Data Augmentation",
-          "Dropout"
-        ],
-        "correctOption": "Tensor Parallelism",
-        "conceptTarget": "Distributed Training"
-      },
-      {
-        "id": "fb-Ar-Adv-14",
-        "text": "How does Proximal Policy Optimization (PPO) handle reward hacking?",
-        "options": [
-          "Clipping the objective function",
-          "Adding Gaussian noise",
-          "Using a replay buffer",
-          "Ignoring negative rewards"
-        ],
-        "correctOption": "Clipping the objective function",
-        "conceptTarget": "Advanced RL"
-      },
-      {
-        "id": "fb-Ar-Adv-15",
-        "text": "How does the Multi-Head Attention mechanism improve sequence-to-sequence models?",
-        "options": [
-          "By focusing on relevant parts of the input",
-          "By processing sequentially",
-          "By using convolutions",
-          "By ignoring the input"
-        ],
-        "correctOption": "By focusing on relevant parts of the input",
-        "conceptTarget": "Transformer Architecture"
-      },
-      {
-        "id": "fb-Ar-Adv-16",
-        "text": "What is the main challenge in training DCGANs?",
-        "options": [
-          "Mode collapse",
-          "Too much data",
-          "Fast convergence",
-          "Easy evaluation"
-        ],
-        "correctOption": "Mode collapse",
-        "conceptTarget": "Generative Models"
-      },
-      {
-        "id": "fb-Ar-Adv-17",
-        "text": "In Reinforcement Learning, what equation defines the optimal policy?",
-        "options": [
-          "Navier-Stokes",
-          "Bellman",
-          "Schrodinger",
-          "Euler"
-        ],
-        "correctOption": "Bellman",
-        "conceptTarget": "Reinforcement Learning"
-      },
-      {
-        "id": "fb-Ar-Adv-18",
-        "text": "Which technique is critical for scaling Transformers across multiple GPUs?",
-        "options": [
-          "Data Augmentation",
-          "Tensor Parallelism",
-          "Early Stopping",
-          "Dropout"
-        ],
-        "correctOption": "Tensor Parallelism",
-        "conceptTarget": "Distributed Training"
-      },
-      {
-        "id": "fb-Ar-Adv-19",
-        "text": "How does Proximal Policy Optimization (PPO) handle reward hacking?",
-        "options": [
-          "Clipping the objective function",
-          "Using a replay buffer",
-          "Adding Gaussian noise",
-          "Ignoring negative rewards"
-        ],
-        "correctOption": "Clipping the objective function",
-        "conceptTarget": "Advanced RL"
-      },
-      {
-        "id": "fb-Ar-Adv-20",
-        "text": "How does the Cross-Attention mechanism improve sequence-to-sequence models?",
-        "options": [
-          "By using convolutions",
-          "By processing sequentially",
-          "By focusing on relevant parts of the input",
-          "By ignoring the input"
-        ],
-        "correctOption": "By focusing on relevant parts of the input",
-        "conceptTarget": "Transformer Architecture"
-      },
-      {
-        "id": "fb-Ar-Adv-21",
-        "text": "What is the main challenge in training CycleGANs?",
-        "options": [
-          "Too much data",
-          "Mode collapse",
-          "Fast convergence",
-          "Easy evaluation"
-        ],
-        "correctOption": "Mode collapse",
-        "conceptTarget": "Generative Models"
-      },
-      {
-        "id": "fb-Ar-Adv-22",
-        "text": "In Reinforcement Learning, what equation defines the optimal policy?",
-        "options": [
-          "Schrodinger",
-          "Navier-Stokes",
-          "Euler",
-          "Bellman"
-        ],
-        "correctOption": "Bellman",
-        "conceptTarget": "Reinforcement Learning"
-      },
-      {
-        "id": "fb-Ar-Adv-23",
-        "text": "Which technique is critical for scaling LLMs across multiple GPUs?",
-        "options": [
-          "Data Augmentation",
-          "Early Stopping",
-          "Dropout",
-          "Tensor Parallelism"
-        ],
-        "correctOption": "Tensor Parallelism",
-        "conceptTarget": "Distributed Training"
-      },
-      {
-        "id": "fb-Ar-Adv-24",
-        "text": "How does Proximal Policy Optimization (PPO) handle exploration?",
-        "options": [
-          "Adding Gaussian noise",
-          "Using a replay buffer",
-          "Ignoring negative rewards",
-          "Clipping the objective function"
-        ],
-        "correctOption": "Clipping the objective function",
-        "conceptTarget": "Advanced RL"
-      },
-      {
-        "id": "fb-Ar-Adv-25",
-        "text": "How does the Multi-Head Attention mechanism improve sequence-to-sequence models?",
-        "options": [
-          "By using convolutions",
-          "By ignoring the input",
-          "By processing sequentially",
-          "By focusing on relevant parts of the input"
-        ],
-        "correctOption": "By focusing on relevant parts of the input",
-        "conceptTarget": "Transformer Architecture"
-      },
-      {
-        "id": "fb-Ar-Adv-26",
-        "text": "What is the main challenge in training CycleGANs?",
-        "options": [
-          "Easy evaluation",
-          "Fast convergence",
-          "Mode collapse",
-          "Too much data"
-        ],
-        "correctOption": "Mode collapse",
-        "conceptTarget": "Generative Models"
-      },
-      {
-        "id": "fb-Ar-Adv-27",
-        "text": "In Reinforcement Learning, what equation defines the optimal policy?",
-        "options": [
-          "Euler",
-          "Bellman",
-          "Navier-Stokes",
-          "Schrodinger"
-        ],
-        "correctOption": "Bellman",
-        "conceptTarget": "Reinforcement Learning"
-      },
-      {
-        "id": "fb-Ar-Adv-28",
-        "text": "Which technique is critical for scaling Vision Models across multiple GPUs?",
-        "options": [
-          "Data Augmentation",
-          "Tensor Parallelism",
-          "Early Stopping",
-          "Dropout"
-        ],
-        "correctOption": "Tensor Parallelism",
-        "conceptTarget": "Distributed Training"
-      },
-      {
-        "id": "fb-Ar-Adv-29",
-        "text": "How does Proximal Policy Optimization (PPO) handle reward hacking?",
-        "options": [
-          "Using a replay buffer",
-          "Adding Gaussian noise",
-          "Clipping the objective function",
-          "Ignoring negative rewards"
-        ],
-        "correctOption": "Clipping the objective function",
-        "conceptTarget": "Advanced RL"
-      }
-    ]
-  },
-  "Software Engineering": {
+  "Software Engineering & Cloud Computing": {
     "Beginner": [
       {
         "id": "fb-So-Beg-0",
@@ -3263,7 +2175,7 @@ export const fallbackQuizData: any = {
       }
     ]
   },
-  "Data Science": {
+  "Data Science & Business Analytics": {
     "Beginner": [
       {
         "id": "ds-b-1",
@@ -3559,1187 +2471,1483 @@ export const fallbackQuizData: any = {
       }
     ]
   },
-  "Cybersecurity": {
+  "Financial Markets & Economics": {
     "Beginner": [
       {
-        "id": "sec-b-1",
-        "text": "What is the primary difference between symmetric and asymmetric encryption?",
+        "id": "fin-b-1",
+        "text": "What is inflation in macroeconomic terms?",
         "options": [
-          "Symmetric uses one shared secret key; asymmetric uses a public/private cryptographic key pair",
-          "Symmetric cannot encrypt text files",
-          "Asymmetric is 1000x faster and requires no CPU overhead",
-          "Symmetric encryption is illegal on the web"
+          "A decrease in taxes",
+          "A general and sustained increase in the prices of goods and services, eroding purchasing power",
+          "A rise in stock market dividends",
+          "An increase in bank branch locations"
         ],
-        "correctOption": "Symmetric uses one shared secret key; asymmetric uses a public/private cryptographic key pair",
-        "conceptTarget": "Cryptography Basics"
+        "correctOption": "A general and sustained increase in the prices of goods and services, eroding purchasing power",
+        "conceptTarget": "Macroeconomic Inflation"
       },
       {
-        "id": "sec-b-2",
-        "text": "What type of attack deceives users into entering sensitive credentials on a fraudulent replica website?",
+        "id": "fin-b-2",
+        "text": "What does the Price-to-Earnings (P/E) ratio evaluate in equity valuation?",
         "options": [
-          "Buffer Overflow",
-          "Phishing",
-          "Port Knocking",
-          "SYN Flood"
+          "A company's total employee headcount",
+          "The ratio of a company's current share price relative to its per-share earnings",
+          "The physical square footage of company factories",
+          "The interest rate on company credit cards"
         ],
-        "correctOption": "Phishing",
-        "conceptTarget": "Social Engineering"
+        "correctOption": "The ratio of a company's current share price relative to its per-share earnings",
+        "conceptTarget": "Equity Valuation"
       },
       {
-        "id": "sec-b-3",
-        "text": "What are the three core pillars of the CIA Triad in information security?",
+        "id": "fin-b-3",
+        "text": "What is the primary benefit of portfolio diversification in investing?",
         "options": [
-          "Control, Inspection, Authorization",
-          "Confidentiality, Integrity, and Availability",
-          "Centralization, Integration, Auditing",
-          "Credentials, IP, Architecture"
+          "Guaranteeing 100% profit with zero risk",
+          "Spreading investments across uncorrelated asset classes to minimize unsystematic risk",
+          "Avoiding all government tax regulations",
+          "Purchasing only one company's stock"
         ],
-        "correctOption": "Confidentiality, Integrity, and Availability",
-        "conceptTarget": "Security Principles"
+        "correctOption": "Spreading investments across uncorrelated asset classes to minimize unsystematic risk",
+        "conceptTarget": "Portfolio Risk Management"
       },
       {
-        "id": "sec-b-4",
-        "text": "Which standard network port is universally reserved for secure HTTPS traffic?",
+        "id": "fin-b-4",
+        "text": "What does Gross Domestic Product (GDP) quantify for a nation?",
         "options": [
-          "Port 80",
-          "Port 22",
-          "Port 443",
-          "Port 21"
+          "The total monetary market value of all finished goods and services produced within a country in a specific time",
+          "The total amount of cash printed by the mint",
+          "The population growth rate",
+          "The total debt owed to international organizations"
         ],
-        "correctOption": "Port 443",
-        "conceptTarget": "Network Protocols"
+        "correctOption": "The total monetary market value of all finished goods and services produced within a country in a specific time",
+        "conceptTarget": "Economic Growth Metrics"
       },
       {
-        "id": "sec-b-5",
-        "text": "What vulnerability does an attacker exploit when executing a SQL Injection (SQLi) attack?",
+        "id": "fin-b-5",
+        "text": "What is the fundamental difference between an equity stock and a bond?",
         "options": [
-          "Unsanitized user input concatenated directly into raw database query strings",
-          "Hardware failure in the memory RAM",
-          "Weak Wi-Fi encryption protocols",
-          "Outdated operating system drivers"
+          "Stock represents partial ownership in a firm; a bond is a debt instrument where the investor loans money to an issuer",
+          "Stocks pay fixed interest; bonds fluctuate randomly",
+          "Bonds are illegal for individual investors",
+          "Stocks cannot be traded on public exchanges"
         ],
-        "correctOption": "Unsanitized user input concatenated directly into raw database query strings",
-        "conceptTarget": "SQL Injection"
+        "correctOption": "Stock represents partial ownership in a firm; a bond is a debt instrument where the investor loans money to an issuer",
+        "conceptTarget": "Capital Markets"
       },
       {
-        "id": "sec-b-6",
-        "text": "What is ransomware?",
+        "id": "fin-b-6",
+        "text": "What is liquidity in financial asset management?",
         "options": [
-          "Malware that encrypts a victim's files and demands payment for the decryption key",
-          "Hardware that speeds up Wi-Fi",
-          "A tool for compressing photos",
-          "A protocol for sending emails"
+          "How easily and quickly an asset can be converted into ready cash without substantial loss of market value",
+          "The total water usage of a company factory",
+          "The interest paid on checking accounts",
+          "The physical weight of gold coins"
         ],
-        "correctOption": "Malware that encrypts a victim's files and demands payment for the decryption key",
-        "conceptTarget": "Malware Types"
+        "correctOption": "How easily and quickly an asset can be converted into ready cash without substantial loss of market value",
+        "conceptTarget": "Asset Liquidity"
       },
       {
-        "id": "sec-b-7",
-        "text": "What is the purpose of hashing passwords with bcrypt or Argon2 instead of storing them as plain text?",
+        "id": "fin-b-7",
+        "text": "What is compound interest in financial mathematics?",
         "options": [
-          "To prevent passwords from being recovered even if the database is leaked, using cryptographic one-way salt and cost factors",
-          "To compress password string length",
-          "To send passwords faster over HTTP",
-          "To make passwords publicly visible"
+          "Interest calculated on the initial principal and on the accumulated interest generated in previous periods",
+          "Interest paid only once at maturity",
+          "A penalty charged by the government",
+          "Interest that decreases every year"
         ],
-        "correctOption": "To prevent passwords from being recovered even if the database is leaked, using cryptographic one-way salt and cost factors",
-        "conceptTarget": "Password Security"
+        "correctOption": "Interest calculated on the initial principal and on the accumulated interest generated in previous periods",
+        "conceptTarget": "Time Value of Money"
       },
       {
-        "id": "sec-b-8",
-        "text": "What does a VPN (Virtual Private Network) do?",
+        "id": "fin-b-8",
+        "text": "Why do central banks typically raise benchmark interest rates during economic cycles?",
         "options": [
-          "Encrypts internet traffic and tunnels it through a secure remote server, masking the user's IP",
-          "Increases monitor refresh rate",
-          "Deletes all cookies automatically",
-          "Cleans hardware fans"
+          "To cool down an overheated economy and rein in rising inflation",
+          "To encourage reckless borrowing",
+          "To crash the domestic currency",
+          "To lower unemployment to zero instantly"
         ],
-        "correctOption": "Encrypts internet traffic and tunnels it through a secure remote server, masking the user's IP",
-        "conceptTarget": "Network Privacy"
+        "correctOption": "To cool down an overheated economy and rein in rising inflation",
+        "conceptTarget": "Monetary Policy"
       }
     ],
     "Intermediate": [
       {
-        "id": "sec-i-1",
-        "text": "What is the most effective architectural defense against Cross-Site Scripting (XSS)?",
+        "id": "fin-i-1",
+        "text": "What does the Capital Asset Pricing Model (CAPM) estimate for an investment?",
         "options": [
-          "Disabling the database firewall",
-          "Context-aware output encoding and enforcing a strict Content Security Policy (CSP)",
-          "Storing passwords in plain text cookies",
-          "Using HTTP instead of HTTPS"
+          "The expected return of an asset based on its sensitivity to non-diversifiable systematic risk (Beta)",
+          "The exact date a stock will hit its all-time high",
+          "The company's marketing budget",
+          "The physical depreciation of office computers"
         ],
-        "correctOption": "Context-aware output encoding and enforcing a strict Content Security Policy (CSP)",
-        "conceptTarget": "XSS Mitigation"
+        "correctOption": "The expected return of an asset based on its sensitivity to non-diversifiable systematic risk (Beta)",
+        "conceptTarget": "CAPM & Systematic Risk"
       },
       {
-        "id": "sec-i-2",
-        "text": "How does a Cross-Site Request Forgery (CSRF) attack exploit a victim's authenticated browser session?",
+        "id": "fin-i-2",
+        "text": "What is the primary difference between fiscal policy and monetary policy?",
         "options": [
-          "It cracks the victim's master password with brute-force",
-          "It tricks the browser into sending stored session cookies along with an unauthorized state-changing request",
-          "It intercepts Wi-Fi radio frequencies",
-          "It reboots the server operating system"
+          "Fiscal policy involves government taxation and budget spending; monetary policy involves central bank interest rates and money supply",
+          "Fiscal policy is set by banks; monetary policy is voted on by citizens",
+          "Monetary policy only deals with gold coins",
+          "Fiscal policy cannot impact the economy"
         ],
-        "correctOption": "It tricks the browser into sending stored session cookies along with an unauthorized state-changing request",
-        "conceptTarget": "CSRF Mitigation"
+        "correctOption": "Fiscal policy involves government taxation and budget spending; monetary policy involves central bank interest rates and money supply",
+        "conceptTarget": "Macroeconomic Policy"
       },
       {
-        "id": "sec-i-3",
-        "text": "What is the primary objective of a Diffie-Hellman cryptographic exchange?",
+        "id": "fin-i-3",
+        "text": "What does an inverted bond yield curve historically signal to financial markets?",
         "options": [
-          "To compress image files over HTTP",
-          "To securely establish a shared secret key over an untrusted, public communication channel",
-          "To sign email headers with digital certificates",
-          "To decrypt hash passwords instantly"
+          "An impending macroeconomic recession in the medium term",
+          "A period of unprecedented economic boom",
+          "The collapse of global internet cables",
+          "A decrease in corporate taxes"
         ],
-        "correctOption": "To securely establish a shared secret key over an untrusted, public communication channel",
-        "conceptTarget": "Key Exchange Protocols"
+        "correctOption": "An impending macroeconomic recession in the medium term",
+        "conceptTarget": "Yield Curve Dynamics"
       },
       {
-        "id": "sec-i-4",
-        "text": "What is the fundamental operational difference between an IDS and an IPS?",
+        "id": "fin-i-4",
+        "text": "What right does an option Call contract give to the buyer?",
         "options": [
-          "An IDS detects and alerts on anomalies; an IPS actively intercepts and drops malicious traffic in-line",
-          "An IDS is hardware; an IPS is only a software plugin",
-          "An IPS cannot monitor TCP packets",
-          "An IDS encrypts data while an IPS decrypts it"
+          "The right, but not the obligation, to purchase an underlying asset at a set strike price before expiration",
+          "The obligation to sell shares at a loss",
+          "The right to attend company board meetings",
+          "The right to cancel a stock trade retroactively"
         ],
-        "correctOption": "An IDS detects and alerts on anomalies; an IPS actively intercepts and drops malicious traffic in-line",
-        "conceptTarget": "Network Defense"
+        "correctOption": "The right, but not the obligation, to purchase an underlying asset at a set strike price before expiration",
+        "conceptTarget": "Derivatives & Options"
       },
       {
-        "id": "sec-i-5",
-        "text": "What is an ARP Poisoning attack?",
+        "id": "fin-i-5",
+        "text": "Why is EBITDA widely utilized in corporate valuation and M&A transactions?",
         "options": [
-          "Sending spoofed ARP messages onto a LAN to associate the attacker's MAC address with an authorized gateway IP",
-          "Flooding an email inbox with spam",
-          "Corrupting hard drive sectors physically",
-          "Breaking RSA 4096-bit keys instantly"
+          "Provides a normalized view of core operational cash flow before capital structure, taxes, and accounting depreciation",
+          "It calculates net income after all taxes and dividends",
+          "It guarantees stock prices will rise",
+          "It eliminates company debt automatically"
         ],
-        "correctOption": "Sending spoofed ARP messages onto a LAN to associate the attacker's MAC address with an authorized gateway IP",
-        "conceptTarget": "Layer 2 Attacks"
+        "correctOption": "Provides a normalized view of core operational cash flow before capital structure, taxes, and accounting depreciation",
+        "conceptTarget": "Corporate Valuation / EBITDA"
       },
       {
-        "id": "sec-i-6",
-        "text": "How does a WAF (Web Application Firewall) inspect HTTP traffic differently from a traditional network firewall?",
+        "id": "fin-i-6",
+        "text": "In microeconomics, what does price elasticity of demand measure?",
         "options": [
-          "WAF inspects Layer 7 application payload content for SQLi, XSS, and command injection patterns",
-          "WAF only blocks port 80",
-          "WAF cannot inspect HTTPS traffic",
-          "WAF only monitors router cooling fans"
+          "The percentage change in quantity demanded in response to a percentage change in price",
+          "The total cost of manufacturing raw materials",
+          "The physical elasticity of rubber products",
+          "The speed at which goods are shipped"
         ],
-        "correctOption": "WAF inspects Layer 7 application payload content for SQLi, XSS, and command injection patterns",
-        "conceptTarget": "Application Firewalls"
+        "correctOption": "The percentage change in quantity demanded in response to a percentage change in price",
+        "conceptTarget": "Price Elasticity"
       },
       {
-        "id": "sec-i-7",
-        "text": "What is the purpose of Public Key Infrastructure (PKI)?",
+        "id": "fin-i-7",
+        "text": "What is a sovereign credit rating downgrade's direct consequence on government borrowing?",
         "options": [
-          "A framework of policies, hardware, and software that manages the issuance, distribution, and revocation of digital X.509 certificates",
-          "A cryptocurrency trading system",
-          "A protocol to format SSD drives",
-          "A game development library"
+          "Increases government bond yields, making future national borrowing more expensive",
+          "Forces the country to shut down its stock exchange",
+          "Lowers the cost of debt for taxpayers",
+          "Deletes all outstanding national debt"
         ],
-        "correctOption": "A framework of policies, hardware, and software that manages the issuance, distribution, and revocation of digital X.509 certificates",
-        "conceptTarget": "PKI Architecture"
+        "correctOption": "Increases government bond yields, making future national borrowing more expensive",
+        "conceptTarget": "Sovereign Debt Markets"
       },
       {
-        "id": "sec-i-8",
-        "text": "What is the principle of least privilege (PoLP)?",
+        "id": "fin-i-8",
+        "text": "What does the Sharpe Ratio quantify regarding an investment portfolio?",
         "options": [
-          "Users and processes should only be granted the minimum necessary permissions required to perform their specific duties",
-          "All users must have administrator rights by default",
-          "Passwords must be reset every hour",
-          "Servers must run without firewalls"
+          "Excess return generated per unit of total risk (standard deviation)",
+          "The total dividend percentage paid annually",
+          "The number of shares traded per minute",
+          "The management fee charged by mutual funds"
         ],
-        "correctOption": "Users and processes should only be granted the minimum necessary permissions required to perform their specific duties",
-        "conceptTarget": "Access Governance"
+        "correctOption": "Excess return generated per unit of total risk (standard deviation)",
+        "conceptTarget": "Risk-Adjusted Performance"
       }
     ],
     "Advanced": [
       {
-        "id": "sec-a-1",
-        "text": "In binary exploitation, how does Return-Oriented Programming (ROP) bypass Data Execution Prevention (DEP/NX)?",
+        "id": "fin-a-1",
+        "text": "In quantitative derivatives pricing, what core assumption does the Black-Scholes formula make regarding underlying asset price dynamics?",
         "options": [
-          "It chains together existing executable machine code snippets ('gadgets') ending in RET instructions",
-          "It disables the CPU memory controller physically",
-          "It overwrites the BIOS motherboard firmware",
-          "It injects shellcode directly onto an executable stack"
+          "Stock prices follow geometric Brownian motion with log-normal distribution and constant volatility",
+          "Stock prices move strictly in linear predictable waves",
+          "Interest rates fluctuate unpredictably every minute",
+          "Dividends are paid continuously every second"
         ],
-        "correctOption": "It chains together existing executable machine code snippets ('gadgets') ending in RET instructions",
-        "conceptTarget": "Binary Exploitation"
+        "correctOption": "Stock prices follow geometric Brownian motion with log-normal distribution and constant volatility",
+        "conceptTarget": "Black-Scholes Pricing Model"
       },
       {
-        "id": "sec-a-2",
-        "text": "What is the core paradigm shift of Zero-Trust Architecture (ZTA)?",
+        "id": "fin-a-2",
+        "text": "What does the Modigliani-Miller Theorem establish regarding corporate capital structure in frictionless markets?",
         "options": [
-          "Eliminating all encryption within internal networks",
-          "Assuming the internal network is hostile and continuously verifying identity and device posture for every transaction",
-          "Granting full access to any client connected via company VPN",
-          "Allowing users to bypass multi-factor authentication"
+          "A firm's market enterprise value is independent of its debt-to-equity financing mix in the absence of taxes and bankruptcy costs",
+          "Companies must maintain 100% equity to maximize value",
+          "Debt financing is always cheaper than equity in every scenario",
+          "Dividends increase total firm value exponentially"
         ],
-        "correctOption": "Assuming the internal network is hostile and continuously verifying identity and device posture for every transaction",
-        "conceptTarget": "Zero-Trust Architecture"
+        "correctOption": "A firm's market enterprise value is independent of its debt-to-equity financing mix in the absence of taxes and bankruptcy costs",
+        "conceptTarget": "Capital Structure Irrelevance"
       },
       {
-        "id": "sec-a-3",
-        "text": "In memory safety, how does Address Space Layout Randomization (ASLR) prevent exploitation?",
+        "id": "fin-a-3",
+        "text": "What does Value at Risk (VaR) quantify in quantitative portfolio risk modeling?",
         "options": [
-          "Randomizes memory location offsets of key data areas (stack, heap, libraries) at execution time",
-          "Deletes RAM memory periodically",
-          "Encrypts the CPU instruction cache with AES",
-          "Converts all pointers to 32-bit floats"
+          "The maximum expected loss over a specific time horizon at a given statistical confidence level (e.g. 99%)",
+          "The maximum guaranteed profit of a hedge fund",
+          "The historical average dividend yield",
+          "The total trading commissions paid to exchanges"
         ],
-        "correctOption": "Randomizes memory location offsets of key data areas (stack, heap, libraries) at execution time",
-        "conceptTarget": "Memory Protection"
+        "correctOption": "The maximum expected loss over a specific time horizon at a given statistical confidence level (e.g. 99%)",
+        "conceptTarget": "Quantitative Risk / VaR"
       },
       {
-        "id": "sec-a-4",
-        "text": "How does the Rowhammer DRAM attack achieve hardware privilege escalation?",
+        "id": "fin-a-4",
+        "text": "What does the Lucas Critique argue regarding econometric macroeconomic policy forecasting?",
         "options": [
-          "Rapidly alternating electrical charges in memory cells induce parasitic capacitance coupling, inducing bit-flips in adjacent rows",
-          "Overheating the CPU with infinite while loops",
-          "Overclocking monitor refresh rates",
-          "Cracking BIOS passwords via serial ports"
+          "Historical statistical correlations break down when government policy changes because economic agents adapt their forward-looking expectations",
+          "Macroeconomic data cannot be stored on computers",
+          "Interest rates must always remain positive",
+          "Central banks should never publish inflation reports"
         ],
-        "correctOption": "Rapidly alternating electrical charges in memory cells induce parasitic capacitance coupling, inducing bit-flips in adjacent rows",
-        "conceptTarget": "Hardware Vulnerabilities"
+        "correctOption": "Historical statistical correlations break down when government policy changes because economic agents adapt their forward-looking expectations",
+        "conceptTarget": "Rational Expectations Theory"
       },
       {
-        "id": "sec-a-5",
-        "text": "What cryptographic primitive enables Zero-Knowledge Proofs (ZKPs) like zk-SNARKs?",
+        "id": "fin-a-5",
+        "text": "In fixed income mathematics, what does bond Duration measure?",
         "options": [
-          "Elliptic curve pairings and polynomial commitment schemes proving knowledge without revealing inputs",
-          "Simple MD5 hashing",
-          "Symmetric XOR operations",
-          "Base64 encoding"
+          "The weighted average maturity of cash flows and the sensitivity of a bond's price to interest rate shifts",
+          "The number of days until the physical certificate is printed",
+          "The percentage of coupons paid in cash",
+          "The total issue size of the bond tranche"
         ],
-        "correctOption": "Elliptic curve pairings and polynomial commitment schemes proving knowledge without revealing inputs",
-        "conceptTarget": "Zero-Knowledge Cryptography"
+        "correctOption": "The weighted average maturity of cash flows and the sensitivity of a bond's price to interest rate shifts",
+        "conceptTarget": "Macaulay / Modified Duration"
       },
       {
-        "id": "sec-a-6",
-        "text": "What is the primary role of an HSM (Hardware Security Module) in enterprise infrastructure?",
+        "id": "fin-a-6",
+        "text": "What is High-Frequency Trading (HFT) latency arbitrage in modern microstructure markets?",
         "options": [
-          "A tamper-resistant dedicated physical computing device that securely generates, stores, and manages cryptographic keys",
-          "A backup power generator",
-          "A fast graphics card for video editing",
-          "A high-speed network switch"
+          "Exploiting minute price discrepancies for identical assets across geographically fragmented exchanges using sub-millisecond execution",
+          "Holding stocks for 10 years to earn dividends",
+          "Trading stocks exclusively over telephone calls",
+          "Investing in early-stage seed startups"
         ],
-        "correctOption": "A tamper-resistant dedicated physical computing device that securely generates, stores, and manages cryptographic keys",
-        "conceptTarget": "Hardware Security Modules"
+        "correctOption": "Exploiting minute price discrepancies for identical assets across geographically fragmented exchanges using sub-millisecond execution",
+        "conceptTarget": "Market Microstructure / HFT"
       },
       {
-        "id": "sec-a-7",
-        "text": "What does Perfect Forward Secrecy (PFS) guarantee in TLS/SSL communications?",
+        "id": "fin-a-7",
+        "text": "In credit risk modeling, what does a Credit Default Swap (CDS) spread reflect?",
         "options": [
-          "Compromise of the server's long-term private key does not compromise past recorded session traffic",
-          "Websites can never be taken offline by DDoS",
-          "Passwords never expire",
-          "Encryption keys can be shared publicly"
+          "The market-implied probability of default of a reference corporate or sovereign entity over a given horizon",
+          "The annual dividend percentage paid by preferred stock",
+          "The currency exchange rate between dollars and euros",
+          "The cost of printing stock certificates"
         ],
-        "correctOption": "Compromise of the server's long-term private key does not compromise past recorded session traffic",
-        "conceptTarget": "Forward Secrecy"
+        "correctOption": "The market-implied probability of default of a reference corporate or sovereign entity over a given horizon",
+        "conceptTarget": "Credit Default Swaps"
       },
       {
-        "id": "sec-a-8",
-        "text": "In side-channel analysis, what vulnerability does a Timing Attack exploit?",
+        "id": "fin-a-8",
+        "text": "What is the primary implication of the Fama-French Three-Factor Model over standard single-factor CAPM?",
         "options": [
-          "Variations in execution time of cryptographic operations leak information about secret key bits",
-          "Clock drift between servers",
-          "Slow internet connections",
-          "Time zones differences across clients"
+          "Adds Size (SMB) and Value (HML) risk premia to explain cross-sectional stock returns beyond market Beta alone",
+          "Proves that all stock returns are purely random and unmodelable",
+          "Eliminates all statistical variance in portfolio tracking",
+          "Calculates real estate prices exclusively"
         ],
-        "correctOption": "Variations in execution time of cryptographic operations leak information about secret key bits",
-        "conceptTarget": "Side-Channel Attacks"
+        "correctOption": "Adds Size (SMB) and Value (HML) risk premia to explain cross-sectional stock returns beyond market Beta alone",
+        "conceptTarget": "Multi-Factor Asset Pricing"
       }
     ]
   },
-  "Mobile Development": {
+  "Business Administration & Strategic Management": {
     "Beginner": [
       {
-        "id": "mob-b-1",
-        "text": "Which programming language is officially designated as the modern first-class standard for native Android development?",
+        "id": "biz-b-1",
+        "text": "What are the four components of a business SWOT analysis?",
         "options": [
-          "Kotlin",
-          "C#",
-          "PHP",
-          "Ruby"
+          "Strengths, Weaknesses, Opportunities, and Threats",
+          "Sales, Wages, Operations, and Taxes",
+          "Suppliers, Warehouses, Orders, and Transport",
+          "Strategy, Workforce, Output, and Targets"
         ],
-        "correctOption": "Kotlin",
-        "conceptTarget": "Android Core"
+        "correctOption": "Strengths, Weaknesses, Opportunities, and Threats",
+        "conceptTarget": "SWOT Analysis"
       },
       {
-        "id": "mob-b-2",
-        "text": "Which programming language is the primary modern language for native iOS app development?",
+        "id": "biz-b-2",
+        "text": "What are the traditional '4 Ps' of the marketing mix?",
         "options": [
-          "Swift",
-          "Objective-C",
-          "Java",
-          "Python"
+          "Product, Price, Place, and Promotion",
+          "People, Process, Profit, and Performance",
+          "Production, Packaging, Payment, and Planning",
+          "Policy, Payroll, Purchasing, and Publicity"
         ],
-        "correctOption": "Swift",
-        "conceptTarget": "iOS Core"
+        "correctOption": "Product, Price, Place, and Promotion",
+        "conceptTarget": "Marketing Mix"
       },
       {
-        "id": "mob-b-3",
-        "text": "What is React Native's primary engineering value proposition?",
+        "id": "biz-b-3",
+        "text": "What does Return on Investment (ROI) measure in business management?",
         "options": [
-          "Compiles JavaScript/TypeScript into native platform UI components for iOS and Android simultaneously",
-          "Eliminates the need for mobile app stores",
-          "Runs full desktop Linux kernels inside mobile phones",
-          "Replaces mobile cellular antennas"
+          "The profitability and financial efficiency of an investment relative to its cost",
+          "The number of hours employees work per week",
+          "The physical size of retail store locations",
+          "The total number of customer complaints"
         ],
-        "correctOption": "Compiles JavaScript/TypeScript into native platform UI components for iOS and Android simultaneously",
-        "conceptTarget": "Cross-Platform Mobile"
+        "correctOption": "The profitability and financial efficiency of an investment relative to its cost",
+        "conceptTarget": "Financial ROI"
       },
       {
-        "id": "mob-b-4",
-        "text": "What is the purpose of the AndroidManifest.xml file in an Android project?",
+        "id": "biz-b-4",
+        "text": "What is the operational break-even point for a business?",
         "options": [
-          "Declares application structure, requested system permissions, activities, and entry points",
-          "Stores user passwords in plain text",
-          "Runs database migrations on build",
-          "Styles buttons with CSS syntax"
+          "The sales volume where total revenue exactly equals total operational costs, yielding zero profit and zero loss",
+          "The day a company goes public on the stock market",
+          "When a company fires half its employees",
+          "When a product runs out of inventory"
         ],
-        "correctOption": "Declares application structure, requested system permissions, activities, and entry points",
-        "conceptTarget": "Android Architecture"
+        "correctOption": "The sales volume where total revenue exactly equals total operational costs, yielding zero profit and zero loss",
+        "conceptTarget": "Break-Even Economics"
       },
       {
-        "id": "mob-b-5",
-        "text": "What is the primary function of an Activity in Android architecture?",
+        "id": "biz-b-5",
+        "text": "What is the primary function of Human Resource Management (HRM)?",
         "options": [
-          "Represents a single screen with a user interface",
-          "A background service that plays music",
-          "A database table",
-          "An image asset"
+          "Attracting, hiring, training, evaluating, and retaining organizational talent",
+          "Managing computer servers and network cables",
+          "Designing company logos and graphic design",
+          "Writing legal contracts for vendors"
         ],
-        "correctOption": "Represents a single screen with a user interface",
-        "conceptTarget": "Android Activity Lifecycle"
+        "correctOption": "Attracting, hiring, training, evaluating, and retaining organizational talent",
+        "conceptTarget": "Human Resource Management"
       },
       {
-        "id": "mob-b-6",
-        "text": "In iOS SwiftUI, what does the @State property wrapper signify?",
+        "id": "biz-b-6",
+        "text": "What is a Supply Chain in enterprise operations?",
         "options": [
-          "A source of truth for a value owned by the view that triggers an automatic UI redraw when mutated",
-          "A database connection pool",
-          "An audio driver",
-          "A network routing protocol"
+          "The end-to-end network of organizations, resources, and activities involved in transforming raw materials into delivered consumer products",
+          "The physical metal chain that locks factory doors",
+          "The bank accounts used to pay executive salaries",
+          "A list of company email addresses"
         ],
-        "correctOption": "A source of truth for a value owned by the view that triggers an automatic UI redraw when mutated",
-        "conceptTarget": "SwiftUI State"
+        "correctOption": "The end-to-end network of organizations, resources, and activities involved in transforming raw materials into delivered consumer products",
+        "conceptTarget": "Supply Chain Management"
       },
       {
-        "id": "mob-b-7",
-        "text": "What is an APK file in Android distribution?",
+        "id": "biz-b-7",
+        "text": "What is the primary difference between a B2B and B2C commercial business model?",
         "options": [
-          "Android Package Kit: the file format used to distribute and install apps on Android",
-          "A video file format",
-          "A photo editing tool",
-          "A sound driver"
+          "B2B sells goods/services to other enterprises; B2C sells directly to individual retail consumers",
+          "B2B is non-profit; B2C is for-profit",
+          "B2B does not accept digital payments",
+          "B2C can only operate online"
         ],
-        "correctOption": "Android Package Kit: the file format used to distribute and install apps on Android",
-        "conceptTarget": "Android Packaging"
+        "correctOption": "B2B sells goods/services to other enterprises; B2C sells directly to individual retail consumers",
+        "conceptTarget": "Commercial Business Models"
       },
       {
-        "id": "mob-b-8",
-        "text": "What tool does Apple provide as the official Integrated Development Environment (IDE) for iOS?",
+        "id": "biz-b-8",
+        "text": "What constitutes an organization's corporate culture?",
         "options": [
-          "Xcode",
-          "Visual Studio Code",
-          "Eclipse",
-          "IntelliJ IDEA"
+          "The shared values, ethical standards, beliefs, and behavioral norms that shape employee interactions",
+          "The architectural blueprint of the office building",
+          "The operating system installed on company laptops",
+          "The specific brand of coffee served in the breakroom"
         ],
-        "correctOption": "Xcode",
-        "conceptTarget": "iOS Tooling"
+        "correctOption": "The shared values, ethical standards, beliefs, and behavioral norms that shape employee interactions",
+        "conceptTarget": "Organizational Culture"
       }
     ],
     "Intermediate": [
       {
-        "id": "mob-i-1",
-        "text": "What paradigm does Jetpack Compose introduce to Android UI development?",
+        "id": "biz-i-1",
+        "text": "What does Michael Porter's Five Forces framework analyze in business strategy?",
         "options": [
-          "Imperative XML layout inflation",
-          "Declarative UI where UI components re-compose automatically when state updates",
-          "Manual pixel coordinate rendering using OpenGL",
-          "Server-side HTML rendering only"
+          "The competitive intensity, structural barriers, and long-term attractiveness of an industry",
+          "The five best marketing slogans for a brand",
+          "The daily cash flow of five branch stores",
+          "The five most popular retail products"
         ],
-        "correctOption": "Declarative UI where UI components re-compose automatically when state updates",
-        "conceptTarget": "Jetpack Compose"
+        "correctOption": "The competitive intensity, structural barriers, and long-term attractiveness of an industry",
+        "conceptTarget": "Porter's Five Forces"
       },
       {
-        "id": "mob-i-2",
-        "text": "How does Swift's Automatic Reference Counting (ARC) manage memory allocation?",
+        "id": "biz-i-2",
+        "text": "In modern Agile project management, what is a Sprint?",
         "options": [
-          "Pauses application execution for periodic stop-the-world garbage collection cycles",
-          "Tracks and manages reference counts at compile-time, deallocating instances when references reach zero",
-          "Stores all objects indefinitely until the phone reboots",
-          "Allocates all variables to the global thread pool"
+          "A fixed time-boxed working cycle (1-4 weeks) during which a team completes defined backlog deliverables",
+          "A race between departments to cut costs",
+          "A mandatory weekend overtime shift",
+          "An annual meeting with shareholders"
         ],
-        "correctOption": "Tracks and manages reference counts at compile-time, deallocating instances when references reach zero",
-        "conceptTarget": "Swift Memory Management"
+        "correctOption": "A fixed time-boxed working cycle (1-4 weeks) during which a team completes defined backlog deliverables",
+        "conceptTarget": "Agile / Scrum Framework"
       },
       {
-        "id": "mob-i-3",
-        "text": "What is the primary cause of a retain cycle / memory leak in iOS Swift development?",
+        "id": "biz-i-3",
+        "text": "Why do venture-backed startups closely monitor the LTV:CAC ratio (Lifetime Value to Customer Acquisition Cost)?",
         "options": [
-          "Two objects holding strong references to each other, preventing ARC from releasing memory",
-          "Writing more than 100 lines of code in a ViewController",
-          "Using struct instead of class",
-          "Connecting to a remote HTTPS server"
+          "To verify that the revenue generated from a customer significantly outpaces the cost incurred to acquire them (target > 3:1)",
+          "To calculate corporate income tax owed to the state",
+          "To determine employee bonus percentages",
+          "To track office utility bills"
         ],
-        "correctOption": "Two objects holding strong references to each other, preventing ARC from releasing memory",
-        "conceptTarget": "Memory Leaks"
+        "correctOption": "To verify that the revenue generated from a customer significantly outpaces the cost incurred to acquire them (target > 3:1)",
+        "conceptTarget": "Unit Economics & CAC"
       },
       {
-        "id": "mob-i-4",
-        "text": "In Android development, why should heavy computational tasks be dispatched away from the Main/UI thread?",
+        "id": "biz-i-4",
+        "text": "What is the core strategic principle behind a Blue Ocean Strategy?",
         "options": [
-          "To prevent Application Not Responding (ANR) dialogs and UI frame dropping",
-          "The main thread cannot execute math",
-          "The battery will explode",
-          "Android OS will delete the app"
+          "Creating uncontested market space and new demand, making direct competition irrelevant through value innovation",
+          "Aggressively slashing prices to bankrupt competitors in a saturated market",
+          "Relocating company offices near the ocean",
+          "Selling products exclusively to maritime shipping fleets"
         ],
-        "correctOption": "To prevent Application Not Responding (ANR) dialogs and UI frame dropping",
-        "conceptTarget": "Thread Management / Coroutines"
+        "correctOption": "Creating uncontested market space and new demand, making direct competition irrelevant through value innovation",
+        "conceptTarget": "Blue Ocean Strategy"
       },
       {
-        "id": "mob-i-5",
-        "text": "What is the primary role of ViewModel in Google's recommended Android architecture?",
+        "id": "biz-i-5",
+        "text": "What characterizes a decentralized organizational management structure?",
         "options": [
-          "Persists UI state data through configuration changes like screen rotations",
-          "Draws pixels on the screen",
-          "Compiles Kotlin into Java bytecode",
-          "Handles Wi-Fi radio frequencies"
+          "Decision-making authority is delegated across regional managers and operational frontline units rather than held solely by executive HQ",
+          "All employees report directly to one CEO",
+          "The company operates without any managers or leadership",
+          "The company has no physical headquarters"
         ],
-        "correctOption": "Persists UI state data through configuration changes like screen rotations",
-        "conceptTarget": "Android Architecture Components"
+        "correctOption": "Decision-making authority is delegated across regional managers and operational frontline units rather than held solely by executive HQ",
+        "conceptTarget": "Organizational Governance"
       },
       {
-        "id": "mob-i-6",
-        "text": "What is the difference between [weak self] and [unowned self] in Swift closures?",
+        "id": "biz-i-6",
+        "text": "In operations management, what is the core philosophy of Lean Manufacturing (Toyota Production System)?",
         "options": [
-          "weak creates an optional reference that becomes nil when deallocated; unowned assumes self is never nil and crashes if accessed after deallocation",
-          "unowned is faster and always safe",
-          "weak can only be used with numbers",
-          "unowned is deprecated in Swift 5"
+          "Continuous elimination of waste (Muda) and relentless focus on value creation for the customer",
+          "Hiring only part-time workers",
+          "Storing maximum inventory in massive warehouses",
+          "Eliminating all quality inspection checks"
         ],
-        "correctOption": "weak creates an optional reference that becomes nil when deallocated; unowned assumes self is never nil and crashes if accessed after deallocation",
-        "conceptTarget": "ARC Reference Types"
+        "correctOption": "Continuous elimination of waste (Muda) and relentless focus on value creation for the customer",
+        "conceptTarget": "Lean & Kaizen Principles"
       },
       {
-        "id": "mob-i-7",
-        "text": "What is Flutter's Skia / Impeller rendering engine approach compared to React Native?",
+        "id": "biz-i-7",
+        "text": "What does a balanced scorecard measure in corporate performance management?",
         "options": [
-          "Flutter controls and renders every single pixel directly to a canvas rather than bridging to native OEM platform widgets",
-          "Flutter converts Dart to HTML",
-          "Flutter runs exclusively inside Safari",
-          "Flutter does not support animations"
+          "Strategic performance across Financial, Customer, Internal Business Processes, and Learning/Growth perspectives",
+          "The physical balance of shipping containers",
+          "The exact weight of retail packages",
+          "The balance in the corporate savings account only"
         ],
-        "correctOption": "Flutter controls and renders every single pixel directly to a canvas rather than bridging to native OEM platform widgets",
-        "conceptTarget": "Flutter Engine"
+        "correctOption": "Strategic performance across Financial, Customer, Internal Business Processes, and Learning/Growth perspectives",
+        "conceptTarget": "Balanced Scorecard"
       },
       {
-        "id": "mob-i-8",
-        "text": "How does Android Room database persistence ensure type safety at compile time?",
+        "id": "biz-i-8",
+        "text": "What is brand equity in modern commercial marketing?",
         "options": [
-          "Validates SQLite queries and schema definitions at compile-time using annotation processors",
-          "Converts SQL tables to JSON text files",
-          "Bypasses SQLite and uses text files",
-          "Disables database transactions"
+          "The commercial value and customer goodwill derived from consumer perception of a brand name rather than the generic product itself",
+          "The dollar value of company warehouse real estate",
+          "The physical stock certificate printed by an agency",
+          "The amount paid to advertising agencies"
         ],
-        "correctOption": "Validates SQLite queries and schema definitions at compile-time using annotation processors",
-        "conceptTarget": "Android Room ORM"
+        "correctOption": "The commercial value and customer goodwill derived from consumer perception of a brand name rather than the generic product itself",
+        "conceptTarget": "Brand Equity"
       }
     ],
     "Advanced": [
       {
-        "id": "mob-a-1",
-        "text": "In React Native's New Architecture (Fabric & TurboModules), how does JSI replace the legacy asynchronous bridge?",
+        "id": "biz-a-1",
+        "text": "In the Resource-Based View (RBV) of strategic management, what does the VRIO framework evaluate?",
         "options": [
-          "By exposing direct C++ host object pointers to JavaScript, eliminating JSON serialization bottlenecks",
-          "By converting JavaScript to Python code at runtime",
-          "By running all React components inside web views",
-          "By bypassing the native operating system entirely"
+          "Whether a firm's internal resource bundle is Valuable, Rare, Inimitable, and Organized to capture sustainable competitive advantage",
+          "Virtual Reality Interactive Operations",
+          "Volume, Rate, Inventory, and Output",
+          "Vendor Registration and Invoice Organization"
         ],
-        "correctOption": "By exposing direct C++ host object pointers to JavaScript, eliminating JSON serialization bottlenecks",
-        "conceptTarget": "JSI & TurboModules"
+        "correctOption": "Whether a firm's internal resource bundle is Valuable, Rare, Inimitable, and Organized to capture sustainable competitive advantage",
+        "conceptTarget": "VRIO Strategic Framework"
       },
       {
-        "id": "mob-a-2",
-        "text": "In React Native's Fabric rendering system, how does C++ core state synchronization prevent visual layout pop-in?",
+        "id": "biz-a-2",
+        "text": "In corporate mergers and acquisitions (M&A), what does Goodwill represent on the consolidated balance sheet?",
         "options": [
-          "Measures and layouts UI nodes synchronously in C++ shadow trees before painting to the host platform",
-          "Renders everything as static SVG images",
-          "Delays all user touches by 500ms",
-          "Executes all animations on web workers"
+          "The purchase price premium paid over the fair market value of the target firm's identifiable net net assets",
+          "A charitable donation to non-profit entities",
+          "A fund reserved for employee holiday parties",
+          "The market value of company office furniture"
         ],
-        "correctOption": "Measures and layouts UI nodes synchronously in C++ shadow trees before painting to the host platform",
-        "conceptTarget": "Fabric Renderer"
+        "correctOption": "The purchase price premium paid over the fair market value of the target firm's identifiable net net assets",
+        "conceptTarget": "M&A Accounting & Goodwill"
       },
       {
-        "id": "mob-a-3",
-        "text": "What is the purpose of R8 / ProGuard in Android release builds?",
+        "id": "biz-a-3",
+        "text": "What does Clayton Christensen's Theory of Disruptive Innovation describe?",
         "options": [
-          "Performs whole-program bytecode shrinking, aggressive dead-code elimination, and symbol obfuscation",
-          "Encrypts all images with RSA",
-          "Translates Kotlin to Swift",
-          "Compiles Android to iOS"
+          "Simpler, cheaper products initially serving overlooked bottom-market segments that steadily improve and displace entrenched market leaders",
+          "Sudden power outages in manufacturing plants",
+          "Illegal industrial espionage by competitor firms",
+          "Corporate bankruptcy caused by executive scandal"
         ],
-        "correctOption": "Performs whole-program bytecode shrinking, aggressive dead-code elimination, and symbol obfuscation",
-        "conceptTarget": "Build Optimization / R8"
+        "correctOption": "Simpler, cheaper products initially serving overlooked bottom-market segments that steadily improve and displace entrenched market leaders",
+        "conceptTarget": "Disruptive Innovation Theory"
       },
       {
-        "id": "mob-a-4",
-        "text": "How does iOS handle background execution deferral with BGTaskScheduler?",
+        "id": "biz-a-4",
+        "text": "What are the three stages of Kurt Lewin's organizational change management model?",
         "options": [
-          "Intelligently batches non-urgent tasks until the device is connected to external power and unmetered network connectivity",
-          "Forces the phone to stay awake 24/7",
-          "Uploads all data to Apple servers immediately",
-          "Deletes background apps after 5 minutes"
+          "Unfreeze, Change (Transition), and Refreeze",
+          "Plan, Execute, and Audit",
+          "Hire, Train, and Promote",
+          "Identify, Analyze, and Report"
         ],
-        "correctOption": "Intelligently batches non-urgent tasks until the device is connected to external power and unmetered network connectivity",
-        "conceptTarget": "iOS Background Processing"
+        "correctOption": "Unfreeze, Change (Transition), and Refreeze",
+        "conceptTarget": "Change Management Dynamics"
       },
       {
-        "id": "mob-a-5",
-        "text": "In modern Android, how does Kotlin Coroutines Flow handle backpressure?",
+        "id": "biz-a-5",
+        "text": "In strategic corporate finance, what is Agency Theory primarily concerned with?",
         "options": [
-          "Suspends the emitter coroutine when the collector cannot keep up with the emission rate without buffer overflow",
-          "Drops all packets over 1MB",
-          "Spawns 100 new OS threads",
-          "Crashes the application"
+          "The inherent conflict of interest between corporate managers (agents) and company shareholders (principals)",
+          "The licensing of modeling and advertising talent agencies",
+          "Government antitrust regulatory inspections",
+          "Managing third-party logistics shipping agents"
         ],
-        "correctOption": "Suspends the emitter coroutine when the collector cannot keep up with the emission rate without buffer overflow",
-        "conceptTarget": "Coroutines Flow Backpressure"
+        "correctOption": "The inherent conflict of interest between corporate managers (agents) and company shareholders (principals)",
+        "conceptTarget": "Agency Theory & Governance"
       },
       {
-        "id": "mob-a-6",
-        "text": "What mechanism allows iOS Dynamic Island and Live Activities to update in real-time with sub-second latency?",
+        "id": "biz-a-6",
+        "text": "In game theory applied to strategic competition, what is a Nash Equilibrium?",
         "options": [
-          "ActivityKit background push tokens via Apple Push Notification service (APNs) updates",
-          "Continuous Bluetooth polling",
-          "Keeping the main app running in the foreground",
-          "Refreshing the entire iOS home screen"
+          "A state where no competing player can unilaterally improve their payoff by altering their strategy, given the choices of other players",
+          "A scenario where all competitors agree to merge",
+          "When prices are fixed by government decree",
+          "When all firms experience zero operational profits"
         ],
-        "correctOption": "ActivityKit background push tokens via Apple Push Notification service (APNs) updates",
-        "conceptTarget": "ActivityKit Architecture"
+        "correctOption": "A state where no competing player can unilaterally improve their payoff by altering their strategy, given the choices of other players",
+        "conceptTarget": "Game Theory / Nash Equilibrium"
       },
       {
-        "id": "mob-a-7",
-        "text": "What is memory thrashing in mobile devices with low RAM budgets?",
+        "id": "biz-a-7",
+        "text": "What does the Ansoff Matrix classify in corporate growth strategy?",
         "options": [
-          "The OS spends more time evicting and paging memory pages than executing application instructions, causing severe stutter",
-          "Battery overheating",
-          "Wi-Fi disconnection",
-          "Screen flickering"
+          "Growth opportunities categorized across Market Penetration, Market Development, Product Development, and Diversification",
+          "Employee salary bonus tiers",
+          "Factory production line speed limits",
+          "Software licensing contract renewals"
         ],
-        "correctOption": "The OS spends more time evicting and paging memory pages than executing application instructions, causing severe stutter",
-        "conceptTarget": "Memory Thrashing"
+        "correctOption": "Growth opportunities categorized across Market Penetration, Market Development, Product Development, and Diversification",
+        "conceptTarget": "Ansoff Growth Matrix"
       },
       {
-        "id": "mob-a-8",
-        "text": "How does Android's low-memory killer daemon (lmkd) prioritize process termination under memory pressure?",
+        "id": "biz-a-8",
+        "text": "What is the primary rationale for vertical backward integration in corporate strategy?",
         "options": [
-          "Evaluates the Out-Of-Memory score (oom_score_adj) to terminate background and cached processes before foreground services",
-          "Kills the currently active user app first",
-          "Shuts down the phone",
-          "Deletes user photos"
+          "Acquiring upstream suppliers to secure critical raw materials, reduce supply risk, and capture upstream supplier profit margins",
+          "Outsourcing customer service overseas",
+          "Selling off non-core company divisions",
+          "Issuing preferred stock to venture capitalists"
         ],
-        "correctOption": "Evaluates the Out-Of-Memory score (oom_score_adj) to terminate background and cached processes before foreground services",
-        "conceptTarget": "Android Kernel lmkd"
+        "correctOption": "Acquiring upstream suppliers to secure critical raw materials, reduce supply risk, and capture upstream supplier profit margins",
+        "conceptTarget": "Vertical Integration Strategy"
       }
     ]
   },
-  "Blockchain & Distributed Systems": {
+  "Psychology & Behavioral Sciences": {
     "Beginner": [
       {
-        "id": "bc-b-1",
-        "text": "What is a blockchain at its fundamental structural level?",
+        "id": "psy-b-1",
+        "text": "What is Classical Conditioning in behavioral psychology?",
         "options": [
-          "A centralized relational SQL database",
-          "A cryptographically linked chain of blocks using cryptographic hashes",
-          "A cloud server hosting Apache web servers",
-          "A compiled C++ desktop program"
+          "A learning process where an unconditioned biological stimulus is paired with a neutral stimulus to elicit a conditioned reflex",
+          "Memorizing classical musical compositions",
+          "Formal classroom teaching etiquette",
+          "Physical strength training with weights"
         ],
-        "correctOption": "A cryptographically linked chain of blocks using cryptographic hashes",
-        "conceptTarget": "Blockchain Architecture"
+        "correctOption": "A learning process where an unconditioned biological stimulus is paired with a neutral stimulus to elicit a conditioned reflex",
+        "conceptTarget": "Classical Conditioning"
       },
       {
-        "id": "bc-b-2",
-        "text": "What is a smart contract in a decentralized network?",
+        "id": "psy-b-2",
+        "text": "What are the five levels of Abraham Maslow's Hierarchy of Needs, starting from the base?",
         "options": [
-          "A signed legal document on paper",
-          "Deterministic self-executing code stored and verified across a decentralized state machine",
-          "A private chat message between users",
-          "A tool for mining Bitcoin faster"
+          "Physiological, Safety, Love/Belonging, Esteem, and Self-Actualization",
+          "Food, Wealth, Fame, Power, and Immortality",
+          "Infancy, Childhood, Adolescence, Adulthood, and Elderhood",
+          "Sight, Sound, Smell, Taste, and Touch"
         ],
-        "correctOption": "Deterministic self-executing code stored and verified across a decentralized state machine",
-        "conceptTarget": "Smart Contracts"
+        "correctOption": "Physiological, Safety, Love/Belonging, Esteem, and Self-Actualization",
+        "conceptTarget": "Maslow's Hierarchy"
       },
       {
-        "id": "bc-b-3",
-        "text": "What is the purpose of 'Gas' on the Ethereum network?",
+        "id": "psy-b-3",
+        "text": "What is Cognitive Dissonance in psychological theory?",
         "options": [
-          "A measure of computational execution units required to process transactions and prevent infinite loops",
-          "A physical fuel for cooling servers",
-          "A payment to download the web browser",
-          "A tool to increase internet bandwidth"
+          "The acute psychological discomfort experienced when holding mutually contradictory beliefs, values, or behaviors",
+          "A physical headache caused by loud noises",
+          "The inability to remember phone numbers",
+          "A neurological disease affecting balance"
         ],
-        "correctOption": "A measure of computational execution units required to process transactions and prevent infinite loops",
-        "conceptTarget": "Gas Economics"
+        "correctOption": "The acute psychological discomfort experienced when holding mutually contradictory beliefs, values, or behaviors",
+        "conceptTarget": "Cognitive Dissonance"
       },
       {
-        "id": "bc-b-4",
-        "text": "What is a cryptographic hash function (e.g. SHA-256)?",
+        "id": "psy-b-4",
+        "text": "What is Confirmation Bias in human decision-making?",
         "options": [
-          "A mathematical algorithm that maps arbitrary data to a fixed-size bit string deterministically and is one-way",
-          "A compression tool for zip files",
-          "A password manager plugin",
-          "A tool to edit audio"
+          "The cognitive tendency to seek out, favor, and recall information that confirms preexisting beliefs while ignoring contradictory evidence",
+          "Confirming an airline flight reservation",
+          "Testing computer software against bugs",
+          "Signing legal documents in triplicate"
         ],
-        "correctOption": "A mathematical algorithm that maps arbitrary data to a fixed-size bit string deterministically and is one-way",
-        "conceptTarget": "Cryptographic Hashing"
+        "correctOption": "The cognitive tendency to seek out, favor, and recall information that confirms preexisting beliefs while ignoring contradictory evidence",
+        "conceptTarget": "Confirmation Bias"
       },
       {
-        "id": "bc-b-5",
-        "text": "What is the primary difference between a public blockchain and a private consortium blockchain?",
+        "id": "psy-b-5",
+        "text": "What is the primary role of the Amygdala in the human brain?",
         "options": [
-          "Public is permissionless where anyone can participate; private restricts consensus and reading rights to vetted entities",
-          "Public blockchains do not use cryptography",
-          "Private blockchains run without electricity",
-          "Public blockchains can only have 10 users"
+          "Processing raw emotional stimuli, particularly fear conditioning, threat assessment, and emotional memory consolidation",
+          "Calculating long division mathematics",
+          "Regulating body temperature exclusively",
+          "Controlling finger movement when typing"
         ],
-        "correctOption": "Public is permissionless where anyone can participate; private restricts consensus and reading rights to vetted entities",
-        "conceptTarget": "Blockchain Taxonomy"
+        "correctOption": "Processing raw emotional stimuli, particularly fear conditioning, threat assessment, and emotional memory consolidation",
+        "conceptTarget": "Neuropsychology / Amygdala"
       },
       {
-        "id": "bc-b-6",
-        "text": "What is a cold hardware wallet?",
+        "id": "psy-b-6",
+        "text": "What is the primary difference between working memory and long-term memory?",
         "options": [
-          "A secure offline physical device that stores private keys isolated from internet-connected devices",
-          "A computer stored in a refrigerator",
-          "A frozen bank account",
-          "An email draft folder"
+          "Working memory temporarily holds and manipulates small information chunks in immediate awareness; long-term memory stores vast knowledge indefinitely",
+          "Working memory lasts 50 years; long-term lasts 2 minutes",
+          "Working memory only stores numbers",
+          "Long-term memory is located in the stomach"
         ],
-        "correctOption": "A secure offline physical device that stores private keys isolated from internet-connected devices",
-        "conceptTarget": "Key Management"
+        "correctOption": "Working memory temporarily holds and manipulates small information chunks in immediate awareness; long-term memory stores vast knowledge indefinitely",
+        "conceptTarget": "Memory Architecture"
       },
       {
-        "id": "bc-b-7",
-        "text": "What is mining in Proof-of-Work blockchains?",
+        "id": "psy-b-7",
+        "text": "What is Operant Conditioning as formulated by B.F. Skinner?",
         "options": [
-          "Using computational power to solve difficult cryptographic puzzles to propose and validate new blocks",
-          "Digging for precious metals",
-          "Writing smart contracts in Solidity",
-          "Buying cryptocurrency on an exchange"
+          "A learning framework where the strength of a voluntary behavior is modified through positive reinforcement, negative reinforcement, or punishment",
+          "Operating heavy construction machinery safely",
+          "Surgical operations on neural pathways",
+          "Conditioning athletes for running marathons"
         ],
-        "correctOption": "Using computational power to solve difficult cryptographic puzzles to propose and validate new blocks",
-        "conceptTarget": "Proof of Work"
+        "correctOption": "A learning framework where the strength of a voluntary behavior is modified through positive reinforcement, negative reinforcement, or punishment",
+        "conceptTarget": "Operant Conditioning"
       },
       {
-        "id": "bc-b-8",
-        "text": "What does the 51% attack represent in blockchain networks?",
+        "id": "psy-b-8",
+        "text": "What does Emotional Intelligence (EQ) measure in interpersonal psychology?",
         "options": [
-          "When an entity controls a majority of hashing/voting power and can reorganize blocks or double-spend",
-          "When 51% of users delete their wallets",
-          "A tax fee on transactions",
-          "A discount on transaction fees"
+          "The capacity to perceive, monitor, regulate, and constructively harness one's own and others' emotional states",
+          "Score on a standard mathematical IQ test",
+          "The volume of an individual's speaking voice",
+          "Memory retention of historical dates"
         ],
-        "correctOption": "When an entity controls a majority of hashing/voting power and can reorganize blocks or double-spend",
-        "conceptTarget": "Network Vulnerabilities"
+        "correctOption": "The capacity to perceive, monitor, regulate, and constructively harness one's own and others' emotional states",
+        "conceptTarget": "Emotional Intelligence"
       }
     ],
     "Intermediate": [
       {
-        "id": "bc-i-1",
-        "text": "What problem does Byzantine Fault Tolerance (BFT) resolve in distributed consensus?",
+        "id": "psy-i-1",
+        "text": "In developmental psychology, what are Jean Piaget's four stages of cognitive development in chronological order?",
         "options": [
-          "Ensuring network nodes can reach reliable consensus even when some nodes fail or act maliciously",
-          "Compressing database images by 90%",
-          "Increasing GPU frame rates in gaming",
-          "Speeding up CPU clock frequencies"
+          "Sensorimotor, Preoperational, Concrete Operational, and Formal Operational",
+          "Infant, Toddler, Child, and Adult",
+          "Oral, Anal, Phallic, and Genital",
+          "Id, Ego, Superego, and Conscious"
         ],
-        "correctOption": "Ensuring network nodes can reach reliable consensus even when some nodes fail or act maliciously",
-        "conceptTarget": "Distributed Consensus"
+        "correctOption": "Sensorimotor, Preoperational, Concrete Operational, and Formal Operational",
+        "conceptTarget": "Piagetian Cognitive Stages"
       },
       {
-        "id": "bc-i-2",
-        "text": "What is the primary role of a Merkle Tree in a block header?",
+        "id": "psy-i-2",
+        "text": "What did Stanley Milgram's classic social psychology experiments at Yale demonstrate?",
         "options": [
-          "To provide efficient and secure cryptographic verification of large data sets using O(log n) inclusion proofs",
-          "To sort transactions alphabetically",
-          "To store high-resolution profile pictures",
-          "To convert smart contracts into HTML"
+          "A surprising willingness of ordinary individuals to obey perceived authority figures, even when instructed to inflict apparent harm",
+          "That human beings have photogenic memory",
+          "That sleep deprivation causes visual hallucinations",
+          "That children learn language faster than adults"
         ],
-        "correctOption": "To provide efficient and secure cryptographic verification of large data sets using O(log n) inclusion proofs",
-        "conceptTarget": "Merkle Trees"
+        "correctOption": "A surprising willingness of ordinary individuals to obey perceived authority figures, even when instructed to inflict apparent harm",
+        "conceptTarget": "Social Obedience Dynamics"
       },
       {
-        "id": "bc-i-3",
-        "text": "What is a reentrancy attack in Solidity smart contracts?",
+        "id": "psy-i-3",
+        "text": "What is the Bystander Effect in social group psychology?",
         "options": [
-          "When an external call invokes the calling contract recursively before internal balance states are updated, draining funds",
-          "When two miners find a block simultaneously",
-          "When a user logs in from two computers",
-          "When a wallet password is forgotten"
+          "Individuals are statistically less likely to intervene and help a victim in distress when more witnesses are present due to diffusion of responsibility",
+          "People enjoy watching sports in stadiums",
+          "Crowds always act with maximum moral empathy",
+          "Bystanders always call emergency services immediately"
         ],
-        "correctOption": "When an external call invokes the calling contract recursively before internal balance states are updated, draining funds",
-        "conceptTarget": "Smart Contract Security"
+        "correctOption": "Individuals are statistically less likely to intervene and help a victim in distress when more witnesses are present due to diffusion of responsibility",
+        "conceptTarget": "Bystander Effect"
       },
       {
-        "id": "bc-i-4",
-        "text": "What is the difference between Layer 1 (L1) and Layer 2 (L2) blockchain scaling?",
+        "id": "psy-i-4",
+        "text": "What is Neuroplasticity in contemporary cognitive neuroscience?",
         "options": [
-          "L1 modifies the fundamental base consensus protocol; L2 processes transactions off-chain and posts cryptographic validity proofs on-chain",
-          "L1 is for mobile; L2 is for desktop",
-          "L2 does not use smart contracts",
-          "L1 is centralized; L2 is decentralized"
+          "The biological capacity of neural networks to dynamically reorganize, forge new synaptic pathways, and adapt throughout life",
+          "A synthetic plastic material used in brain implants",
+          "The rigid inability of the adult brain to learn new skills",
+          "The deterioration of brain cells with age"
         ],
-        "correctOption": "L1 modifies the fundamental base consensus protocol; L2 processes transactions off-chain and posts cryptographic validity proofs on-chain",
-        "conceptTarget": "Layer 2 Scaling"
+        "correctOption": "The biological capacity of neural networks to dynamically reorganize, forge new synaptic pathways, and adapt throughout life",
+        "conceptTarget": "Neuroplasticity"
       },
       {
-        "id": "bc-i-5",
-        "text": "In distributed systems, what is the purpose of Vector Clocks?",
+        "id": "psy-i-5",
+        "text": "In the Big Five Personality Trait framework (OCEAN), what does the 'C' dimension evaluate?",
         "options": [
-          "To capture causal relationships and determine partial ordering of events across distributed nodes without a central physical clock",
-          "To measure network cable lengths",
-          "To draw 3D graphics in games",
-          "To calculate GPU frame rates"
+          "Conscientiousness (organization, impulse control, diligence, and goal-directed behavior)",
+          "Creativity",
+          "Curiosity",
+          "Competitiveness"
         ],
-        "correctOption": "To capture causal relationships and determine partial ordering of events across distributed nodes without a central physical clock",
-        "conceptTarget": "Logical Time / Vector Clocks"
+        "correctOption": "Conscientiousness (organization, impulse control, diligence, and goal-directed behavior)",
+        "conceptTarget": "Big Five OCEAN Model"
       },
       {
-        "id": "bc-i-6",
-        "text": "What is the Raft consensus algorithm designed to achieve in distributed systems?",
+        "id": "psy-i-6",
+        "text": "What does the Fundamental Attribution Error in social cognition describe?",
         "options": [
-          "Leader election, log replication, and safe state machine consensus among distributed server clusters",
-          "Bitcoin mining efficiency",
-          "CSS layout styling",
-          "Audio encoding"
+          "The tendency to overemphasize internal personal traits and underestimate situational external factors when explaining others' negative behavior",
+          "A bug in computer algorithms",
+          "Forgetting the name of a close acquaintance",
+          "Believing that all news reports are accurate"
         ],
-        "correctOption": "Leader election, log replication, and safe state machine consensus among distributed server clusters",
-        "conceptTarget": "Raft Consensus"
+        "correctOption": "The tendency to overemphasize internal personal traits and underestimate situational external factors when explaining others' negative behavior",
+        "conceptTarget": "Attribution Theory"
       },
       {
-        "id": "bc-i-7",
-        "text": "What does an Automated Market Maker (AMM) rely on instead of a traditional order book in decentralized finance (DeFi)?",
+        "id": "psy-i-7",
+        "text": "In cognitive psychology, what does the Stroop Effect demonstrate?",
         "options": [
-          "Constant product mathematical formula (e.g. x * y = k) governing liquidity pools",
-          "Centralized stock exchange brokers",
-          "Manual price negotiations via chat",
-          "Government regulatory approval"
+          "Delayed reaction time and cognitive interference when reading the name of a color printed in an incongruent ink color (e.g. word 'BLUE' printed in red ink)",
+          "The speed of human peripheral vision",
+          "The ability to read in dark environments",
+          "The impact of caffeine on typing speed"
         ],
-        "correctOption": "Constant product mathematical formula (e.g. x * y = k) governing liquidity pools",
-        "conceptTarget": "DeFi / AMM Mechanics"
+        "correctOption": "Delayed reaction time and cognitive interference when reading the name of a color printed in an incongruent ink color (e.g. word 'BLUE' printed in red ink)",
+        "conceptTarget": "Stroop Interference"
       },
       {
-        "id": "bc-i-8",
-        "text": "What is a hard fork in blockchain protocol evolution?",
+        "id": "psy-i-8",
+        "text": "What is Albert Bandura's concept of Self-Efficacy?",
         "options": [
-          "A non-backwards-compatible protocol rule change requiring all validating nodes to upgrade or split into separate chains",
-          "A physical break in a fiber optic cable",
-          "A software crash in the web browser",
-          "A temporary price fluctuation"
+          "An individual's personal belief in their capability to execute the actions required to achieve designated performance outcomes",
+          "High self-esteem and pride",
+          "Physical endurance in athletics",
+          "Self-reliance without any friends"
         ],
-        "correctOption": "A non-backwards-compatible protocol rule change requiring all validating nodes to upgrade or split into separate chains",
-        "conceptTarget": "Hard Fork Dynamics"
+        "correctOption": "An individual's personal belief in their capability to execute the actions required to achieve designated performance outcomes",
+        "conceptTarget": "Bandura's Self-Efficacy"
       }
     ],
     "Advanced": [
       {
-        "id": "bc-a-1",
-        "text": "What does the CAP Theorem mathematically dictate regarding distributed distributed data stores?",
+        "id": "psy-a-1",
+        "text": "In behavioral economics and cognitive science, what does Daniel Kahneman's Dual-System Theory propose?",
         "options": [
-          "A system can achieve Consistency, Availability, and Partition Tolerance simultaneously without trade-offs",
-          "In the presence of a network partition, a distributed system must trade off between consistency and availability",
-          "Distributed systems must always prioritize throughput over correctness",
-          "Latency is independent of physical distance"
+          "System 1 is fast, instinctive, and automatic; System 2 is slow, deliberate, effortful, and analytically rational",
+          "The brain has two separate physical skulls",
+          "Memory is divided into left and right hemispheres exclusively",
+          "Visual perception is handled by two independent optic nerves"
         ],
-        "correctOption": "In the presence of a network partition, a distributed system must trade off between consistency and availability",
-        "conceptTarget": "CAP Theorem"
+        "correctOption": "System 1 is fast, instinctive, and automatic; System 2 is slow, deliberate, effortful, and analytically rational",
+        "conceptTarget": "Dual-Process Theory"
       },
       {
-        "id": "bc-a-2",
-        "text": "How do Zero-Knowledge Rollups (zk-Rollups) verify transaction batches without executing every state transition on-chain?",
+        "id": "psy-a-2",
+        "text": "In clinical psychopathology, what does the Diathesis-Stress Model posit regarding mental illness etiology?",
         "options": [
-          "Generates a concise cryptographic validity proof (SNARK/STARK) proving the mathematical correctness of thousands of off-chain state updates",
-          "Trusts a central validator company signature",
-          "Reruns every transaction on Ethereum mainnet",
-          "Delays all withdrawals by 7 days"
+          "Disorders manifest from the interaction between an underlying genetic/biological vulnerability (diathesis) and precipitating environmental stressors",
+          "Mental illness is caused purely by physical head trauma",
+          "All psychological disorders are 100% determined by diet",
+          "Stress has zero impact on psychiatric outcomes"
         ],
-        "correctOption": "Generates a concise cryptographic validity proof (SNARK/STARK) proving the mathematical correctness of thousands of off-chain state updates",
-        "conceptTarget": "zk-Rollup Architecture"
+        "correctOption": "Disorders manifest from the interaction between an underlying genetic/biological vulnerability (diathesis) and precipitating environmental stressors",
+        "conceptTarget": "Diathesis-Stress Model"
       },
       {
-        "id": "bc-a-3",
-        "text": "In distributed consensus, what is the FLP Impossibility Theorem (Fischer, Lynch, Paterson)?",
+        "id": "psy-a-3",
+        "text": "What does the Yerkes-Dodson Law dictate regarding physiological arousal and task performance?",
         "options": [
-          "In an asynchronous network, no deterministic consensus protocol can guarantee both safety and liveness if even a single node can fail by crashing",
-          "Distributed systems can achieve infinite scaling without bandwidth limits",
-          "Data can never be lost on SSDs",
-          "All networks must use TCP instead of UDP"
+          "Performance increases with physiological arousal up to an optimal peak, beyond which excess arousal causes performance deterioration (inverted U-curve)",
+          "Performance increases linearly to infinity as stress increases",
+          "Arousal has no impact on human cognitive efficiency",
+          "Calm individuals can never perform complex tasks"
         ],
-        "correctOption": "In an asynchronous network, no deterministic consensus protocol can guarantee both safety and liveness if even a single node can fail by crashing",
-        "conceptTarget": "FLP Impossibility"
+        "correctOption": "Performance increases with physiological arousal up to an optimal peak, beyond which excess arousal causes performance deterioration (inverted U-curve)",
+        "conceptTarget": "Yerkes-Dodson Arousal Dynamics"
       },
       {
-        "id": "bc-a-4",
-        "text": "What is MEV (Maximal Extractable Value) in decentralized blockchain networks?",
+        "id": "psy-a-4",
+        "text": "In cellular neurobiology of learning, what is Long-Term Potentiation (LTP)?",
         "options": [
-          "The maximum value that miners/validators can extract by arbitrarily reordering, inserting, or censoring transactions in a block",
-          "The highest gas price paid in a day",
-          "The total market cap of Bitcoin",
-          "The maximum memory size of a node"
+          "A persistent strengthening of synapses based on recent high-frequency activation patterns, providing the biological foundation for memory consolidation",
+          "The growth of new bone tissue in the skull",
+          "The temporary numbing of pain receptors in skin",
+          "The dilation of blood vessels during exercise"
         ],
-        "correctOption": "The maximum value that miners/validators can extract by arbitrarily reordering, inserting, or censoring transactions in a block",
-        "conceptTarget": "MEV & Block Production"
+        "correctOption": "A persistent strengthening of synapses based on recent high-frequency activation patterns, providing the biological foundation for memory consolidation",
+        "conceptTarget": "Long-Term Potentiation (LTP)"
       },
       {
-        "id": "bc-a-5",
-        "text": "In Ethereum's Proof of Stake consensus, what is the role of the Casper FFG (Friendly Finality Gadget)?",
+        "id": "psy-a-5",
+        "text": "In cognitive psychology, what does the Framing Effect demonstrate regarding human choice architecture?",
         "options": [
-          "An overlay consensus protocol providing economic finality by slashing validator stakes if contradictory checkpoints are attested",
-          "A wallet user interface tool",
-          "A compiler for Solidity",
-          "A network routing protocol"
+          "People react to a particular choice in different ways depending on whether it is presented as a loss or as a gain (e.g. 90% survival vs 10% mortality)",
+          "People choose pictures with ornate picture frames",
+          "Visual artists think faster than accountants",
+          "Decisions are always mathematically optimal regardless of wording"
         ],
-        "correctOption": "An overlay consensus protocol providing economic finality by slashing validator stakes if contradictory checkpoints are attested",
-        "conceptTarget": "Casper FFG Finality"
+        "correctOption": "People react to a particular choice in different ways depending on whether it is presented as a loss or as a gain (e.g. 90% survival vs 10% mortality)",
+        "conceptTarget": "Prospect Theory & Framing"
       },
       {
-        "id": "bc-a-6",
-        "text": "What is state bloat in public blockchain nodes?",
+        "id": "psy-a-6",
+        "text": "What does Festinger's Cognitive Dissonance resolution research show about post-decisional spreading of alternatives?",
         "options": [
-          "The continuous growth of active global state accounts and smart contract storage that must reside in fast memory for transaction validation",
-          "When smart contract code exceeds 100 lines",
-          "When gas prices drop too low",
-          "When a block has too few transactions"
+          "After choosing between two close alternatives, individuals retrospectively elevate their chosen option and denigrate the rejected alternative to justify choice",
+          "People always regret every major purchase forever",
+          "Individuals seek out negative reviews of their new car",
+          "People immediately return items to the store"
         ],
-        "correctOption": "The continuous growth of active global state accounts and smart contract storage that must reside in fast memory for transaction validation",
-        "conceptTarget": "State Bloat"
+        "correctOption": "After choosing between two close alternatives, individuals retrospectively elevate their chosen option and denigrate the rejected alternative to justify choice",
+        "conceptTarget": "Post-Decisional Justification"
       },
       {
-        "id": "bc-a-7",
-        "text": "How does sharding achieve horizontal scalability in distributed ledger architectures?",
+        "id": "psy-a-7",
+        "text": "What is the primary neurochemical mechanism of selective serotonin reuptake inhibitors (SSRIs)?",
         "options": [
-          "Partitions the global network state and transaction throughput across independent parallel subnetworks ('shards')",
-          "Compiles all smart contracts to WebAssembly",
-          "Reduces block times to 1 millisecond",
-          "Increases block size to 100 Gigabytes"
+          "Inhibiting the presynaptic reuptake transporter protein, increasing the extracellular concentration and residence time of serotonin in synaptic clefts",
+          "Destroying dopamine receptors in the cortex",
+          "Preventing all action potentials from firing",
+          "Synthesizing adrenaline in the bloodstream directly"
         ],
-        "correctOption": "Partitions the global network state and transaction throughput across independent parallel subnetworks ('shards')",
-        "conceptTarget": "Database Sharding"
+        "correctOption": "Inhibiting the presynaptic reuptake transporter protein, increasing the extracellular concentration and residence time of serotonin in synaptic clefts",
+        "conceptTarget": "Psychopharmacology / SSRI"
       },
       {
-        "id": "bc-a-8",
-        "text": "What is a Sybil attack and how do consensus mechanisms mathematically prevent it?",
+        "id": "psy-a-8",
+        "text": "In sleep medicine and memory consolidation, what occurs during slow-wave sleep (N3 delta waves)?",
         "options": [
-          "An adversary creates numerous pseudo-identities to gain disproportionate influence; prevented by tying voting weight to scarce economic resources (PoW hashpower or PoS stake)",
-          "Flooding network ports with UDP packets",
-          "Guessing private keys using dictionary attacks",
-          "Injecting malicious SQL queries"
+          "Synchronized neural replay in the hippocampus transfers declarative memories to the neocortex while the glymphatic system clears metabolic waste",
+          "The brain completely shuts off and consumes zero oxygen",
+          "Rapid eye movements occur accompanied by vivid dreams",
+          "Muscles contract continuously at high frequency"
         ],
-        "correctOption": "An adversary creates numerous pseudo-identities to gain disproportionate influence; prevented by tying voting weight to scarce economic resources (PoW hashpower or PoS stake)",
-        "conceptTarget": "Sybil Resistance"
+        "correctOption": "Synchronized neural replay in the hippocampus transfers declarative memories to the neocortex while the glymphatic system clears metabolic waste",
+        "conceptTarget": "Sleep & Memory Consolidation"
       }
     ]
   },
-  "DevOps & Cloud Engineering": {
+  "Healthcare & Biomedical Sciences": {
     "Beginner": [
       {
-        "id": "dev-b-1",
-        "text": "What is Docker's primary role in software development and deployment?",
+        "id": "med-b-1",
+        "text": "What is the primary physiological function of red blood cells (erythrocytes)?",
         "options": [
-          "Packaging applications and their dependencies into standardized, isolated lightweight containers",
-          "Writing frontend CSS styling rules",
-          "Designing relational database schemas",
-          "Creating vector graphics"
+          "Binding and transporting oxygen from lungs to systemic tissues via hemoglobin and returning carbon dioxide",
+          "Fighting viral infections by producing antibodies",
+          "Clotting blood during skin lacerations",
+          "Digesting carbohydrates in the stomach"
         ],
-        "correctOption": "Packaging applications and their dependencies into standardized, isolated lightweight containers",
-        "conceptTarget": "Containerization"
+        "correctOption": "Binding and transporting oxygen from lungs to systemic tissues via hemoglobin and returning carbon dioxide",
+        "conceptTarget": "Erythrocyte Physiology"
       },
       {
-        "id": "dev-b-2",
-        "text": "What is Continuous Integration (CI) in a DevOps pipeline?",
+        "id": "med-b-2",
+        "text": "What do the numbers in a standard blood pressure reading (e.g. 120/80 mmHg) represent?",
         "options": [
-          "The practice of automating the building, testing, and validation of code changes as soon as they are pushed",
-          "Manually testing code in production once a year",
-          "Re-installing the operating system weekly",
-          "Writing documentation on paper"
+          "Systolic pressure during ventricular contraction over diastolic pressure during ventricular relaxation",
+          "Heart rate per minute over respiration rate per minute",
+          "Blood sugar level over cholesterol percentage",
+          "Total liters of blood over body temperature in Celsius"
         ],
-        "correctOption": "The practice of automating the building, testing, and validation of code changes as soon as they are pushed",
-        "conceptTarget": "Continuous Integration"
+        "correctOption": "Systolic pressure during ventricular contraction over diastolic pressure during ventricular relaxation",
+        "conceptTarget": "Cardiovascular Vitals"
       },
       {
-        "id": "dev-b-3",
-        "text": "What is the concept of Infrastructure as Code (IaC)?",
+        "id": "med-b-3",
+        "text": "What is the fundamental biological distinction between a bacterium and a virus?",
         "options": [
-          "Managing and provisioning cloud and IT infrastructure through declarative code definition files rather than manual console clicks",
-          "Writing assembly language for routers",
-          "Building physical server racks with wood",
-          "Printing server logs on paper"
+          "Bacteria are independent single-celled organisms with cellular machinery; viruses are acellular genetic fragments requiring a host cell to replicate",
+          "Viruses are 100x larger than bacteria",
+          "Bacteria do not have DNA or RNA",
+          "Antibiotics cure viral illnesses effectively"
         ],
-        "correctOption": "Managing and provisioning cloud and IT infrastructure through declarative code definition files rather than manual console clicks",
-        "conceptTarget": "Infrastructure as Code"
+        "correctOption": "Bacteria are independent single-celled organisms with cellular machinery; viruses are acellular genetic fragments requiring a host cell to replicate",
+        "conceptTarget": "Pathogen Microbiology"
       },
       {
-        "id": "dev-b-4",
-        "text": "What is the primary role of Git in a modern software engineering team?",
+        "id": "med-b-4",
+        "text": "What is Homeostasis in human physiology?",
         "options": [
-          "Distributed version control tracking source code history and enabling collaborative branch merges",
-          "Running automated database backups",
-          "Compiling JavaScript to native machine code",
-          "Hosting domain name servers (DNS)"
+          "The dynamic self-regulating physiological mechanisms maintaining internal physical and chemical equilibrium (e.g. pH, temperature)",
+          "The loss of body heat during hypothermia",
+          "The digestion of food in the colon",
+          "A medical condition causing bone loss"
         ],
-        "correctOption": "Distributed version control tracking source code history and enabling collaborative branch merges",
-        "conceptTarget": "Git Version Control"
+        "correctOption": "The dynamic self-regulating physiological mechanisms maintaining internal physical and chemical equilibrium (e.g. pH, temperature)",
+        "conceptTarget": "Physiological Homeostasis"
       },
       {
-        "id": "dev-b-5",
-        "text": "Which configuration language is the standard for Kubernetes manifests and GitHub Actions workflows?",
+        "id": "med-b-5",
+        "text": "Which organ in the human body is primarily responsible for drug metabolism and detoxification?",
         "options": [
-          "YAML",
-          "C++",
-          "Assembly",
-          "CSS"
+          "The Liver",
+          "The Spleen",
+          "The Lungs",
+          "The Bladder"
         ],
-        "correctOption": "YAML",
-        "conceptTarget": "YAML Configuration"
+        "correctOption": "The Liver",
+        "conceptTarget": "Hepatic Metabolism"
       },
       {
-        "id": "dev-b-6",
-        "text": "What is a Reverse Proxy (e.g. Nginx or Cloudflare)?",
+        "id": "med-b-6",
+        "text": "What are antibiotics formulated to treat?",
         "options": [
-          "A server sitting in front of web servers, intercepting client requests to handle load balancing, SSL termination, and caching",
-          "A tool to download torrents",
-          "A computer monitor calibration tool",
-          "A browser extension for taking screenshots"
+          "Bacterial infections only (completely ineffective against viral infections like influenza or the common cold)",
+          "Viral infections and fungal rashes",
+          "Cardiovascular hypertension",
+          "Bone fractures and torn ligaments"
         ],
-        "correctOption": "A server sitting in front of web servers, intercepting client requests to handle load balancing, SSL termination, and caching",
-        "conceptTarget": "Reverse Proxies"
+        "correctOption": "Bacterial infections only (completely ineffective against viral infections like influenza or the common cold)",
+        "conceptTarget": "Antimicrobial Pharmacology"
       },
       {
-        "id": "dev-b-7",
-        "text": "What does CD stand for in the CI/CD paradigm?",
+        "id": "med-b-7",
+        "text": "What is the primary endocrine role of Insulin secreted by pancreatic beta cells?",
         "options": [
-          "Continuous Delivery / Continuous Deployment",
-          "Compact Disc",
-          "Centralized Database",
-          "Code Documentation"
+          "Facilitating cellular glucose uptake from blood to lower systemic blood glucose levels",
+          "Raising blood pressure during exercise",
+          "Stimulating stomach acid secretion for digestion",
+          "Producing red blood cells in bone marrow"
         ],
-        "correctOption": "Continuous Delivery / Continuous Deployment",
-        "conceptTarget": "Continuous Delivery"
+        "correctOption": "Facilitating cellular glucose uptake from blood to lower systemic blood glucose levels",
+        "conceptTarget": "Endocrine Homeostasis"
       },
       {
-        "id": "dev-b-8",
-        "text": "What is an AWS S3 bucket primarily used for in cloud architecture?",
+        "id": "med-b-8",
+        "text": "What is the primary role of Antibodies (Immunoglobulins) produced by B lymphocytes?",
         "options": [
-          "Scalable, highly durable object storage for files, media, and static assets",
-          "Executing relational SQL queries",
-          "Running Windows desktop games",
-          "Monitoring server temperatures"
+          "Specifically recognizing and binding foreign pathogen antigens to neutralize them or flag them for phagocytic destruction",
+          "Pumping oxygenated blood into the aorta",
+          "Breaking down dietary fats in bile",
+          "Generating electrical impulses in cardiac nodes"
         ],
-        "correctOption": "Scalable, highly durable object storage for files, media, and static assets",
-        "conceptTarget": "Object Storage"
+        "correctOption": "Specifically recognizing and binding foreign pathogen antigens to neutralize them or flag them for phagocytic destruction",
+        "conceptTarget": "Adaptive Immunology"
       }
     ],
     "Intermediate": [
       {
-        "id": "dev-i-1",
-        "text": "In Kubernetes, what is a Pod?",
+        "id": "med-i-1",
+        "text": "What are the four standardized phases of human clinical trials for investigative new drugs?",
         "options": [
-          "The smallest deployable unit of computing in Kubernetes, encapsulating one or more co-located containers",
-          "A physical data center facility",
-          "A hardware hard drive partition",
-          "A type of network router cable"
+          "Phase 1: Safety & Dosage; Phase 2: Efficacy & Side Effects; Phase 3: Large-Scale Randomized Trials; Phase 4: Post-Market Surveillance",
+          "Animal testing, Lab synthesis, Packaging, and TV commercials",
+          "Doctor review, Pharmacy stock, Pricing, and Patient feedback",
+          "Phase 1: Surgery; Phase 2: Diet; Phase 3: Exercise; Phase 4: Recovery"
         ],
-        "correctOption": "The smallest deployable unit of computing in Kubernetes, encapsulating one or more co-located containers",
-        "conceptTarget": "Kubernetes Primitives"
+        "correctOption": "Phase 1: Safety & Dosage; Phase 2: Efficacy & Side Effects; Phase 3: Large-Scale Randomized Trials; Phase 4: Post-Market Surveillance",
+        "conceptTarget": "Clinical Trial Protocol"
       },
       {
-        "id": "dev-i-2",
-        "text": "How does a Blue/Green deployment strategy achieve zero-downtime application releases?",
+        "id": "med-i-2",
+        "text": "In infectious disease epidemiology, what does the Basic Reproduction Number (R0) indicate?",
         "options": [
-          "Maintaining two identical production environments and instantly switching router traffic to the new version once verified",
-          "Deploying changes randomly to half the users",
-          "Shutting down servers for maintenance overnight",
-          "Converting all microservices to a single monolith"
+          "The expected average number of secondary cases produced by a single infectious individual in a completely susceptible population",
+          "The mortality rate percentage among hospitalized patients",
+          "The number of days a patient remains in quarantine",
+          "The percentage of vaccinated citizens required for herd immunity"
         ],
-        "correctOption": "Maintaining two identical production environments and instantly switching router traffic to the new version once verified",
-        "conceptTarget": "Deployment Strategies"
+        "correctOption": "The expected average number of secondary cases produced by a single infectious individual in a completely susceptible population",
+        "conceptTarget": "Epidemiological R0"
       },
       {
-        "id": "dev-i-3",
-        "text": "What is the primary purpose of Terraform state files in Infrastructure-as-Code?",
+        "id": "med-i-3",
+        "text": "What is the primary difference between Pharmacokinetics and Pharmacodynamics?",
         "options": [
-          "Maps declared configuration resources to real-world cloud resource IDs and tracks operational metadata",
-          "Stores plain text user credit cards",
-          "Compiles Go binaries",
-          "Configures local desktop monitors"
+          "Pharmacokinetics is what the biological body does to the drug (ADME); Pharmacodynamics is what the drug does to the body (receptor targets)",
+          "Pharmacokinetics is for pills; Pharmacodynamics is for injections",
+          "Pharmacokinetics deals only with side effects",
+          "Pharmacodynamics deals with drug pricing"
         ],
-        "correctOption": "Maps declared configuration resources to real-world cloud resource IDs and tracks operational metadata",
-        "conceptTarget": "Terraform State"
+        "correctOption": "Pharmacokinetics is what the biological body does to the drug (ADME); Pharmacodynamics is what the drug does to the body (receptor targets)",
+        "conceptTarget": "Pharmacokinetics vs Pharmacodynamics"
       },
       {
-        "id": "dev-i-4",
-        "text": "What is the difference between Prometheus and Grafana in cloud monitoring?",
+        "id": "med-i-4",
+        "text": "On a diagnostic Electrocardiogram (ECG/EKG), what physiological event does the P-wave signify?",
         "options": [
-          "Prometheus scrapes, stores, and evaluates time-series metrics; Grafana visualizes and queries those metrics on dashboards",
-          "Prometheus is hardware; Grafana is software",
-          "Grafana replaces Docker; Prometheus replaces Kubernetes",
-          "Prometheus cannot monitor CPU usage"
+          "Atrial depolarization preceding atrial muscular contraction",
+          "Ventricular repolarization",
+          "Ventricular contraction",
+          "Resting state of the whole heart"
         ],
-        "correctOption": "Prometheus scrapes, stores, and evaluates time-series metrics; Grafana visualizes and queries those metrics on dashboards",
-        "conceptTarget": "Observability / Metrics"
+        "correctOption": "Atrial depolarization preceding atrial muscular contraction",
+        "conceptTarget": "Cardiac Electrophysiology"
       },
       {
-        "id": "dev-i-5",
-        "text": "How does a Canary deployment mitigate production release risks?",
+        "id": "med-i-5",
+        "text": "What is the primary physiological function of the Renin-Angiotensin-Aldosterone System (RAAS)?",
         "options": [
-          "Gradually rolls out the new software version to a small percentage (e.g. 5%) of live users before full deployment",
-          "Deploys code exclusively on weekends",
-          "Replaces all servers with virtual machines",
-          "Disables database backups during upgrades"
+          "Long-term regulation of systemic arterial blood pressure, plasma sodium volume, and vascular tone",
+          "Digesting proteins in the duodenum",
+          "Regulating pupil dilation in bright light",
+          "Controlling circadian sleep rhythms"
         ],
-        "correctOption": "Gradually rolls out the new software version to a small percentage (e.g. 5%) of live users before full deployment",
-        "conceptTarget": "Canary Releases"
+        "correctOption": "Long-term regulation of systemic arterial blood pressure, plasma sodium volume, and vascular tone",
+        "conceptTarget": "RAAS System"
       },
       {
-        "id": "dev-i-6",
-        "text": "What is an Ingress Controller in Kubernetes?",
+        "id": "med-i-6",
+        "text": "What is the function of the Glomerulus in the human nephron?",
         "options": [
-          "Manages external HTTP/HTTPS access and routing rules to services within the cluster",
-          "Deletes crashed nodes physically",
-          "Reboots the master node weekly",
-          "Allocates hard drive sectors"
+          "High-pressure filtration of blood plasma, creating a protein-free filtrate that enters Bowman's capsule",
+          "Reabsorbing all water into the bladder directly",
+          "Producing bile salts for lipid breakdown",
+          "Secreting adrenaline into the renal artery"
         ],
-        "correctOption": "Manages external HTTP/HTTPS access and routing rules to services within the cluster",
-        "conceptTarget": "Kubernetes Ingress"
+        "correctOption": "High-pressure filtration of blood plasma, creating a protein-free filtrate that enters Bowman's capsule",
+        "conceptTarget": "Renal Glomerular Filtration"
       },
       {
-        "id": "dev-i-7",
-        "text": "What does Horizontal Pod Autoscaling (HPA) in Kubernetes adjust based on workload metrics?",
+        "id": "med-i-7",
+        "text": "What is an autoimmune disease in pathology?",
         "options": [
-          "Automatically scales the number of replica Pods up or down based on observed CPU or memory utilization",
-          "Increases the CPU speed of physical motherboards",
-          "Deletes underutilized namespaces",
-          "Purchases new cloud domain names"
+          "A pathological condition where the adaptive immune system fails self-tolerance and mistakenly attacks healthy host tissues",
+          "An infection caught from automobiles",
+          "A genetic disease that only affects bone marrow",
+          "A temporary allergic reaction to pollen"
         ],
-        "correctOption": "Automatically scales the number of replica Pods up or down based on observed CPU or memory utilization",
-        "conceptTarget": "Autoscaling / HPA"
+        "correctOption": "A pathological condition where the adaptive immune system fails self-tolerance and mistakenly attacks healthy host tissues",
+        "conceptTarget": "Autoimmunity Pathophysiology"
       },
       {
-        "id": "dev-i-8",
-        "text": "What is the benefit of multi-stage Docker builds?",
+        "id": "med-i-8",
+        "text": "In diagnostic laboratory medicine, what does a high Troponin-I blood level strongly indicate?",
         "options": [
-          "Dramatically reduces final production image size by copying only compiled artifacts from temporary build environments",
-          "Allows Docker to run on mobile phones",
-          "Eliminates the need for Linux kernels",
-          "Bypasses all unit test suites"
+          "Acute myocardial infarction (heart attack) resulting in cardiac muscle cell necrosis",
+          "Bacterial pneumonia in lungs",
+          "Early-stage diabetes mellitus",
+          "Fractured femur bone"
         ],
-        "correctOption": "Dramatically reduces final production image size by copying only compiled artifacts from temporary build environments",
-        "conceptTarget": "Multi-Stage Docker"
+        "correctOption": "Acute myocardial infarction (heart attack) resulting in cardiac muscle cell necrosis",
+        "conceptTarget": "Cardiac Biomarkers"
       }
     ],
     "Advanced": [
       {
-        "id": "dev-a-1",
-        "text": "How does a Service Mesh (e.g. Istio) manage microservice traffic and security without modifying application source code?",
+        "id": "med-a-1",
+        "text": "In cellular oncology, why is the TP53 gene frequently designated as the 'guardian of the human genome'?",
         "options": [
-          "By injecting transparent sidecar proxies (e.g. Envoy) alongside each microservice container to handle mTLS and routing",
-          "By rewriting all application code into Go binaries automatically",
-          "By routing all traffic through a centralized overseas proxy server",
-          "By disabling TLS encryption within the cluster"
+          "It encodes a transcription factor that halts the cell cycle at G1/S for DNA repair or triggers apoptosis in irreversibly damaged cells",
+          "It kills circulating tumor cells via phagocytosis",
+          "It synthesizes chemotherapy molecules internally",
+          "It prevents all mutations in skin cells from UV light"
         ],
-        "correctOption": "By injecting transparent sidecar proxies (e.g. Envoy) alongside each microservice container to handle mTLS and routing",
-        "conceptTarget": "Service Mesh Architecture"
+        "correctOption": "It encodes a transcription factor that halts the cell cycle at G1/S for DNA repair or triggers apoptosis in irreversibly damaged cells",
+        "conceptTarget": "Tumor Suppressor Genes"
       },
       {
-        "id": "dev-a-2",
-        "text": "What is GitOps (e.g. ArgoCD or Flux) and how does its continuous reconciliation loop operate?",
+        "id": "med-a-2",
+        "text": "In CRISPR-Cas9 precision genome editing, what is the mandatory function of the Protospacer Adjacent Motif (PAM)?",
         "options": [
-          "Git is the single declarative source of truth; cluster controllers continuously compare and synchronize live infrastructure with Git manifests",
-          "Developers push code directly to production servers via FTP",
-          "Cluster state is managed through manual web UI clicks",
-          "All Kubernetes YAML is compiled to C++"
+          "A short essential 2-6 base-pair DNA sequence immediately following the target DNA that Cas9 must recognize to trigger double-strand cleaving",
+          "A virus that infects bacteria",
+          "A chemical dye used to stain chromosomes",
+          "A protein that glues DNA together"
         ],
-        "correctOption": "Git is the single declarative source of truth; cluster controllers continuously compare and synchronize live infrastructure with Git manifests",
-        "conceptTarget": "GitOps Paradigm"
+        "correctOption": "A short essential 2-6 base-pair DNA sequence immediately following the target DNA that Cas9 must recognize to trigger double-strand cleaving",
+        "conceptTarget": "CRISPR Genome Editing"
       },
       {
-        "id": "dev-a-3",
-        "text": "In distributed tracing (e.g. OpenTelemetry / Jaeger), what is a Trace Context / Span?",
+        "id": "med-a-3",
+        "text": "What is the molecular mechanism of action of mRNA vaccines (e.g. against SARS-CoV-2)?",
         "options": [
-          "A unique correlation identifier propagated across network headers tracking a single request's path and latency across multiple microservices",
-          "A physical cable measuring server speed",
-          "A snapshot of the entire database",
-          "A cron job that restarts Docker"
+          "Delivers lipid nanoparticle-encapsulated mRNA instructing host ribosomes to translate viral spike protein, eliciting humoral and cellular immunity",
+          "Injects live weakened viral pathogens directly into blood",
+          "Modifies host genomic DNA permanently in the nucleus",
+          "Neutralizes viruses using synthetic nanobots"
         ],
-        "correctOption": "A unique correlation identifier propagated across network headers tracking a single request's path and latency across multiple microservices",
-        "conceptTarget": "Distributed Tracing"
+        "correctOption": "Delivers lipid nanoparticle-encapsulated mRNA instructing host ribosomes to translate viral spike protein, eliciting humoral and cellular immunity",
+        "conceptTarget": "mRNA Immunotherapeutics"
       },
       {
-        "id": "dev-a-4",
-        "text": "How does Chaos Engineering (e.g. Chaos Monkey) proactively improve system resilience?",
+        "id": "med-a-4",
+        "text": "What cellular architectural feature constitutes the physiological Blood-Brain Barrier (BBB)?",
         "options": [
-          "Intentionally injecting realistic pseudo-random failures into production to uncover architectural weaknesses before they cause outages",
-          "Deleting user databases randomly",
-          "Shutting down company email servers",
-          "Disabling production SSL certificates"
+          "Continuous tight junctions (zonula occludens) between cerebral endothelial cells, surrounded by pericytes and astrocyte end-feet",
+          "Thick bone tissue lining brain blood vessels",
+          "A layer of cartilage covering the cortex",
+          "High blood pressure in the carotid artery"
         ],
-        "correctOption": "Intentionally injecting realistic pseudo-random failures into production to uncover architectural weaknesses before they cause outages",
-        "conceptTarget": "Chaos Engineering"
+        "correctOption": "Continuous tight junctions (zonula occludens) between cerebral endothelial cells, surrounded by pericytes and astrocyte end-feet",
+        "conceptTarget": "Blood-Brain Barrier Physiology"
       },
       {
-        "id": "dev-a-5",
-        "text": "What problem does eBPF (Extended Berkeley Packet Filter) solve in modern Linux cloud observability and security?",
+        "id": "med-a-5",
+        "text": "What is the primary mechanism of action of Monoclonal Antibodies targeting Programmed Death-1 (PD-1 / PD-L1) in cancer immunotherapy?",
         "options": [
-          "Allows running sandboxed byte-code programs directly inside the Linux kernel without modifying kernel source code or loading modules",
-          "Replaces the Linux kernel with Windows NT",
-          "Disables all network firewalls",
-          "Translates Python to kernel machine code"
+          "Releases the immune checkpoint brake on exhausted cytotoxic T cells, enabling them to recognize and destroy malignant cancer cells",
+          "Kills all white blood cells in bone marrow",
+          "Starves tumor cells of glucose directly",
+          "Replaces cancer cells with healthy stem cells"
         ],
-        "correctOption": "Allows running sandboxed byte-code programs directly inside the Linux kernel without modifying kernel source code or loading modules",
-        "conceptTarget": "eBPF Architecture"
+        "correctOption": "Releases the immune checkpoint brake on exhausted cytotoxic T cells, enabling them to recognize and destroy malignant cancer cells",
+        "conceptTarget": "Immune Checkpoint Inhibitors"
       },
       {
-        "id": "dev-a-6",
-        "text": "What is Mutual TLS (mTLS) in a Service Mesh zero-trust network?",
+        "id": "med-a-6",
+        "text": "In molecular pharmacology, what is an Allosteric Modulator?",
         "options": [
-          "Both client and server authenticate each other's X.509 digital certificates to ensure both encrypted transport and verified identity",
-          "Encrypts only the server response while leaving request headers in plain text",
-          "Disables TLS handshakes to decrease latency",
-          "Uses shared passwords instead of certificates"
+          "A ligand that binds to a topographically distinct site on a receptor, altering its conformation and modulating its affinity for the orthosteric agonist",
+          "A drug that destroys the receptor permanently",
+          "A drug that only acts in the stomach",
+          "An inactive placebo pill"
         ],
-        "correctOption": "Both client and server authenticate each other's X.509 digital certificates to ensure both encrypted transport and verified identity",
-        "conceptTarget": "mTLS Authentication"
+        "correctOption": "A ligand that binds to a topographically distinct site on a receptor, altering its conformation and modulating its affinity for the orthosteric agonist",
+        "conceptTarget": "Allosteric Pharmacology"
       },
       {
-        "id": "dev-a-7",
-        "text": "In distributed database scaling, what is the Raft/Paxos consensus log truncation problem?",
+        "id": "med-a-7",
+        "text": "What is the physiological role of the Cytochrome P450 (CYP450) enzyme superfamily in hepatic pharmacology?",
         "options": [
-          "State machines must periodically take snapshots and truncate append-only consensus logs to prevent disks from exhausting capacity",
-          "Consensus logs can never be pruned safely",
-          "Logs must be stored in plain text on client browsers",
-          "Truncation disables leader election"
+          "Phase I biotransformation of xenobiotics and endogenous compounds via oxidative, peroxidative, and reductive chemical reactions",
+          "Pumping oxygen into red blood cells",
+          "Synthesizing insulin in pancreatic islets",
+          "Regulating blood clotting cascade factors"
         ],
-        "correctOption": "State machines must periodically take snapshots and truncate append-only consensus logs to prevent disks from exhausting capacity",
-        "conceptTarget": "Consensus Log Compaction"
+        "correctOption": "Phase I biotransformation of xenobiotics and endogenous compounds via oxidative, peroxidative, and reductive chemical reactions",
+        "conceptTarget": "CYP450 Pharmacogenomics"
       },
       {
-        "id": "dev-a-8",
-        "text": "What is the Split-Brain scenario in high-availability clustered systems?",
+        "id": "med-a-8",
+        "text": "In human neuroanatomy, what is the role of the Circle of Willis at the base of the brain?",
         "options": [
-          "A network partition causes two disconnected sub-clusters to each believe they are the legitimate leader, potentially corrupting shared state",
-          "When a computer monitor splits into two windows",
-          "When two developers commit to the same Git branch",
-          "When RAM is divided equally across two CPUs"
+          "Provides collateral circulatory anastomoses between anterior and posterior cerebral blood supplies to maintain brain perfusion during vessel occlusion",
+          "Stores cerebrospinal fluid under high pressure",
+          "Acts as the relay center for auditory reflexes",
+          "Controls balance in the inner ear"
         ],
-        "correctOption": "A network partition causes two disconnected sub-clusters to each believe they are the legitimate leader, potentially corrupting shared state",
-        "conceptTarget": "Split-Brain Resolution"
+        "correctOption": "Provides collateral circulatory anastomoses between anterior and posterior cerebral blood supplies to maintain brain perfusion during vessel occlusion",
+        "conceptTarget": "Cerebrovascular Anatomy"
+      }
+    ]
+  },
+  "Digital Product Design & Human-Computer Interaction (HCI)": {
+    "Beginner": [
+      {
+        "id": "des-b-1",
+        "text": "What is the fundamental difference between UI (User Interface) and UX (User Experience)?",
+        "options": [
+          "UI is the visual aesthetic, layout, and interactive styling; UX is the holistic journey, intuitive usability, and problem-solving architecture",
+          "UI is for mobile; UX is only for desktop computers",
+          "UI is written in Python; UX is written in HTML",
+          "There is no difference; they are interchangeable marketing buzzwords"
+        ],
+        "correctOption": "UI is the visual aesthetic, layout, and interactive styling; UX is the holistic journey, intuitive usability, and problem-solving architecture",
+        "conceptTarget": "UI vs UX Fundamentals"
+      },
+      {
+        "id": "des-b-2",
+        "text": "What is a Wireframe in digital product design workflows?",
+        "options": [
+          "A low-fidelity structural grayscale schematic outlining page layout and element placement without branding colors or final graphics",
+          "A metal frame that holds a smartphone",
+          "The high-voltage electrical cable in a computer",
+          "A final production-ready React component"
+        ],
+        "correctOption": "A low-fidelity structural grayscale schematic outlining page layout and element placement without branding colors or final graphics",
+        "conceptTarget": "Wireframing"
+      },
+      {
+        "id": "des-b-3",
+        "text": "What does WCAG stand for in software and web accessibility standards?",
+        "options": [
+          "Web Content Accessibility Guidelines",
+          "World Computer Application Graphics",
+          "Wide Component Architecture Grid",
+          "Wireless Communication Access Gateway"
+        ],
+        "correctOption": "Web Content Accessibility Guidelines",
+        "conceptTarget": "Digital Accessibility (WCAG)"
+      },
+      {
+        "id": "des-b-4",
+        "text": "What is a Design System in enterprise software engineering?",
+        "options": [
+          "A standardized library of reusable UI components, design tokens (colors, typography, spacing), and behavioral design rules",
+          "A new computer operating system like Windows",
+          "A printer that prints posters",
+          "A software program for editing audio files"
+        ],
+        "correctOption": "A standardized library of reusable UI components, design tokens (colors, typography, spacing), and behavioral design rules",
+        "conceptTarget": "Design Systems"
+      },
+      {
+        "id": "des-b-5",
+        "text": "What is Visual Hierarchy in interface design?",
+        "options": [
+          "Arranging UI elements purposefully in order of visual importance using scale, color contrast, typography weights, and white space",
+          "Listing all employees by corporate rank",
+          "Putting all buttons in alphabetical order",
+          "Centering every single paragraph on a screen"
+        ],
+        "correctOption": "Arranging UI elements purposefully in order of visual importance using scale, color contrast, typography weights, and white space",
+        "conceptTarget": "Visual Hierarchy"
+      },
+      {
+        "id": "des-b-6",
+        "text": "What is a User Persona in UX research?",
+        "options": [
+          "A research-backed semi-fictional archetype representing the goals, pain points, technical literacy, and behaviors of a target user group",
+          "An avatar picture used on social media",
+          "An actor hired to star in product commercials",
+          "A fictitious customer created to fabricate positive reviews"
+        ],
+        "correctOption": "A research-backed semi-fictional archetype representing the goals, pain points, technical literacy, and behaviors of a target user group",
+        "conceptTarget": "User Persona Development"
+      },
+      {
+        "id": "des-b-7",
+        "text": "What is the primary psychological purpose of White Space (negative space) in an interface?",
+        "options": [
+          "Reduces cognitive visual overload, establishes visual breathing room, and groups related components hierarchically",
+          "Saves digital ink when displaying on screens",
+          "Allows web pages to load faster over slow modems",
+          "Indicates that an image failed to download"
+        ],
+        "correctOption": "Reduces cognitive visual overload, establishes visual breathing room, and groups related components hierarchically",
+        "conceptTarget": "Negative Space / Layout"
+      },
+      {
+        "id": "des-b-8",
+        "text": "What is an A/B Test (Split Test) in product design optimization?",
+        "options": [
+          "Serving two variants (A and B) of a screen simultaneously to randomized user cohorts to measure conversion and engagement metrics",
+          "Testing keyboard keys 'A' and 'B' for hardware defects",
+          "Testing an app in only two countries",
+          "A grading rubric where students receive either an A or B"
+        ],
+        "correctOption": "Serving two variants (A and B) of a screen simultaneously to randomized user cohorts to measure conversion and engagement metrics",
+        "conceptTarget": "A/B Testing & Optimization"
+      }
+    ],
+    "Intermediate": [
+      {
+        "id": "des-i-1",
+        "text": "What does Fitts's Law state in Human-Computer Interaction (HCI)?",
+        "options": [
+          "The time required to move rapidly to a target area is a function of the target distance and the target size (larger and closer buttons are faster to click)",
+          "Websites must load in under 1 second",
+          "Users will leave a page after reading 5 words",
+          "Monitors should never exceed 24 inches in width"
+        ],
+        "correctOption": "The time required to move rapidly to a target area is a function of the target distance and the target size (larger and closer buttons are faster to click)",
+        "conceptTarget": "Fitts's Law"
+      },
+      {
+        "id": "des-i-2",
+        "text": "In Jakob Nielsen's 10 Usability Heuristics, what does 'Visibility of System Status' prescribe?",
+        "options": [
+          "The system should always keep users informed about ongoing operations through timely, clear feedback within reasonable time (e.g. progress bars)",
+          "Displaying all server CPU temperatures on the homepage",
+          "Showing all code line numbers to users",
+          "Making the browser window transparent"
+        ],
+        "correctOption": "The system should always keep users informed about ongoing operations through timely, clear feedback within reasonable time (e.g. progress bars)",
+        "conceptTarget": "Nielsen Usability Heuristics"
+      },
+      {
+        "id": "des-i-3",
+        "text": "What does Hick's Law dictate regarding decision-making time in digital user interfaces?",
+        "options": [
+          "The time it takes for a user to make a decision increases logarithmically as the number and complexity of choices increases",
+          "Users always choose the first button on a screen",
+          "People spend 5 minutes reading privacy policies",
+          "Decision time is independent of interface options"
+        ],
+        "correctOption": "The time it takes for a user to make a decision increases logarithmically as the number and complexity of choices increases",
+        "conceptTarget": "Hick's Law"
+      },
+      {
+        "id": "des-i-4",
+        "text": "In Don Norman's 'The Design of Everyday Things', what is an Affordance?",
+        "options": [
+          "The fundamental physical or perceived properties of an object that determine how it could possibly be used (e.g. a raised button affords pressing)",
+          "How affordable a product is in dollars",
+          "The warranty provided by a manufacturer",
+          "The color code of an icon"
+        ],
+        "correctOption": "The fundamental physical or perceived properties of an object that determine how it could possibly be used (e.g. a raised button affords pressing)",
+        "conceptTarget": "Norman's Affordances"
+      },
+      {
+        "id": "des-i-5",
+        "text": "What is the primary difference between Qualitative and Quantitative UX research?",
+        "options": [
+          "Quantitative research measures statistical metrics ('What' and 'How many'); Qualitative research explores underlying motivations and mental models ('Why')",
+          "Quantitative uses interviews; Qualitative uses spreadsheets",
+          "Quantitative is free; Qualitative costs millions",
+          "There is no methodological distinction"
+        ],
+        "correctOption": "Quantitative research measures statistical metrics ('What' and 'How many'); Qualitative research explores underlying motivations and mental models ('Why')",
+        "conceptTarget": "Mixed UX Methodologies"
+      },
+      {
+        "id": "des-i-6",
+        "text": "What is the primary role of a Customer Journey Map in UX strategy?",
+        "options": [
+          "A timeline visualization illustrating user touchpoints, emotional highs/lows, and pain points across their end-to-end product interaction",
+          "A geographical GPS map showing user locations",
+          "A flowchart of database tables",
+          "An organizational chart of company executives"
+        ],
+        "correctOption": "A timeline visualization illustrating user touchpoints, emotional highs/lows, and pain points across their end-to-end product interaction",
+        "conceptTarget": "Customer Journey Mapping"
+      },
+      {
+        "id": "des-i-7",
+        "text": "What does Jakob's Law of Internet User Experience dictate to product designers?",
+        "options": [
+          "Users spend most of their time on other sites, meaning they expect your site to function according to existing familiar interaction conventions",
+          "Every website must invent completely unique navigation rules",
+          "Websites must be rebuilt from scratch every 6 months",
+          "Users never scroll past the fold"
+        ],
+        "correctOption": "Users spend most of their time on other sites, meaning they expect your site to function according to existing familiar interaction conventions",
+        "conceptTarget": "Jakob's Law"
+      },
+      {
+        "id": "des-i-8",
+        "text": "What is Micro-Copy in user interface writing?",
+        "options": [
+          "The small bits of instructional copy, error messages, button labels, and placeholder hints that guide users through interactive friction points",
+          "Subtitles on promotional YouTube videos",
+          "The legal terms of service in 6pt font",
+          "Code comments written by frontend engineers"
+        ],
+        "correctOption": "The small bits of instructional copy, error messages, button labels, and placeholder hints that guide users through interactive friction points",
+        "conceptTarget": "UX Micro-Copywriting"
+      }
+    ],
+    "Advanced": [
+      {
+        "id": "des-a-1",
+        "text": "In cognitive psychology of design, what does the Peak-End Rule demonstrate?",
+        "options": [
+          "People judge an overall experience largely based on how they felt at its peak (most intense moment) and at its final end, rather than the arithmetic average",
+          "Users only read the first paragraph of a webpage",
+          "Websites must have a mountain picture at the top",
+          "User attention peaks at 2:00 PM every day"
+        ],
+        "correctOption": "People judge an overall experience largely based on how they felt at its peak (most intense moment) and at its final end, rather than the arithmetic average",
+        "conceptTarget": "Peak-End Rule"
+      },
+      {
+        "id": "des-a-2",
+        "text": "What are the four iterative phases of the British Design Council's Double Diamond framework?",
+        "options": [
+          "Discover (divergent), Define (convergent), Develop (divergent), and Deliver (convergent)",
+          "Brainstorm, Code, Test, and Deploy",
+          "Pitch, Finance, Build, and Sell",
+          "Research, Write, Review, and Publish"
+        ],
+        "correctOption": "Discover (divergent), Define (convergent), Develop (divergent), and Deliver (convergent)",
+        "conceptTarget": "Double Diamond Design Model"
+      },
+      {
+        "id": "des-a-3",
+        "text": "Under WCAG 2.1 Level AA accessibility guidelines, what is the minimum required color contrast ratio for normal body text against its background?",
+        "options": [
+          "4.5:1 (3:1 for large text over 18pt or bold 14pt)",
+          "1.5:1",
+          "10:1",
+          "20:1"
+        ],
+        "correctOption": "4.5:1 (3:1 for large text over 18pt or bold 14pt)",
+        "conceptTarget": "WCAG 2.1 Contrast Ratios"
+      },
+      {
+        "id": "des-a-4",
+        "text": "What is Cognitive Friction in interaction design?",
+        "options": [
+          "The resistance and mental effort encountered when an interface behaves contrary to a user's internalized mental model",
+          "The heat generated by laptop keyboards when typing fast",
+          "Visual eye strain caused by bright monitors",
+          "When two users click the same button simultaneously"
+        ],
+        "correctOption": "The resistance and mental effort encountered when an interface behaves contrary to a user's internalized mental model",
+        "conceptTarget": "Cognitive Friction & Mental Models"
+      },
+      {
+        "id": "des-a-5",
+        "text": "What is the primary difference between Skeuomorphism and Flat / Neumorphism design paradigms?",
+        "options": [
+          "Skeuomorphism mimics real-world physical textures (e.g. leather, beveled glass); Flat design removes 3D illusions in favor of 2D typographic clarity",
+          "Skeuomorphism only works on Apple devices",
+          "Flat design cannot use colors",
+          "Neumorphism is only for video games"
+        ],
+        "correctOption": "Skeuomorphism mimics real-world physical textures (e.g. leather, beveled glass); Flat design removes 3D illusions in favor of 2D typographic clarity",
+        "conceptTarget": "Design Paradigms & Evolution"
+      },
+      {
+        "id": "des-a-6",
+        "text": "In user research telemetry, what is the System Usability Scale (SUS)?",
+        "options": [
+          "A reliable, 10-item Likert scale questionnaire yielding a standardized composite usability score from 0 to 100 (benchmark average: 68)",
+          "A thermometer measuring hardware heat",
+          "A tool for testing network bandwidth",
+          "A scale that weighs computer hardware"
+        ],
+        "correctOption": "A reliable, 10-item Likert scale questionnaire yielding a standardized composite usability score from 0 to 100 (benchmark average: 68)",
+        "conceptTarget": "System Usability Scale (SUS)"
+      },
+      {
+        "id": "des-a-7",
+        "text": "How does Card Sorting assist information architects when designing website navigation structures?",
+        "options": [
+          "Participants organize topics into categorized groups, revealing user mental models and semantic taxonomy for menu hierarchies",
+          "Sorting credit cards by balance",
+          "Playing poker with team members",
+          "Sorting employee badges"
+        ],
+        "correctOption": "Participants organize topics into categorized groups, revealing user mental models and semantic taxonomy for menu hierarchies",
+        "conceptTarget": "Card Sorting / Information Architecture"
+      },
+      {
+        "id": "des-a-8",
+        "text": "What is Progressive Disclosure in complex enterprise interface engineering?",
+        "options": [
+          "Deferring advanced or rarely used features to secondary screens/drawers to keep initial interfaces clean and reduce novice user cognitive load",
+          "Gradually revealing website text line-by-line over 10 minutes",
+          "Requiring users to pay a subscription to view buttons",
+          "Publishing company financial disclosures every quarter"
+        ],
+        "correctOption": "Deferring advanced or rarely used features to secondary screens/drawers to keep initial interfaces clean and reduce novice user cognitive load",
+        "conceptTarget": "Progressive Disclosure"
       }
     ]
   }

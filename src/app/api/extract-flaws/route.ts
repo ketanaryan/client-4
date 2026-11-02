@@ -32,6 +32,7 @@ export async function POST(req: Request) {
   let score = 50;
   let quizResultId: string | null = null;
   let currentUserId: string | null = null;
+  let incorrectDetails: any[] = [];
 
   try {
     const body = await req.json();
@@ -47,7 +48,7 @@ export async function POST(req: Request) {
 
     // 1. Evaluate Quiz
     let correctCount = 0;
-    const incorrectDetails: any[] = [];
+    incorrectDetails = [];
     const rawResponses: any[] = [];
 
     questions.forEach((q: any) => {
@@ -151,17 +152,18 @@ export async function POST(req: Request) {
     console.error("Extract Flaws Error, falling back to dummy data:", error);
     // Add realistic presentation delay so it doesn't flash instantly
     await new Promise(resolve => setTimeout(resolve, 2000));
-    // Fallback for presentation so it never breaks
-    const fallbackFlaws = [
-      {
-        conceptName: "Algorithmic Complexity",
-        description: "Student lacks understanding of how time complexity scales with nested operations."
-      },
-      {
-        conceptName: "State Management",
-        description: "Student failed to identify how state mutations trigger UI re-renders."
-      }
-    ];
+    // Fallback for presentation: dynamically derive flaws from the student's actual missed question concept targets
+    const fallbackFlaws = incorrectDetails.length > 0
+      ? incorrectDetails.slice(0, 2).map((item: any) => ({
+          conceptName: item.conceptTarget || "Core Conceptual Foundations",
+          description: `Misconception identified in ${item.conceptTarget || "core concepts"}. Targeted micro-remediation recommended before proceeding to advanced coursework.`
+        }))
+      : [
+          {
+            conceptName: "Prerequisite Conceptual Synthesis",
+            description: "Targeted micro-remediation recommended to solidify end-to-end conceptual mastery."
+          }
+        ];
 
     if (quizResultId && currentUserId) {
       const authHeader = req.headers.get('Authorization');

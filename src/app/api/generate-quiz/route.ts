@@ -74,21 +74,59 @@ export async function POST(req: Request) {
       try {
         let questionPool: any[] = [];
         const domainMap: Record<string, string> = {
-          'computer-engineering': 'Computer Engineering',
-          'artificial-intelligence': 'Artificial Intelligence',
-          'software-engineering': 'Software Engineering',
-          'data-science': 'Data Science',
-          'cybersecurity': 'Cybersecurity',
-          'mobile-development': 'Mobile Development',
-          'blockchain': 'Blockchain & Distributed Systems',
-          'blockchain-distributed-systems': 'Blockchain & Distributed Systems',
-          'devops': 'DevOps & Cloud Engineering',
-          'devops-cloud-engineering': 'DevOps & Cloud Engineering'
+          'computer-science-ai': 'Computer Science & Artificial Intelligence',
+          'computer-engineering': 'Computer Science & Artificial Intelligence',
+          'artificial-intelligence': 'Computer Science & Artificial Intelligence',
+          'software-engineering-cloud': 'Software Engineering & Cloud Computing',
+          'software-engineering': 'Software Engineering & Cloud Computing',
+          'devops': 'Software Engineering & Cloud Computing',
+          'devops-cloud-engineering': 'Software Engineering & Cloud Computing',
+          'cybersecurity': 'Software Engineering & Cloud Computing',
+          'blockchain': 'Software Engineering & Cloud Computing',
+          'mobile-development': 'Software Engineering & Cloud Computing',
+          'data-science-analytics': 'Data Science & Business Analytics',
+          'data-science': 'Data Science & Business Analytics',
+          'financial-markets-economics': 'Financial Markets & Economics',
+          'finance': 'Financial Markets & Economics',
+          'financial-markets': 'Financial Markets & Economics',
+          'economics': 'Financial Markets & Economics',
+          'business-management': 'Business Administration & Strategic Management',
+          'business-administration': 'Business Administration & Strategic Management',
+          'management': 'Business Administration & Strategic Management',
+          'psychology-behavioral-sciences': 'Psychology & Behavioral Sciences',
+          'psychology': 'Psychology & Behavioral Sciences',
+          'behavioral-sciences': 'Psychology & Behavioral Sciences',
+          'healthcare-biomedical-sciences': 'Healthcare & Biomedical Sciences',
+          'healthcare': 'Healthcare & Biomedical Sciences',
+          'medicine': 'Healthcare & Biomedical Sciences',
+          'biomedical': 'Healthcare & Biomedical Sciences',
+          'product-design-hci': 'Digital Product Design & Human-Computer Interaction (HCI)',
+          'design': 'Digital Product Design & Human-Computer Interaction (HCI)',
+          'ui-ux': 'Digital Product Design & Human-Computer Interaction (HCI)',
+          'hci': 'Digital Product Design & Human-Computer Interaction (HCI)'
         };
-        const normalizedTarget = (targetDomain || '').toLowerCase().replace(/\s+/g, '-');
-        const actualDomain = domainMap[normalizedTarget] || (fallbackQuizData[targetDomain] ? targetDomain : 'Computer Engineering');
-        const actualLevel = academicLevel || 'Beginner';
-        questionPool = fallbackQuizData[actualDomain]?.[actualLevel] || fallbackQuizData['Computer Engineering']['Beginner'];
+        const normalizedTarget = (targetDomain || '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+        let actualDomain = domainMap[normalizedTarget];
+        
+        if (!actualDomain) {
+          if (fallbackQuizData[targetDomain]) {
+            actualDomain = targetDomain;
+          } else {
+            const keys = Object.keys(fallbackQuizData);
+            const foundKey = keys.find(k => {
+              const kNorm = k.toLowerCase();
+              return normalizedTarget.split('-').some(word => word.length > 3 && kNorm.includes(word));
+            });
+            actualDomain = foundKey || keys[0];
+          }
+        }
+
+        const validLevels = ['Beginner', 'Intermediate', 'Advanced'];
+        const actualLevel = validLevels.includes(academicLevel) ? academicLevel : 'Beginner';
+        const rawPool = fallbackQuizData[actualDomain]?.[actualLevel] || fallbackQuizData[actualDomain]?.['Beginner'] || fallbackQuizData[Object.keys(fallbackQuizData)[0]]['Beginner'];
+        
+        // Deep clone question pool to safely shuffle
+        questionPool = JSON.parse(JSON.stringify(rawPool));
 
         for (let i = questionPool.length - 1; i > 0; i--) {
           const j = Math.floor(Math.random() * (i + 1));

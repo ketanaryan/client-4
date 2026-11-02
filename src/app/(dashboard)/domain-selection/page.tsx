@@ -24,73 +24,77 @@ import {
   BookOpen, 
   Rocket, 
   ArrowRight,
-  Clock
+  Clock,
+  TrendingUp,
+  Brain,
+  Stethoscope,
+  Palette
 } from 'lucide-react';
 
 const DOMAINS = [
   {
-    id: 'computer-engineering',
-    title: 'Computer Engineering',
-    category: 'Hardware & Systems',
-    description: 'Computer architecture, operating systems, embedded hardware, and low-level memory management.',
+    id: 'computer-science-ai',
+    title: 'Computer Science & Artificial Intelligence',
+    category: 'Tech & Computing',
+    description: 'Algorithms, data structures, machine learning architectures, neural networks, and computational theory.',
     icon: Cpu,
     color: 'from-blue-500/10 to-indigo-500/10'
   },
   {
-    id: 'artificial-intelligence',
-    title: 'Artificial Intelligence & ML',
-    category: 'AI & Data Intelligence',
-    description: 'Neural networks, transformer models, machine learning algorithms, and cognitive reasoning.',
-    icon: Bot,
-    color: 'from-violet-500/10 to-purple-500/10'
-  },
-  {
-    id: 'software-engineering',
-    title: 'Full-Stack & Cloud Architecture',
-    category: 'Systems & Web',
-    description: 'Distributed web platforms, serverless microservices, REST/GraphQL APIs, and system design patterns.',
+    id: 'software-engineering-cloud',
+    title: 'Software Engineering & Cloud Computing',
+    category: 'Tech & Infrastructure',
+    description: 'Distributed microservices, REST/GraphQL APIs, serverless state, containerization, and system design.',
     icon: Globe,
     color: 'from-sky-500/10 to-blue-500/10'
   },
   {
-    id: 'data-science',
-    title: 'Data Science & Analytics',
-    category: 'Data & Statistics',
+    id: 'data-science-analytics',
+    title: 'Data Science & Business Analytics',
+    category: 'Analytics & Statistics',
     description: 'Statistical modeling, predictive algorithms, Pandas/NumPy pipelines, and big data visualization.',
     icon: Database,
     color: 'from-emerald-500/10 to-teal-500/10'
   },
   {
-    id: 'cybersecurity',
-    title: 'Cybersecurity & Defense',
-    category: 'Security & Infra',
-    description: 'Zero-Trust network architecture, cryptography, threat modeling, and web application vulnerability defense.',
-    icon: ShieldCheck,
+    id: 'financial-markets-economics',
+    title: 'Financial Markets & Economics',
+    category: 'Finance & Economics',
+    description: 'Capital asset pricing (CAPM), macroeconomic monetary policy, equity valuation, portfolio risk hedging, and financial markets.',
+    icon: TrendingUp,
+    color: 'from-amber-500/10 to-yellow-500/10'
+  },
+  {
+    id: 'business-management',
+    title: 'Business Administration & Strategic Management',
+    category: 'Management & Strategy',
+    description: 'Competitive strategy (Porter\'s Five Forces), unit economics (LTV:CAC), Agile operations, corporate governance, and leadership.',
+    icon: Briefcase,
+    color: 'from-indigo-500/10 to-purple-500/10'
+  },
+  {
+    id: 'psychology-behavioral-sciences',
+    title: 'Psychology & Behavioral Sciences',
+    category: 'Humanities & Social Science',
+    description: 'Cognitive biases, operant conditioning, neuroplasticity, memory consolidation, and social group dynamics.',
+    icon: Brain,
+    color: 'from-pink-500/10 to-rose-500/10'
+  },
+  {
+    id: 'healthcare-biomedical-sciences',
+    title: 'Healthcare & Biomedical Sciences',
+    category: 'Medicine & Life Sciences',
+    description: 'Human pathophysiology, pharmacokinetics, immunology, cardiovascular vitals, and diagnostic biomarkers.',
+    icon: Stethoscope,
     color: 'from-rose-500/10 to-red-500/10'
   },
   {
-    id: 'mobile-development',
-    title: 'Mobile App Engineering',
-    category: 'Mobile & Client',
-    description: 'Native iOS (Swift), Android (Kotlin & Jetpack Compose), and cross-platform reactive UI frameworks.',
-    icon: Smartphone,
-    color: 'from-amber-500/10 to-orange-500/10'
-  },
-  {
-    id: 'blockchain',
-    title: 'Blockchain & Distributed Ledgers',
-    category: 'Web3 & Distributed',
-    description: 'Smart contracts, consensus mechanisms (PoW/PoS), decentralized state machines, and cryptographic proofs.',
-    icon: Layers,
-    color: 'from-cyan-500/10 to-blue-500/10'
-  },
-  {
-    id: 'devops',
-    title: 'DevOps & Site Reliability',
-    category: 'Cloud & Infrastructure',
-    description: 'Kubernetes orchestration, Docker containerization, CI/CD automated deployment, and Infrastructure-as-Code.',
-    icon: Terminal,
-    color: 'from-zinc-500/10 to-slate-500/10'
+    id: 'product-design-hci',
+    title: 'Digital Product Design & Human-Computer Interaction (HCI)',
+    category: 'Design & User Experience',
+    description: 'User research, Fitts\'s Law, information architecture, WCAG 2.1 accessibility, design systems, and heuristics.',
+    icon: Palette,
+    color: 'from-purple-500/10 to-violet-500/10'
   }
 ];
 
@@ -107,7 +111,7 @@ const TIME_COMMITMENTS = [
 ];
 
 export default function DomainSelectionPage() {
-  const [selectedDomain, setSelectedDomain] = useState<string>('computer-engineering');
+  const [selectedDomain, setSelectedDomain] = useState<string>('computer-science-ai');
   const [competency, setCompetency] = useState<string>('Beginner');
   const [focusTrack, setFocusTrack] = useState<string>('placement');
   const [timeCommitment, setTimeCommitment] = useState<string>('5-10');
