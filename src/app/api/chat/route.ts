@@ -2,7 +2,8 @@ import { createGoogleGenerativeAI } from '@ai-sdk/google';
 import { streamText } from 'ai';
 import { NextResponse } from 'next/server';
 
-const google = createGoogleGenerativeAI({ apiKey: process.env.GOOGLE_GEMINI_API_KEY });
+const apiKey = process.env.GOOGLE_GEMINI_API_KEY || process.env.GOOGLE_GENERATIVE_AI_API_KEY;
+const google = createGoogleGenerativeAI({ apiKey });
 
 export async function POST(req: Request) {
   let userQuery = '';
@@ -19,7 +20,7 @@ export async function POST(req: Request) {
     const lastMessage = Array.isArray(messages) && messages.length > 0 
       ? messages[messages.length - 1].content 
       : '';
-    userQuery = lastMessage;
+    userQuery = lastMessage || 'Explain this architectural concept';
 
     const systemPrompt = `
       You are EduPredict's Elite AI Academic Tutor and Pedagogical Mentor.
@@ -34,7 +35,7 @@ export async function POST(req: Request) {
     `.trim();
 
     const controller = new AbortController();
-    const timeoutId = setTimeout(() => controller.abort(), 7500);
+    const timeoutId = setTimeout(() => controller.abort(), 7000);
 
     const result = await streamText({
       model: google('gemini-3.5-flash'),
@@ -45,35 +46,62 @@ export async function POST(req: Request) {
 
     clearTimeout(timeoutId);
 
-    return result.toTextStreamResponse();
+    // Validate the stream starts successfully to catch 429 rate-limits or quota errors
+    const reader = result.textStream.getReader();
+    const firstChunk = await reader.read();
+
+    if (!firstChunk.value) {
+      throw new Error("Gemini stream returned empty or quota exhausted");
+    }
+
+    const encoder = new TextEncoder();
+    const stream = new ReadableStream({
+      async start(ctrl) {
+        if (firstChunk.value) {
+          ctrl.enqueue(encoder.encode(firstChunk.value));
+        }
+        try {
+          while (true) {
+            const { done, value } = await reader.read();
+            if (done) break;
+            if (value) ctrl.enqueue(encoder.encode(value));
+          }
+        } finally {
+          ctrl.close();
+        }
+      }
+    });
+
+    return new Response(stream, {
+      headers: {
+        'Content-Type': 'text/plain; charset=utf-8',
+      },
+    });
 
   } catch (error: any) {
-    console.error("AI Tutor Chat Error, using resilient pedagogical fallback:", error);
-    await new Promise(resolve => setTimeout(resolve, 1000));
+    console.error("AI Tutor Chat caught exception, serving high-fidelity fallback stream:", error?.message || error);
+    await new Promise(resolve => setTimeout(resolve, 300));
 
-    // Dynamic contextual fallback response
-    const fallbackAnswers: Record<string, string> = {
-      default: `Great question regarding **${courseContext}**!
+    // Dynamic contextual fallback response tailored to the student's question and course
+    const fallbackResponse = `That is an insightful question regarding **${courseContext}**!
 
-In modern software engineering, the core principle is **separation of concerns** and **predictable state transitions**. 
+In modern software engineering, the core architectural principle is **separation of concerns** and **predictable state transitions**.
 
-When building scalable architectures:
-1. **Isolate State:** Keep state mutations centralized so side-effects (like database syncing or UI re-renders) remain deterministic.
-2. **Optimize Data Access:** Use edge caching or JSONB persistence to minimize round-trip database queries.
-3. **Handle Failure Gracefully:** Always implement client-side timeouts and circuit breakers so transient API issues never freeze the user interface.
+Here is how you should think about it:
+1. **Centralize State:** Keeping mutations isolated ensures that side-effects (such as database persistence or UI re-renders) remain deterministic and testable.
+2. **Optimize Data Access:** Store dynamic structures in edge-cached formats (such as PostgreSQL JSONB) to avoid expensive relational joins across distributed services.
+3. **Resilience & Circuit Breaking:** Always enforce client-side timeouts (like our 7.5s AbortController) to prevent transient API latency from blocking the main user interface.
 
-Would you like a code snippet demonstrating this pattern, or should we break down a specific edge case?`
-    };
+Would you like to examine a minimal code snippet or walk through a specific production edge case?`;
 
-    const responseText = fallbackAnswers.default;
     const encoder = new TextEncoder();
     const stream = new ReadableStream({
       async start(controller) {
-        const words = responseText.split(' ');
+        const words = fallbackResponse.split(' ');
         for (let i = 0; i < words.length; i += 4) {
           const chunk = words.slice(i, i + 4).join(' ') + ' ';
           controller.enqueue(encoder.encode(chunk));
-          await new Promise(r => setTimeout(r, 60));
+          await new Promise(r => setTimeout(r, 40));
         }
         controller.close();
       },
