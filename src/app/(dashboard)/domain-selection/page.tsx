@@ -158,7 +158,9 @@ export default function DomainSelectionPage() {
         .from('profiles')
         .update({
           time_commitment: timeCommitment,
-          academic_level: competency
+          academic_level: competency,
+          cached_course_pathway: null,
+          cached_career_paths: null
         })
         .eq('id', user.id);
       

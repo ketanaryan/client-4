@@ -145,6 +145,15 @@ export default function QuizPage() {
         .limit(1)
         .single();
       
+      // Invalidate stale pathway cache so new quiz domain generates fresh courses
+      await supabase
+        .from('profiles')
+        .update({
+          cached_course_pathway: null,
+          cached_career_paths: null
+        })
+        .eq('id', session?.user.id);
+
       const response = await fetch('/api/extract-flaws', {
         method: 'POST',
         headers: { 

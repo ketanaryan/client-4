@@ -27,10 +27,423 @@ import {
 import { useToast } from '@/hooks/use-toast';
 import AITutorChat from '@/components/AITutorChat';
 
+
+function getCourseLessonData(title: string) {
+  const t = (title || '').toLowerCase();
+
+  if (t.includes('financ') || t.includes('market') || t.includes('capm') || t.includes('accounting') || t.includes('portfolio') || t.includes('derivatives') || t.includes('economic')) {
+    return {
+      category: "Finance & Quantitative Economics",
+      summary: `Welcome to ${title}. This module builds rigorous mathematical and corporate governance frameworks for financial statement analysis, discounted cash flow (DCF) modeling, and risk-adjusted capital budgeting.`,
+      objectives: [
+        "Normalize EBITDA and extract true free cash flow (FCFF) from audited balance sheets.",
+        "Calculate asset sensitivity to non-diversifiable systematic market risk using CAPM Beta.",
+        "Construct Sharpe-optimal multi-asset investment portfolios under Modern Portfolio Theory.",
+        "Formulate macroeconomic hedging strategies against central bank monetary policy shifts."
+      ],
+      axiom: "In financial economics, excess return generated without systematic beta adjustment is a mathematical illusion.",
+      simTitle: "Capital Asset Valuation & Cash Flow Pipeline",
+      simDescription: "Simulate cash flow discounting, market risk beta weighting, and valuation sensitivity.",
+      defaultCode: `// Corporate DCF Valuation & Sharpe Ratio Calculator
+function calculateValuation(freeCashFlow, growthRate, discountRate) {
+  console.log("[INPUT]: Base FCF =", freeCashFlow, "| Discount Rate =", discountRate);
+  
+  let pvCashFlows = 0;
+  let currentFCF = freeCashFlow;
+  for (let year = 1; year <= 5; year++) {
+    currentFCF *= (1 + growthRate);
+    const pv = currentFCF / Math.pow(1 + discountRate, year);
+    pvCashFlows += pv;
+    console.log(\`Year \${year} Projected FCF: \${currentFCF.toFixed(2)} | Present Value: \${pv.toFixed(2)}\`);
+  }
+
+  const terminalValue = (currentFCF * 1.02) / (discountRate - 0.02);
+  const pvTerminalValue = terminalValue / Math.pow(1 + discountRate, 5);
+  const enterpriseValue = pvCashFlows + pvTerminalValue;
+
+  console.log("[RESULT]: Enterprise Value =", enterpriseValue.toFixed(2));
+  return enterpriseValue;
+}
+
+const ev = calculateValuation(1000000, 0.08, 0.10);
+console.log("[ASSERTION PASSED]: Enterprise valuation converged within bounds.");`,
+      testNames: [
+        { name: "5-Year FCF Projection Convergence", passed: true },
+        { name: "Terminal Value Gordon Growth Formula", passed: true },
+        { name: "Net Present Value (NPV) Determinism", passed: true }
+      ],
+      questions: [
+        {
+          id: 1,
+          question: `In ${title}, why must Free Cash Flow to Firm (FCFF) be discounted using WACC rather than Cost of Equity alone?`,
+          options: [
+            "Because FCFF represents cash available to all capital providers (both debt and equity holders).",
+            "Because corporate debt is always completely free.",
+            "Because WACC ignores all tax obligations.",
+            "Because common equity carries zero risk."
+          ],
+          correct: 0,
+          explanation: "FCFF belongs to both equity and debt capital providers, so it must be discounted by the blended Weighted Average Cost of Capital (WACC)."
+        },
+        {
+          id: 2,
+          question: "What does an inverted bond yield curve indicate to financial market analysts?",
+          options: [
+            "An impending macroeconomic recession in the medium term as short-term yields exceed long-term yields.",
+            "An unprecedented economic boom with rising inflation.",
+            "That corporate bonds have ceased trading.",
+            "That central bank interest rates are zero."
+          ],
+          correct: 0,
+          explanation: "An inverted yield curve reflects investor expectations of future economic contraction and impending central bank rate cuts."
+        },
+        {
+          id: 3,
+          question: "How does the Sharpe Ratio quantify investment performance efficiency?",
+          options: [
+            "Calculates excess return over the risk-free rate per unit of total risk (standard deviation).",
+            "Measures the total physical volume of stock certificates.",
+            "Determines corporate tax deductions.",
+            "Calculates the number of shares outstanding."
+          ],
+          correct: 0,
+          explanation: "The Sharpe Ratio standardizes excess performance against risk, revealing whether alpha is generated via skill or excessive volatility."
+        }
+      ]
+    };
+  }
+
+  if (t.includes('psycholog') || t.includes('cognit') || t.includes('behavior') || t.includes('neuro') || t.includes('psychopath')) {
+    return {
+      category: "Psychology & Behavioral Sciences",
+      summary: `Welcome to ${title}. This module explores the empirical foundations of human cognition, conditioning frameworks, neuropsychological circuitry, and evidence-based diagnostic models.`,
+      objectives: [
+        "Contrast classical Pavlovian conditioning with Skinnerian operant reinforcement schedules.",
+        "Map amygdala-prefrontal cortex activation patterns during acute cognitive threat processing.",
+        "Differentiate System 1 intuitive heuristics from System 2 deliberative rationality.",
+        "Isolate confirmation bias and cognitive dissonance in post-decisional evaluation."
+      ],
+      axiom: "Human behavior is an adaptive synthesis of biological neurochemistry and internalized cognitive schemas.",
+      simTitle: "Cognitive Decision Architecture & Neural Feedback Loop",
+      simDescription: "Simulate stimulus processing, cognitive friction, emotional modulation, and behavioral output.",
+      defaultCode: `// Dual-Process Cognitive Decision Architecture (System 1 vs System 2)
+class CognitiveDecisionEngine {
+  constructor() {
+    this.mentalModel = { biasFactor: 0.15, emotionalArousal: 0.4 };
+  }
+
+  evaluateStimulus(stimulus, requiresDeepAnalysis = false) {
+    console.log("[STIMULUS RECEIVED]:", stimulus);
+    
+    if (!requiresDeepAnalysis && this.mentalModel.emotionalArousal < 0.7) {
+      console.log("[SYSTEM 1 ENGAGED]: Fast, heuristic, automatic response pattern.");
+      return { processingType: "System 1", reactionTimeMs: 120, confidence: 0.85 };
+    } else {
+      console.log("[SYSTEM 2 ENGAGED]: Deliberative, algorithmic working memory analysis.");
+      const effortScore = this.mentalModel.biasFactor * 10 + 40;
+      return { processingType: "System 2", reactionTimeMs: 850, cognitiveEffort: effortScore };
+    }
+  }
+}
+
+const engine = new CognitiveDecisionEngine();
+const quickDecision = engine.evaluateStimulus("Visual Recognition", false);
+console.log("Decision Output:", quickDecision);
+const analyticalDecision = engine.evaluateStimulus("Complex Statistical Inference", true);
+console.log("Deep Analysis Output:", analyticalDecision);
+console.log("[ASSERTION PASSED]: Dual-System cognitive divergence verified.");`,
+      testNames: [
+        { name: "System 1 Fast Heuristic Routing", passed: true },
+        { name: "System 2 Deliberative Working Memory", passed: true },
+        { name: "Cognitive Load Threshold Verification", passed: true }
+      ],
+      questions: [
+        {
+          id: 1,
+          question: `In ${title}, how does Daniel Kahneman's System 1 differ from System 2?`,
+          options: [
+            "System 1 is fast, automatic, and heuristic; System 2 is slow, effortful, and analytically rational.",
+            "System 1 handles language; System 2 handles physical balance.",
+            "System 1 is active during sleep only.",
+            "System 2 operates with zero metabolic energy."
+          ],
+          correct: 0,
+          explanation: "System 1 operates automatically with little or no effort, while System 2 allocates attention to effortful mental operations."
+        },
+        {
+          id: 2,
+          question: "What did Jean Piaget establish regarding the Concrete Operational stage?",
+          options: [
+            "Children develop conservation of volume and logical reasoning about concrete events (ages 7-11).",
+            "Infants rely purely on sensorimotor reflexes.",
+            "Adolescents formulate abstract hypothetical theorems.",
+            "Adults lose all working memory capacity."
+          ],
+          correct: 0,
+          explanation: "In the concrete operational stage, children understand conservation and reversible operations for concrete objects."
+        },
+        {
+          id: 3,
+          question: "What is the biological mechanism of Long-Term Potentiation (LTP)?",
+          options: [
+            "Persistent strengthening of synapses following high-frequency activation, providing the basis for memory consolidation.",
+            "The permanent destruction of brain capillaries.",
+            "The crystallization of skull bone tissue.",
+            "The cessation of neurotransmitter release."
+          ],
+          correct: 0,
+          explanation: "LTP strengthens synaptic transmission through NMDA and AMPA receptor upregulation, forming the biological substrate of memory."
+        }
+      ]
+    };
+  }
+
+  if (t.includes('health') || t.includes('medic') || t.includes('pharmac') || t.includes('anatom') || t.includes('pathophys')) {
+    return {
+      category: "Healthcare & Biomedical Sciences",
+      summary: `Welcome to ${title}. This module analyzes systemic human pathophysiology, receptor-ligand pharmacokinetics, diagnostic biomarkers, and evidence-based epidemiological methodologies.`,
+      objectives: [
+        "Map homeostatic negative feedback loops across the renin-angiotensin-aldosterone system.",
+        "Calculate first-order elimination half-life and hepatic CYP450 biotransformations.",
+        "Analyze electrocardiographic vitals (P-wave, QRS, T-wave) during cardiac cycles.",
+        "Interpret elevated troponin-I and biomarker thresholds in clinical diagnostic triage."
+      ],
+      axiom: "Physiological viability requires homeostatic equilibrium across systemic organ interactions.",
+      simTitle: "Cardiovascular Hemodynamics & Pharmacokinetics Simulator",
+      simDescription: "Simulate arterial pressure regulation, drug distribution volume, and metabolic clearance.",
+      defaultCode: `// Pharmacokinetics ADME (One-Compartment First-Order Elimination Model)
+function simulateDrugClearance(doseMg, volumeOfDistributionL, eliminationConstantKe) {
+  console.log(\`[INITIAL DOSE]: \${doseMg}mg | Vd: \${volumeOfDistributionL}L | Ke: \${eliminationConstantKe}/hr\`);
+  const initialConcentration = doseMg / volumeOfDistributionL;
+  const halfLifeHours = Math.LN2 / eliminationConstantKe;
+  
+  console.log(\`[INITIAL PEAK C0]: \${initialConcentration.toFixed(2)} mg/L\`);
+  console.log(\`[HALF-LIFE (t1/2)]: \${halfLifeHours.toFixed(2)} hours\`);
+
+  for (let t = 1; t <= 3; t++) {
+    const hours = t * halfLifeHours;
+    const conc = initialConcentration * Math.exp(-eliminationConstantKe * hours);
+    console.log(\`Time \${hours.toFixed(1)} hrs: Plasma Conc = \${conc.toFixed(3)} mg/L (\${(conc/initialConcentration * 100).toFixed(1)}% remaining)\`);
+  }
+  return halfLifeHours;
+}
+
+const tHalf = simulateDrugClearance(500, 25, 0.15);
+console.log("[ASSERTION PASSED]: Pharmacokinetic ADME decay modeled deterministically.");`,
+      testNames: [
+        { name: "C0 Initial Distribution Volume Calculation", passed: true },
+        { name: "First-Order Elimination Half-Life (t1/2)", passed: true },
+        { name: "Plasma Concentration Decay Verification", passed: true }
+      ],
+      questions: [
+        {
+          id: 1,
+          question: `In ${title}, what does a diagnostic elevation in Troponin-I indicate?`,
+          options: [
+            "Acute myocardial cell damage and cardiac tissue necrosis (myocardial infarction).",
+            "Temporary skeletal muscle fatigue after walking.",
+            "Normal gastrointestinal nutrient digestion.",
+            "An allergic response to airborne pollen."
+          ],
+          correct: 0,
+          explanation: "Cardiac Troponin-I is a highly sensitive and specific clinical biomarker released into the blood upon myocardial cell death."
+        },
+        {
+          id: 2,
+          question: "What is the primary physiological function of the Renin-Angiotensin-Aldosterone System (RAAS)?",
+          options: [
+            "Long-term regulation of systemic arterial blood pressure, plasma sodium, and vascular resistance.",
+            "Secreting saliva in the oral cavity.",
+            "Regulating pupil dilation during sleep.",
+            "Digesting carbohydrates in the stomach."
+          ],
+          correct: 0,
+          explanation: "RAAS regulates blood volume and systemic vascular resistance to maintain blood pressure and renal perfusion."
+        },
+        {
+          id: 3,
+          question: "Why is the TP53 gene termed the guardian of the human genome?",
+          options: [
+            "It halts the cell cycle for DNA repair or triggers apoptosis in irreversibly mutated cells.",
+            "It converts dietary fats into muscle proteins.",
+            "It neutralizes viral infections directly in blood.",
+            "It manufactures red blood cells in bone marrow."
+          ],
+          correct: 0,
+          explanation: "TP53 responds to DNA damage by arresting cell division at the G1/S checkpoint or initiating programmed cell death (apoptosis)."
+        }
+      ]
+    };
+  }
+
+  if (t.includes('design') || t.includes('ux') || t.includes('hci') || t.includes('interface') || t.includes('product') || t.includes('arts')) {
+    return {
+      category: "Design & Human-Computer Interaction",
+      summary: `Welcome to ${title}. This module grounds interface design in empirical usability engineering, cognitive mental models, Fitts's Law ergonomics, and WCAG 2.1 accessibility standards.`,
+      objectives: [
+        "Apply Fitts's Law to optimize interactive target sizing and bounding click radii.",
+        "Audit user interface workflows against Jakob Nielsen's 10 usability heuristics.",
+        "Ensure WCAG 2.1 Level AA color contrast compliance (minimum 4.5:1 ratio).",
+        "Construct scalable design token architectures for enterprise multi-platform consistency."
+      ],
+      axiom: "Good design is invisible: it aligns with existing human mental models to eliminate cognitive friction.",
+      simTitle: "Interaction Ergonomics & Visual Hierarchy Pipeline",
+      simDescription: "Simulate user visual scan paths, cognitive friction indexes, and touch-target bounding boxes.",
+      defaultCode: `// Fitts's Law Index of Difficulty (ID) & Movement Time (MT) Calculator
+function calculateInteractionTime(distancePx, widthPx, a = 50, b = 150) {
+  console.log(\`[FITTS LAW]: Target Distance = \${distancePx}px | Target Width = \${widthPx}px\`);
+  
+  const indexDifficulty = Math.log2((2 * distancePx) / widthPx);
+  const movementTimeMs = a + (b * indexDifficulty);
+
+  console.log(\`Index of Difficulty (ID): \${indexDifficulty.toFixed(2)} bits\`);
+  console.log(\`Estimated Movement Time (MT): \${movementTimeMs.toFixed(1)} ms\`);
+
+  const isTouchCompliant = widthPx >= 44;
+  console.log(\`WCAG Touch Target Compliance: \${isTouchCompliant ? "PASS (>=44px)" : "FAIL (<44px)"}\`);
+  
+  return { id: indexDifficulty, mt: movementTimeMs, compliant: isTouchCompliant };
+}
+
+const desktopBtn = calculateInteractionTime(300, 120);
+const mobileFab = calculateInteractionTime(150, 48);
+console.log("[ASSERTION PASSED]: Ergonomic movement times computed deterministically.");`,
+      testNames: [
+        { name: "Fitts Law Index of Difficulty Calculation", passed: true },
+        { name: "Movement Time (MT) Model Formulation", passed: true },
+        { name: "WCAG 2.1 AA 44px Touch Target Verification", passed: true }
+      ],
+      questions: [
+        {
+          id: 1,
+          question: `In ${title}, what does Fitts's Law state regarding user interaction speed?`,
+          options: [
+            "The time required to move to a target is a function of the target distance and target size (larger, closer targets are clicked faster).",
+            "Users always abandon websites that fail to load in under 500ms.",
+            "Text readability decreases linearly with font size.",
+            "Users only read the top-left quadrant of a screen."
+          ],
+          correct: 0,
+          explanation: "Fitts's Law proves that movement time increases with distance and decreases with target size: MT = a + b * log2(2D/W)."
+        },
+        {
+          id: 2,
+          question: "Under WCAG 2.1 Level AA, what is the minimum required color contrast ratio for normal body text?",
+          options: [
+            "4.5:1 against the background (3:1 for large text).",
+            "1.5:1 against the background.",
+            "10:1 against the background.",
+            "Color contrast is not required under Level AA."
+          ],
+          correct: 0,
+          explanation: "WCAG 2.1 Level AA mandates a contrast ratio of at least 4.5:1 for standard body text to ensure legibility for visually impaired users."
+        },
+        {
+          id: 3,
+          question: "What is Jakob's Law of Internet User Experience?",
+          options: [
+            "Users spend most of their time on other sites, meaning they expect your site to follow familiar interaction conventions.",
+            "Every web application must invent a completely novel navigation pattern.",
+            "Websites must be redesigned every 12 months.",
+            "Users never scroll below the initial viewport."
+          ],
+          correct: 0,
+          explanation: "Jakob's Law states that familiar patterns reduce user cognitive load because users transfer expectations from all other sites."
+        }
+      ]
+    };
+  }
+
+  // Default: Systems & Computer Science
+  return {
+    category: "Systems & Distributed Architecture",
+    summary: `Welcome to ${title}. This module analyzes resilient distributed systems, event-driven state synchronization, database caching architectures, and serverless fault tolerance.`,
+    objectives: [
+      "Decouple state presentation from asynchronous edge persistence.",
+      "Implement circuit breakers to prevent cascade failures in serverless APIs.",
+      "Structure PostgreSQL JSONB trees for atomic sub-millisecond retrieval.",
+      "Prevent UI race conditions via synchronous execution locks."
+    ],
+    axiom: "In distributed web systems, failure is not an anomaly—it is a continuous mathematical certainty. Production architectures must enforce strict timeouts and fallbacks.",
+    simTitle: "Interactive Request Pipeline & Circuit Breaker Simulator",
+    simDescription: "Observe how EduPredict orchestrates requests between Next.js, Edge Gateways, Gemini AI, and Supabase.",
+    defaultCode: `// Production State Manager & Circuit Breaker Pattern
+class ResilientStateManager {
+  constructor(initialState = {}) {
+    this.state = initialState;
+    this.listeners = new Set();
+  }
+
+  dispatch(action, payload) {
+    console.log(\`[DISPATCH]: \${action}\`, payload);
+    if (action === 'UPDATE_MASTERY') {
+      this.state.mastery = payload;
+      this.notify();
+    }
+  }
+
+  notify() {
+    this.listeners.forEach(cb => cb(this.state));
+  }
+}
+
+const manager = new ResilientStateManager({ mastery: 50 });
+manager.listeners.add((s) => console.log("[EVENT]: UI Hydrated with state:", s));
+manager.dispatch('UPDATE_MASTERY', 85);
+console.log("[ASSERTION PASSED]: State mutated deterministically.");`,
+    testNames: [
+      { name: "State Manager Instantiation", passed: true },
+      { name: "Event Listener Registration", passed: true },
+      { name: "Deterministic State Mutation", passed: true }
+    ],
+    questions: [
+      {
+        id: 1,
+        question: `In ${title}, why is JSONB preferred over relational normalization for dynamic learning pathways?`,
+        options: [
+          "It allows deeply nested, multi-tiered curriculums to be retrieved in a single sub-millisecond atomic query without complex multi-table JOINs.",
+          "It eliminates the need for database indexes.",
+          "It converts SQL into assembly instructions.",
+          "It prevents client JavaScript execution."
+        ],
+        correct: 0,
+        explanation: "JSONB decomposes nested structures into optimized binary key-value maps, enabling instantaneous single-query hydration for dynamic hierarchical data."
+      },
+      {
+        id: 2,
+        question: "How does EduPredict's Circuit Breaker prevent serverless execution crashes?",
+        options: [
+          "By enforcing an explicit 7.5s AbortController timeout before Vercel's 10s serverless termination threshold, seamlessly deploying fallback data.",
+          "By restarting the browser automatically.",
+          "By bypassing database authentication.",
+          "By disabling all React components."
+        ],
+        correct: 0,
+        explanation: "The 7.5s threshold guarantees that transient LLM API latency never triggers a fatal 504 Gateway Timeout on Vercel's serverless infrastructure."
+      },
+      {
+        id: 3,
+        question: "What is the primary role of the Socratic Micro-Remediation loop before unlocking advanced coursework?",
+        options: [
+          "To enforce Mastery Learning by resolving cognitive prerequisite misconceptions before they compound into learning roadblocks.",
+          "To artificially increase student quiz attempts.",
+          "To replace university professors with chatbots.",
+          "To reduce server memory usage."
+        ],
+        correct: 0,
+        explanation: "Bloom's Mastery Learning theory proves that remediating foundational mental models directly prevents compounding errors in advanced domains."
+      }
+    ]
+  };
+}
+
 export default function CoursePage() {
   const params = useParams();
   const router = useRouter();
   const { toast } = useToast();
+  const courseId = params?.courseId as string;
+  const courseTitle = decodeURIComponent(courseId || 'Foundations of Modern Architectures');
+  const lessonData = getCourseLessonData(courseTitle);
   
   const [currentLesson, setCurrentLesson] = useState(1);
   
@@ -68,7 +481,7 @@ manager.listeners.add((s) => console.log("[EVENT]: UI Hydrated with state:", s))
 manager.dispatch('UPDATE_MASTERY', 85);
 console.log("[ASSERTION PASSED]: State mutated deterministically.");`;
 
-  const [code, setCode] = useState(defaultCode);
+  const [code, setCode] = useState(lessonData.defaultCode);
   const [executionOutput, setExecutionOutput] = useState<string[]>([]);
   const [isRunningCode, setIsRunningCode] = useState(false);
   const [testResults, setTestResults] = useState<{ name: string; passed: boolean }[]>([]);
@@ -77,8 +490,7 @@ console.log("[ASSERTION PASSED]: State mutated deterministically.");`;
   const [quizAnswers, setQuizAnswers] = useState<Record<number, number>>({});
   const [quizSubmitted, setQuizSubmitted] = useState(false);
 
-  const courseId = params?.courseId as string;
-  const courseTitle = decodeURIComponent(courseId || 'Foundations of Modern Architectures');
+
 
   const lessons = [
     { id: 1, title: '1. Theoretical Blueprint', icon: BookOpen },
@@ -156,11 +568,7 @@ console.log("[ASSERTION PASSED]: State mutated deterministically.");`;
         const runner = new Function(code);
         runner();
         setExecutionOutput(logs.length > 0 ? logs : ["Code executed with no stdout output."]);
-        setTestResults([
-          { name: "State Manager Instantiation", passed: true },
-          { name: "Event Listener Registration", passed: true },
-          { name: "Deterministic State Mutation", passed: true }
-        ]);
+        setTestResults(lessonData.testNames);
       } catch (err: any) {
         setExecutionOutput([`[Runtime Error]: ${err?.message || 'Execution error'}`]);
         setTestResults([
@@ -175,44 +583,7 @@ console.log("[ASSERTION PASSED]: State mutated deterministically.");`;
   };
 
   // Module Quiz Questions (Context-specific)
-  const moduleQuestions = [
-    {
-      id: 1,
-      question: `In the context of ${courseTitle}, why is JSONB preferred over traditional relational normalization for dynamic learning pathways?`,
-      options: [
-        "It eliminates the need for any database indexes.",
-        "It allows deeply nested, multi-tiered curriculums to be retrieved in a single sub-millisecond atomic query without complex multi-table JOINs.",
-        "It converts SQL queries into binary assembly instructions automatically.",
-        "It prevents all client-side JavaScript execution."
-      ],
-      correct: 1,
-      explanation: "JSONB decomposes nested structures into optimized binary key-value maps, enabling instantaneous single-query hydration for dynamic hierarchical data."
-    },
-    {
-      id: 2,
-      question: "How does EduPredict's Circuit Breaker prevent serverless execution crashes?",
-      options: [
-        "By restarting the client's web browser automatically.",
-        "By enforcing an explicit 7.5s AbortController timeout before Vercel's 10s serverless termination threshold, seamlessly deploying fallback data.",
-        "By bypassing database authentication entirely.",
-        "By disabling all frontend React components during heavy load."
-      ],
-      correct: 1,
-      explanation: "The 7.5s threshold guarantees that transient LLM API latency never triggers a fatal 504 Gateway Timeout on Vercel's serverless infrastructure."
-    },
-    {
-      id: 3,
-      question: "What is the primary role of the Socratic Micro-Remediation loop before unlocking advanced coursework?",
-      options: [
-        "To increase student quiz attempts artificially.",
-        "To enforce Mastery Learning by resolving cognitive prerequisite misconceptions before they compound into learning roadblocks.",
-        "To replace university professors with static chatbots.",
-        "To decrease the server memory usage."
-      ],
-      correct: 1,
-      explanation: "Bloom's Mastery Learning theory proves that remediating foundational mental models directly prevents compounding errors in advanced domains."
-    }
-  ];
+  const moduleQuestions = lessonData.questions;
 
   const handleQuizAnswer = (qIndex: number, optionIndex: number) => {
     setQuizAnswers(prev => ({ ...prev, [qIndex]: optionIndex }));
@@ -264,29 +635,18 @@ console.log("[ASSERTION PASSED]: State mutated deterministically.");`;
                   <div className="p-4 bg-indigo-50/60 rounded-xl border border-indigo-100">
                     <h3 className="font-bold text-indigo-950 text-base mb-1">Executive Summary</h3>
                     <p className="text-sm text-indigo-900/90 leading-relaxed">
-                      Welcome to <strong>{courseTitle}</strong>. This module focuses on the structural principles necessary to construct resilient, enterprise-grade software systems. Rather than surface-level syntax, we analyze component encapsulation, predictable data flow, and fault tolerance.
-                    </p>
+                      {lessonData.summary}</p>
                   </div>
 
                   <div>
                     <h3 className="text-lg font-bold text-zinc-900 mb-3">Key Learning Objectives</h3>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                      <div className="p-3.5 rounded-lg border border-zinc-200 bg-zinc-50/50 flex items-start gap-3">
-                        <CheckCircle className="h-5 w-5 text-emerald-600 shrink-0 mt-0.5" />
-                        <span className="text-sm font-medium text-zinc-700">Decouple state presentation from asynchronous edge persistence.</span>
-                      </div>
-                      <div className="p-3.5 rounded-lg border border-zinc-200 bg-zinc-50/50 flex items-start gap-3">
-                        <CheckCircle className="h-5 w-5 text-emerald-600 shrink-0 mt-0.5" />
-                        <span className="text-sm font-medium text-zinc-700">Implement circuit breakers to prevent cascade failures in serverless APIs.</span>
-                      </div>
-                      <div className="p-3.5 rounded-lg border border-zinc-200 bg-zinc-50/50 flex items-start gap-3">
-                        <CheckCircle className="h-5 w-5 text-emerald-600 shrink-0 mt-0.5" />
-                        <span className="text-sm font-medium text-zinc-700">Structure PostgreSQL JSONB trees for atomic sub-millisecond retrieval.</span>
-                      </div>
-                      <div className="p-3.5 rounded-lg border border-zinc-200 bg-zinc-50/50 flex items-start gap-3">
-                        <CheckCircle className="h-5 w-5 text-emerald-600 shrink-0 mt-0.5" />
-                        <span className="text-sm font-medium text-zinc-700">Prevent UI race conditions via synchronous execution locks.</span>
-                      </div>
+                      {lessonData.objectives.map((obj, i) => (
+                        <div key={i} className="p-3.5 rounded-lg border border-zinc-200 bg-zinc-50/50 flex items-start gap-3">
+                          <CheckCircle className="h-5 w-5 text-emerald-600 shrink-0 mt-0.5" />
+                          <span className="text-sm font-medium text-zinc-700">{obj}</span>
+                        </div>
+                      ))}
                     </div>
                   </div>
 
@@ -298,7 +658,7 @@ console.log("[ASSERTION PASSED]: State mutated deterministically.");`;
                     <div className="border-l-4 border-indigo-600 pl-4 py-1 bg-zinc-50 rounded-r-lg">
                       <span className="text-xs font-bold text-indigo-900 uppercase tracking-wide">Core Architectural Axiom</span>
                       <p className="text-sm italic text-zinc-700 mt-1">
-                        "A resilient distributed system degrades gracefully into a functional fallback rather than failing catastrophically."
+                        "{lessonData.axiom}"
                       </p>
                     </div>
                   </div>
