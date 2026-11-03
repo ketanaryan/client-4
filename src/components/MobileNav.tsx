@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Menu, X, LayoutDashboard, Sliders, Route, Settings, GraduationCap, Award } from 'lucide-react';
+import { Menu, X, LayoutDashboard, Sliders, Route, Settings, GraduationCap, Brain } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
 
@@ -28,7 +28,7 @@ export default function MobileNav() {
     { href: '/domain-selection', label: 'Domain Setup', icon: Sliders },
     { href: '/pathway-recommendations', label: 'My Pathway', icon: Route },
     { href: '/interview-prep', label: 'AI Viva Prep', icon: GraduationCap },
-    { href: '/transcript', label: 'Skill Transcript', icon: Award },
+    { href: '/flashcards', label: 'Concept Flashcards', icon: Brain },
     { href: '/settings/profile', label: 'Settings', icon: Settings },
   ];
 

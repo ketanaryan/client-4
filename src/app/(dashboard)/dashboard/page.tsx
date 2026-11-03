@@ -648,11 +648,11 @@ export default async function DashboardOverview() {
                 </Link>
 
                 <Link 
-                  href="/transcript" 
+                  href="/flashcards" 
                   className="flex items-center justify-center gap-1.5 py-2 px-3 rounded-lg bg-white hover:bg-zinc-50 text-zinc-700 border border-zinc-200 text-xs font-semibold transition-colors"
                 >
-                  <ShieldCheck className="h-3.5 w-3.5 text-indigo-600" />
-                  <span>Transcript</span>
+                  <Brain className="h-3.5 w-3.5 text-indigo-600" />
+                  <span>Flashcards</span>
                 </Link>
               </div>
             </CardContent>

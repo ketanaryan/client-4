@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { LayoutDashboard, Sliders, Route, Settings, GraduationCap, Award } from 'lucide-react';
+import { LayoutDashboard, Sliders, Route, Settings, GraduationCap, Brain } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 export default function SidebarNav() {
@@ -13,7 +13,7 @@ export default function SidebarNav() {
     { href: '/domain-selection', label: 'Domain Setup', icon: Sliders },
     { href: '/pathway-recommendations', label: 'My Pathway', icon: Route },
     { href: '/interview-prep', label: 'AI Viva Prep', icon: GraduationCap },
-    { href: '/transcript', label: 'Skill Transcript', icon: Award },
+    { href: '/flashcards', label: 'Concept Flashcards', icon: Brain },
     { href: '/settings/profile', label: 'Settings', icon: Settings },
   ];
 
