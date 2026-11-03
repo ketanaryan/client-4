@@ -8,7 +8,7 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 import { useToast } from '@/hooks/use-toast';
-import { Loader2, Settings } from 'lucide-react';
+import { Loader2, Settings, ArrowLeft } from 'lucide-react';
 
 const PRIOR_KNOWLEDGE_OPTIONS = [
   "Python", "JavaScript/TypeScript", "C/C++", "React/Next.js", 
@@ -126,7 +126,15 @@ export default function ProfileSettingsPage() {
 
   return (
     <div className="max-w-4xl mx-auto pb-12">
-      <div className="mb-8">
+      <div className="mb-6">
+        <Button
+          type="button"
+          variant="ghost"
+          onClick={() => router.push('/dashboard')}
+          className="text-zinc-600 hover:text-zinc-900 -ml-2 mb-3 text-xs font-semibold flex items-center gap-1.5 h-8 px-2.5 cursor-pointer"
+        >
+          <ArrowLeft className="h-4 w-4" /> Back to Dashboard
+        </Button>
         <div className="flex items-center gap-3 mb-2">
           <Settings className="text-indigo-600 h-8 w-8" />
           <h1 className="text-3xl font-bold text-zinc-900 tracking-tight">Profile Settings</h1>
@@ -248,9 +256,17 @@ export default function ProfileSettingsPage() {
             </div>
           </div>
 
-          <div className="pt-8 border-t border-zinc-100">
-            <Button type="submit" className="bg-indigo-600 text-white hover:bg-indigo-700 px-8 h-10 font-medium shadow-sm" disabled={isSubmitting}>
+          <div className="pt-8 border-t border-zinc-100 flex items-center gap-3">
+            <Button type="submit" className="bg-indigo-600 text-white hover:bg-indigo-700 px-8 h-10 font-medium shadow-sm cursor-pointer" disabled={isSubmitting}>
               {isSubmitting ? <><Loader2 className="mr-2 h-4 w-4 animate-spin" /> Saving Changes...</> : "Save Profile Details"}
+            </Button>
+            <Button 
+              type="button" 
+              variant="outline" 
+              onClick={() => router.push('/dashboard')}
+              className="border-zinc-300 text-zinc-700 hover:bg-zinc-100 h-10 px-5 text-sm font-medium cursor-pointer"
+            >
+              Cancel & Go Back
             </Button>
           </div>
         </form>
