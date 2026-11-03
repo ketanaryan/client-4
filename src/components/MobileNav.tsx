@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Menu, X, LayoutDashboard, Sliders, Route, Settings } from 'lucide-react';
+import { Menu, X, LayoutDashboard, Sliders, Route, Settings, GraduationCap, Award } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
 
@@ -27,6 +27,8 @@ export default function MobileNav() {
     { href: '/dashboard', label: 'Overview', icon: LayoutDashboard },
     { href: '/domain-selection', label: 'Domain Setup', icon: Sliders },
     { href: '/pathway-recommendations', label: 'My Pathway', icon: Route },
+    { href: '/interview-prep', label: 'AI Viva Prep', icon: GraduationCap },
+    { href: '/transcript', label: 'Skill Transcript', icon: Award },
     { href: '/settings/profile', label: 'Settings', icon: Settings },
   ];
 
@@ -69,13 +71,13 @@ export default function MobileNav() {
                     href={link.href}
                     onClick={() => setIsOpen(false)}
                     className={cn(
-                      "flex items-center gap-3 px-4 py-3 text-[15px] rounded-xl transition-all",
+                      "flex items-center gap-3 px-4 py-2.5 text-sm rounded-lg transition-all",
                       isActive
-                        ? "bg-indigo-50 text-indigo-700 font-semibold shadow-sm border border-indigo-100"
-                        : "text-zinc-600 hover:bg-zinc-100 hover:text-zinc-900 font-medium"
+                        ? "bg-indigo-50 text-indigo-700 font-semibold border border-indigo-100 shadow-sm"
+                        : "text-zinc-600 hover:text-zinc-900 hover:bg-zinc-100 font-medium"
                     )}
                   >
-                    <Icon className={cn("h-5 w-5", isActive ? "text-indigo-600" : "text-zinc-400")} />
+                    <Icon className={cn("h-4 w-4", isActive ? "text-indigo-600" : "text-zinc-400")} />
                     {link.label}
                   </Link>
                 );

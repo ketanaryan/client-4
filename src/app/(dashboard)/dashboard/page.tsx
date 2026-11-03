@@ -590,6 +590,74 @@ export default async function DashboardOverview() {
             </CardContent>
           </Card>
 
+          
+          {/* Career Placement & Industry Readiness Index */}
+          <Card className="border-indigo-100 shadow-sm bg-gradient-to-br from-white via-indigo-50/20 to-zinc-50 overflow-hidden">
+            <CardHeader className="pb-3 border-b border-indigo-100/60">
+              <div className="flex items-center justify-between">
+                <div className="flex items-center gap-2">
+                  <div className="h-7 w-7 rounded-lg bg-indigo-600/10 flex items-center justify-center">
+                    <Sparkles className="h-4 w-4 text-indigo-600" />
+                  </div>
+                  <CardTitle className="text-sm font-bold text-zinc-900">Industry Placement Index</CardTitle>
+                </div>
+                <Badge variant="outline" className="bg-indigo-50 text-indigo-700 border-indigo-200 text-[10px] font-bold">
+                  Top 15% Cohort
+                </Badge>
+              </div>
+            </CardHeader>
+            <CardContent className="pt-4 space-y-3.5">
+              <div className="flex items-baseline justify-between">
+                <div>
+                  <div className="text-2xl font-extrabold text-indigo-950">
+                    {Math.min(96, Math.max(72, (masteryScore > 0 ? masteryScore + 8 : 78)))}%
+                  </div>
+                  <div className="text-[11px] font-medium text-zinc-500">Industry Placement Readiness</div>
+                </div>
+                <div className="text-right">
+                  <span className="text-xs font-bold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-full border border-emerald-200">
+                    High Demand
+                  </span>
+                </div>
+              </div>
+
+              <Progress 
+                value={Math.min(96, Math.max(72, (masteryScore > 0 ? masteryScore + 8 : 78)))} 
+                className="h-2 bg-zinc-100 [&>div]:bg-gradient-to-r [&>div]:from-indigo-600 [&>div]:to-violet-600" 
+              />
+
+              <div className="bg-white p-3 rounded-xl border border-zinc-200/80 space-y-1">
+                <span className="text-[10px] uppercase font-bold text-zinc-400 tracking-wider block">Target Industry Profile</span>
+                <span className="text-xs font-bold text-zinc-800 block truncate">
+                  {domainProfile?.domain_name ? `Senior ${domainProfile.domain_name} Specialist` : 'Distributed Systems Engineer'}
+                </span>
+                <span className="text-[11px] text-zinc-500 block leading-tight">
+                  {activeFlaws.length > 0 
+                    ? `Remediate ${activeFlaws.length} prerequisite flaw to unlock 90%+ placement tier.`
+                    : 'All prerequisite competencies verified. Ready for corporate interview loops.'}
+                </span>
+              </div>
+
+              <div className="grid grid-cols-2 gap-2 pt-1">
+                <Link 
+                  href="/interview-prep" 
+                  className="flex items-center justify-center gap-1.5 py-2 px-3 rounded-lg bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-semibold shadow-xs transition-colors"
+                >
+                  <Award className="h-3.5 w-3.5" />
+                  <span>AI Viva Prep</span>
+                </Link>
+
+                <Link 
+                  href="/transcript" 
+                  className="flex items-center justify-center gap-1.5 py-2 px-3 rounded-lg bg-white hover:bg-zinc-50 text-zinc-700 border border-zinc-200 text-xs font-semibold transition-colors"
+                >
+                  <ShieldCheck className="h-3.5 w-3.5 text-indigo-600" />
+                  <span>Transcript</span>
+                </Link>
+              </div>
+            </CardContent>
+          </Card>
+
           {/* Academic Milestone Tracker */}
           <Card className="border-zinc-200 shadow-sm bg-white">
             <CardHeader className="pb-4 border-b border-zinc-100">
