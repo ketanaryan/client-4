@@ -1,11 +1,11 @@
 "use client";
 
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect, useMemo } from 'react';
 import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardHeader, CardTitle, CardFooter } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
-import { Sparkles, Send, Bot, User, Loader2, X, RefreshCw, MessageSquare } from 'lucide-react';
+import { Sparkles, Send, Bot, User, Loader2, X, RefreshCw, MessageSquare, BookOpen, HelpCircle } from 'lucide-react';
+import { Badge } from '@/components/ui/badge';
 
 interface Message {
   role: 'user' | 'assistant';
@@ -20,12 +20,103 @@ interface AITutorChatProps {
 export default function AITutorChat({ courseTitle, lessonTitle }: AITutorChatProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [input, setInput] = useState('');
+
+  const courseLower = (courseTitle || '').toLowerCase();
+
+  const domainCategory = useMemo(() => {
+    if (courseLower.includes('financ') || courseLower.includes('econom') || courseLower.includes('capital') || courseLower.includes('account')) {
+      return 'Finance & Economics';
+    }
+    if (courseLower.includes('psycholog') || courseLower.includes('behavior') || courseLower.includes('cognit')) {
+      return 'Psychology & Behavioral Sciences';
+    }
+    if (courseLower.includes('health') || courseLower.includes('biomed') || courseLower.includes('medic') || courseLower.includes('patho')) {
+      return 'Healthcare & Biomedical Sciences';
+    }
+    if (courseLower.includes('design') || courseLower.includes('hci') || courseLower.includes('product') || courseLower.includes('ux')) {
+      return 'Digital Product Design & HCI';
+    }
+    if (courseLower.includes('manage') || courseLower.includes('business') || courseLower.includes('strateg')) {
+      return 'Business & Strategic Management';
+    }
+    if (courseLower.includes('data') || courseLower.includes('statist') || courseLower.includes('analytic')) {
+      return 'Data Science & Analytics';
+    }
+    return 'Systems Engineering & Computing';
+  }, [courseLower]);
+
+  const quickPrompts = useMemo(() => {
+    if (domainCategory === 'Finance & Economics') {
+      return [
+        "Explain with a DCF valuation or portfolio example",
+        "What are common market risk or liquidity pitfalls?",
+        "How is this metric calculated in financial modeling?"
+      ];
+    }
+    if (domainCategory === 'Psychology & Behavioral Sciences') {
+      return [
+        "Explain with an empirical behavioral experiment",
+        "What cognitive bias or schema influences this?",
+        "How is this evaluated in clinical psychometrics?"
+      ];
+    }
+    if (domainCategory === 'Healthcare & Biomedical Sciences') {
+      return [
+        "Explain with a clinical patient case study",
+        "What physiological feedback loop is involved?",
+        "How do clinicians evaluate sensitivity & specificity?"
+      ];
+    }
+    if (domainCategory === 'Digital Product Design & HCI') {
+      return [
+        "Explain with an interface UX case study",
+        "How does Fitts's Law or cognitive load apply here?",
+        "What are the WCAG 2.1 accessibility requirements?"
+      ];
+    }
+    if (domainCategory === 'Business & Strategic Management') {
+      return [
+        "Explain with an enterprise case study",
+        "How does this impact unit economics (LTV:CAC)?",
+        "What competitive moat or advantage does this build?"
+      ];
+    }
+    if (domainCategory === 'Data Science & Analytics') {
+      return [
+        "Explain the bias-variance tradeoff here",
+        "How do we prevent data leakage in training?",
+        "Show a Python/Pandas feature transformation"
+      ];
+    }
+    // Default Tech
+    return [
+      "Explain this concept with a real-world analogy",
+      "What are common edge cases or concurrency pitfalls?",
+      "Show a minimal production code snippet"
+    ];
+  }, [domainCategory]);
+
+  const initialGreeting = useMemo(() => {
+    return `Hello! I am your AI Academic Tutor for **${courseTitle}** (${domainCategory}). How can I assist your understanding today? You can ask me to explain theoretical principles, walk through step-by-step calculations or case studies, or clarify foundational trade-offs.`;
+  }, [courseTitle, domainCategory]);
+
   const [messages, setMessages] = useState<Message[]>([
     {
       role: 'assistant',
-      content: `Hello! I am your AI Academic Tutor for **${courseTitle}**. How can I assist your understanding today? You can ask me to explain concepts, walk through code examples, or clarify architectural tradeoffs.`
+      content: initialGreeting
     }
   ]);
+
+  // Keep greeting synchronized if courseTitle changes
+  useEffect(() => {
+    setMessages([
+      {
+        role: 'assistant',
+        content: initialGreeting
+      }
+    ]);
+  }, [initialGreeting]);
+
   const [isLoading, setIsLoading] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
@@ -98,19 +189,13 @@ export default function AITutorChat({ courseTitle, lessonTitle }: AITutorChatPro
     }
   };
 
-  const quickPrompts = [
-    "Explain this concept with a real-world analogy",
-    "What are common edge cases or pitfalls here?",
-    "Show a minimal production code snippet"
-  ];
-
   return (
     <>
       {/* Floating Action Button */}
       <div className="fixed bottom-6 right-6 z-50">
         <Button
           onClick={() => setIsOpen(true)}
-          className="shadow-xl bg-gradient-to-r from-indigo-600 to-violet-600 hover:from-indigo-700 hover:to-violet-700 text-white rounded-full px-5 py-6 flex items-center gap-2.5 border border-indigo-300/40 text-sm font-semibold transition-all hover:scale-105 active:scale-95"
+          className="shadow-xl bg-gradient-to-r from-indigo-600 via-indigo-700 to-violet-600 hover:from-indigo-700 hover:to-violet-700 text-white rounded-full px-5 py-6 flex items-center gap-2.5 border border-indigo-300/40 text-sm font-semibold transition-all hover:scale-105 active:scale-95 cursor-pointer"
         >
           <Sparkles className="h-5 w-5 animate-pulse text-amber-300" />
           <span>Ask AI Academic Tutor</span>
@@ -119,9 +204,9 @@ export default function AITutorChat({ courseTitle, lessonTitle }: AITutorChatPro
 
       {/* Slide-out / Modal Dialog */}
       <Dialog open={isOpen} onOpenChange={setIsOpen}>
-        <DialogContent className="sm:max-w-xl max-h-[85vh] flex flex-col p-0 gap-0 overflow-hidden bg-white border-zinc-200 shadow-2xl">
+        <DialogContent className="sm:max-w-xl max-h-[85vh] flex flex-col p-0 gap-0 overflow-hidden bg-white border-zinc-200 shadow-2xl rounded-2xl">
           {/* Header */}
-          <DialogHeader className="p-4 bg-gradient-to-r from-indigo-900 to-zinc-900 text-white border-b border-indigo-950/40">
+          <DialogHeader className="p-4 bg-gradient-to-r from-zinc-900 via-indigo-950 to-zinc-900 text-white border-b border-indigo-950/40">
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-2.5">
                 <div className="h-9 w-9 rounded-lg bg-indigo-500/20 border border-indigo-400/30 flex items-center justify-center">
@@ -130,12 +215,12 @@ export default function AITutorChat({ courseTitle, lessonTitle }: AITutorChatPro
                 <div>
                   <DialogTitle className="text-base font-bold text-white flex items-center gap-2">
                     AI Academic Tutor
-                    <span className="text-[10px] font-medium bg-indigo-500/30 text-indigo-200 px-2 py-0.5 rounded-full border border-indigo-400/30">
-                      Gemini 3.5 Active
+                    <span className="text-[10px] font-medium bg-emerald-500/20 text-emerald-300 px-2 py-0.5 rounded-full border border-emerald-400/30">
+                      Domain Calibrated
                     </span>
                   </DialogTitle>
                   <p className="text-xs text-indigo-200/80 truncate max-w-sm mt-0.5">
-                    Context: {courseTitle} {lessonTitle ? `• ${lessonTitle}` : ''}
+                    {courseTitle} {lessonTitle ? `• ${lessonTitle}` : ''}
                   </p>
                 </div>
               </div>
@@ -155,9 +240,9 @@ export default function AITutorChat({ courseTitle, lessonTitle }: AITutorChatPro
                   </div>
                 )}
                 <div
-                  className={`max-w-[85%] rounded-2xl px-4 py-3 text-sm leading-relaxed shadow-sm ${
+                  className={`max-w-[85%] rounded-2xl px-4 py-3 text-sm leading-relaxed shadow-xs ${
                     msg.role === 'user'
-                      ? 'bg-indigo-600 text-white rounded-tr-none'
+                      ? 'bg-indigo-600 text-white rounded-tr-none font-medium'
                       : 'bg-white text-zinc-800 border border-zinc-200 rounded-tl-none prose prose-sm max-w-none'
                   }`}
                 >
@@ -173,7 +258,7 @@ export default function AITutorChat({ courseTitle, lessonTitle }: AITutorChatPro
             {isLoading && (
               <div className="flex items-center gap-2 text-xs text-indigo-600 pl-10 font-medium">
                 <Loader2 className="h-3.5 w-3.5 animate-spin" />
-                <span>AI Tutor is reasoning...</span>
+                <span>AI Tutor is formulating calibrated response...</span>
               </div>
             )}
             <div ref={messagesEndRef} />
@@ -186,7 +271,7 @@ export default function AITutorChat({ courseTitle, lessonTitle }: AITutorChatPro
                 key={i}
                 onClick={() => handleSend(prompt)}
                 disabled={isLoading}
-                className="text-xs whitespace-nowrap bg-zinc-100 hover:bg-indigo-50 hover:text-indigo-700 hover:border-indigo-200 text-zinc-600 px-3 py-1.5 rounded-full border border-zinc-200 transition-colors"
+                className="text-xs whitespace-nowrap bg-zinc-100 hover:bg-indigo-50 hover:text-indigo-700 hover:border-indigo-200 text-zinc-700 px-3 py-1.5 rounded-full border border-zinc-200 transition-colors font-medium cursor-pointer"
               >
                 {prompt}
               </button>
@@ -199,14 +284,14 @@ export default function AITutorChat({ courseTitle, lessonTitle }: AITutorChatPro
               value={input}
               onChange={(e) => setInput(e.target.value)}
               onKeyDown={(e) => e.key === 'Enter' && !e.shiftKey && handleSend()}
-              placeholder="Ask anything about this concept or code..."
+              placeholder="Ask anything about this academic concept..."
               disabled={isLoading}
               className="flex-1 bg-zinc-50 border-zinc-200 focus-visible:ring-indigo-600 text-sm"
             />
             <Button
               onClick={() => handleSend()}
               disabled={!input.trim() || isLoading}
-              className="bg-indigo-600 hover:bg-indigo-700 text-white shrink-0 h-9 px-4"
+              className="bg-indigo-600 hover:bg-indigo-700 text-white shrink-0 h-9 px-4 cursor-pointer"
             >
               {isLoading ? <Loader2 className="h-4 w-4 animate-spin" /> : <Send className="h-4 w-4" />}
             </Button>
