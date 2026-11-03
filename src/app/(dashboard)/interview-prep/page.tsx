@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -20,7 +20,11 @@ import {
   Lightbulb, 
   ArrowRight, 
   Shuffle, 
-  Loader2 
+  Loader2, 
+  Volume2, 
+  VolumeX, 
+  MicOff, 
+  Radio 
 } from 'lucide-react';
 import { createClient } from '@/lib/supabase/client';
 
@@ -345,6 +349,91 @@ export default function InterviewPrepPage() {
   const [evaluation, setEvaluation] = useState<any>(null);
   const [vivaTimer, setVivaTimer] = useState(0);
   const [isTimerRunning, setIsTimerRunning] = useState(true);
+  const [isRecording, setIsRecording] = useState(false);
+  const [isSpeakingQuestion, setIsSpeakingQuestion] = useState(false);
+  const recognitionRef = useRef<any>(null);
+
+  // Initialize Web Speech Recognition
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const SpeechRecognition = (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
+      if (SpeechRecognition) {
+        const recognition = new SpeechRecognition();
+        recognition.continuous = true;
+        recognition.interimResults = true;
+        recognition.lang = 'en-US';
+
+        recognition.onresult = (event: any) => {
+          let transcript = '';
+          for (let i = event.resultIndex; i < event.results.length; i++) {
+            if (event.results[i].isFinal) {
+              transcript += event.results[i][0].transcript + ' ';
+            }
+          }
+          if (transcript) {
+            setStudentAnswer(prev => (prev ? `${prev.trim()} ${transcript.trim()}` : transcript.trim()));
+          }
+        };
+
+        recognition.onerror = (event: any) => {
+          console.warn("Speech recognition error:", event.error);
+          setIsRecording(false);
+        };
+
+        recognition.onend = () => {
+          setIsRecording(false);
+        };
+
+        recognitionRef.current = recognition;
+      }
+    }
+
+    return () => {
+      if (typeof window !== 'undefined' && window.speechSynthesis) {
+        window.speechSynthesis.cancel();
+      }
+    };
+  }, []);
+
+  const toggleVoiceRecording = () => {
+    if (!recognitionRef.current) {
+      alert("Voice speech recognition is supported in Chrome, Edge, and Brave! You can also type or use Demo Mode.");
+      return;
+    }
+
+    if (isRecording) {
+      recognitionRef.current.stop();
+      setIsRecording(false);
+    } else {
+      try {
+        recognitionRef.current.start();
+        setIsRecording(true);
+      } catch (e) {
+        console.error(e);
+        setIsRecording(false);
+      }
+    }
+  };
+
+  const handleSpeakQuestion = () => {
+    if (typeof window === 'undefined' || !window.speechSynthesis) return;
+
+    if (isSpeakingQuestion) {
+      window.speechSynthesis.cancel();
+      setIsSpeakingQuestion(false);
+      return;
+    }
+
+    window.speechSynthesis.cancel();
+    const utterance = new SpeechSynthesisUtterance(currentQuestion.questionText);
+    utterance.rate = 0.95;
+    utterance.pitch = 1.0;
+    utterance.onend = () => setIsSpeakingQuestion(false);
+    utterance.onerror = () => setIsSpeakingQuestion(false);
+
+    setIsSpeakingQuestion(true);
+    window.speechSynthesis.speak(utterance);
+  };
 
   // Fetch active domain from Supabase
   useEffect(() => {
@@ -499,9 +588,30 @@ export default function InterviewPrepPage() {
                   {currentQuestion.conceptTarget}
                 </Badge>
               </div>
-              <CardTitle className="text-base md:text-lg font-bold text-zinc-900 mt-2 leading-snug">
-                "{currentQuestion.questionText}"
-              </CardTitle>
+              <div className="flex items-start justify-between gap-4 mt-2">
+                <CardTitle className="text-base md:text-lg font-bold text-zinc-900 leading-snug flex-1">
+                  "{currentQuestion.questionText}"
+                </CardTitle>
+                <Button
+                  type="button"
+                  variant="outline"
+                  size="sm"
+                  onClick={handleSpeakQuestion}
+                  className="shrink-0 text-xs border-indigo-200 text-indigo-700 hover:bg-indigo-50 font-semibold gap-1.5 cursor-pointer"
+                >
+                  {isSpeakingQuestion ? (
+                    <>
+                      <VolumeX className="h-3.5 w-3.5 text-rose-500 animate-pulse" />
+                      <span>Stop Audio</span>
+                    </>
+                  ) : (
+                    <>
+                      <Volume2 className="h-3.5 w-3.5 text-indigo-600" />
+                      <span>Listen to Question</span>
+                    </>
+                  )}
+                </Button>
+              </div>
               <CardDescription className="text-xs text-zinc-500 mt-1">
                 Contextual Focus: {currentQuestion.contextSnippet}
               </CardDescription>
@@ -525,17 +635,50 @@ export default function InterviewPrepPage() {
 
               {/* Student Defense Input */}
               <div className="space-y-2">
-                <div className="flex items-center justify-between">
-                  <label className="text-xs font-bold text-zinc-700 uppercase tracking-wider flex items-center gap-1.5">
-                    <Mic className="h-3.5 w-3.5 text-zinc-500" /> Your Academic Defense:
-                  </label>
-                  <button
-                    type="button"
-                    onClick={handleUseSample}
-                    className="text-xs text-indigo-600 hover:text-indigo-800 font-semibold underline cursor-pointer"
-                  >
-                    Load Sample Defense (Demo Mode)
-                  </button>
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                  <div className="flex items-center gap-2">
+                    <label className="text-xs font-bold text-zinc-700 uppercase tracking-wider flex items-center gap-1.5">
+                      <Mic className="h-3.5 w-3.5 text-zinc-500" /> Your Academic Defense:
+                    </label>
+                    {isRecording && (
+                      <span className="inline-flex items-center gap-1 text-[11px] font-bold text-rose-600 bg-rose-50 px-2 py-0.5 rounded-full border border-rose-200 animate-pulse">
+                        <Radio className="h-3 w-3" /> Listening... Speak now
+                      </span>
+                    )}
+                  </div>
+
+                  <div className="flex items-center gap-2">
+                    <Button
+                      type="button"
+                      size="sm"
+                      onClick={toggleVoiceRecording}
+                      className={`text-xs font-bold px-3 py-1.5 h-8 cursor-pointer shadow-xs transition-all ${
+                        isRecording 
+                          ? 'bg-rose-600 hover:bg-rose-700 text-white animate-pulse' 
+                          : 'bg-emerald-600 hover:bg-emerald-700 text-white'
+                      }`}
+                    >
+                      {isRecording ? (
+                        <>
+                          <MicOff className="h-3.5 w-3.5 mr-1" />
+                          <span>Stop Recording</span>
+                        </>
+                      ) : (
+                        <>
+                          <Mic className="h-3.5 w-3.5 mr-1" />
+                          <span>Speak Defense (Voice Input)</span>
+                        </>
+                      )}
+                    </Button>
+
+                    <button
+                      type="button"
+                      onClick={handleUseSample}
+                      className="text-xs text-indigo-600 hover:text-indigo-800 font-semibold underline cursor-pointer"
+                    >
+                      Demo Answer
+                    </button>
+                  </div>
                 </div>
                 <textarea
                   value={studentAnswer}
