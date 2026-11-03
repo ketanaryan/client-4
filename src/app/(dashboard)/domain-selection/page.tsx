@@ -134,6 +134,11 @@ export default function DomainSelectionPage() {
 
       const domainNameStr = DOMAINS.find(d => d.id === selectedDomain)?.title || selectedDomain;
       
+      if (typeof window !== 'undefined') {
+        localStorage.setItem('edupredict_active_domain', domainNameStr);
+        localStorage.setItem('edupredict_active_domain_id', selectedDomain);
+      }
+      
       const { data: existing } = await supabase
         .from('domain_profiles')
         .select('id')

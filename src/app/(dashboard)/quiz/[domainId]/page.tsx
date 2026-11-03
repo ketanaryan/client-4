@@ -27,6 +27,35 @@ interface DiagnosticReviewData {
   answers: Record<string, string>;
 }
 
+function getDomainTitleFromId(id: string): string {
+  const clean = (id || '').toLowerCase();
+  if (clean.includes('liberal') || clean.includes('arts') || clean.includes('humanit') || clean.includes('history')) {
+    return 'Liberal Arts & Humanities';
+  }
+  if (clean.includes('design') || clean.includes('hci') || clean.includes('product')) {
+    return 'Digital Product Design & Human-Computer Interaction (HCI)';
+  }
+  if (clean.includes('psycholog') || clean.includes('behavior')) {
+    return 'Psychology & Behavioral Sciences';
+  }
+  if (clean.includes('health') || clean.includes('biomed') || clean.includes('medic')) {
+    return 'Healthcare & Biomedical Sciences';
+  }
+  if (clean.includes('financ') || clean.includes('econom')) {
+    return 'Financial Markets & Economics';
+  }
+  if (clean.includes('business') || clean.includes('manage')) {
+    return 'Business Administration & Strategic Management';
+  }
+  if (clean.includes('data') || clean.includes('analytic')) {
+    return 'Data Science & Business Analytics';
+  }
+  if (clean.includes('computer') || clean.includes('ai')) {
+    return 'Computer Science & Artificial Intelligence';
+  }
+  return 'Software Engineering & Cloud Computing';
+}
+
 export default function QuizPage() {
   const [questions, setQuestions] = useState<Question[]>([]);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
@@ -40,6 +69,14 @@ export default function QuizPage() {
   const params = useParams();
   const { toast } = useToast();
   const supabase = createClient();
+
+  const handleNavigateToPathway = () => {
+    const domainTitle = getDomainTitleFromId(params?.domainId as string);
+    if (typeof window !== 'undefined') {
+      localStorage.setItem('edupredict_active_domain', domainTitle);
+    }
+    router.push('/pathway-recommendations?domain=' + encodeURIComponent(domainTitle));
+  };
 
   useEffect(() => {
     let isMounted = true;
@@ -250,8 +287,8 @@ export default function QuizPage() {
             <div className="pt-4 mt-4 border-t border-zinc-100 flex items-center justify-between">
               <span className="text-xs text-zinc-500">Curriculum generated based on these results.</span>
               <Button
-                onClick={() => router.push('/pathway-recommendations')}
-                className="bg-indigo-600 hover:bg-indigo-700 text-white font-medium shadow-md text-sm"
+                onClick={handleNavigateToPathway}
+                className="bg-indigo-600 hover:bg-indigo-700 text-white font-medium shadow-md text-sm cursor-pointer"
               >
                 View Personalized Learning Pathway <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
@@ -349,9 +386,9 @@ export default function QuizPage() {
         {/* Bottom Navigation */}
         <div className="pt-6 border-t border-zinc-200 flex justify-end">
           <Button
-            onClick={() => router.push('/pathway-recommendations')}
+            onClick={handleNavigateToPathway}
             size="lg"
-            className="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold shadow-lg px-8"
+            className="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold shadow-lg px-8 cursor-pointer"
           >
             Continue to Recommended Pathway <ArrowRight className="ml-2 h-5 w-5" />
           </Button>

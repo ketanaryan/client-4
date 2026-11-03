@@ -18,7 +18,7 @@ function getDomainAwareFallbackSchedule(domainName: string, timeCommitment: stri
 
 ## Wednesday: Discounted Cash Flow (DCF) Modeling
 - ${dailyHours} hour(s): Build an unlevered free cash flow projection model with sensitivity tables.
-- Practice: Beta unlevering ($$\\beta_U$$) and corporate tax adjustments.
+- Practice: Beta unlevering (β_U) and corporate tax adjustments.
 
 ## Friday: Macroeconomic Policy & Risk Parity
 - ${dailyHours} hour(s): Central bank interest rate yield curve shifts and portfolio value-at-risk (VaR).

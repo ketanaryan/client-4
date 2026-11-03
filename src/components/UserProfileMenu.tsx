@@ -78,31 +78,32 @@ export default function UserProfileMenu({ profile }: { profile: any }) {
       
       <DialogContent 
         showCloseButton={false}
-        className="sm:max-w-[450px] w-[95vw] max-h-[90vh] flex flex-col p-0 overflow-hidden rounded-2xl border border-zinc-200 shadow-2xl bg-white focus:outline-none"
+        className="sm:max-w-[450px] w-[95vw] max-h-[92vh] flex flex-col p-0 overflow-hidden rounded-2xl border border-zinc-200 shadow-2xl bg-white focus:outline-none"
       >
         <DialogTitle className="sr-only">Student Academic Profile</DialogTitle>
         
-        {/* Top Dark Header */}
-        <div className="bg-zinc-900 px-6 pt-12 pb-6 flex flex-col items-center justify-center relative shrink-0">
-          {/* Prominent Back Button on Top Left */}
+        {/* Dedicated Top Navigation Bar - Always Visible */}
+        <div className="bg-zinc-950 border-b border-zinc-800 px-4 py-2.5 flex items-center justify-between shrink-0 z-20">
           <button
             type="button"
             onClick={() => setIsOpen(false)}
-            className="absolute top-3 left-3 text-zinc-300 hover:text-white bg-zinc-800/90 hover:bg-zinc-800 px-3 py-1.5 rounded-lg text-xs font-semibold flex items-center gap-1.5 transition-all border border-zinc-700/60 shadow-sm cursor-pointer"
+            className="text-zinc-200 hover:text-white bg-zinc-800 hover:bg-zinc-700 px-3 py-1.5 rounded-lg text-xs font-semibold flex items-center gap-1.5 transition-all border border-zinc-700 shadow-xs cursor-pointer"
           >
-            <ArrowLeft className="h-3.5 w-3.5" /> Back
+            <ArrowLeft className="h-3.5 w-3.5" /> Back to Dashboard
           </button>
 
-          {/* Prominent Close X on Top Right */}
           <button
             type="button"
             onClick={() => setIsOpen(false)}
-            className="absolute top-3 right-3 text-zinc-400 hover:text-white bg-zinc-800/90 hover:bg-zinc-800 p-1.5 rounded-lg text-xs transition-all border border-zinc-700/60 shadow-sm cursor-pointer"
+            className="text-zinc-400 hover:text-white bg-zinc-800 hover:bg-zinc-700 p-1.5 rounded-lg text-xs transition-all border border-zinc-700 shadow-xs cursor-pointer"
             aria-label="Close dialog"
           >
             <X className="h-4 w-4" />
           </button>
+        </div>
 
+        {/* User Identity Header */}
+        <div className="bg-zinc-900 px-6 pt-5 pb-6 flex flex-col items-center justify-center relative shrink-0">
           {/* Avatar with Upload */}
           <div className="relative group">
             <div className="h-20 w-20 rounded-full overflow-hidden border-4 border-zinc-800 bg-zinc-100 flex items-center justify-center shadow-md">

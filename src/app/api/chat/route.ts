@@ -15,8 +15,8 @@ function getDomainAwareChatFallback(courseContext: string, userQuery: string): s
 In corporate valuation and modern financial economics, the foundational pillar is **risk-adjusted returns** and **unlevered cash-flow projections**.
 
 Here is how you should structure your analysis:
-1. **Discounted Cash Flow (DCF) & Cost of Capital:** Always discount projected Free Cash Flow to Firm (FCFF) using the Weighted Average Cost of Capital (WACC), adjusting your equity beta for financial leverage ($$\\beta_L = \\beta_U [1 + (1 - t)(D/E)]$$).
-2. **Systematic vs. Unsystematic Risk:** Capital Asset Pricing Model (CAPM) isolates non-diversifiable market exposure. Diversification eliminates firm-specific idiosyncrasies, leaving beta ($$\\beta$$) as the sole priced factor.
+1. **Discounted Cash Flow (DCF) & Cost of Capital:** Always discount projected Free Cash Flow to Firm (FCFF) using the Weighted Average Cost of Capital (WACC), adjusting your equity beta for financial leverage: [β_L = β_U · (1 + (1 - t) · D/E)].
+2. **Systematic vs. Unsystematic Risk:** Capital Asset Pricing Model (CAPM) isolates non-diversifiable market exposure. Diversification eliminates firm-specific idiosyncrasies, leaving beta (β) as the sole priced factor.
 3. **Liquidity & Working Capital Health:** Beyond GAAP net income, monitor the Cash Conversion Cycle (CCC) and operating cash flow to prevent balance-sheet insolvency during tightening monetary cycles.
 
 Would you like to analyze a practical valuation model or walk through sensitivity analysis for cost of capital?`;

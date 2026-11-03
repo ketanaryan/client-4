@@ -44,6 +44,59 @@ export const DOMAIN_DATA_MAP: Record<string, {
     growth_potential: string;
   }>;
 }> = {
+  "Liberal Arts & Humanities": {
+    courses: [
+      {
+        id: "c1",
+        title: "Critical Historiography & Primary Source Archival Analysis",
+        type: "Course",
+        status: "Next",
+        flaws: [],
+        reasoning: "Strengthens archival contextualization, bias deconstruction, and primary document verification."
+      },
+      {
+        id: "c2",
+        title: "Epistemological Frameworks & Rhetorical Argumentation",
+        type: "Course",
+        status: "Locked",
+        flaws: [],
+        reasoning: "Deepens understanding of philosophical argumentation, dialectics, and formal logical fallacies."
+      },
+      {
+        id: "c3",
+        title: "Semiotics, Cultural Hermeneutics & Narrative Discourse",
+        type: "Course",
+        status: "Locked",
+        flaws: [],
+        reasoning: "Analyzes cultural sign systems, literary theory, semiotic codes, and ideological representation."
+      },
+      {
+        id: "c4",
+        title: "Digital Humanities, Archival Ethics & Public Intellectualism",
+        type: "Course",
+        status: "Locked",
+        flaws: [],
+        reasoning: "Capstone in computational text mining, digital cultural preservation, and public policy discourse."
+      }
+    ],
+    careerPaths: [
+      {
+        title: "Cultural Heritage & Archival Intelligence Strategist",
+        match_reason: "Your rigorous grounding in historiography, primary documentation, and cultural preservation prepares you to direct archival institutions.",
+        growth_potential: "High Demand"
+      },
+      {
+        title: "Public Policy & Epistemological Research Analyst",
+        match_reason: "Combines dialectical argumentation, rhetorical deconstruction, and socio-historical analysis for policy institutes.",
+        growth_potential: "Steady Growth"
+      },
+      {
+        title: "Editorial Director & Digital Humanities Synthesist",
+        match_reason: "Cutting-edge crossover applying narrative analysis, semiotics, and computational text synthesis to media and publishing.",
+        growth_potential: "Explosive Growth"
+      }
+    ]
+  },
   "Financial Markets & Economics": {
     courses: [
       {
@@ -470,12 +523,28 @@ export const DOMAIN_DATA_MAP: Record<string, {
   }
 };
 
+
+export const AVAILABLE_DOMAINS = [
+  "Liberal Arts & Humanities",
+  "Digital Product Design & Human-Computer Interaction (HCI)",
+  "Psychology & Behavioral Sciences",
+  "Healthcare & Biomedical Sciences",
+  "Financial Markets & Economics",
+  "Business Administration & Strategic Management",
+  "Data Science & Business Analytics",
+  "Computer Science & Artificial Intelligence",
+  "Software Engineering & Cloud Computing"
+];
+
 function getDomainData(domainName: string | undefined) {
   const d = (domainName || '').toLowerCase();
+  if (d.includes('liberal') || d.includes('humanit') || d.includes('history') || d.includes('literature') || (d.includes('arts') && !d.includes('design'))) {
+    return DOMAIN_DATA_MAP["Liberal Arts & Humanities"];
+  }
   if (d.includes('financ') || d.includes('econom')) return DOMAIN_DATA_MAP["Financial Markets & Economics"];
   if (d.includes('psycholog') || d.includes('behavior')) return DOMAIN_DATA_MAP["Psychology & Behavioral Sciences"];
   if (d.includes('health') || d.includes('biomed') || d.includes('medic')) return DOMAIN_DATA_MAP["Healthcare & Biomedical Sciences"];
-  if (d.includes('design') || d.includes('hci') || d.includes('product') || d.includes('arts') || d.includes('ui')) return DOMAIN_DATA_MAP["Digital Product Design & Human-Computer Interaction (HCI)"];
+  if (d.includes('design') || d.includes('hci') || d.includes('product') || d.includes('ui') || d.includes('ux')) return DOMAIN_DATA_MAP["Digital Product Design & Human-Computer Interaction (HCI)"];
   if (d.includes('manage') || d.includes('business')) return DOMAIN_DATA_MAP["Business Administration & Strategic Management"];
   if (d.includes('data') || d.includes('analytic')) return DOMAIN_DATA_MAP["Data Science & Business Analytics"];
   if (d.includes('computer') || d.includes('ai') || d.includes('intelligence')) return DOMAIN_DATA_MAP["Computer Science & Artificial Intelligence"];
@@ -487,6 +556,9 @@ function isPathwayMatchingDomain(courses: any[] | null | undefined, domainName: 
   const d = domainName.toLowerCase();
   const cTitles = courses.map(c => (c.title || '').toLowerCase()).join(' ');
 
+  if (d.includes('liberal') || d.includes('humanit') || (d.includes('arts') && !d.includes('design'))) {
+    return cTitles.includes('historiograph') || cTitles.includes('epistemolog') || cTitles.includes('semiotic') || cTitles.includes('humanities') || cTitles.includes('archival');
+  }
   if (d.includes('financ') || d.includes('econom')) {
     return cTitles.includes('financ') || cTitles.includes('capital') || cTitles.includes('portfolio') || cTitles.includes('valuation') || cTitles.includes('accounting');
   }
@@ -516,6 +588,9 @@ function isCareerMatchingDomain(paths: any[] | null | undefined, domainName: str
   const d = domainName.toLowerCase();
   const pTitles = paths.map(p => (p.title || '').toLowerCase()).join(' ');
 
+  if (d.includes('liberal') || d.includes('humanit') || (d.includes('arts') && !d.includes('design'))) {
+    return pTitles.includes('heritage') || pTitles.includes('archival') || pTitles.includes('policy') || pTitles.includes('editorial') || pTitles.includes('humanities');
+  }
   if (d.includes('financ') || d.includes('econom')) {
     return pTitles.includes('financ') || pTitles.includes('portfolio') || pTitles.includes('equity') || pTitles.includes('risk') || pTitles.includes('analyst');
   }
@@ -658,17 +733,24 @@ export default function PathwayRecommendationsPage() {
         }
       }
 
-      // 4. Strict Domain-Matching Cache Validation:
-      // If cached data belongs to an older/different domain (e.g. user selected Arts/Psychology but cache has CS),
-      // discard stale cache immediately and initialize fresh domain-authentic pathway!
-      const currentDomainName = userDomain?.domain_name;
+      // 4. Multi-Source Deterministic Domain Resolution:
+      // Priority: URL Param -> localStorage -> User Profile -> Fallback
+      const urlDomain = searchParams.get('domain');
+      const storedDomain = typeof window !== 'undefined' ? localStorage.getItem('edupredict_active_domain') : null;
+      const currentDomainName = urlDomain || storedDomain || userDomain?.domain_name || "Digital Product Design & Human-Computer Interaction (HCI)";
+
+      setDomainProfile((prev: any) => ({ ...(prev || {}), domain_name: currentDomainName }));
+      if (typeof window !== 'undefined') {
+        localStorage.setItem('edupredict_active_domain', currentDomainName);
+      }
+
       const coursesMatch = isPathwayMatchingDomain(userProfile?.cached_course_pathway, currentDomainName);
       const careersMatch = isCareerMatchingDomain(userProfile?.cached_career_paths, currentDomainName);
 
       if (coursesMatch && userProfile?.cached_course_pathway) {
         setCourses(userProfile.cached_course_pathway);
-      } else if (currentDomainName) {
-        console.log("Stale or missing course cache detected for domain:", currentDomainName, "Generating fresh pathway...");
+      } else {
+        console.log("Generating fresh domain-authentic pathway for:", currentDomainName);
         const domainDefaults = getDomainData(currentDomainName);
         const flawNames = activeFlaws.map(f => f.concept_name);
         const freshCourses = domainDefaults.courses.map((c, idx) => ({
@@ -677,17 +759,15 @@ export default function PathwayRecommendationsPage() {
           flaws: idx === 0 ? flawNames : []
         }));
         setCourses(freshCourses);
-        // Persist to DB
         supabase.from('profiles').update({ cached_course_pathway: freshCourses }).eq('id', user.id).then(() => {});
       }
 
       if (careersMatch && userProfile?.cached_career_paths) {
         setCareerPaths(userProfile.cached_career_paths);
-      } else if (currentDomainName) {
-        console.log("Stale or missing career cache detected for domain:", currentDomainName, "Generating fresh career paths...");
+      } else {
+        console.log("Generating fresh domain-authentic career paths for:", currentDomainName);
         const domainDefaults = getDomainData(currentDomainName);
         setCareerPaths(domainDefaults.careerPaths);
-        // Persist to DB
         supabase.from('profiles').update({ cached_career_paths: domainDefaults.careerPaths }).eq('id', user.id).then(() => {});
       }
 
@@ -703,6 +783,31 @@ export default function PathwayRecommendationsPage() {
       setCourses(prev => prev.map((c, idx) => idx === 0 ? { ...c, status: 'Next', flaws: [] } : c));
     }
   }, [courses, flaws, isLoading]);
+
+  
+  const handleSwitchDomain = (newDomain: string) => {
+    setDomainProfile((prev: any) => ({ ...(prev || {}), domain_name: newDomain }));
+    if (typeof window !== 'undefined') {
+      localStorage.setItem('edupredict_active_domain', newDomain);
+    }
+    const domainDefaults = getDomainData(newDomain);
+    const freshCourses = domainDefaults.courses.map((c, idx) => ({
+      ...c,
+      status: (idx === 0 ? 'Next' : 'Locked') as 'Locked' | 'Next' | 'Completed',
+      flaws: []
+    }));
+    setCourses(freshCourses);
+    setCareerPaths(domainDefaults.careerPaths);
+
+    supabase.auth.getUser().then(({ data: { user } }) => {
+      if (user) {
+        supabase.from('profiles').update({
+          cached_course_pathway: freshCourses,
+          cached_career_paths: domainDefaults.careerPaths
+        }).eq('id', user.id).then(() => {});
+      }
+    });
+  };
 
   const handleRemediate = async (flaw: string) => {
     setSelectedFlaw(flaw);
@@ -813,13 +918,22 @@ export default function PathwayRecommendationsPage() {
       {/* Header Banner */}
       <div className="mb-8 flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-zinc-200 pb-6">
         <div>
-          <div className="flex items-center gap-2 mb-2">
-            <span className="text-xs font-bold uppercase tracking-wider bg-indigo-50 text-indigo-700 px-3 py-1 rounded-full border border-indigo-200 inline-flex items-center gap-1.5">
-              <Compass className="h-3.5 w-3.5" />
-              Active Domain: {currentDomainTitle}
-            </span>
-            <span className="text-xs font-semibold text-emerald-600 bg-emerald-50 px-2.5 py-0.5 rounded-full border border-emerald-100">
-              Live & Synchronized
+          <div className="flex flex-wrap items-center gap-2.5 mb-2">
+            <div className="flex items-center gap-1.5 bg-indigo-50 border border-indigo-200 px-2.5 py-1 rounded-lg">
+              <Compass className="h-3.5 w-3.5 text-indigo-600 shrink-0" />
+              <span className="text-xs font-bold text-indigo-700 uppercase tracking-wide">Domain Focus:</span>
+              <select
+                value={AVAILABLE_DOMAINS.find(d => d.toLowerCase() === currentDomainTitle.toLowerCase()) || currentDomainTitle}
+                onChange={(e) => handleSwitchDomain(e.target.value)}
+                className="text-xs font-bold bg-white text-zinc-900 border border-indigo-300 rounded-md px-2 py-0.5 focus:outline-none focus:ring-2 focus:ring-indigo-500 cursor-pointer shadow-xs"
+              >
+                {AVAILABLE_DOMAINS.map(d => (
+                  <option key={d} value={d}>{d}</option>
+                ))}
+              </select>
+            </div>
+            <span className="text-xs font-semibold text-emerald-600 bg-emerald-50 px-2.5 py-1 rounded-md border border-emerald-100">
+              ⚡ 100% Dynamic & Calibrated
             </span>
           </div>
           <h1 className="text-3xl font-extrabold text-zinc-900 tracking-tight">Your Optimal Pathway & Career Horizon</h1>
