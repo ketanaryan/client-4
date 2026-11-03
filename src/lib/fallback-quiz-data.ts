@@ -1,4 +1,4 @@
-export const fallbackQuizData: any = {
+export const fallbackQuizData: Record<string, Record<string, Array<{ id?: string; text: string; options: string[]; correctOption: string; conceptTarget: string }>>> = {
   "Computer Science & Artificial Intelligence": {
     "Beginner": [
       {
@@ -2272,6 +2272,94 @@ export const fallbackQuizData: any = {
         ],
         "correctOption": "GROUP BY",
         "conceptTarget": "SQL Aggregations"
+      },
+      {
+        "text": "What is the primary difference between Supervised and Unsupervised learning?",
+        "options": [
+          "Supervised learning trains on labeled data; Unsupervised learning finds patterns in unlabeled data",
+          "Supervised learning requires no computers",
+          "Unsupervised learning always uses neural networks",
+          "There is no difference"
+        ],
+        "correctOption": "Supervised learning trains on labeled data; Unsupervised learning finds patterns in unlabeled data",
+        "conceptTarget": "Supervised vs Unsupervised"
+      },
+      {
+        "text": "What does the Mean Squared Error (MSE) measure in regression models?",
+        "options": [
+          "The average of the squared differences between predicted values and actual values",
+          "The percentage of correct categorical classifications",
+          "The training runtime in milliseconds",
+          "The volume of missing values in a dataframe"
+        ],
+        "correctOption": "The average of the squared differences between predicted values and actual values",
+        "conceptTarget": "Regression Metrics: MSE"
+      },
+      {
+        "text": "In Python data science, what is the Pandas library primarily used for?",
+        "options": [
+          "Data manipulation, cleaning, and tabular dataframe analysis",
+          "3D game rendering",
+          "Audio signal compression",
+          "Writing device hardware drivers"
+        ],
+        "correctOption": "Data manipulation, cleaning, and tabular dataframe analysis",
+        "conceptTarget": "Python Data Science: Pandas"
+      },
+      {
+        "text": "What is a 'null value' or NaN in a dataset?",
+        "options": [
+          "Missing or undefined data within a record",
+          "A number strictly equal to zero",
+          "A categorical string value",
+          "A primary database key"
+        ],
+        "correctOption": "Missing or undefined data within a record",
+        "conceptTarget": "Data Cleaning: Missing Values"
+      },
+      {
+        "text": "What is an outlier in statistical analysis?",
+        "options": [
+          "A data point that significantly differs from the overall distribution pattern",
+          "The exact median of a dataset",
+          "A corrupted database table",
+          "The most frequently occurring value"
+        ],
+        "correctOption": "A data point that significantly differs from the overall distribution pattern",
+        "conceptTarget": "Descriptive Statistics: Outliers"
+      },
+      {
+        "text": "What is a scatter plot best used for?",
+        "options": [
+          "Visualizing the relationship and correlation between two numerical variables",
+          "Displaying categorical percentages of a whole",
+          "Tracking continuous time series over decades",
+          "Showing hierarchical organizational trees"
+        ],
+        "correctOption": "Visualizing the relationship and correlation between two numerical variables",
+        "conceptTarget": "Data Visualization: Scatter Plots"
+      },
+      {
+        "text": "What does a correlation coefficient of +1.0 indicate?",
+        "options": [
+          "A perfect positive linear relationship between two variables",
+          "Zero relationship between two variables",
+          "A perfect negative inverse relationship",
+          "Data corruption"
+        ],
+        "correctOption": "A perfect positive linear relationship between two variables",
+        "conceptTarget": "Correlation Coefficients"
+      },
+      {
+        "text": "What is the median of a dataset?",
+        "options": [
+          "The middle value when data is sorted in ascending order",
+          "The arithmetic average of all numbers",
+          "The difference between the maximum and minimum values",
+          "The standard deviation divided by sample size"
+        ],
+        "correctOption": "The middle value when data is sorted in ascending order",
+        "conceptTarget": "Descriptive Statistics: Median"
       }
     ],
     "Intermediate": [
@@ -2370,6 +2458,72 @@ export const fallbackQuizData: any = {
         ],
         "correctOption": "How similar an object is to its own cluster compared to neighboring clusters",
         "conceptTarget": "Cluster Validation"
+      },
+      {
+        "text": "What is the Bias-Variance tradeoff in machine learning?",
+        "options": [
+          "Underfitting caused by high bias vs overfitting caused by high variance",
+          "Balancing GPU memory against CPU threads",
+          "Trading model accuracy for database storage space",
+          "Choosing between Python and R programming languages"
+        ],
+        "correctOption": "Underfitting caused by high bias vs overfitting caused by high variance",
+        "conceptTarget": "Bias-Variance Tradeoff"
+      },
+      {
+        "text": "What is data leakage in machine learning pipelines?",
+        "options": [
+          "Information from outside the training dataset (such as target or validation split data) improperly contaminating the model during training",
+          "A hacker stealing private user emails",
+          "A memory leak causing a Python script to crash",
+          "Losing records during SQL export"
+        ],
+        "correctOption": "Information from outside the training dataset (such as target or validation split data) improperly contaminating the model during training",
+        "conceptTarget": "Pipeline Integrity: Data Leakage"
+      },
+      {
+        "text": "Why is ROC-AUC preferred over raw accuracy for highly imbalanced classification datasets (e.g., 99% negative class)?",
+        "options": [
+          "Accuracy is misleading because predicting all negatives achieves 99% accuracy; ROC-AUC evaluates true positive vs false positive trade-offs across all thresholds",
+          "ROC-AUC computes 10x faster than accuracy",
+          "Accuracy cannot be computed on categorical labels",
+          "ROC-AUC works exclusively on regression models"
+        ],
+        "correctOption": "Accuracy is misleading because predicting all negatives achieves 99% accuracy; ROC-AUC evaluates true positive vs false positive trade-offs across all thresholds",
+        "conceptTarget": "Model Evaluation: ROC-AUC"
+      },
+      {
+        "text": "How does k-fold cross-validation evaluate model generalizability?",
+        "options": [
+          "Splits the dataset into k partitions, training on k-1 folds and validating on the remaining fold iteratively",
+          "Trains k distinct neural networks simultaneously",
+          "Multiplies dataset size by k through duplication",
+          "Tests the model across k different programming languages"
+        ],
+        "correctOption": "Splits the dataset into k partitions, training on k-1 folds and validating on the remaining fold iteratively",
+        "conceptTarget": "Cross-Validation"
+      },
+      {
+        "text": "What is the primary difference between L1 (Lasso) and L2 (Ridge) regularization?",
+        "options": [
+          "L1 adds absolute penalty driving weights to zero (feature selection); L2 adds squared penalty shrinking weights smoothly",
+          "L1 is for neural networks; L2 is for linear regression",
+          "L1 increases model complexity; L2 reduces it",
+          "There is no mathematical difference"
+        ],
+        "correctOption": "L1 adds absolute penalty driving weights to zero (feature selection); L2 adds squared penalty shrinking weights smoothly",
+        "conceptTarget": "Regularization: L1 vs L2"
+      },
+      {
+        "text": "What is the Central Limit Theorem (CLT)?",
+        "options": [
+          "The distribution of sample means approaches a normal distribution as sample size increases, regardless of the population's underlying distribution",
+          "All datasets eventually converge to zero variance",
+          "Large neural networks always overfit small samples",
+          "Sample standard deviation is always equal to population mean"
+        ],
+        "correctOption": "The distribution of sample means approaches a normal distribution as sample size increases, regardless of the population's underlying distribution",
+        "conceptTarget": "Inferential Statistics: CLT"
       }
     ],
     "Advanced": [
@@ -2468,6 +2622,28 @@ export const fallbackQuizData: any = {
         ],
         "correctOption": "All eigenvalues are non-negative, ensuring real variance projections",
         "conceptTarget": "Linear Algebra / Eigendecomposition"
+      },
+      {
+        "text": "How does a Random Forest ensemble differ fundamentally from Gradient Boosted Decision Trees (GBDT)?",
+        "options": [
+          "Random Forest builds independent trees in parallel using bagging; GBDT builds sequential trees where each tree corrects residual errors of prior trees",
+          "Random Forest is unsupervised; GBDT is supervised",
+          "GBDT cannot handle numerical features",
+          "Random Forest always requires deeper trees than GBDT"
+        ],
+        "correctOption": "Random Forest builds independent trees in parallel using bagging; GBDT builds sequential trees where each tree corrects residual errors of prior trees",
+        "conceptTarget": "Ensemble Architecture: Bagging vs Boosting"
+      },
+      {
+        "text": "What does the p-value quantify in hypothesis testing?",
+        "options": [
+          "The probability of observing test results at least as extreme as the actual data, assuming the null hypothesis is true",
+          "The probability that the alternative hypothesis is 100% correct",
+          "The percentage of variance explained by the model",
+          "The chance of making a Type II false negative error"
+        ],
+        "correctOption": "The probability of observing test results at least as extreme as the actual data, assuming the null hypothesis is true",
+        "conceptTarget": "Hypothesis Testing: p-Values"
       }
     ]
   },
@@ -2568,6 +2744,138 @@ export const fallbackQuizData: any = {
         ],
         "correctOption": "To cool down an overheated economy and rein in rising inflation",
         "conceptTarget": "Monetary Policy"
+      },
+      {
+        "text": "What is the primary role of a central bank like the Federal Reserve or RBI?",
+        "options": [
+          "Trade corporate equities",
+          "Control money supply and set policy interest rates",
+          "Underwrite private initial public offerings",
+          "Manage retail consumer checking accounts"
+        ],
+        "correctOption": "Control money supply and set policy interest rates",
+        "conceptTarget": "Central Banking & Monetary Policy"
+      },
+      {
+        "text": "What distinguishes a stock from a corporate bond?",
+        "options": [
+          "Stocks represent debt ownership; bonds represent equity",
+          "Stocks represent equity ownership; bonds represent debt obligation",
+          "Bonds always yield higher returns than stocks",
+          "Stocks guarantee fixed quarterly interest payments"
+        ],
+        "correctOption": "Stocks represent equity ownership; bonds represent debt obligation",
+        "conceptTarget": "Securities & Capital Assets"
+      },
+      {
+        "text": "What does the term 'liquidity' mean in financial markets?",
+        "options": [
+          "The total dividend yield of a security",
+          "The ease and speed of converting an asset into cash without price slippage",
+          "The legal bankruptcy status of a firm",
+          "The volatility of interest rates across sovereign debt"
+        ],
+        "correctOption": "The ease and speed of converting an asset into cash without price slippage",
+        "conceptTarget": "Market Liquidity"
+      },
+      {
+        "text": "What is an Initial Public Offering (IPO)?",
+        "options": [
+          "A company's first sale of stock to the institutional and retail public",
+          "A private buyout by venture capitalists",
+          "The liquidation of assets during bankruptcy",
+          "A quarterly corporate earnings release"
+        ],
+        "correctOption": "A company's first sale of stock to the institutional and retail public",
+        "conceptTarget": "Primary Capital Markets"
+      },
+      {
+        "text": "What is the Gross Domestic Product (GDP)?",
+        "options": [
+          "Total revenue of Fortune 500 corporations",
+          "Total market value of all final goods and services produced within a country",
+          "The annual trade surplus of sovereign exports",
+          "The net tax revenue collected by the federal treasury"
+        ],
+        "correctOption": "Total market value of all final goods and services produced within a country",
+        "conceptTarget": "Macroeconomic Output"
+      },
+      {
+        "text": "What does a Price-to-Earnings (P/E) ratio indicate?",
+        "options": [
+          "Current share price divided by annual earnings per share",
+          "The profit margin on operating merchandise",
+          "The debt-to-equity leverage of the balance sheet",
+          "The percentage of revenue distributed as dividends"
+        ],
+        "correctOption": "Current share price divided by annual earnings per share",
+        "conceptTarget": "Equity Valuation Ratios"
+      },
+      {
+        "text": "What happens to bond prices when market interest rates rise?",
+        "options": [
+          "Bond prices increase",
+          "Bond prices remain unchanged",
+          "Bond prices decrease",
+          "Bond coupons increase automatically"
+        ],
+        "correctOption": "Bond prices decrease",
+        "conceptTarget": "Bond Price-Yield Relationship"
+      },
+      {
+        "text": "What is a bull market?",
+        "options": [
+          "A sustained period of rising asset prices and investor confidence",
+          "A market crash exceeding 20%",
+          "A period of high deflation",
+          "A market where trading is temporarily halted"
+        ],
+        "correctOption": "A sustained period of rising asset prices and investor confidence",
+        "conceptTarget": "Market Cycles"
+      },
+      {
+        "text": "What is compound interest?",
+        "options": [
+          "Interest calculated only on the initial principal",
+          "Interest calculated on both initial principal and accumulated interest",
+          "A penalty charged by central banks",
+          "A fixed flat administrative bank fee"
+        ],
+        "correctOption": "Interest calculated on both initial principal and accumulated interest",
+        "conceptTarget": "Time Value of Money"
+      },
+      {
+        "text": "What is inflation?",
+        "options": [
+          "A general increase in price levels and decrease in currency purchasing power",
+          "A rapid increase in corporate share valuation",
+          "A decline in unemployment rates",
+          "An increase in gold reserves"
+        ],
+        "correctOption": "A general increase in price levels and decrease in currency purchasing power",
+        "conceptTarget": "Inflation & Purchasing Power"
+      },
+      {
+        "text": "What is a mutual fund?",
+        "options": [
+          "A pool of funds collected from many investors to invest in securities",
+          "A government-run retirement pension",
+          "A loan between private banks",
+          "An uninsured derivative contract"
+        ],
+        "correctOption": "A pool of funds collected from many investors to invest in securities",
+        "conceptTarget": "Pooled Investment Vehicles"
+      },
+      {
+        "text": "What is a dividend?",
+        "options": [
+          "A distribution of a portion of company earnings to shareholders",
+          "The cost of issuing corporate debt",
+          "A tax penalty on foreign investments",
+          "An executive compensation bonus"
+        ],
+        "correctOption": "A distribution of a portion of company earnings to shareholders",
+        "conceptTarget": "Corporate Distributions"
       }
     ],
     "Intermediate": [
@@ -2666,6 +2974,116 @@ export const fallbackQuizData: any = {
         ],
         "correctOption": "Excess return generated per unit of total risk (standard deviation)",
         "conceptTarget": "Risk-Adjusted Performance"
+      },
+      {
+        "text": "In modern portfolio theory, what does the Sharpe Ratio measure?",
+        "options": [
+          "Return per unit of systematic beta risk",
+          "Excess return over risk-free rate per unit of total volatility (standard deviation)",
+          "Total gross profit divided by invested capital",
+          "The covariance between equity and debt assets"
+        ],
+        "correctOption": "Excess return over risk-free rate per unit of total volatility (standard deviation)",
+        "conceptTarget": "Sharpe Ratio & Risk Adjustment"
+      },
+      {
+        "text": "How does the three-stage DuPont model decompose Return on Equity (ROE)?",
+        "options": [
+          "Gross Margin x Net Margin x Debt Ratio",
+          "Net Profit Margin x Asset Turnover x Equity Multiplier",
+          "EBITDA x Tax Rate x Working Capital",
+          "Operating Cash Flow x Asset Growth x Beta"
+        ],
+        "correctOption": "Net Profit Margin x Asset Turnover x Equity Multiplier",
+        "conceptTarget": "DuPont Framework"
+      },
+      {
+        "text": "What is the Weighted Average Cost of Capital (WACC)?",
+        "options": [
+          "The required return on equity alone",
+          "The average interest rate on sovereign debt",
+          "The blended average cost of financing across debt and equity after taxes",
+          "The maximum borrowing capacity of a corporation"
+        ],
+        "correctOption": "The blended average cost of financing across debt and equity after taxes",
+        "conceptTarget": "Corporate Cost of Capital"
+      },
+      {
+        "text": "What is the primary difference between Free Cash Flow to Firm (FCFF) and FCFE?",
+        "options": [
+          "FCFF is available to both debt and equity holders; FCFE is available only to equity holders",
+          "FCFF includes depreciation; FCFE excludes depreciation",
+          "FCFF is after tax and interest; FCFE is before tax",
+          "FCFF is used for small businesses; FCFE is used for public firms"
+        ],
+        "correctOption": "FCFF is available to both debt and equity holders; FCFE is available only to equity holders",
+        "conceptTarget": "Cash Flow Valuation"
+      },
+      {
+        "text": "What does an inverted Treasury yield curve historically anticipate?",
+        "options": [
+          "Accelerating industrial GDP expansion",
+          "An economic recession within 12 to 18 months",
+          "Rapid hyperinflation",
+          "A sharp rise in corporate capital expenditure"
+        ],
+        "correctOption": "An economic recession within 12 to 18 months",
+        "conceptTarget": "Yield Curve Inversion"
+      },
+      {
+        "text": "What is the Capital Asset Pricing Model (CAPM) formula?",
+        "options": [
+          "E(R) = Rf + Beta x (Rm - Rf)",
+          "E(R) = Dividends / Price + Growth",
+          "E(R) = Net Income / Total Assets",
+          "E(R) = Gross Profit x Asset Turnover"
+        ],
+        "correctOption": "E(R) = Rf + Beta x (Rm - Rf)",
+        "conceptTarget": "CAPM Asset Pricing"
+      },
+      {
+        "text": "What does Beta (β) measure in asset pricing?",
+        "options": [
+          "The volatility of an individual stock relative to the overall market portfolio",
+          "The legal probability of bond default",
+          "The difference between bid and ask prices",
+          "The dividend growth rate of an equity"
+        ],
+        "correctOption": "The volatility of an individual stock relative to the overall market portfolio",
+        "conceptTarget": "Systematic Risk & Beta"
+      },
+      {
+        "text": "What is an option Call contract?",
+        "options": [
+          "The obligation to sell an asset at a predetermined strike price",
+          "The right, but not the obligation, to buy an asset at a set strike price",
+          "A guaranteed government savings bond",
+          "A private equity debt swap"
+        ],
+        "correctOption": "The right, but not the obligation, to buy an asset at a set strike price",
+        "conceptTarget": "Derivatives Mechanics"
+      },
+      {
+        "text": "What is the Cash Conversion Cycle (CCC)?",
+        "options": [
+          "Days Sales Outstanding + Days Inventory Outstanding - Days Payable Outstanding",
+          "Total cash reserves divided by monthly burn rate",
+          "The time required to issue initial public shares",
+          "Operating revenue minus capital expenditures"
+        ],
+        "correctOption": "Days Sales Outstanding + Days Inventory Outstanding - Days Payable Outstanding",
+        "conceptTarget": "Working Capital Management"
+      },
+      {
+        "text": "What does the efficient market hypothesis (EMH) semi-strong form assert?",
+        "options": [
+          "Only historical prices are reflected in asset prices",
+          "All publicly available information is fully reflected in asset prices",
+          "Private insider information is instantly priced",
+          "Technical chart analysis consistently outperforms the market"
+        ],
+        "correctOption": "All publicly available information is fully reflected in asset prices",
+        "conceptTarget": "Market Efficiency"
       }
     ],
     "Advanced": [
@@ -2764,6 +3182,72 @@ export const fallbackQuizData: any = {
         ],
         "correctOption": "Adds Size (SMB) and Value (HML) risk premia to explain cross-sectional stock returns beyond market Beta alone",
         "conceptTarget": "Multi-Factor Asset Pricing"
+      },
+      {
+        "text": "Under Modigliani-Miller Theorem with corporate taxes, how does debt leverage affect firm value?",
+        "options": [
+          "Has zero impact on total firm value",
+          "Increases firm value by the present value of the interest tax shield",
+          "Decreases firm value due to asymmetric agency costs",
+          "Eliminates financial distress costs entirely"
+        ],
+        "correctOption": "Increases firm value by the present value of the interest tax shield",
+        "conceptTarget": "Capital Structure Theory"
+      },
+      {
+        "text": "In Black-Scholes option pricing, what does the Greek metric Gamma measure?",
+        "options": [
+          "The rate of change of Delta with respect to the underlying asset price",
+          "Sensitivity of option price to the risk-free rate",
+          "Sensitivity of option price to time decay (theta)",
+          "Expected change in price relative to implied volatility"
+        ],
+        "correctOption": "The rate of change of Delta with respect to the underlying asset price",
+        "conceptTarget": "Option Greeks & Convexity"
+      },
+      {
+        "text": "How does the Hamada equation unlever equity beta to isolate asset risk?",
+        "options": [
+          "Beta_U = Beta_L / [1 + (1 - T) x (Debt / Equity)]",
+          "Beta_U = Beta_L x (1 + Debt / Equity)",
+          "Beta_U = Beta_L - Sovereign Spread",
+          "Beta_U = Covariance / Variance x ROE"
+        ],
+        "correctOption": "Beta_U = Beta_L / [1 + (1 - T) x (Debt / Equity)]",
+        "conceptTarget": "Beta Unlevering"
+      },
+      {
+        "text": "What is Value at Risk (VaR) at a 99% confidence level over a 1-day horizon?",
+        "options": [
+          "The maximum loss expected on 99 out of 100 days under normal market conditions",
+          "The absolute guaranteed limit of portfolio drawdown",
+          "The average expected tail loss during a market crash",
+          "The total standard deviation of the risk-weighted assets"
+        ],
+        "correctOption": "The maximum loss expected on 99 out of 100 days under normal market conditions",
+        "conceptTarget": "Risk Measurement: VaR"
+      },
+      {
+        "text": "What is the difference between Value at Risk (VaR) and Conditional VaR (Expected Shortfall)?",
+        "options": [
+          "VaR measures only equity; CVaR measures only bonds",
+          "CVaR quantifies the average expected loss exceeding the VaR threshold in the tail distribution",
+          "VaR requires Monte Carlo; CVaR requires historical simulation",
+          "There is no mathematical difference"
+        ],
+        "correctOption": "CVaR quantifies the average expected loss exceeding the VaR threshold in the tail distribution",
+        "conceptTarget": "Tail Risk & Expected Shortfall"
+      },
+      {
+        "text": "What is the primary mechanism of Quantitative Easing (QE) by central banks?",
+        "options": [
+          "Printing physical cash and distributing to citizens",
+          "Purchasing long-term government bonds to suppress term premiums and expand bank reserves",
+          "Raising short-term reserve requirement ratios",
+          "Fixing foreign currency exchange pegs"
+        ],
+        "correctOption": "Purchasing long-term government bonds to suppress term premiums and expand bank reserves",
+        "conceptTarget": "Unconventional Monetary Policy"
       }
     ]
   },
@@ -2864,6 +3348,72 @@ export const fallbackQuizData: any = {
         ],
         "correctOption": "The shared values, ethical standards, beliefs, and behavioral norms that shape employee interactions",
         "conceptTarget": "Organizational Culture"
+      },
+      {
+        "text": "What is a SWOT analysis used for in strategic management?",
+        "options": [
+          "Evaluating Strengths, Weaknesses, Opportunities, and Threats of an organization",
+          "Auditing quarterly accounting ledger entries",
+          "Calculating employee salary bonuses",
+          "Designing marketing logos"
+        ],
+        "correctOption": "Evaluating Strengths, Weaknesses, Opportunities, and Threats of an organization",
+        "conceptTarget": "SWOT Strategic Framework"
+      },
+      {
+        "text": "What does B2B stand for compared to B2C?",
+        "options": [
+          "Business-to-Business vs Business-to-Consumer",
+          "Brand-to-Brand vs Brand-to-Customer",
+          "Buyer-to-Buyer vs Buyer-to-Company",
+          "Banking-to-Business vs Banking-to-Consumer"
+        ],
+        "correctOption": "Business-to-Business vs Business-to-Consumer",
+        "conceptTarget": "Business Models: B2B vs B2C"
+      },
+      {
+        "text": "What is Customer Acquisition Cost (CAC)?",
+        "options": [
+          "Total sales and marketing expenditure divided by the number of new customers acquired",
+          "The retail price of a product sold to customers",
+          "The cost of shipping goods to warehouses",
+          "The annual salary of customer support agents"
+        ],
+        "correctOption": "Total sales and marketing expenditure divided by the number of new customers acquired",
+        "conceptTarget": "Unit Economics: CAC"
+      },
+      {
+        "text": "What is market segmentation?",
+        "options": [
+          "Dividing a broad consumer market into distinct subsets based on shared characteristics or needs",
+          "Splitting a company into multiple legal entities",
+          "Closing underperforming retail stores",
+          "Issuing stock shares on international exchanges"
+        ],
+        "correctOption": "Dividing a broad consumer market into distinct subsets based on shared characteristics or needs",
+        "conceptTarget": "Market Segmentation"
+      },
+      {
+        "text": "What does 'break-even point' mean for a business enterprise?",
+        "options": [
+          "The production volume where total revenue exactly equals total costs (zero profit and zero loss)",
+          "The day a company is officially incorporated",
+          "When a startup receives venture capital funding",
+          "When net profit reaches 100% of sales"
+        ],
+        "correctOption": "The production volume where total revenue exactly equals total costs (zero profit and zero loss)",
+        "conceptTarget": "Break-Even Economics"
+      },
+      {
+        "text": "What is supply chain management?",
+        "options": [
+          "The oversight of materials, information, and finances as they move from supplier to manufacturer to wholesaler to retailer to consumer",
+          "Managing internal office supplies",
+          "Auditing employee bank accounts",
+          "Writing computer software for cash registers"
+        ],
+        "correctOption": "The oversight of materials, information, and finances as they move from supplier to manufacturer to wholesaler to retailer to consumer",
+        "conceptTarget": "Supply Chain Operations"
       }
     ],
     "Intermediate": [
@@ -2962,6 +3512,61 @@ export const fallbackQuizData: any = {
         ],
         "correctOption": "The commercial value and customer goodwill derived from consumer perception of a brand name rather than the generic product itself",
         "conceptTarget": "Brand Equity"
+      },
+      {
+        "text": "What are Porter's Five Forces that shape industry competitive structure?",
+        "options": [
+          "Supplier Power, Buyer Power, Competitive Rivalry, Threat of Substitution, Threat of New Entrants",
+          "Revenue, Cost, Profit, Taxes, Dividends",
+          "Product, Price, Place, Promotion, People",
+          "Strength, Weakness, Opportunity, Threat, Growth"
+        ],
+        "correctOption": "Supplier Power, Buyer Power, Competitive Rivalry, Threat of Substitution, Threat of New Entrants",
+        "conceptTarget": "Porter's Five Forces"
+      },
+      {
+        "text": "In subscription SaaS business models, what is churn rate?",
+        "options": [
+          "The percentage of subscribers who cancel their recurring memberships over a given period",
+          "The rate at which new employees are hired",
+          "The speed of server database replication",
+          "The annual rate of inventory shrinkage"
+        ],
+        "correctOption": "The percentage of subscribers who cancel their recurring memberships over a given period",
+        "conceptTarget": "SaaS Metrics: Churn Rate"
+      },
+      {
+        "text": "What does the VRIO framework assess regarding enterprise resources?",
+        "options": [
+          "Whether resources are Valuable, Rare, Inimitable, and Organically Organized",
+          "Velocity, Reliability, Integrity, and Output",
+          "Volume, Rate, Income, and Optimization",
+          "Variance, Return, Investment, and Overhead"
+        ],
+        "correctOption": "Whether resources are Valuable, Rare, Inimitable, and Organically Organized",
+        "conceptTarget": "Internal Resource View: VRIO"
+      },
+      {
+        "text": "Why is a Customer Lifetime Value to Acquisition Cost (LTV:CAC) ratio exceeding 3:1 desirable?",
+        "options": [
+          "It provides healthy gross margins to cover overhead, development, and churn while generating sustainable profit",
+          "It guarantees zero customer support inquiries",
+          "It is a legal requirement for public corporations",
+          "It eliminates federal corporate income taxes"
+        ],
+        "correctOption": "It provides healthy gross margins to cover overhead, development, and churn while generating sustainable profit",
+        "conceptTarget": "LTV:CAC Ratio Optimization"
+      },
+      {
+        "text": "What is the primary difference between a cost leadership strategy and a differentiation strategy?",
+        "options": [
+          "Cost leadership competes on lowest operational cost and prices; differentiation competes on unique premium value and features",
+          "Cost leadership is for technology; differentiation is for retail",
+          "Cost leadership ignores customers entirely",
+          "There is no difference in Porter's generic strategies"
+        ],
+        "correctOption": "Cost leadership competes on lowest operational cost and prices; differentiation competes on unique premium value and features",
+        "conceptTarget": "Porter's Generic Strategies"
       }
     ],
     "Advanced": [
@@ -3060,6 +3665,28 @@ export const fallbackQuizData: any = {
         ],
         "correctOption": "Acquiring upstream suppliers to secure critical raw materials, reduce supply risk, and capture upstream supplier profit margins",
         "conceptTarget": "Vertical Integration Strategy"
+      },
+      {
+        "text": "How does Kaplan & Norton's Balanced Scorecard prevent the hazards of managing exclusively by quarterly financial earnings?",
+        "options": [
+          "It integrates non-financial leading indicators across Customer Satisfaction, Internal Processes, and Learning & Growth alongside lagging financial metrics",
+          "It eliminates GAAP financial reporting completely",
+          "It requires all corporate spending to be approved by public vote",
+          "It mandates flat salary compensation for all executives"
+        ],
+        "correctOption": "It integrates non-financial leading indicators across Customer Satisfaction, Internal Processes, and Learning & Growth alongside lagging financial metrics",
+        "conceptTarget": "Balanced Scorecard Strategy"
+      },
+      {
+        "text": "In Corporate Governance, how does Agency Theory explain conflict between shareholders and executive managers?",
+        "options": [
+          "Information asymmetry and misaligned incentives allow managers (agents) to pursue self-serving interests at the expense of shareholder (principal) wealth",
+          "Shareholders manage daily operations while executives provide capital",
+          "Government agencies regulate private pricing agreements",
+          "Labor unions hold exclusive ownership of board seats"
+        ],
+        "correctOption": "Information asymmetry and misaligned incentives allow managers (agents) to pursue self-serving interests at the expense of shareholder (principal) wealth",
+        "conceptTarget": "Agency Theory & Corporate Governance"
       }
     ]
   },
@@ -3160,6 +3787,116 @@ export const fallbackQuizData: any = {
         ],
         "correctOption": "The capacity to perceive, monitor, regulate, and constructively harness one's own and others' emotional states",
         "conceptTarget": "Emotional Intelligence"
+      },
+      {
+        "text": "What is classical conditioning?",
+        "options": [
+          "Learning via reward and punishment consequences",
+          "Learning via association between an environmental stimulus and a biological reflex",
+          "Learning through observational role modeling",
+          "Genetic inheritance of temperament traits"
+        ],
+        "correctOption": "Learning via association between an environmental stimulus and a biological reflex",
+        "conceptTarget": "Classical Conditioning"
+      },
+      {
+        "text": "In Pavlov's famous experiment, what was the conditioned stimulus (CS)?",
+        "options": [
+          "The salivation reflex",
+          "The sound of the bell / metronome",
+          "The meat powder food",
+          "The dog harness"
+        ],
+        "correctOption": "The sound of the bell / metronome",
+        "conceptTarget": "Conditioned Stimuli"
+      },
+      {
+        "text": "What does the term 'confirmation bias' refer to?",
+        "options": [
+          "The tendency to seek and remember information that validates preexisting beliefs",
+          "Believing an event was predictable after it has already occurred",
+          "Overestimating how many people share our private views",
+          "Evaluating probability based on how easily examples are recalled"
+        ],
+        "correctOption": "The tendency to seek and remember information that validates preexisting beliefs",
+        "conceptTarget": "Confirmation Bias"
+      },
+      {
+        "text": "What is cognitive dissonance?",
+        "options": [
+          "Memory loss caused by physical trauma",
+          "Mental discomfort experienced by holding contradictory beliefs, values, or actions",
+          "A severe clinical disorder affecting speech",
+          "Inability to focus on multiple tasks"
+        ],
+        "correctOption": "Mental discomfort experienced by holding contradictory beliefs, values, or actions",
+        "conceptTarget": "Cognitive Dissonance"
+      },
+      {
+        "text": "What are the three stages of memory processing in cognitive psychology?",
+        "options": [
+          "Encoding, Storage, and Retrieval",
+          "Stimulus, Response, and Extinction",
+          "Id, Ego, and Superego",
+          "Sensation, Perception, and Reaction"
+        ],
+        "correctOption": "Encoding, Storage, and Retrieval",
+        "conceptTarget": "Memory Processing Stages"
+      },
+      {
+        "text": "What is operant conditioning?",
+        "options": [
+          "Learning through associations between reflexive stimuli",
+          "Learning where voluntary behavior is strengthened or weakened by consequences",
+          "Unconscious repression of childhood instincts",
+          "Instinctual animal navigation"
+        ],
+        "correctOption": "Learning where voluntary behavior is strengthened or weakened by consequences",
+        "conceptTarget": "Operant Conditioning"
+      },
+      {
+        "text": "What is the primary function of the amygdala in the human brain?",
+        "options": [
+          "Regulating circadian sleep cycles",
+          "Processing emotional responses, particularly fear and threat detection",
+          "Encoding grammatical syntax",
+          "Controlling fine motor finger movements"
+        ],
+        "correctOption": "Processing emotional responses, particularly fear and threat detection",
+        "conceptTarget": "Neuroanatomy: Amygdala"
+      },
+      {
+        "text": "What does the term 'neuroplasticity' mean?",
+        "options": [
+          "The brain's ability to reorganize structure and synaptic connections in response to learning or injury",
+          "The rigid, immutable hardwiring of adult neurons",
+          "A diagnostic technique for measuring electrical brainwaves",
+          "Degeneration of myelin sheaths in old age"
+        ],
+        "correctOption": "The brain's ability to reorganize structure and synaptic connections in response to learning or injury",
+        "conceptTarget": "Neuroplasticity"
+      },
+      {
+        "text": "What is the bystander effect in social psychology?",
+        "options": [
+          "Individuals are less likely to offer help in an emergency when other passive onlookers are present",
+          "People perform better in athletic tasks when watched by a crowd",
+          "Crowds always become aggressive during protests",
+          "Witnesses remember crimes with 100% photographic accuracy"
+        ],
+        "correctOption": "Individuals are less likely to offer help in an emergency when other passive onlookers are present",
+        "conceptTarget": "Social Psychology: Bystander Effect"
+      },
+      {
+        "text": "What is the fundamental attribution error?",
+        "options": [
+          "Overemphasizing internal personality traits and underemphasizing situational factors when judging others' actions",
+          "Believing good things happen to good people",
+          "Attributing all successes to luck and all failures to oneself",
+          "Misidentifying the source of a retrieved memory"
+        ],
+        "correctOption": "Overemphasizing internal personality traits and underemphasizing situational factors when judging others' actions",
+        "conceptTarget": "Fundamental Attribution Error"
       }
     ],
     "Intermediate": [
@@ -3258,6 +3995,94 @@ export const fallbackQuizData: any = {
         ],
         "correctOption": "An individual's personal belief in their capability to execute the actions required to achieve designated performance outcomes",
         "conceptTarget": "Bandura's Self-Efficacy"
+      },
+      {
+        "text": "Which reinforcement schedule produces the highest resistance to behavioral extinction?",
+        "options": [
+          "Fixed-Interval",
+          "Fixed-Ratio",
+          "Variable-Ratio",
+          "Continuous Reinforcement"
+        ],
+        "correctOption": "Variable-Ratio",
+        "conceptTarget": "Reinforcement Schedules & Extinction"
+      },
+      {
+        "text": "In Kahneman's dual-process framework, how does System 1 differ from System 2?",
+        "options": [
+          "System 1 is fast, intuitive, and heuristic; System 2 is slow, deliberate, and logical",
+          "System 1 handles language; System 2 handles vision",
+          "System 1 is conscious; System 2 is entirely subconscious",
+          "System 1 is analytical; System 2 is emotional"
+        ],
+        "correctOption": "System 1 is fast, intuitive, and heuristic; System 2 is slow, deliberate, and logical",
+        "conceptTarget": "Dual-Process Theory"
+      },
+      {
+        "text": "What is the 'scalloping effect' observed in operant conditioning?",
+        "options": [
+          "A pause in responses immediately following reinforcement in a Fixed-Interval schedule",
+          "A continuous flat rate of high responses in Variable-Ratio",
+          "Extinction of behavior after reward cessation",
+          "Generalization of conditioned stimuli across similar pitches"
+        ],
+        "correctOption": "A pause in responses immediately following reinforcement in a Fixed-Interval schedule",
+        "conceptTarget": "Fixed-Interval Scalloping"
+      },
+      {
+        "text": "What is the primary role of the hippocampus in human memory?",
+        "options": [
+          "Storage of long-term procedural muscle memories",
+          "Consolidation of declarative episodic and semantic information from short-term into long-term cortical networks",
+          "Execution of autonomic respiratory rhythms",
+          "Immediate perception of auditory frequencies"
+        ],
+        "correctOption": "Consolidation of declarative episodic and semantic information from short-term into long-term cortical networks",
+        "conceptTarget": "Hippocampal Consolidation"
+      },
+      {
+        "text": "In the Big Five (OCEAN) personality framework, what does high Neuroticism denote?",
+        "options": [
+          "High intellectual curiosity and aesthetic appreciation",
+          "Tendency to experience psychological distress, emotional instability, and anxiety",
+          "High organized discipline and goal-directed conduct",
+          "Preference for social interaction and gregariousness"
+        ],
+        "correctOption": "Tendency to experience psychological distress, emotional instability, and anxiety",
+        "conceptTarget": "Big Five OCEAN: Neuroticism"
+      },
+      {
+        "text": "What does the 'availability heuristic' cause people to do?",
+        "options": [
+          "Evaluate the probability of an event by how easily concrete examples come to mind",
+          "Assume someone matches a stereotype regardless of statistical base rates",
+          "Overestimate their own skills compared to average peers",
+          "Anchor decisions to the first number presented"
+        ],
+        "correctOption": "Evaluate the probability of an event by how easily concrete examples come to mind",
+        "conceptTarget": "Availability Heuristic"
+      },
+      {
+        "text": "What is the difference between negative reinforcement and punishment?",
+        "options": [
+          "Negative reinforcement removes an aversive stimulus to increase behavior; punishment introduces or removes a stimulus to decrease behavior",
+          "Negative reinforcement decreases behavior; punishment increases behavior",
+          "They are identical terms in behavioral psychology",
+          "Punishment is always physical; negative reinforcement is always verbal"
+        ],
+        "correctOption": "Negative reinforcement removes an aversive stimulus to increase behavior; punishment introduces or removes a stimulus to decrease behavior",
+        "conceptTarget": "Reinforcement vs Punishment"
+      },
+      {
+        "text": "What did the Milgram obedience experiments demonstrate?",
+        "options": [
+          "Ordinary individuals can commit severe acts against their conscience when instructed by a perceived legitimate authority figure",
+          "Groups always make riskier decisions than individuals",
+          "Visual perception is immune to social conformity",
+          "Children imitate violent behaviors seen on television"
+        ],
+        "correctOption": "Ordinary individuals can commit severe acts against their conscience when instructed by a perceived legitimate authority figure",
+        "conceptTarget": "Milgram Obedience Studies"
       }
     ],
     "Advanced": [
@@ -3356,6 +4181,61 @@ export const fallbackQuizData: any = {
         ],
         "correctOption": "Synchronized neural replay in the hippocampus transfers declarative memories to the neocortex while the glymphatic system clears metabolic waste",
         "conceptTarget": "Sleep & Memory Consolidation"
+      },
+      {
+        "text": "What is the synaptic mechanism of Long-Term Potentiation (LTP)?",
+        "options": [
+          "Dopamine reuptake inhibition across the striatum",
+          "Magnesium unblocking of NMDA receptors allowing calcium influx and insertion of AMPA receptors",
+          "GABA hyperpolarization of interneurons",
+          "Degradation of acetylcholine by acetylcholinesterase"
+        ],
+        "correctOption": "Magnesium unblocking of NMDA receptors allowing calcium influx and insertion of AMPA receptors",
+        "conceptTarget": "Cellular LTP Mechanism"
+      },
+      {
+        "text": "How does the Diathesis-Stress model explain the emergence of major clinical psychopathology?",
+        "options": [
+          "Disorders result exclusively from acute environmental childhood trauma",
+          "Disorders emerge when an underlying biological or genetic vulnerability interacts with environmental stress exceeding a threshold",
+          "All psychiatric conditions are caused by viral infections",
+          "Environmental factors play zero role in genetic psychiatric expression"
+        ],
+        "correctOption": "Disorders emerge when an underlying biological or genetic vulnerability interacts with environmental stress exceeding a threshold",
+        "conceptTarget": "Diathesis-Stress Model"
+      },
+      {
+        "text": "In psychometrics, what is construct validity?",
+        "options": [
+          "The degree to which a test measures the theoretical psychological construct it purports to measure",
+          "The consistency of test scores across repeated administrations",
+          "The visual appearance of test items to a layperson",
+          "The ease of scoring a multiple-choice exam"
+        ],
+        "correctOption": "The degree to which a test measures the theoretical psychological construct it purports to measure",
+        "conceptTarget": "Psychometric Construct Validity"
+      },
+      {
+        "text": "What is the Insufficient Justification Effect in cognitive dissonance experiments (Festinger & Carlsmith, 1959)?",
+        "options": [
+          "Participants paid $1 showed greater attitude change than participants paid $20 because of insufficient external rationale for lying",
+          "Participants paid $20 showed greater attitude change due to reward conditioning",
+          "Payment amount had zero effect on task enjoyment",
+          "Participants rejected all compensation due to guilt"
+        ],
+        "correctOption": "Participants paid $1 showed greater attitude change than participants paid $20 because of insufficient external rationale for lying",
+        "conceptTarget": "Insufficient Justification Effect"
+      },
+      {
+        "text": "What is the primary role of the prefrontal cortex in executive cognitive control?",
+        "options": [
+          "Reflexive withdrawal from noxious heat stimuli",
+          "Top-down goal maintenance, response inhibition, and working memory manipulation",
+          "Primary auditory tone sensation",
+          "Metabolic regulation of thyroid hormone"
+        ],
+        "correctOption": "Top-down goal maintenance, response inhibition, and working memory manipulation",
+        "conceptTarget": "Executive Function & Prefrontal Cortex"
       }
     ]
   },
@@ -3456,6 +4336,116 @@ export const fallbackQuizData: any = {
         ],
         "correctOption": "Specifically recognizing and binding foreign pathogen antigens to neutralize them or flag them for phagocytic destruction",
         "conceptTarget": "Adaptive Immunology"
+      },
+      {
+        "text": "What is homeostasis in human physiology?",
+        "options": [
+          "The breakdown of bone tissue by osteoclasts",
+          "The maintenance of a relatively stable internal physiological environment despite external fluctuations",
+          "The transmission of genetic alleles to offspring",
+          "The rapid elevation of body temperature during septic shock"
+        ],
+        "correctOption": "The maintenance of a relatively stable internal physiological environment despite external fluctuations",
+        "conceptTarget": "Homeostasis"
+      },
+      {
+        "text": "What is the primary function of red blood cells (erythrocytes)?",
+        "options": [
+          "Transport oxygen from the lungs to peripheral tissues via hemoglobin",
+          "Synthesize peptide hormones like insulin",
+          "Phagocytose bacterial pathogens",
+          "Coagulate blood at wound sites using fibrinogen"
+        ],
+        "correctOption": "Transport oxygen from the lungs to peripheral tissues via hemoglobin",
+        "conceptTarget": "Erythrocyte Physiology"
+      },
+      {
+        "text": "What is the normal resting blood pressure range in a healthy adult?",
+        "options": [
+          "80/40 mmHg",
+          "120/80 mmHg",
+          "160/100 mmHg",
+          "200/120 mmHg"
+        ],
+        "correctOption": "120/80 mmHg",
+        "conceptTarget": "Vital Signs: Blood Pressure"
+      },
+      {
+        "text": "Which organ produces the hormone insulin?",
+        "options": [
+          "Liver",
+          "Gallbladder",
+          "Pancreas (beta cells)",
+          "Adrenal medulla"
+        ],
+        "correctOption": "Pancreas (beta cells)",
+        "conceptTarget": "Endocrine Regulation: Insulin"
+      },
+      {
+        "text": "What is the role of white blood cells (leukocytes) in the body?",
+        "options": [
+          "Defend against infectious pathogens and foreign antigens",
+          "Transport carbon dioxide exclusively",
+          "Regulate core body temperature",
+          "Filter urea from the blood stream"
+        ],
+        "correctOption": "Defend against infectious pathogens and foreign antigens",
+        "conceptTarget": "Leukocytes & Immune Defense"
+      },
+      {
+        "text": "What is the function of the human heart's left ventricle?",
+        "options": [
+          "Pump oxygenated blood into the aorta to supply the entire systemic circulation",
+          "Pump deoxygenated blood into the pulmonary arteries",
+          "Receive venous blood from the superior vena cava",
+          "Filter dead platelets from circulation"
+        ],
+        "correctOption": "Pump oxygenated blood into the aorta to supply the entire systemic circulation",
+        "conceptTarget": "Cardiovascular Anatomy: Left Ventricle"
+      },
+      {
+        "text": "What is an antibiotic used for?",
+        "options": [
+          "To treat bacterial infections",
+          "To cure viral influenza and colds",
+          "To reduce chronic hypertension",
+          "To treat autoimmune rheumatoid arthritis"
+        ],
+        "correctOption": "To treat bacterial infections",
+        "conceptTarget": "Pharmacology: Antimicrobials"
+      },
+      {
+        "text": "What is the normal resting adult heart rate range?",
+        "options": [
+          "20 - 40 bpm",
+          "60 - 100 bpm",
+          "130 - 160 bpm",
+          "180 - 220 bpm"
+        ],
+        "correctOption": "60 - 100 bpm",
+        "conceptTarget": "Vital Signs: Heart Rate"
+      },
+      {
+        "text": "What is the primary gas exchange unit in the human lung?",
+        "options": [
+          "Bronchi",
+          "Trachea",
+          "Alveoli",
+          "Pharynx"
+        ],
+        "correctOption": "Alveoli",
+        "conceptTarget": "Pulmonary Anatomy: Alveoli"
+      },
+      {
+        "text": "What is the main function of the kidneys?",
+        "options": [
+          "Filter metabolic waste products from blood and regulate fluid and electrolyte balance",
+          "Produce bile for lipid digestion",
+          "Store glycogen for muscle contraction",
+          "Synthesize white blood cells"
+        ],
+        "correctOption": "Filter metabolic waste products from blood and regulate fluid and electrolyte balance",
+        "conceptTarget": "Renal Physiology"
       }
     ],
     "Intermediate": [
@@ -3554,6 +4544,94 @@ export const fallbackQuizData: any = {
         ],
         "correctOption": "Acute myocardial infarction (heart attack) resulting in cardiac muscle cell necrosis",
         "conceptTarget": "Cardiac Biomarkers"
+      },
+      {
+        "text": "In the baroreceptor reflex, how does the body immediately respond to acute systemic hypotension?",
+        "options": [
+          "Increased parasympathetic vagal output to decrease heart rate",
+          "Decreased afferent firing from carotid sinus leading to sympathetic discharge and vasoconstriction",
+          "Immediate secretion of renin by the liver",
+          "Inhibition of cardiac contractility"
+        ],
+        "correctOption": "Decreased afferent firing from carotid sinus leading to sympathetic discharge and vasoconstriction",
+        "conceptTarget": "Baroreceptor Reflex Mechanism"
+      },
+      {
+        "text": "What are the four pillars of pharmacokinetics abbreviated as ADME?",
+        "options": [
+          "Affinity, Dissociation, Metabolism, Efficacy",
+          "Absorption, Distribution, Metabolism, and Excretion",
+          "Agonism, Dosage, Margin, Elimination",
+          "Activation, Degradation, Mutation, Excretion"
+        ],
+        "correctOption": "Absorption, Distribution, Metabolism, and Excretion",
+        "conceptTarget": "Pharmacokinetics: ADME"
+      },
+      {
+        "text": "What is the clinical significance of hepatic Cytochrome P450 (CYP450) enzymes?",
+        "options": [
+          "They are the primary enzymatic system responsible for Phase I drug oxidation and metabolism",
+          "They synthesize structural collagen in connective tissue",
+          "They store iron reserves as ferritin",
+          "They regulate cardiac pacemaker action potentials"
+        ],
+        "correctOption": "They are the primary enzymatic system responsible for Phase I drug oxidation and metabolism",
+        "conceptTarget": "Hepatic CYP450 Metabolism"
+      },
+      {
+        "text": "What is the normal physiological range of human arterial blood pH?",
+        "options": [
+          "6.80 - 7.00",
+          "7.35 - 7.45",
+          "7.80 - 8.00",
+          "8.20 - 8.50"
+        ],
+        "correctOption": "7.35 - 7.45",
+        "conceptTarget": "Arterial Blood Gas: pH"
+      },
+      {
+        "text": "How does an anticoagulant like warfarin exert its therapeutic mechanism?",
+        "options": [
+          "Directly inhibits thrombin without cofactors",
+          "Inhibits Vitamin K epoxide reductase (VKOR), impairing synthesis of clotting factors II, VII, IX, and X",
+          "Activates platelet cyclooxygenase-1 (COX-1)",
+          "Breaks down existing fibrin clots via plasminogen activation"
+        ],
+        "correctOption": "Inhibits Vitamin K epoxide reductase (VKOR), impairing synthesis of clotting factors II, VII, IX, and X",
+        "conceptTarget": "Anticoagulation: Warfarin"
+      },
+      {
+        "text": "What is the difference between diagnostic sensitivity and specificity?",
+        "options": [
+          "Sensitivity is true positive rate; specificity is true negative rate",
+          "Sensitivity is true negative rate; specificity is true positive rate",
+          "Sensitivity measures cost; specificity measures speed",
+          "There is no diagnostic difference"
+        ],
+        "correctOption": "Sensitivity is true positive rate; specificity is true negative rate",
+        "conceptTarget": "Sensitivity vs Specificity"
+      },
+      {
+        "text": "What does the International Normalized Ratio (INR) monitor?",
+        "options": [
+          "Arterial oxygen saturation",
+          "The extrinsic coagulation pathway and warfarin anticoagulation intensity",
+          "Hepatic cirrhosis transaminase levels",
+          "Renal glomerular filtration rate"
+        ],
+        "correctOption": "The extrinsic coagulation pathway and warfarin anticoagulation intensity",
+        "conceptTarget": "Clinical Diagnostics: INR"
+      },
+      {
+        "text": "What happens during respiratory compensation for metabolic acidosis?",
+        "options": [
+          "The patient hyperventilates (Kussmaul breathing) to blow off PaCO2 and restore pH",
+          "The patient hypoventilates to retain PaCO2",
+          "The kidneys excrete all hydrogen ions within seconds",
+          "Oxygen saturation drops to zero"
+        ],
+        "correctOption": "The patient hyperventilates (Kussmaul breathing) to blow off PaCO2 and restore pH",
+        "conceptTarget": "Acid-Base Compensation"
       }
     ],
     "Advanced": [
@@ -3652,6 +4730,61 @@ export const fallbackQuizData: any = {
         ],
         "correctOption": "Provides collateral circulatory anastomoses between anterior and posterior cerebral blood supplies to maintain brain perfusion during vessel occlusion",
         "conceptTarget": "Cerebrovascular Anatomy"
+      },
+      {
+        "text": "Why is the TP53 gene designated the 'guardian of the genome'?",
+        "options": [
+          "It encodes p53, which arrests the cell cycle at G1/S via p21 or initiates Bax-mediated apoptosis upon DNA damage",
+          "It stimulates rapid angiogenesis to nourish growing tumors",
+          "It produces antibodies that neutralize circulating retroviruses",
+          "It codes for reverse transcriptase enzymes"
+        ],
+        "correctOption": "It encodes p53, which arrests the cell cycle at G1/S via p21 or initiates Bax-mediated apoptosis upon DNA damage",
+        "conceptTarget": "Cellular Oncology: TP53"
+      },
+      {
+        "text": "How many half-lives (t½) are required for a pharmaceutical agent to reach 97% of steady-state plasma concentration (Css) under constant infusion?",
+        "options": [
+          "1 half-life",
+          "2 half-lives",
+          "3 half-lives",
+          "5 half-lives"
+        ],
+        "correctOption": "5 half-lives",
+        "conceptTarget": "Steady-State Pharmacokinetics"
+      },
+      {
+        "text": "What is the clinical consequence when a patient on warfarin takes a potent CYP2C9 enzyme inhibitor?",
+        "options": [
+          "Warfarin clearance decreases, causing plasma accumulation, prolonged INR, and severe hemorrhage risk",
+          "Warfarin is metabolized too rapidly, inducing acute thrombosis",
+          "Zero clinical change occurs",
+          "Blood pressure elevates to crisis levels immediately"
+        ],
+        "correctOption": "Warfarin clearance decreases, causing plasma accumulation, prolonged INR, and severe hemorrhage risk",
+        "conceptTarget": "CYP2C9 Drug Interactions"
+      },
+      {
+        "text": "Contrast MHC Class I vs MHC Class II antigen presentation:",
+        "options": [
+          "MHC I presents endogenous cytosolic peptides to CD8+ cytotoxic T cells; MHC II presents exogenous peptides to CD4+ helper T cells",
+          "MHC I presents to CD4+ cells; MHC II presents to CD8+ cells",
+          "MHC I is found only on red blood cells; MHC II is found on all nucleated cells",
+          "Both present identical antigens to B cell receptors"
+        ],
+        "correctOption": "MHC I presents endogenous cytosolic peptides to CD8+ cytotoxic T cells; MHC II presents exogenous peptides to CD4+ helper T cells",
+        "conceptTarget": "MHC Antigen Presentation"
+      },
+      {
+        "text": "Why does Positive Predictive Value (PPV) decline when screening a low-prevalence disease in the general population?",
+        "options": [
+          "False positives outnumber true positives even when test specificity is high (e.g. 99%)",
+          "Sensitivity drops to zero in large populations",
+          "Disease prevalence has no mathematical impact on PPV",
+          "Laboratory error rates automatically multiply by 10"
+        ],
+        "correctOption": "False positives outnumber true positives even when test specificity is high (e.g. 99%)",
+        "conceptTarget": "Epidemiological PPV Dynamics"
       }
     ]
   },
@@ -3752,6 +4885,116 @@ export const fallbackQuizData: any = {
         ],
         "correctOption": "Serving two variants (A and B) of a screen simultaneously to randomized user cohorts to measure conversion and engagement metrics",
         "conceptTarget": "A/B Testing & Optimization"
+      },
+      {
+        "text": "What is the primary difference between UI (User Interface) and UX (User Experience)?",
+        "options": [
+          "UI is visual design and interactive components; UX is the holistic user journey, satisfaction, and usability",
+          "UI is coding backends; UX is writing CSS",
+          "UI is used on mobile; UX is used on desktop",
+          "They are identical synonyms in software design"
+        ],
+        "correctOption": "UI is visual design and interactive components; UX is the holistic user journey, satisfaction, and usability",
+        "conceptTarget": "UI vs UX Fundamentals"
+      },
+      {
+        "text": "What is a wireframe in product design?",
+        "options": [
+          "A low-fidelity visual structural blueprint of a screen layout",
+          "The production JavaScript codebase",
+          "A high-resolution marketing billboard",
+          "A database relationship schema"
+        ],
+        "correctOption": "A low-fidelity visual structural blueprint of a screen layout",
+        "conceptTarget": "Wireframing & Prototyping"
+      },
+      {
+        "text": "What does WCAG stand for in web accessibility?",
+        "options": [
+          "Web Content Accessibility Guidelines",
+          "Worldwide Computer Automation Group",
+          "Web Component Architecture Guide",
+          "Windows Client Accessibility Grid"
+        ],
+        "correctOption": "Web Content Accessibility Guidelines",
+        "conceptTarget": "Accessibility: WCAG Basics"
+      },
+      {
+        "text": "What is visual hierarchy in interface design?",
+        "options": [
+          "Arranging elements to show their order of importance using size, color, contrast, and spacing",
+          "Making every button the exact same size and bright red",
+          "Listing all links alphabetically in a single column",
+          "Hiding interactive controls behind complex gestures"
+        ],
+        "correctOption": "Arranging elements to show their order of importance using size, color, contrast, and spacing",
+        "conceptTarget": "Visual Hierarchy"
+      },
+      {
+        "text": "What is a 'Call to Action' (CTA) button?",
+        "options": [
+          "A prominent interface button designed to prompt immediate user action (e.g., 'Sign Up', 'Purchase')",
+          "A system error alert modal",
+          "A legal disclaimer in the footer",
+          "A background image placeholder"
+        ],
+        "correctOption": "A prominent interface button designed to prompt immediate user action (e.g., 'Sign Up', 'Purchase')",
+        "conceptTarget": "CTA Design"
+      },
+      {
+        "text": "Why is white space (negative space) essential in layout design?",
+        "options": [
+          "It reduces cognitive visual clutter, organizes content, and improves readability",
+          "It saves server storage space",
+          "It is required by web browsers to load HTML",
+          "It makes websites load faster over dial-up"
+        ],
+        "correctOption": "It reduces cognitive visual clutter, organizes content, and improves readability",
+        "conceptTarget": "Negative Space & Readability"
+      },
+      {
+        "text": "What is responsive web design?",
+        "options": [
+          "Designing interfaces that dynamically adapt layout and typography across varying screen sizes and devices",
+          "A website that sends automatic email replies",
+          "A website that only functions on Apple iPhones",
+          "Using Flash animations for mobile menus"
+        ],
+        "correctOption": "Designing interfaces that dynamically adapt layout and typography across varying screen sizes and devices",
+        "conceptTarget": "Responsive Layouts"
+      },
+      {
+        "text": "What is a user persona in product research?",
+        "options": [
+          "A fictional archetype representing the goals, pain points, and behaviors of a target user group",
+          "An actual real employee's identity",
+          "A software automated testing bot",
+          "An executive manager's personal preference"
+        ],
+        "correctOption": "A fictional archetype representing the goals, pain points, and behaviors of a target user group",
+        "conceptTarget": "User Personas"
+      },
+      {
+        "text": "What is a design system?",
+        "options": [
+          "A unified repository of reusable UI components, tokens, and design standards governing an ecosystem",
+          "A graphic design software license",
+          "The internal operating system of a computer",
+          "A collection of random PNG stock photos"
+        ],
+        "correctOption": "A unified repository of reusable UI components, tokens, and design standards governing an ecosystem",
+        "conceptTarget": "Design Systems"
+      },
+      {
+        "text": "What is the 8pt grid system widely adopted in digital design?",
+        "options": [
+          "Using multiples of 8px for spacing, margins, and sizing to ensure visual rhythm and cross-device scaling",
+          "Limiting all screens to exactly 8 colors",
+          "Writing code in 8-bit machine language",
+          "Restricting paragraphs to 8 words per line"
+        ],
+        "correctOption": "Using multiples of 8px for spacing, margins, and sizing to ensure visual rhythm and cross-device scaling",
+        "conceptTarget": "8pt Grid Principles"
       }
     ],
     "Intermediate": [
@@ -3850,6 +5093,94 @@ export const fallbackQuizData: any = {
         ],
         "correctOption": "The small bits of instructional copy, error messages, button labels, and placeholder hints that guide users through interactive friction points",
         "conceptTarget": "UX Micro-Copywriting"
+      },
+      {
+        "text": "What is Fitts's Law in human-computer interaction?",
+        "options": [
+          "Target acquisition time is a function of distance and target width: T = a + b · log2(2D/W)",
+          "Users spend most time on other websites, so your site should follow conventions",
+          "Human working memory can only hold 7 ± 2 items",
+          "Decision time scales linearly with options"
+        ],
+        "correctOption": "Target acquisition time is a function of distance and target width: T = a + b · log2(2D/W)",
+        "conceptTarget": "Fitts's Law Formulation"
+      },
+      {
+        "text": "What is the minimum WCAG 2.1 Level AA color contrast ratio required for standard body text?",
+        "options": [
+          "2:1",
+          "3:1",
+          "4.5:1",
+          "7:1"
+        ],
+        "correctOption": "4.5:1",
+        "conceptTarget": "WCAG 2.1 AA Contrast Ratios"
+      },
+      {
+        "text": "How does Hick's Law govern decision time in user interfaces?",
+        "options": [
+          "Reaction time increases logarithmically with the number of choices: RT = b · log2(n + 1)",
+          "Reaction time is independent of menu size",
+          "Users always choose the first menu item",
+          "Reaction time doubles with every extra color on screen"
+        ],
+        "correctOption": "Reaction time increases logarithmically with the number of choices: RT = b · log2(n + 1)",
+        "conceptTarget": "Hick's Law & Choice Latency"
+      },
+      {
+        "text": "What is the primary UX benefit of 'Progressive Disclosure'?",
+        "options": [
+          "Displays only essential information upfront, deferring advanced options to reduce cognitive overload",
+          "Animates buttons with colorful flashing effects",
+          "Forces users to fill in 20 form fields on one page",
+          "Hides all navigation menus permanently"
+        ],
+        "correctOption": "Displays only essential information upfront, deferring advanced options to reduce cognitive overload",
+        "conceptTarget": "Progressive Disclosure"
+      },
+      {
+        "text": "What is a 'dark pattern' in user interface design?",
+        "options": [
+          "A deceptive UI pattern maliciously engineered to trick users into unintended actions (e.g., hidden subscriptions)",
+          "A high-contrast dark mode color theme",
+          "A software bug that turns the screen black",
+          "A terminal command-line prompt"
+        ],
+        "correctOption": "A deceptive UI pattern maliciously engineered to trick users into unintended actions (e.g., hidden subscriptions)",
+        "conceptTarget": "Ethical UX: Dark Patterns"
+      },
+      {
+        "text": "What is Jakob's Law of Internet User Experience?",
+        "options": [
+          "Users spend most of their time on other sites, so they prefer your site to work like all the others they know",
+          "Simpler code runs faster",
+          "Mobile traffic always exceeds desktop traffic",
+          "Every button should be blue"
+        ],
+        "correctOption": "Users spend most of their time on other sites, so they prefer your site to work like all the others they know",
+        "conceptTarget": "Jakob's Law"
+      },
+      {
+        "text": "Why are screen boundaries and corners considered 'infinitely large' targets under Fitts's Law in desktop UX?",
+        "options": [
+          "The mouse pointer cannot overshoot the viewport edge, stopping automatically at the boundary",
+          "They have infinite pixel resolution",
+          "Modern GPUs render corners first",
+          "Operating systems disable mouse acceleration at edges"
+        ],
+        "correctOption": "The mouse pointer cannot overshoot the viewport edge, stopping automatically at the boundary",
+        "conceptTarget": "Fitts's Law: Boundary Pinning"
+      },
+      {
+        "text": "What is the primary purpose of Closed Card Sorting in user research?",
+        "options": [
+          "Validating an established category taxonomy by asking participants to slot topics into predefined buckets",
+          "Brainstorming completely new menu category names",
+          "Writing functional CSS code",
+          "Measuring server network latency"
+        ],
+        "correctOption": "Validating an established category taxonomy by asking participants to slot topics into predefined buckets",
+        "conceptTarget": "Information Architecture: Card Sorting"
       }
     ],
     "Advanced": [
@@ -3948,6 +5279,61 @@ export const fallbackQuizData: any = {
         ],
         "correctOption": "Deferring advanced or rarely used features to secondary screens/drawers to keep initial interfaces clean and reduce novice user cognitive load",
         "conceptTarget": "Progressive Disclosure"
+      },
+      {
+        "text": "How do semantic design tokens decouple visual design from code implementation?",
+        "options": [
+          "Tokens map abstract intent (e.g., color-surface-interactive) to raw values, enabling universal theme switching across platforms",
+          "Tokens compress image files into WebP format automatically",
+          "Tokens replace React components with raw SVG HTML",
+          "Tokens eliminate the need for QA testing"
+        ],
+        "correctOption": "Tokens map abstract intent (e.g., color-surface-interactive) to raw values, enabling universal theme switching across platforms",
+        "conceptTarget": "Design Token Architecture"
+      },
+      {
+        "text": "What does Miller's Law state, and what is its accurate modern application in UX?",
+        "options": [
+          "Working memory capacity is 7 ± 2 chunks, meaning content should be chunked into manageable cognitive units rather than limiting menus to 7 items",
+          "Users never click more than 7 times on a website",
+          "Websites must only have 7 navigation items",
+          "Typography scale must strictly multiply by 7"
+        ],
+        "correctOption": "Working memory capacity is 7 ± 2 chunks, meaning content should be chunked into manageable cognitive units rather than limiting menus to 7 items",
+        "conceptTarget": "Cognitive Chunking: Miller's Law"
+      },
+      {
+        "text": "How does Nielsen's heuristic 'Visibility of System Status' apply to perceived performance thresholds?",
+        "options": [
+          "Operations <100ms feel instantaneous; operations >1s require progress indicators; >10s require percentage feedback",
+          "All operations should display loading spinners regardless of duration",
+          "Users ignore delays under 30 seconds",
+          "Only failed API calls require system notifications"
+        ],
+        "correctOption": "Operations <100ms feel instantaneous; operations >1s require progress indicators; >10s require percentage feedback",
+        "conceptTarget": "Perceived Latency & System Status"
+      },
+      {
+        "text": "What is the primary accessibility requirement for screen readers regarding non-text interactive elements?",
+        "options": [
+          "Providing unambiguous accessible names via aria-label or accessible text alternatives",
+          "Removing all icons from mobile buttons",
+          "Disabling keyboard tab navigation",
+          "Using red text for all error messages"
+        ],
+        "correctOption": "Providing unambiguous accessible names via aria-label or accessible text alternatives",
+        "conceptTarget": "WCAG Screen-Reader Semantics"
+      },
+      {
+        "text": "How does an optimistic UI update improve perceived user experience in high-latency network conditions?",
+        "options": [
+          "Updates the client interface immediately assuming server success, rolling back state only on error",
+          "Waits for server database commit before updating visual state",
+          "Slows down UI animations to hide server lag",
+          "Disables network retry mechanisms"
+        ],
+        "correctOption": "Updates the client interface immediately assuming server success, rolling back state only on error",
+        "conceptTarget": "Optimistic UI Updates"
       }
     ]
   }

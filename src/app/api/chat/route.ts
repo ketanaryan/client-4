@@ -42,7 +42,7 @@ In biomedical sciences and clinical pathology, understanding system dynamics rel
 
 Core principles to consider:
 1. **Dynamic Homeostasis:** Negative feedback loops maintain blood pressure, serum electrolytes, and arterial pH within narrow physiological ranges (e.g., baroreceptor reflex and renin-angiotensin-aldosterone axis).
-2. **Pharmacokinetics (ADME):** Drug bioavailability depends on Absorption, Distribution, Metabolism (primarily via hepatic cytochrome P450 isoenzymes), and Excretion. Elimination half-life ($$t_{1/2}$$) dictates therapeutic dosing intervals.
+2. **Pharmacokinetics (ADME):** Drug bioavailability depends on Absorption, Distribution, Metabolism (primarily via hepatic cytochrome P450 isoenzymes), and Excretion. Elimination half-life (t½) dictates therapeutic dosing intervals.
 3. **Diagnostic Biomarker Specificity:** When evaluating disease states, calculate sensitivity (true positive rate) and specificity (true negative rate) to avoid clinical false discoveries.
 
 Would you like to review a diagnostic patient case study or trace a biochemical feedback mechanism?`;
@@ -54,7 +54,7 @@ Would you like to review a diagnostic patient case study or trace a biochemical 
 In modern Human-Computer Interaction (HCI) and digital design, the core objective is **minimizing cognitive friction** and **maximizing task accessibility**.
 
 Key design systems heuristics:
-1. **Fitts's Law & Motor Ergonomics:** The time to acquire a target is a function of target distance and target width ($$T = a + b \\log_2(2D/W)$$). Primary actions must be prominent and easily reachable.
+1. **Fitts's Law & Motor Ergonomics:** The time to acquire a target is a function of target distance and target width [T = a + b · log₂(2D/W)]. Primary actions must be prominent and easily reachable.
 2. **Information Scent & Progressive Disclosure:** Present essential actions upfront while deferring advanced settings to secondary layers, preventing decision paralysis (Hick's Law).
 3. **WCAG 2.1 AA Compliance:** Maintain a minimum 4.5:1 text-to-background contrast ratio and guarantee that all interactive states are fully navigable via screen readers and keyboard tab indices.
 
