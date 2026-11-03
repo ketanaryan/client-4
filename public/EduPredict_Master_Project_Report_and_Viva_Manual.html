@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>EduPredict - Master Project Report & Viva Defense Manual</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap');
+
+    @page {
+      size: A4;
+      margin: 18mm 16mm 18mm 16mm;
+      @bottom-right {
+        content: counter(page);
+        font-family: 'Inter', sans-serif;
+        font-size: 8pt;
+        color: #71717a;
+      }
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      color: #18181b;
+      background: #ffffff;
+      line-height: 1.55;
+      font-size: 9.5pt;
+    }
+
+    .page-break {
+      page-break-before: always;
+      break-before: page;
+    }
+
+    .avoid-break {
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+
+    /* Cover / Title Page */
+    .cover-container {
+      padding: 40px 20px 20px 20px;
+      min-height: 90vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border: 2px solid #e4e4e7;
+      border-radius: 12px;
+      background: linear-gradient(180deg, #fafafa 0%, #ffffff 100%);
+    }
+
+    .cover-top {
+      text-align: left;
+    }
+
+    .badge-pill {
+      display: inline-block;
+      padding: 4px 12px;
+      border-radius: 9999px;
+      font-size: 8pt;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      background: #eef2ff;
+      color: #4338ca;
+      border: 1px solid #c7d2fe;
+      margin-bottom: 20px;
+    }
+
+    .cover-title {
+      font-size: 28pt;
+      font-weight: 800;
+      color: #09090b;
+      line-height: 1.15;
+      margin-bottom: 12px;
+      letter-spacing: -0.03em;
+    }
+
+    .cover-subtitle {
+      font-size: 13pt;
+      color: #52525b;
+      line-height: 1.4;
+      margin-bottom: 30px;
+      font-weight: 500;
+    }
+
+    .cover-meta-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-top: 30px;
+      padding: 20px;
+      background: #f4f4f5;
+      border-radius: 8px;
+      border: 1px solid #e4e4e7;
+    }
+
+    .meta-item {
+      font-size: 9pt;
+    }
+
+    .meta-label {
+      font-size: 7.5pt;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: #71717a;
+      letter-spacing: 0.05em;
+      margin-bottom: 2px;
+    }
+
+    .meta-value {
+      font-weight: 600;
+      color: #18181b;
+    }
+
+    .cover-footer {
+      border-top: 1px solid #e4e4e7;
+      padding-top: 15px;
+      display: flex;
+      justify-content: space-between;
+      font-size: 8pt;
+      color: #71717a;
+    }
+
+    /* Standard Content Sections */
+    h1 {
+      font-size: 18pt;
+      font-weight: 800;
+      color: #09090b;
+      letter-spacing: -0.02em;
+      margin-top: 24px;
+      margin-bottom: 12px;
+      padding-bottom: 6px;
+      border-bottom: 2px solid #4f46e5;
+    }
+
+    h2 {
+      font-size: 13pt;
+      font-weight: 700;
+      color: #1e1b4b;
+      margin-top: 18px;
+      margin-bottom: 8px;
+      letter-spacing: -0.01em;
+    }
+
+    h3 {
+      font-size: 10.5pt;
+      font-weight: 700;
+      color: #27272a;
+      margin-top: 12px;
+      margin-bottom: 6px;
+    }
+
+    p {
+      margin-bottom: 10px;
+      color: #27272a;
+      text-align: justify;
+    }
+
+    ul, ol {
+      margin-left: 20px;
+      margin-bottom: 12px;
+    }
+
+    li {
+      margin-bottom: 4px;
+    }
+
+    /* Tables */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 12px 0 16px 0;
+      font-size: 8.5pt;
+    }
+
+    th, td {
+      border: 1px solid #e4e4e7;
+      padding: 7px 10px;
+      text-align: left;
+    }
+
+    th {
+      background: #f4f4f5;
+      font-weight: 700;
+      color: #18181b;
+    }
+
+    tr:nth-child(even) td {
+      background: #fafafa;
+    }
+
+    /* Callout & Highlight Boxes */
+    .callout {
+      padding: 12px 14px;
+      border-radius: 8px;
+      margin: 12px 0;
+      border-left: 4px solid #4f46e5;
+      background: #eef2ff;
+      font-size: 9pt;
+    }
+
+    .callout-title {
+      font-weight: 700;
+      color: #3730a3;
+      margin-bottom: 4px;
+    }
+
+    .callout-warning {
+      border-left-color: #f59e0b;
+      background: #fffbeb;
+    }
+    .callout-warning .callout-title {
+      color: #b45309;
+    }
+
+    .callout-success {
+      border-left-color: #10b981;
+      background: #ecfdf5;
+    }
+    .callout-success .callout-title {
+      color: #065f46;
+    }
+
+    /* Key-Value Card Grid */
+    .card-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin: 10px 0 16px 0;
+    }
+
+    .feature-card {
+      border: 1px solid #e4e4e7;
+      border-radius: 6px;
+      padding: 10px 12px;
+      background: #ffffff;
+    }
+
+    .feature-card-header {
+      font-weight: 700;
+      font-size: 9pt;
+      color: #4338ca;
+      margin-bottom: 4px;
+    }
+
+    .feature-card-body {
+      font-size: 8pt;
+      color: #52525b;
+      line-height: 1.4;
+    }
+
+    /* Code & Architecture */
+    code {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 8pt;
+      background: #f4f4f5;
+      padding: 2px 4px;
+      border-radius: 4px;
+      color: #4338ca;
+    }
+
+    pre {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 8pt;
+      background: #18181b;
+      color: #f4f4f5;
+      padding: 12px;
+      border-radius: 6px;
+      margin: 10px 0;
+      overflow-x: auto;
+      line-height: 1.4;
+    }
+
+    /* Viva Q&A styling */
+    .viva-block {
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      padding: 12px;
+      margin-bottom: 12px;
+      background: #ffffff;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.03);
+    }
+
+    .viva-question {
+      font-weight: 700;
+      color: #0f172a;
+      font-size: 9.5pt;
+      margin-bottom: 6px;
+      display: flex;
+      align-items: flex-start;
+      gap: 6px;
+    }
+
+    .viva-q-tag {
+      background: #4f46e5;
+      color: #ffffff;
+      padding: 1px 6px;
+      border-radius: 4px;
+      font-size: 7.5pt;
+      font-weight: 800;
+      text-transform: uppercase;
+      shrink-0;
+    }
+
+    .viva-answer {
+      font-size: 8.8pt;
+      color: #334155;
+      line-height: 1.45;
+      background: #f8fafc;
+      padding: 8px 10px;
+      border-radius: 6px;
+      border-left: 3px solid #0284c7;
+    }
+
+    .viva-bullet {
+      margin-top: 4px;
+      padding-left: 12px;
+      font-size: 8.5pt;
+      color: #475569;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- COVER PAGE -->
+  <div class="cover-container">
+    <div class="cover-top">
+      <span class="badge-pill">Autonomous Educational Intelligence Platform</span>
+      <h1 class="cover-title">EduPredict</h1>
+      <div class="cover-subtitle">
+        Adaptive Diagnostic Learning, Knowledge-Gap Remediation & Career Pathway Engineering Engine
+      </div>
+      <p style="font-size: 10pt; color: #3f3f46; max-width: 600px; line-height: 1.6;">
+        A comprehensive technical documentation manual, architectural blueprint, and viva defense guide for evaluating committees, examiners, and project team members.
+      </p>
+
+      <div class="cover-meta-grid">
+        <div class="meta-item">
+          <div class="meta-label">Primary Technology Stack</div>
+          <div class="meta-value">Next.js 16 (Turbopack) • React 19 • Supabase • Gemini AI</div>
+        </div>
+        <div class="meta-item">
+          <div class="meta-label">Live Production Deployment</div>
+          <div class="meta-value">https://studyquiz-three.vercel.app</div>
+        </div>
+        <div class="meta-item">
+          <div class="meta-label">Source Code Repository</div>
+          <div class="meta-value">github.com/ketanaryan/client-4 (Branch: main)</div>
+        </div>
+        <div class="meta-item">
+          <div class="meta-label">Academic Disciplines Supported</div>
+          <div class="meta-value">8+ Tracks (Tech, Finance, Health, Psych, Arts, Management)</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cover-footer">
+      <span>Project Defense Manual • Final Capstone Presentation</span>
+      <span>Confidential & Academic Evaluation Copy</span>
+    </div>
+  </div>
+
+  <div class="page-break"></div>
+
+  <!-- TABLE OF CONTENTS & EXECUTIVE SUMMARY -->
+  <h1>1. Executive Summary & Core Motivation</h1>
+
+  <h2>1.1 Project Overview in Plain Language</h2>
+  <p>
+    <strong>EduPredict</strong> is an enterprise-grade, autonomous diagnostic learning platform designed to replace the broken "one-size-fits-all" model of modern Online Learning Systems (LMS). Traditional platforms like Coursera, Udemy, and university portals treat every learner identically: they force students through static video lectures and provide shallow percentage scores on multiple-choice quizzes without identifying <em>why</em> a student failed a question.
+  </p>
+  <p>
+    EduPredict re-engineers online education by treating learning like an <strong>adaptive diagnostic loop</strong>. When a student takes an assessment:
+  </p>
+  <ol>
+    <li><strong>Misconception Extraction:</strong> Instead of calculating a superficial percentage (e.g., "70%"), our system deploys <em>Chain-of-Thought (CoT)</em> cognitive reasoning to isolate the student's exact theoretical misconception (e.g., "CAPM Beta Unlevering Flaw", "Fitts's Law Target Ergonomics Misconception").</li>
+    <li><strong>Targeted Micro-Module Remediation:</strong> Blocked foundational concepts gate subsequent courses. Students must interactively remediate their specific flaw before advanced units unlock.</li>
+    <li><strong>Dynamic Multi-Tier Pathway:</strong> The system automatically synthesizes a customized 4-stage course curriculum and aligns it with verified industry career trajectories.</li>
+    <li><strong>Cognitive Spaced Repetition (Flashcard Lab):</strong> Built on the proven <em>Leitner 5-Box algorithmic model</em>, concepts are scheduled for review right before human cognitive decay occurs.</li>
+    <li><strong>Oral Viva Voce Exam Simulator:</strong> Using browser-native <em>Web Speech Recognition</em> and <em>Speech Synthesis</em>, students defend complex academic principles with their actual voice before a simulated university examination panel.</li>
+    <li><strong>Zero-Downtime Reliability:</strong> Equipped with an autonomous <em>Deterministic Offline Fallback Matrix (480+ pre-curated question pool)</em>, guaranteeing that even if the internet drops or AI quotas expire, the platform continues executing with 0 millisecond latency.</li>
+  </ol>
+
+  <div class="callout callout-success">
+    <div class="callout-title">The Core Pedagogical Thesis</div>
+    Students do not fail because they lack intelligence; they fail because introductory foundational flaws compound over time. By diagnosing and remediating the root-cause cognitive gap immediately, EduPredict prevents educational dropouts and accelerates placement readiness.
+  </div>
+
+  <h2>1.2 Academic Pedagogy Grounding</h2>
+  <table>
+    <thead>
+      <tr>
+        <th style="width: 25%;">Theoretical Framework</th>
+        <th style="width: 35%;">Traditional Educational Flaw</th>
+        <th style="width: 40%;">EduPredict Engineering Solution</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Bloom's Revised Taxonomy</strong></td>
+        <td>Rote memorization and surface-level recall (Level 1).</td>
+        <td>Ascends to Analysis, Evaluation, and Defense through open oral viva examinations.</td>
+      </tr>
+      <tr>
+        <td><strong>Ebbinghaus Forgetting Curve</strong></td>
+        <td>Information retention decays by 70% within 48 hours without reinforcement.</td>
+        <td>Algorithmic Spaced Repetition Flashcards re-stimulate memory traces right before exponential decay.</td>
+      </tr>
+      <tr>
+        <td><strong>Socratic Inquiry Method</strong></td>
+        <td>AI tutors act as "answer vending machines," promoting cognitive laziness.</td>
+        <td>Our AI Tutor is prompt-engineered to refuse direct answers and instead guide students via dialectical questioning.</td>
+      </tr>
+      <tr>
+        <td><strong>Deliberate Practice (Ericsson)</strong></td>
+        <td>Students spend hours reviewing concepts they already know.</td>
+        <td>Dynamic curriculum dynamically locks advanced modules until diagnosed flaws are remediated.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="page-break"></div>
+
+  <!-- SYSTEM ARCHITECTURE -->
+  <h1>2. System Architecture & Tech Stack</h1>
+
+  <h2>2.1 Technical Stack Matrix</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Layer</th>
+        <th>Technologies Selected</th>
+        <th>Architectural Justification</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Frontend Core</strong></td>
+        <td>Next.js 16.2 (App Router), Turbopack, React 19, TypeScript</td>
+        <td>Provides sub-second Hot Module Replacement, zero client-bundle bloat via React Server Components, and strict type safety.</td>
+      </tr>
+      <tr>
+        <td><strong>Styling & UI</strong></td>
+        <td>Tailwind CSS, Radix UI Primitives, Lucide Icons</td>
+        <td>Custom accessible component design system with zero runtime CSS overhead and seamless responsive viewport adapting.</td>
+      </tr>
+      <tr>
+        <td><strong>Voice & Audio</strong></td>
+        <td>Web Speech API (SpeechRecognition & SpeechSynthesis)</td>
+        <td>Browser-native verbal transcription and speech synthesis with zero third-party latency, zero recurring billing, and full offline support.</td>
+      </tr>
+      <tr>
+        <td><strong>Backend & Database</strong></td>
+        <td>Supabase (PostgreSQL 15), Row-Level Security (RLS)</td>
+        <td>Relational integrity for user profiles, quiz results, and identified flaws with cryptographic session management.</td>
+      </tr>
+      <tr>
+        <td><strong>AI Engine</strong></td>
+        <td>Google Gemini 1.5 Flash / Pro, Vercel AI SDK</td>
+        <td>Fast latency token streaming, deep context reasoning for cognitive diagnostics, and structured JSON object output.</td>
+      </tr>
+      <tr>
+        <td><strong>Failover Layer</strong></td>
+        <td>Deterministic Fallback Engine (JSON + TS Registry)</td>
+        <td>Guarantees 100% operational uptime during live presentations without relying on cloud availability or rate limits.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>2.2 Architectural Data Flow Diagram</h2>
+  <pre>
+  [ STUDENT VIEWPORT ]
+          │
+          ├── 1. Diagnostic Assessment (8 Disciplines) ────────► [ /api/generate-quiz ]
+          │                                                            │
+          ├── 2. Submits Answers ──────────────────────────────► [ /api/extract-flaws ]
+          │                                                            │ (Gemini CoT + Fallback)
+          │◄─── 3. Receives Flaws & Recommended Pathway ───────────────┘
+          │
+          ├── 4. Interactively Remediates Flaws ───────────────► [ /api/remediate-flaw ]
+          │                                                            │
+          │◄─── 5. Course Modules Unlock Sequentially ─────────────────┘
+          │
+          ├── 6. Active Recall Flashcards (Leitner 5-Box) ─────► Local Retention State
+          │
+          ├── 7. Oral Viva Defense (Web Speech Input) ────────► [ /api/viva-evaluate ]
+          │                                                            │ (Multi-Criteria Rubric)
+          │◄─── 8. Examiner Verdict, Strengths & Grade ────────────────┘
+          │
+          └── 9. 24/7 Socratic Academic Tutor ────────────────► [ /api/chat ]
+  </pre>
+
+  <h2>2.3 Database Relational Schema (PostgreSQL / Supabase)</h2>
+  <ul>
+    <li><strong><code>profiles</code>:</strong> Stores user identity, institution, degree, CGPA, academic level (Beginner/Intermediate/Advanced), weekly study commitment, cached course pathway, and active domain.</li>
+    <li><strong><code>domain_profiles</code>:</strong> Tracks student performance across multiple parallel domains (e.g., a student exploring both Computer Science and Financial Economics simultaneously).</li>
+    <li><strong><code>quiz_results</code>:</strong> Captures historic quiz attempts, overall numerical score (0-100), timestamps, and relational foreign keys.</li>
+    <li><strong><code>identified_flaws</code>:</strong> Stores atomic conceptual weaknesses discovered by AI (<code>concept_name</code>, <code>flaw_description</code>, <code>is_remediated</code> boolean flag).</li>
+    <li><strong><code>course_progress</code>:</strong> Records completion status (Locked, Next, Completed) across sequential modules.</li>
+  </ul>
+
+  <div class="page-break"></div>
+
+  <!-- CORE FEATURES DEEP DIVE -->
+  <h1>3. Exhaustive Breakdown of Core Features</h1>
+
+  <h2>3.1 Feature 1: Multidisciplinary Diagnostic Assessment Engine</h2>
+  <p>
+    Unlike conventional coding-only portals, EduPredict is engineered for complete multidisciplinary breadth, supporting <strong>8 distinct academic domains</strong>:
+  </p>
+  <div class="card-grid">
+    <div class="feature-card">
+      <div class="feature-card-header">1. Computer Science & AI</div>
+      <div class="feature-card-body">Algorithms, data structures, Transformer neural networks, operating systems, and computational theory.</div>
+    </div>
+    <div class="feature-card">
+      <div class="feature-card-header">2. Software Engineering & Cloud</div>
+      <div class="feature-card-body">Distributed systems, microservice boundaries, concurrency, and CI/CD production resiliency.</div>
+    </div>
+    <div class="feature-card">
+      <div class="feature-card-header">3. Financial Markets & Economics</div>
+      <div class="feature-card-body">DCF equity valuation, CAPM systematic risk, portfolio optimization, options Greeks, and yield curves.</div>
+    </div>
+    <div class="feature-card">
+      <div class="feature-card-header">4. Business & Strategic Management</div>
+      <div class="feature-card-body">Porter's Five Forces, VRIO frameworks, unit economics (LTV:CAC), Agile sprint cadences, and corporate M&A.</div>
+    </div>
+    <div class="feature-card">
+      <div class="feature-card-header">5. Psychology & Behavioral Sciences</div>
+      <div class="feature-card-body">Operant conditioning, cognitive dissonance, hippocampal LTP neuroplasticity, heuristics, and Big Five OCEAN.</div>
+    </div>
+    <div class="feature-card">
+      <div class="feature-card-header">6. Healthcare & Biomedical Sciences</div>
+      <div class="feature-card-body">Cardiovascular baroreceptor reflex, ADME pharmacokinetics, CYP450 metabolism, and CRISPR oncology.</div>
+    </div>
+    <div class="feature-card">
+      <div class="feature-card-header">7. Liberal Arts & Humanities</div>
+      <div class="feature-card-body">Critical historiography, archival analysis, epistemological logic, semiotics, and digital humanities.</div>
+    </div>
+    <div class="feature-card">
+      <div class="feature-card-header">8. Digital Product Design & HCI</div>
+      <div class="feature-card-body">Fitts's Law ergonomics, Hick's Law, WCAG 2.1 accessibility, design tokens, and Nielsen heuristics.</div>
+    </div>
+  </div>
+
+  <h2>3.2 Feature 2: Explainable AI (XAI) Flaw Extraction</h2>
+  <p>
+    When a student submits a diagnostic quiz, standard platforms merely mark an option red or green. EduPredict sends the full diagnostic telemetry (question, student's chosen option, target concept) to an advanced Chain-of-Thought extraction pipeline. The AI isolates the underlying <em>mental model misconception</em> and renders it as an actionable remediation pill on the student's dashboard.
+  </p>
+
+  <h2>3.3 Feature 3: Dynamic Adaptive Pathway & Career Horizon Engine</h2>
+  <p>
+    The curriculum dynamically rearranges based on diagnosed flaws:
+  </p>
+  <ul>
+    <li>If foundational flaws exist, Course 1 is tagged as <strong>"Locked by Flaws"</strong> until remediated.</li>
+    <li>Students can utilize the <strong>Instant Domain Focus Switcher</strong> right from the pathway banner to switch between any of the 8 academic domains in real-time with zero page reload.</li>
+    <li>Each pathway pairs with 3 data-driven career trajectories featuring matching rationales and industry growth forecasts (e.g., <em>Quantitative Risk Analyst</em>, <em>UX Architect</em>, <em>Genomic Data Specialist</em>).</li>
+  </ul>
+
+  <h2>3.4 Feature 4: Concept Flashcards Lab (Leitner Active Recall)</h2>
+  <p>
+    Replacing unaccredited certificates, EduPredict provides a scientifically defensible <strong>Active Recall & Spaced Repetition Lab</strong>:
+  </p>
+  <ul>
+    <li><strong>3D Card Flip Mechanics:</strong> Students view high-yield theoretical prompts and flip to reveal rigorous academic explanations.</li>
+    <li><strong>Leitner Rating Buttons:</strong> Four difficulty intervals (<em>Again, Hard, Good, Easy</em>) calibrate card review frequencies.</li>
+    <li><strong>Dynamic Retention Index (%):</strong> Mathematically calculates the student's real-time knowledge retention score based on successful recall reviews.</li>
+  </ul>
+
+  <h2>3.5 Feature 5: Oral Viva Voce Exam Simulator</h2>
+  <p>
+    To prepare students for graduation defense committees and technical interview boards, the platform provides an AI Oral Viva Simulator:
+  </p>
+  <ul>
+    <li><strong>Voice Input (Speech-to-Text):</strong> Utilizing native <code>webkitSpeechRecognition</code>, students speak their academic defense out loud with live visual listening indicators.</li>
+    <li><strong>Audio Question Reader (Text-to-Speech):</strong> Synthesizes natural examiner speech so students hear questions verbally.</li>
+    <li><strong>Academic Rubric Scoring:</strong> Evaluates answers across Conceptual Clarity, Technical Depth, and Domain Terminology with detailed examiner remarks and model benchmark answers.</li>
+  </ul>
+
+  <div class="page-break"></div>
+
+  <!-- PRESENTATION SCRIPT & VIVA QUESTIONS -->
+  <h1>4. Step-by-Step Slide Presentation Guide (8-Minute Plan)</h1>
+
+  <h2>4.1 Presentation Roles & Time Allocation</h2>
+  <table>
+    <thead>
+      <tr>
+        <th style="width: 15%;">Time</th>
+        <th style="width: 25%;">Speaker</th>
+        <th style="width: 25%;">Slide / Topic</th>
+        <th style="width: 35%;">Key Message & Live Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>0:00 - 1:30</td>
+        <td><strong>Teammate 1 (Lead)</strong></td>
+        <td>Introduction & The Problem</td>
+        <td>Explain why current online education fails. Introduce EduPredict's mission and live deployment.</td>
+      </tr>
+      <tr>
+        <td>1:30 - 3:30</td>
+        <td><strong>Teammate 2 (Tech Lead)</strong></td>
+        <td>Diagnostic Engine & Flaws</td>
+        <td>Demo diagnostic quiz on live screen. Show how AI isolates specific misconceptions rather than raw scores.</td>
+      </tr>
+      <tr>
+        <td>3:30 - 5:30</td>
+        <td><strong>Teammate 3 (AI / UX Lead)</strong></td>
+        <td>Pathway & Viva Defense</td>
+        <td>Demonstrate instant domain switching, Spaced Repetition Flashcards, and test verbal defense with microphone.</td>
+      </tr>
+      <tr>
+        <td>5:30 - 7:00</td>
+        <td><strong>All Team Members</strong></td>
+        <td>Architecture & Fallback Matrix</td>
+        <td>Highlight Next.js 16 + Supabase tech stack and emphasize zero-downtime offline reliability.</td>
+      </tr>
+      <tr>
+        <td>7:00 - 8:00</td>
+        <td><strong>Teammate 1 (Lead)</strong></td>
+        <td>Conclusion & Q&A Opening</td>
+        <td>Summarize key metrics and invite questions from the panel.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h1>5. Top 15 Expected Viva Questions & Model Answers</h1>
+
+  <div class="viva-block avoid-break">
+    <div class="viva-question">
+      <span class="viva-q-tag">Q1</span>
+      How does EduPredict differ from a generic ChatGPT prompt or AI wrapper?
+    </div>
+    <div class="viva-answer">
+      <strong>Model Answer:</strong> Generic wrappers send unstructured prompts with zero state awareness. EduPredict is an integrated, full-stack stateful learning engine. It enforces relational schema tracking in PostgreSQL, binds diagnosed flaws directly to progressive course gating, runs Leitner spaced repetition algorithms, implements Web Speech voice processing, and features an autonomous Deterministic Fallback Engine with 480+ curated questions that works completely offline.
+    </div>
+  </div>
+
+  <div class="viva-block avoid-break">
+    <div class="viva-question">
+      <span class="viva-q-tag">Q2</span>
+      How do you prevent AI hallucinations during diagnostic flaw extraction?
+    </div>
+    <div class="viva-answer">
+      <strong>Model Answer:</strong> We employ a three-tier mitigation strategy: (1) <em>Strict JSON Schema Enforcement</em> using Zod, rejecting unformatted outputs; (2) <em>Grounding Context Injection</em>, passing the exact question metadata, concept target, and student selection into the prompt; and (3) <em>Deterministic Concept Validation</em>, ensuring extracted flaw concepts match pre-verified academic ontology nodes.
+    </div>
+  </div>
+
+  <div class="viva-block avoid-break">
+    <div class="viva-question">
+      <span class="viva-q-tag">Q3</span>
+      What is the mathematical formulation behind the Leitner Flashcards system?
+    </div>
+    <div class="viva-answer">
+      <strong>Model Answer:</strong> The Leitner model operationalizes the Ebbinghaus retention equation: <code>R = e^(-t / S)</code>, where <code>R</code> is retrievability, <code>t</code> is elapsed time, and <code>S</code> is synaptic memory strength. Each successful recall (Good/Easy) promotes the card to an exponentially longer review interval (1 day → 3 days → 7 days → 14 days), while failed recall (Again) resets the card to Box 1, maintaining an active retention index above 85%.
+    </div>
+  </div>
+
+  <div class="viva-block avoid-break">
+    <div class="viva-question">
+      <span class="viva-q-tag">Q4</span>
+      Why did you choose Next.js 16 with Turbopack and React 19 over standard React Vite or MERN?
+    </div>
+    <div class="viva-answer">
+      <strong>Model Answer:</strong> Next.js 16 App Router provides hybrid React Server Components (RSC) and Server Actions, dramatically reducing client-side JavaScript payloads. Turbopack provides 10x faster incremental builds. By using Next.js Serverless Edge route handlers, our backend scales automatically without managing Express server instances or container fleets.
+    </div>
+  </div>
+
+  <div class="viva-block avoid-break">
+    <div class="viva-question">
+      <span class="viva-q-tag">Q5</span>
+      What happens if the university Wi-Fi disconnects or Gemini API hits a rate limit during the presentation?
+    </div>
+    <div class="viva-answer">
+      <strong>Model Answer:</strong> The system is architected with a zero-dependency Deterministic Fallback Matrix. Every single API route (/api/generate-quiz, /api/extract-flaws, /api/remediate-flaw, /api/viva-evaluate, /api/chat) contains a comprehensive offline fallback pool with Fisher-Yates question shuffling. If network latency exceeds 8 seconds or an HTTP 429 quota is returned, the engine instantaneously serves verified academic responses with zero error alerts.
+    </div>
+  </div>
+
+  <div class="viva-block avoid-break">
+    <div class="viva-question">
+      <span class="viva-q-tag">Q6</span>
+      Why is the Oral Viva Voce Simulator significant from an educational evaluation perspective?
+    </div>
+    <div class="viva-answer">
+      <strong>Model Answer:</strong> Written multiple-choice assessments only test passive recognition (Bloom's Level 1). In contrast, viva voce requires students to verbally synthesize theoretical principles, articulate trade-offs, and defend hypotheses in real time (Bloom's Level 5 & 6). Our system uses browser-native Speech Recognition to provide realistic vocal interview preparation without requiring expensive human proctoring.
+    </div>
+  </div>
+
+  <div class="viva-block avoid-break">
+    <div class="viva-question">
+      <span class="viva-q-tag">Q7</span>
+      How does the platform ensure multidisciplinary students (e.g. Arts, Psychology, Healthcare) receive authentic instruction?
+    </div>
+    <div class="viva-answer">
+      <strong>Model Answer:</strong> Rather than forcing tech questions onto non-tech students, our question banks, course pathways, and viva rubrics are custom-calibrated across 8 distinct academic domains. A Healthcare student is tested on ADME pharmacokinetics and baroreceptor hemodynamics, while a Humanities student defends critical historiography and semiotic cultural discourse.
+    </div>
+  </div>
+
+  <div class="viva-block avoid-break">
+    <div class="viva-question">
+      <span class="viva-q-tag">Q8</span>
+      How is student privacy and institutional data security handled?
+    </div>
+    <div class="viva-answer">
+      <strong>Model Answer:</strong> All database operations are secured through Supabase Row-Level Security (RLS) policies, ensuring users can only read and write their own academic records. Authentication is handled via cryptographically signed JWT sessions. Voice recognition executes entirely on the client-side browser runtime, with zero voice biometric recordings stored on external servers.
+    </div>
+  </div>
+
+  <div class="page-break"></div>
+
+  <h1>6. Verification Credentials & Quick Links</h1>
+  <table>
+    <thead>
+      <tr>
+        <th style="width: 30%;">Resource</th>
+        <th style="width: 70%;">Link / Access Location</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Live Production App</strong></td>
+        <td><a href="https://studyquiz-three.vercel.app">https://studyquiz-three.vercel.app</a></td>
+      </tr>
+      <tr>
+        <td><strong>GitHub Repository</strong></td>
+        <td><a href="https://github.com/ketanaryan/client-4.git">https://github.com/ketanaryan/client-4.git</a> (Branch: main)</td>
+      </tr>
+      <tr>
+        <td><strong>Local Workspace Directory</strong></td>
+        <td><code>C:UsersKETANDownloadsahmed projectai-pathway-recommender</code></td>
+      </tr>
+      <tr>
+        <td><strong>Master PDF Location</strong></td>
+        <td><code>C:UsersKETANDownloadsahmed projectEduPredict_Master_Project_Report_and_Viva_Manual.pdf</code></td>
+      </tr>
+      <tr>
+        <td><strong>Key Test Routes</strong></td>
+        <td>
+          <code>/domain-selection</code> • <code>/quiz/product-design-hci</code> • <code>/pathway-recommendations</code> • <code>/flashcards</code> • <code>/interview-prep</code>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="callout callout-success" style="margin-top: 30px;">
+    <div class="callout-title">Final Examination Tip</div>
+    Always begin your presentation by demonstrating the <strong>Multidisciplinary Diagnostic Assessment</strong>, then show the <strong>Explainable AI Flaw Breakdown</strong>, transition into the <strong>Flashcards Spaced Repetition Lab</strong>, and finish with a 1-question verbal defense in the <strong>Oral Viva Voce Simulator</strong> using your microphone. This sequence visually proves all layers of the platform in under 6 minutes.
+  </div>
+
+</body>
+</html>
